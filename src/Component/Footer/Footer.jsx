@@ -51,9 +51,9 @@ const Footer = () => {
                     </div>
                 </div>
                 {/* <hr /> */}
-                <div className="footer-bottom bg-[#ef1721]">                 
+                <div className="footer-bottom bg-[#181818]">                 
                         <div className="copyright text-white">
-                            <p>© Copyright 2023 <span className='text-black'>MOTEX</span> All Rights Reserved. </p>
+                            <p>© Copyright 2023 <span className='text-red-600'>ASETTA AUTO'S</span> All Rights Reserved. </p>
                         </div>
                         <div className="sociallink">
                             <FaFacebook className='icons'></FaFacebook>

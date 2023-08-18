@@ -108,15 +108,16 @@
 .icons {
     width: 16px;
     height: 16px;
+    color: #ef1721;
     transform: scale(2);
-    background-color: white;
+    background-color: #fff;
     padding: 3px;
     border-radius: 4px;
 }
 
 .icons:hover {
-    background-color: black;
-    color: white;
+    background-color: #111;
+    color: #ef1721;
 }
 
 .about-us-icons {
