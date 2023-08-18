@@ -1,0 +1,68 @@
+[
+    {
+        "id" : "1",
+        "name" : "Toyota Suv",
+        "image" : "https://i.ibb.co/GtgnJPz/pic-6.png",
+        "rating" : "5",
+        "reviews" : "58.5",
+        "perlitre" : "10.15",
+        "model" : "2023",
+        "enginetype" : "Hybrid",
+        "price" : "65,350"
+    },
+    {
+        "id" : "2",
+        "name" : "Mercedes Benz Car",
+        "image" : "https://i.ibb.co/hmMSQvd/pic-3.png",
+        "rating" : "5",
+        "reviews" : "58.5",
+        "perlitre" : "10.15",
+        "model" : "2023",
+        "enginetype" : "Hybrid",
+        "price" : "75,210"
+    },
+    {
+        "id" : "3",
+        "name" : "Hyundai",
+        "image" : "https://i.ibb.co/X7Dhw6v/pic-7.png",
+        "rating" : "5",
+        "reviews" : "58.5",
+        "perlitre" : "10.15",
+        "model" : "2023",
+        "enginetype" : "Hybrid",
+        "price" : "35,620"
+    },
+    {
+        "id" : "4",
+        "name" : "BMW",
+        "image" : "https://i.ibb.co/2Mgzcc4/pic-4.png",
+        "rating" : "5",
+        "reviews" : "58.5",
+        "perlitre" : "10.15",
+        "model" : "2023",
+        "enginetype" : "Electric",
+        "price" : "80,350"
+    },
+    {
+        "id" : "5",
+        "name" : "Audi Q7",
+        "image" : "https://i.ibb.co/YDCzLbg/pic-5.png",
+        "rating" : "5",
+        "reviews" : "58.5",
+        "perlitre" : "12.35",
+        "model" : "2022",
+        "enginetype" : "Non-Hybrid",
+        "price" : "79,350"
+    },
+    {
+        "id" : "6",
+        "name" : "Mercedes Benz Car",
+        "image" : "https://i.ibb.co/h7N7dMX/pic-2.png",
+        "rating" : "5",
+        "reviews" : "58.5",
+        "perlitre" : "10.15",
+        "model" : "2023",
+        "enginetype" : "Hybrid",
+        "price" : "90,350"
+    }
+]
