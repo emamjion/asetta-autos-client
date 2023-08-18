@@ -3,6 +3,8 @@ import './Footer.css'
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaPhone, FaRegAddressCard, FaMailBulk } from "react-icons/fa";
 import { BiSolidRightArrow } from "react-icons/bi";
 import { BsFillSendFill } from "react-icons/bs";
+import logo from "../../../public/Asseta.png"
+import logo2 from '../../../src/assets/images/logo/logo.png'
 
 
 const Footer = () => {
@@ -11,8 +13,8 @@ const Footer = () => {
             <div className="w-full bg-[#111]">
                 <div className="row">
                     <div className="footer-col quick-section w-2/6">
-                        <h1>Quick Links</h1>
-                        <p className='mb-4 text-white'>We are many variations of passages available but the majority have suffered alteration in some form by injected humour words believable. </p>
+                        <img className='w-40 h-40 -mt-12 ' src={logo} alt="" />
+                        <p className='-mt-10 mb-3 text-white'>We are many variations of passages available but the majority have suffered alteration in some form by injected humour words believable. </p>
                         <div className='text-white'>
                             <p className='py-2 about-us-paragraph'><a href=""><FaPhone className='about-us-icons '></FaPhone> +2 123 654 7898</a></p>
                             <p className='py-2 about-us-paragraph'><FaRegAddressCard className='about-us-icons '></FaRegAddressCard> 25/B Milford Road, New York</p>
@@ -41,12 +43,12 @@ const Footer = () => {
                             <li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow>   Sitemap</a></li>
                         </ul>
                     </div>
-                    <div className="footer-col quick-section w-2/6  text-white">
+                    <div className="footer-col quick-section text-white">
                         <h1>Newsletter</h1>
                         <p>Subscribe Our Newsletter To Get Latest Update And News</p>
                         <form action="">
                             <input type="email" name="email" id="" placeholder='Your Email' className='email-field rounded-lg ' />
-                            <button type='submit' className="subscribe-button bg-[#ef1721] rounded-lg ">Subcribe Now<BsFillSendFill className='ml-2'></BsFillSendFill></button>
+                            <button type='submit' className="subscribe-button bg-[#ef1721] hover:bg-white duration-500 rounded-lg ">Subcribe Now<BsFillSendFill className='ml-2'></BsFillSendFill></button>
                         </form>
                     </div>
                 </div>

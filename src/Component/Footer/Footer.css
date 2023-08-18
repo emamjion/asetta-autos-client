@@ -11,7 +11,7 @@
 .row {
     display: flex;
     justify-content: space-between;
-    padding: 80px 100px;
+    padding: 60px 120px;
     gap: 60px;
     
 }
@@ -86,6 +86,7 @@
 .subscribe-button:hover {
     background-color: white;
     color: black;
+    transition-duration: 700ms;
 }
 
 .email-field {
@@ -118,6 +119,7 @@
 .icons:hover {
     background-color: #111;
     color: #ef1721;
+    transition-duration: 500ms;
 }
 
 .about-us-icons {
