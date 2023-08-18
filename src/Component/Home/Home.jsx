@@ -1,21 +1,23 @@
-import React from 'react';
-import NewArrivals from '../NewArrivals/NewArrivals';
-import Banner from '../Banner/Banner';
+import React from "react";
+import NewArrivals from "../NewArrivals/NewArrivals";
+import Banner from "../Banner/Banner";
+import AboutUs from "../AboutUs/AboutUs";
 
 const Home = () => {
-    return (
-        <div>
-            {/* add your component here  */}
-            {/* Banner section */}
-                {/*Sagor Ahmed Make Banner Section */}
-                <Banner></Banner>
-            {/* About Section */}
+	return (
+		<div>
+			{/* add your component here  */}
+			{/* Banner section */}
+			{/*Sagor Ahmed Make Banner Section */}
+			<Banner></Banner>
 
+			{/* About Section */}
+			<AboutUs></AboutUs>
 
-            {/* New Arrivals section */}
-            <NewArrivals/>
-        </div>
-    );
+			{/* New Arrivals section */}
+			<NewArrivals />
+		</div>
+	);
 };
 
 export default Home;
