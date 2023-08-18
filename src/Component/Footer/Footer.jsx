@@ -5,11 +5,13 @@ import { BiSolidRightArrow } from "react-icons/bi";
 import { BsFillSendFill } from "react-icons/bs";
 import logo from "../../../public/Asseta.png"
 import logo2 from '../../../src/assets/images/logo/logo.png'
+import moment from 'moment/moment';
 
 
 const Footer = () => {
+    const currentyear = moment().format('YYYY');
     return (
-        <footer> 
+        <footer>
             <div className="w-full bg-[#111]">
                 <div className="row">
                     <div className="footer-col quick-section w-2/6">
@@ -46,24 +48,24 @@ const Footer = () => {
                     <div className="footer-col quick-section text-white">
                         <h1>Newsletter</h1>
                         <p>Subscribe Our Newsletter To Get Latest Update And News</p>
-                        <form action="">
+                        <form action="" className='mt-7'>
                             <input type="email" name="email" id="" placeholder='Your Email' className='email-field rounded-lg ' />
-                            <button type='submit' className="subscribe-button bg-[#ef1721] hover:bg-white duration-500 rounded-lg ">Subcribe Now<BsFillSendFill className='ml-2'></BsFillSendFill></button>
+                            <button type='submit' className="subscribe-button mt-10 bg-[#ef1721] hover:bg-white duration-500 rounded-lg ">Subcribe Now<BsFillSendFill className='ml-2'></BsFillSendFill></button>
                         </form>
                     </div>
                 </div>
                 {/* <hr /> */}
-                <div className="footer-bottom bg-[#181818]">                 
-                        <div className="copyright text-white">
-                            <p>© Copyright 2023 <span className='text-red-600'>ASETTA AUTO'S</span> All Rights Reserved. </p>
-                        </div>
-                        <div className="sociallink">
-                            <FaFacebook className='icons'></FaFacebook>
-                            <FaTwitter className='icons'></FaTwitter>
-                            <FaInstagram className='icons'></FaInstagram>
-                            <FaYoutube className='icons'></FaYoutube>
-                        </div>
+                <div className="footer-bottom bg-[#181818]">
+                    <div className="copyright text-white">
+                        <p>© Copyright {currentyear} <span className='text-red-600'>ASETTA AUTO'S</span> All Rights Reserved. </p>
                     </div>
+                    <div className="sociallink">
+                        <FaFacebook className='icons'></FaFacebook>
+                        <FaTwitter className='icons'></FaTwitter>
+                        <FaInstagram className='icons'></FaInstagram>
+                        <FaYoutube className='icons'></FaYoutube>
+                    </div>
+                </div>
             </div>
         </footer>
     );
