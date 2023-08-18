@@ -55,9 +55,9 @@ const Footer = () => {
                     </div>
                 </div>
                 {/* <hr /> */}
-                <div className="footer-bottom bg-[#181818]">
+                <div className="footer-bottom bg-[#ef1721]">
                     <div className="copyright text-white">
-                        <p>© Copyright {currentyear} <span className='text-red-600'>ASETTA AUTO'S</span> All Rights Reserved. </p>
+                        <p>© Copyright {currentyear}  <span className='text-[#111]'> ASETTA AUTO'S </span>  All Rights Reserved. </p>
                     </div>
                     <div className="sociallink">
                         <FaFacebook className='icons'></FaFacebook>
