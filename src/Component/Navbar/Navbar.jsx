@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <nav>
             {/* Navbar first part */}
-            <div className='flex bg-[#111] text-white items-center justify-evenly h-14'>
+            <div className='flex bg-[#111] text-white items-center justify-between px-[240px] h-14'>
                 {/* Info part */}
                 <div className='flex items-center justify-center gap-6'>
                     <p className='flex items-center gap-2 text-lg'>
@@ -38,7 +38,7 @@ const Navbar = () => {
                 </div>
             </div>
             {/* Navbar second part */}
-            <div className='flex items-center justify-around'>
+            <div className='flex items-center justify-between mx-[240px]'>
                 <div className='flex items-center justify-center'>
                     <img src={logo} className='h-32 w-32' />
                     <h2 className='text-2xl text-[#111] font-semibold -ml-4'>Asetta Auto&apos;s</h2>
