@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { FaCarSide } from 'react-icons/fa';
+import NewArrivalsCar from './NewArrivalsCar';
 
 const NewArrivals = () => {
+    const [cars, setCars] = useState([]);
+    useEffect(() => {
+        fetch('new_arrivals.json')
+        .then(res => res.json())
+        .then(data => setCars(data))
+    }, [])
     return (
         <div className='mx-[240px] my-24'>
-            <h2>new arrivals section</h2>
+            <div className='flex items-center justify-center flex-col'>
+                <h4 className='flex items-center justify-center gap-2 text-xl font-medium uppercase text-[#ef1721] mb-2'> <span > < FaCarSide /> </span> <span>New Arrivals</span></h4>
+                <h1 className='text-5xl font-semibold '>Let's Check Latest Cars</h1>
+            </div>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12'>
+                {
+                    cars.map(car => <NewArrivalsCar
+                        key={car.id}
+                        car={car}
+                    />)
+                }
+            </div>
         </div>
     );
 };
