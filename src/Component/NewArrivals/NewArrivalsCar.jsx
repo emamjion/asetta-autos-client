@@ -8,7 +8,7 @@ const NewArrivalsCar = ({car}) => {
     
     return (
         <div className="card card-compact w-full bg-base-100 shadow-xl">
-            <figure><img src={image} /></figure>
+            <figure><img src={image} className='hover:scale-110 duration-500' /></figure>
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>
                 <div className='flex items-center justify-start'>
