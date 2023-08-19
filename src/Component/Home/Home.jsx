@@ -2,6 +2,8 @@ import React from "react";
 import NewArrivals from "../NewArrivals/NewArrivals";
 import Banner from "../Banner/Banner";
 import AboutUs from "../AboutUs/AboutUs";
+import Tittle from "../Shared/Tittle/Tittle";
+import LatestNews from "../LatestNews/LatestNews";
 
 const Home = () => {
 	return (
@@ -16,6 +18,7 @@ const Home = () => {
 
 			{/* New Arrivals section */}
 			<NewArrivals />
+			<LatestNews></LatestNews>
 		</div>
 	);
 };
