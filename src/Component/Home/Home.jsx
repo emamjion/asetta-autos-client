@@ -7,6 +7,7 @@ import Tittle from "../Shared/Tittle/Tittle";
 import LatestNews from "../LatestNews/LatestNews";
 import PopularBrand from "../PopularBrand/PopularBrand";
 import MobileApp from "../MobileApp/MobileApp";
+import ChooseUs from "../ChooseUs/ChooseUs";
 
 const Home = () => {
 	return (
@@ -29,7 +30,7 @@ const Home = () => {
 
 
 			{/* Why choose us section - Emam */}
-
+			<ChooseUs/>
 
 			{/* Popular Brand section - Emam */}
 			<PopularBrand/>
