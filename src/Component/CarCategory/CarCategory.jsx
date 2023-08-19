@@ -12,14 +12,16 @@ import type9 from '../../assets/images/car_category/type-9.png'
 import type10 from '../../assets/images/car_category/type-10.png'
 import type11 from '../../assets/images/car_category/type-11.png'
 import type12 from '../../assets/images/car_category/type-12.png'
+import Tittle from '../Shared/Tittle/Tittle';
 
 const CarCategory = () => {
     return (
         <div className='mx-[240px] my-24'>
-            <div className='flex items-center justify-center flex-col'>
-                <div className='flex items-center justify-center gap-2 text-xl font-medium uppercase text-[#ef1721] mb-2'><span > < FaCarSide /> </span> <span>Car Category</span></div>
-                <h1 className='text-5xl font-semibold '>Car By Body Types</h1>
-            </div>
+            <Tittle
+                topTitle={"Car Category"} 
+                boldblackTitle={"Car By Body"} 
+                boldredTitle={"Types"}
+            />
             <div className='grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-12'>
                 <div className='shadow-2xl flex items-center justify-center flex-col rounded-2xl p-4  hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer'>
                     <img src={type1}  className='w-[120px] h-[120px]'/>
