@@ -1,9 +1,6 @@
 import React from 'react';
 import Tittle from '../Shared/Tittle/Tittle';
-import popular1 from '../../assets/images/popular_brands/popular-1.png'
-import popular2 from '../../assets/images/popular_brands/popular-2.png'
 import popular3 from '../../assets/images/popular_brands/popular-3.png'
-import popular4 from '../../assets/images/popular_brands/popular-4.png'
 import popular5 from '../../assets/images/popular_brands/popular-5.png'
 import popular6 from '../../assets/images/popular_brands/popular-6.png'
 import popular7 from '../../assets/images/popular_brands/popular-7.png'
@@ -20,20 +17,8 @@ const PopularBrand = () => {
             />
             <div className='grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-12'>
                 <div className='shadow-2xl flex items-center justify-center flex-col rounded-2xl p-4 hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer'>
-                    <img src={popular1} className='w-[120px] h-[120px] rounded-xl' />
-                    <h4 className='text-lg font-medium mt-2'>Mitsubishi</h4>
-                </div>
-                <div className='shadow-2xl flex items-center justify-center flex-col rounded-2xl p-4 hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer'>
-                    <img src={popular2} className='w-[120px] h-[120px] rounded-xl' />
-                    <h4 className='text-lg font-medium mt-2'>Hyundai</h4>
-                </div>
-                <div className='shadow-2xl flex items-center justify-center flex-col rounded-2xl p-4 hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer'>
                     <img src={popular3} className='w-[120px] h-[120px] rounded-xl' />
                     <h4 className='text-lg font-medium mt-2'>Honda</h4>
-                </div>
-                <div className='shadow-2xl flex items-center justify-center flex-col rounded-2xl p-4 hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer'>
-                    <img src={popular4} className='w-[120px] h-[120px] rounded-xl' />
-                    <h4 className='text-lg font-medium mt-2'>Jaguar</h4>
                 </div>
                 <div className='shadow-2xl flex items-center justify-center flex-col rounded-2xl p-4 hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer'>
                     <img src={popular5} className='w-[120px] h-[120px] rounded-xl' />
