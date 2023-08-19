@@ -3,8 +3,8 @@ import './Footer.css'
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaPhone, FaRegAddressCard, FaMailBulk } from "react-icons/fa";
 import { BiSolidRightArrow } from "react-icons/bi";
 import { BsFillSendFill } from "react-icons/bs";
-import logo from "../../../public/Asseta.png"
-import logo2 from '../../../src/assets/images/logo/logo.png'
+import logo from "/Asseta.png"
+// import logo2 from '../../../src/assets/images/logo/logo.png'
 import moment from 'moment/moment';
 
 
