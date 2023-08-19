@@ -11,8 +11,8 @@ const LatestNews = () => {
     return (
         <>
           <Tittle topTitle={"Our Blog"} boldblackTitle={"Latest News &"} boldredTitle={"Blog"}></Tittle>
-            <div className='grid md:grid-cols-3 gap-8 mx-[70px] my-20'>
-                <div className="card card-compact text-black w-full font-bold bg-white shadow-xl">
+            <div className='grid md:grid-cols-3 gap-8 mx-[240px] my-20'>
+                <div className="hover:transition-transform transform origin-center hover:scale-105 duration-500 card card-compact text-black w-full font-bold bg-white shadow-xl">
                     <figure className="px-4 pt-5">
                         <img src={img4} alt="Shoes" className="rounded-xl hover:transition-transform transform origin-center hover:scale-150 duration-500" />
                     </figure>

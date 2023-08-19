@@ -5,6 +5,7 @@ import AboutUs from "../AboutUs/AboutUs";
 import CarCategory from "../CarCategory/CarCategory";
 import Tittle from "../Shared/Tittle/Tittle";
 import LatestNews from "../LatestNews/LatestNews";
+import MobileApp from "../MobileApp/MobileApp";
 
 const Home = () => {
 	return (
@@ -24,6 +25,7 @@ const Home = () => {
 			<CarCategory/>
 
 			<LatestNews></LatestNews>
+			<MobileApp></MobileApp>
 		</div>
 	);
 };
