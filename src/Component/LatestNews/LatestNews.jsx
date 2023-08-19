@@ -9,7 +9,7 @@ import Tittle from '../Shared/Tittle/Tittle';
 const LatestNews = () => {
     return (
         <>
-          <Tittle topTitle={"Our Blog"} boldblackTitle={"Latest News &"} boldredTitle={"Blog"}></Tittle>
+            <Tittle topTitle={"Our Blog"} boldblackTitle={"Latest News &"} boldredTitle={"Blog"}></Tittle>
             <div className='grid md:grid-cols-3 gap-8 mx-[70px] my-20'>
                 <div className="card card-compact text-black w-full font-bold bg-white shadow-xl">
                     <figure className="px-4 pt-5">
