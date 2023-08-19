@@ -5,6 +5,8 @@ import AboutUs from "../AboutUs/AboutUs";
 import CarCategory from "../CarCategory/CarCategory";
 import Tittle from "../Shared/Tittle/Tittle";
 import LatestNews from "../LatestNews/LatestNews";
+import PopularBrand from "../PopularBrand/PopularBrand";
+import MobileApp from "../MobileApp/MobileApp";
 
 const Home = () => {
 	return (
@@ -34,6 +36,8 @@ const Home = () => {
 
 			{/* Latest News section - Arafat */}
 			<LatestNews></LatestNews>
+
+			{/* Mobile App section - Arafat */}
 			<MobileApp></MobileApp>
 		</div>
 	);
