@@ -5,6 +5,7 @@ import AboutUs from "../AboutUs/AboutUs";
 import CarCategory from "../CarCategory/CarCategory";
 import Tittle from "../Shared/Tittle/Tittle";
 import LatestNews from "../LatestNews/LatestNews";
+import PopularBrand from "../PopularBrand/PopularBrand";
 
 const Home = () => {
 	return (
@@ -23,6 +24,16 @@ const Home = () => {
 			{/* Car Body Types - Emam */}
 			<CarCategory/>
 
+			{/* Best Dealer in your city section - Tarikul Sk */}
+
+
+			{/* Why choose us section - Emam */}
+
+
+			{/* Popular Brand section - Emam */}
+			<PopularBrand/>
+
+			{/* Latest News section - Arafat */}
 			<LatestNews></LatestNews>
 		</div>
 	);
