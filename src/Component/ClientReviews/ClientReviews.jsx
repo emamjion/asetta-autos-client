@@ -27,7 +27,7 @@ const ClientReviews = () => {
                         clickable: true,
                     }}
                     modules={[Pagination]}
-                    className="mySwiper"
+                    className="mySwiper py-10"
                 >
                     <SwiperSlide>
                         <SwiperCard image={ima1} name={"Herlui Nez"} reviews={"There are many variations of passages are available but the majority have suffered to the alternation to some injection"} rating={'4.5'}></SwiperCard>
