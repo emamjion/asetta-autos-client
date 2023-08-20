@@ -3,8 +3,10 @@ import NewArrivals from "../NewArrivals/NewArrivals";
 import Banner from "../Banner/Banner";
 import AboutUs from "../AboutUs/AboutUs";
 import CarCategory from "../CarCategory/CarCategory";
-import Tittle from "../Shared/Tittle/Tittle";
 import LatestNews from "../LatestNews/LatestNews";
+import PopularBrand from "../PopularBrand/PopularBrand";
+import MobileApp from "../MobileApp/MobileApp";
+import ClientReviews from "../ClientReviews/ClientReviews";
 
 const Home = () => {
 	return (
@@ -33,6 +35,7 @@ const Home = () => {
 			<PopularBrand/>
 
 			{/* Latest News section - Arafat */}
+			<ClientReviews></ClientReviews>
 			<LatestNews></LatestNews>
 			<MobileApp></MobileApp>
 		</div>
