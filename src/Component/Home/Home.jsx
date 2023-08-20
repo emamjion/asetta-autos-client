@@ -4,6 +4,10 @@ import Banner from "../Banner/Banner";
 import AboutUs from "../AboutUs/AboutUs";
 import CarCategory from "../CarCategory/CarCategory";
 import LatestNews from "../LatestNews/LatestNews";
+import ChooseUs from "../ChooseUs/ChooseUs";
+import PopularBrand from "../PopularBrand/PopularBrand";
+import ClientReviews from "../ClientReviews/ClientReviews";
+import MobileApp from "../MobileApp/MobileApp";
 
 const Home = () => {
 	return (
