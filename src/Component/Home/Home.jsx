@@ -4,9 +4,6 @@ import Banner from "../Banner/Banner";
 import AboutUs from "../AboutUs/AboutUs";
 import CarCategory from "../CarCategory/CarCategory";
 import LatestNews from "../LatestNews/LatestNews";
-import PopularBrand from "../PopularBrand/PopularBrand";
-import MobileApp from "../MobileApp/MobileApp";
-import ClientReviews from "../ClientReviews/ClientReviews";
 
 const Home = () => {
 	return (
@@ -29,7 +26,7 @@ const Home = () => {
 
 
 			{/* Why choose us section - Emam */}
-
+			<ChooseUs/>
 
 			{/* Popular Brand section - Emam */}
 			<PopularBrand/>
@@ -37,6 +34,8 @@ const Home = () => {
 			{/* Latest News section - Arafat */}
 			<ClientReviews></ClientReviews>
 			<LatestNews></LatestNews>
+
+			{/* Mobile App section - Arafat */}
 			<MobileApp></MobileApp>
 		</div>
 	);

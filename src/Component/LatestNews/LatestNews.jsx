@@ -10,11 +10,11 @@ import Tittle from '../Shared/Tittle/Tittle';
 const LatestNews = () => {
     return (
         <>
-          <Tittle topTitle={"Our Blog"} boldblackTitle={"Latest News &"} boldredTitle={"Blog"}></Tittle>
-            <div className='grid md:grid-cols-3 gap-8 mx-[240px] my-20'>
+            <Tittle topTitle={"Our Blog"} boldblackTitle={"Latest News &"} boldredTitle={"Blog"}></Tittle>
+            <div className='grid md:grid-cols-3 gap-8 mx-[240px] my-12'>
                 <div className="hover:transition-transform transform origin-center hover:scale-105 duration-500 card card-compact text-black w-full font-bold bg-white shadow-xl">
                     <figure className="px-4 pt-5">
-                        <img src={img4} alt="Shoes" className="rounded-xl hover:transition-transform transform origin-center hover:scale-150 duration-500" />
+                        <img src={img4} alt="Shoes" className="rounded-xl hover:transition-transform transform origin-center hover:scale-105 duration-500" />
                     </figure>
                     <div className="card-body">
                         <div className='flex mt-2 text-[16px] justify-around'>
@@ -31,7 +31,7 @@ const LatestNews = () => {
                 </div>
                 <div className="hover:transition-transform transform origin-center hover:scale-105 duration-500 card card-compact text-black w-full font-bold bg-white shadow-xl">
                     <figure className="px-4 pt-5">
-                        <img src={img3} alt="Shoes" className="rounded-xl hover:transition-transform transform origin-center hover:scale-150 duration-500" />
+                        <img src={img3} alt="Shoes" className="rounded-xl hover:transition-transform transform origin-center hover:scale-105 duration-500" />
                     </figure>
                     <div className="card-body">
                         <div className='flex mt-2 text-[16px] justify-around'>
@@ -48,7 +48,7 @@ const LatestNews = () => {
                 </div>
                 <div className="hover:transition-transform transform origin-center hover:scale-105 duration-500 card card-compact text-black w-full font-bold bg-white shadow-xl">
                     <figure className="px-4 pt-5">
-                        <img src={img2} alt="Shoes" className="rounded-xl hover:transition-transform transform origin-center hover:scale-150 duration-500" />
+                        <img src={img2} alt="Shoes" className="rounded-xl hover:transition-transform transform origin-center hover:scale-105 duration-500" />
                     </figure>
                     <div className="card-body">
                         <div className='flex mt-2 text-[16px] justify-around'>
