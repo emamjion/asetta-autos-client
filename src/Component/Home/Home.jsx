@@ -8,6 +8,7 @@ import ChooseUs from "../ChooseUs/ChooseUs";
 import PopularBrand from "../PopularBrand/PopularBrand";
 import ClientReviews from "../ClientReviews/ClientReviews";
 import MobileApp from "../MobileApp/MobileApp";
+import BestDealer from "../BestDealer/BestDealer";
 
 const Home = () => {
 	return (
@@ -28,6 +29,7 @@ const Home = () => {
 
 			{/* Best Dealer in your city section - Tarikul Sk */}
 
+			<BestDealer></BestDealer>
 
 			{/* Why choose us section - Emam */}
 			<ChooseUs/>
