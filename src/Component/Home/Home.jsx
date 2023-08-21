@@ -27,7 +27,7 @@ const Home = () => {
 			{/* Car Body Types - Emam */}
 			<CarCategory/>
 
-			{/* Best Dealer in your city section - Tarikul Sk */}
+			{/* Best Dealer in your city section - Arafat */}
 
 			<BestDealer></BestDealer>
 
