@@ -8,6 +8,7 @@ import LatestNews from "../LatestNews/LatestNews";
 import PopularBrand from "../PopularBrand/PopularBrand";
 import MobileApp from "../MobileApp/MobileApp";
 import ChooseUs from "../ChooseUs/ChooseUs";
+import Testimonials from "../Testimonials/Testimonials";
 
 const Home = () => {
 	return (
@@ -34,6 +35,9 @@ const Home = () => {
 
 			{/* Popular Brand section - Emam */}
 			<PopularBrand/>
+
+			{/* Testimonials section  */}
+			<Testimonials/>
 
 			{/* Latest News section - Arafat */}
 			<LatestNews></LatestNews>
