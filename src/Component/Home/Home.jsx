@@ -3,12 +3,13 @@ import NewArrivals from "../NewArrivals/NewArrivals";
 import Banner from "../Banner/Banner";
 import AboutUs from "../AboutUs/AboutUs";
 import CarCategory from "../CarCategory/CarCategory";
-import Tittle from "../Shared/Tittle/Tittle";
 import LatestNews from "../LatestNews/LatestNews";
-import PopularBrand from "../PopularBrand/PopularBrand";
-import MobileApp from "../MobileApp/MobileApp";
 import ChooseUs from "../ChooseUs/ChooseUs";
 import Testimonials from "../Testimonials/Testimonials";
+import PopularBrand from "../PopularBrand/PopularBrand";
+import ClientReviews from "../ClientReviews/ClientReviews";
+import MobileApp from "../MobileApp/MobileApp";
+import BestDealer from "../BestDealer/BestDealer";
 
 const Home = () => {
 	return (
@@ -27,8 +28,9 @@ const Home = () => {
 			{/* Car Body Types - Emam */}
 			<CarCategory/>
 
-			{/* Best Dealer in your city section - Tarikul Sk */}
+			{/* Best Dealer in your city section - Arafat */}
 
+			<BestDealer></BestDealer>
 
 			{/* Why choose us section - Emam */}
 			<ChooseUs/>
@@ -40,6 +42,7 @@ const Home = () => {
 			<Testimonials/>
 
 			{/* Latest News section - Arafat */}
+			<ClientReviews></ClientReviews>
 			<LatestNews></LatestNews>
 
 			{/* Mobile App section - Arafat */}

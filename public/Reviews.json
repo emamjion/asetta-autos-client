@@ -1,0 +1,73 @@
+[
+    {
+      "_id": "1",
+      "image": "car1.jpg",
+      "name": "Toyota Camry",
+      "reviews": ["Smooth ride and great fuel efficiency.", "Spacious interior.", "Reliable and low maintenance."],
+      "rating": 4.5
+    },
+    {
+      "_id": "2",
+      "image": "car2.jpg",
+      "name": "Honda Civic",
+      "reviews": ["Sporty and fun to drive.", "Good value for the price.", "Decent fuel economy."],
+      "rating": 4.2
+    },
+    {
+      "_id": "3",
+      "image": "car3.jpg",
+      "name": "Ford Mustang",
+      "reviews": ["Powerful performance and iconic design.", "Not very fuel efficient.", "Great for enthusiasts."],
+      "rating": 4.7
+    },
+    {
+      "_id": "4",
+      "image": "car4.jpg",
+      "name": "Chevrolet Corvette",
+      "reviews": ["Incredible speed and handling.", "Luxurious interior.", "High maintenance costs."],
+      "rating": 4.8
+    },
+    {
+      "_id": "5",
+      "image": "car5.jpg",
+      "name": "Tesla Model S",
+      "reviews": ["Electric powerhouse with instant acceleration.", "Cutting-edge technology.", "Limited charging infrastructure."],
+      "rating": 4.6
+    },
+    {
+      "_id": "6",
+      "image": "car6.jpg",
+      "name": "BMW 3 Series",
+      "reviews": ["Balanced performance and upscale interior.", "Slightly higher maintenance costs.", "Comfortable for daily driving."],
+      "rating": 4.4
+    },
+    {
+      "_id": "7",
+      "image": "car7.jpg",
+      "name": "Mercedes-Benz C-Class",
+      "reviews": ["Elegant design and premium features.", "Smooth and refined ride.", "Expensive repairs."],
+      "rating": 4.3
+    },
+    {
+      "_id": "8",
+      "image": "car8.jpg",
+      "name": "Audi A4",
+      "reviews": ["High-quality interior and advanced technology.", "Responsive handling.", "Reliability concerns."],
+      "rating": 4.1
+    },
+    {
+      "_id": "9",
+      "image": "car9.jpg",
+      "name": "Nissan Altima",
+      "reviews": ["Affordable and practical.", "Decent fuel economy.", "Basic features."],
+      "rating": 4.0
+    },
+    {
+      "_id": "10",
+      "image": "car10.jpg",
+      "name": "Subaru Outback",
+      "reviews": ["Versatile and spacious.", "All-wheel drive for various terrains.", "Somewhat underpowered."],
+      "rating": 4.2
+    }
+  ]
+  

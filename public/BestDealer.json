@@ -1,0 +1,66 @@
+[
+    {
+        "_id": "01",
+        "img": "../src/assets/images/Banner/001.png",
+        "name": "Oceanfront Paradise Villa",
+        "location": "123 Beach Avenue, Seaside Town",
+        "phone": "555-123-4567",
+        "listing": "50"
+    },
+    {
+        "_id": "02",
+        "img": "../src/assets/images/Banner/02.png",
+        "name": "Mountain View Cabin",
+        "location": "456 Pine Ridge Road, Mountain Retreat",
+        "phone": "555-987-6543",
+        "listing": "75"
+    },
+    {
+        "_id": "03",
+        "img": "../src/assets/images/Banner/03.png",
+        "name": "Urban Loft Oasis",
+        "location": "789 Loft Street, Downtown Metropolis",
+        "phone": "555-555-1234",
+        "listing": "49"
+    },
+    {
+        "_id": "04",
+        "img": "../src/assets/images/Banner/04.png",
+        "name": "Rural Farmhouse Getaway",
+        "location": "321 Country Lane, Countryside",
+        "phone": "555-789-0123",
+        "listing": "25"
+    },
+    {
+        "_id": "05",
+        "img": "../src/assets/images/Banner/05.png",
+        "name": "Lakeview Retreat House",
+        "location": "567 Lakeside Drive, Tranquil Waters",
+        "phone": "555-234-5678",
+        "listing": "55"
+    },
+    {
+        "_id": "06",
+        "img": "../src/assets/images/Banner/06.png",
+        "name": "City Center Apartment",
+        "location": "890 Main Street, Urban Hub",
+        "phone": "555-678-9012",
+        "listing": "65"
+    },
+    {
+        "_id": "07",
+        "img": "../src/assets/images/Banner/07.png",
+        "name": "Historic District Cottage",
+        "location": "123 Heritage Lane, Old Town",
+        "phone": "555-345-6789",
+        "listing": "55"
+    },
+    {
+        "_id": "08",
+        "img": "../src/assets/images/Banner/08.png",
+        "name": "Sunny Beach Bungalow",
+        "location": "456 Sunshine Street, Coastal Retreat",
+        "phone": "555-789-0123",
+        "listing": "59"
+    }
+]
