@@ -5,6 +5,7 @@ import AboutUs from "../AboutUs/AboutUs";
 import CarCategory from "../CarCategory/CarCategory";
 import LatestNews from "../LatestNews/LatestNews";
 import ChooseUs from "../ChooseUs/ChooseUs";
+import Testimonials from "../Testimonials/Testimonials";
 import PopularBrand from "../PopularBrand/PopularBrand";
 import ClientReviews from "../ClientReviews/ClientReviews";
 import MobileApp from "../MobileApp/MobileApp";
@@ -36,6 +37,9 @@ const Home = () => {
 
 			{/* Popular Brand section - Emam */}
 			<PopularBrand/>
+
+			{/* Testimonials section  */}
+			<Testimonials/>
 
 			{/* Latest News section - Arafat */}
 			<ClientReviews></ClientReviews>

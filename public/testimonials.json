@@ -1,0 +1,58 @@
+[
+    {
+        "id" : "1",
+        "image" : "https://i.ibb.co/TRQYwqg/user-1.jpg",
+        "name" : "Alina Khan",
+        "type" : "Customer",
+        "speach" : "I recently used this car selling website to find my dream car, and I couldn't be happier with the experience. The user-friendly interface made it easy to browse through a wide selection of vehicles.",
+        "rating" : "5"
+    },
+    {
+        "id" : "2",
+        "image" : "https://i.ibb.co/6mSjhBd/user-2.jpg",
+        "name" : "Rabeya Enan",
+        "type" : "Customer",
+        "speach" : "As a car enthusiast, I'm always on the lookout for unique and hard-to-find vehicles. This website delivered on that front! I was able to discover some rare gems that I wouldn't have found elsewhere.",
+        "rating" : "5"
+    },
+    {
+        "id" : "3",
+        "image" : "https://i.ibb.co/wzW718r/user-3.jpg",
+        "name" : "Jaberi Islam",
+        "type" : "Customer",
+        "speach" : "We needed a larger family car, and this website made our search a breeze. The family-friendly filter helped us find cars with the right features, and we found a fantastic SUV at a reasonable price.",
+        "rating" : "5"
+    },
+    {
+        "id" : "4",
+        "image" : "https://i.ibb.co/Q6sG5f9/user-4.jpg",
+        "name" : "Ekramul Alam",
+        "type" : "Customer",
+        "speach" : "I was a bit nervous about buying my first car online, but this website made it surprisingly easy. The step-by-step buying guide and the option to get a vehicle inspection gave me the confidence I needed. ",
+        "rating" : "5"
+    },
+    {
+        "id" : "5",
+        "image" : "https://i.ibb.co/GPSGfK1/user-5.png",
+        "name" : "Khan Raqib",
+        "type" : "Customer",
+        "speach" : "I've been selling cars on this website for a while, and it's been a fantastic experience. The listing process is straightforward, and the platform attracts serious buyers.",
+        "rating" : "5"
+    },
+    {
+        "id" : "6",
+        "image" : "https://i.ibb.co/44ryjmd/user-6.png",
+        "name" : "Anan Chowdhury",
+        "type" : "Customer",
+        "speach" : "Selling my car on this website was a breeze. The step-by-step listing process was straightforward, and I appreciated the tips on pricing and creating a compelling listing. ",
+        "rating" : "5"
+    },
+    {
+        "id" : "7",
+        "image" : "https://i.ibb.co/qDpdNnz/user-7.png",
+        "name" : "Ramin Islam",
+        "type" : "Customer",
+        "speach" : "I was looking for a rugged SUV to fuel my adventure cravings, and this website had plenty of options. The filter for off-road capabilities was a game-changer. I found a perfect match for my adventures, and the seller even shared some great travel stories. ",
+        "rating" : "5"
+    }
+]
