@@ -7,32 +7,32 @@ import {
 } from "react-icons/Ai";
 const AboutUs = () => {
 	return (
-		// todo - mohosin
-		<div className="w-9/12 m-auto hidden">
-			<div className=" bg-base-100 grid gap-10 border p-20 border-red-100 md:grid-cols-2">
+		// responsive - mohosin
+		<div className="md:w-9/12 px-4 m-auto">
+			<div className=" bg-base-100 grid gap-10 border p-5 md:p-20 border-red-100 md:grid-cols-2">
 				<div>
-					<div className="w-64 auto p-5 flex bg-black text-white rounded-xl absolute left-40 ">
+					<div className="md:w-64 auto p-5 flex bg-black text-white rounded-xl absolute left-40 ">
 						{" "}
-						<span className="text-red-600 text-3xl me-5">
+						<span className="text-red-600 md:text-3xl me-5">
 							<AiFillSetting /> <AiFillCar />
 						</span>{" "}
-						<h6 className="text-xl w-9/12"> 30 Years Of Quality Service</h6>{" "}
+						<h6 className="text-xs md:text-xl w-9/12"> 30 Years Of Quality Service</h6>{" "}
 					</div>
 					<img src="https://i.ibb.co/bgXGT5N/cars.png" alt="" />
 				</div>
 				<div>
-					<h4 className="text-red-600 text-2xl font-bold flex">
+					<h4 className="text-red-600 text-lg md:text-2xl font-bold flex">
 						{" "}
 						<span className="mt-1 me-3">
 							<AiOutlineCar />
 						</span>{" "}
 						About Us
 					</h4>
-					<h1 className="text-5xl font-bold mb-4 mt-2">
+					<h1 className="text-2xl md:text-5xl font-bold mb-4 mt-2">
 						World Largest <span className="text-red-600">Car Dealer</span>{" "}
 						Marketplace.
 					</h1>
-					<h6>
+					<h6 className="text-sm">
 						There are many variations of passages of Lorem Ipsum available, but
 						the majority have suffered alteration in some form, by injected
 						humour.
@@ -60,7 +60,7 @@ const AboutUs = () => {
 							Sed ut perspiciatis unde omnis iste natus sit.
 						</h6>
 					</div>
-					<button className="btn bg-red-600 p-4 flex justify-center items-center  text-white mt-3 hover:bg-black">
+					<button className="btn btn-sm md:btn-md mt-5 bg-red-600  flex justify-center items-center  text-white  hover:bg-black">
 						Discover More <AiOutlineArrowRight />{" "}
 					</button>
 				</div>
