@@ -19,7 +19,7 @@ const ClientReviews = () => {
         <>
             <Tittle topTitle={"Testimonials"} boldblackTitle={"What Our Client"} boldredTitle={"Say's"}></Tittle>
             {/* responsive - mohosin */}
-            <div className='px-4 xl:px-[140px] 2xl:px-[240px] py-20'>
+            <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
                 <Swiper
                     slidesPerView={2}
                     spaceBetween={1}

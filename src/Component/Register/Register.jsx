@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-// import { AuthContex } from '../Providers/Authprovider';
+import { AuthContex } from '../Providers/Authprovider';
 
 const Register = () => {
 

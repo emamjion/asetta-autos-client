@@ -17,7 +17,7 @@ import Tittle from '../Shared/Tittle/Tittle';
 const CarCategory = () => {
     return (
         // responsive - mohosin
-        <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-24'>
+        <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
             <Tittle
                 topTitle={"Car Category"} 
                 boldblackTitle={"Car By Body"} 

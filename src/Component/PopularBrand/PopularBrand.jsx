@@ -10,7 +10,7 @@ import popular9 from '../../assets/images/popular_brands/popular-9.png'
 const PopularBrand = () => {
     return (
         // responsive - mohosin
-        <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-24'>
+        <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
             <Tittle
                 topTitle={"Popular Brands"} 
                 boldblackTitle={"Our Top quality"} 

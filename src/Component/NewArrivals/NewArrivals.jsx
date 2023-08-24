@@ -12,7 +12,7 @@ const NewArrivals = () => {
     }, [])
     return (
         // responsive - mohosin
-        <div className=' px-4 xl:px-[140px] 2xl:px-[240px] my-24'>
+        <div className=' px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
             <Tittle
                 topTitle={"New Arrivals"} 
                 boldblackTitle={"Let's Check Latest"} 

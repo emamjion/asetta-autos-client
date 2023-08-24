@@ -6,7 +6,7 @@ import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, val
 import Swal from 'sweetalert2';
 
 const Login = () => {
-    const {signin} = useContext(AuthContex)
+    // const {signin} = useContext(AuthContex)
     let navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";

@@ -19,7 +19,7 @@ const Testimonials = () => {
     }, [])
     return (
         // responsive - mohosin
-        <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-24'>
+        <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
             <Tittle
                 topTitle={"Testimonials"} 
                 boldblackTitle={"What our client"} 

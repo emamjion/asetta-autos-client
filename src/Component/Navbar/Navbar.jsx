@@ -2,12 +2,11 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { FaEnvelope, FaPhoneAlt, FaClock, FaArrowRight, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaSearch, FaCartPlus } from "react-icons/fa";
 import logo from '../../assets/images/logo/logo.png';
-// import { AuthContex } from '../Providers/Authprovider';
+import { AuthContex } from '../Providers/Authprovider';
 
 const Navbar = () => {
 
-    // const { user, logOut } = useContext(AuthContex)
-    const  {user} = 'Md Mohosin'
+    const { user, logOut } = useContext(AuthContex)
 
     const handleLogOut = () => {
         logOut()
