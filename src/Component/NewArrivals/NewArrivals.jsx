@@ -11,14 +11,14 @@ const NewArrivals = () => {
         .then(data => setCars(data))
     }, [])
     return (
-        // todo - mohosin
-        <div className='mx-[240px] my-24 hidden'>
+        // responsive - mohosin
+        <div className=' px-4 xl:px-[140px] 2xl:px-[240px] my-24'>
             <Tittle
                 topTitle={"New Arrivals"} 
                 boldblackTitle={"Let's Check Latest"} 
                 boldredTitle={"Cars"}
             />
-            <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-12'>
                 {
                     cars.map(car => <NewArrivalsCar
                         key={car.id}

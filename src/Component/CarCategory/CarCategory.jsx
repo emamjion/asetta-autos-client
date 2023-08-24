@@ -16,14 +16,14 @@ import Tittle from '../Shared/Tittle/Tittle';
 
 const CarCategory = () => {
     return (
-        // todo - mohosin
-        <div className='mx-[240px] my-24 hidden'>
+        // responsive - mohosin
+        <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-24'>
             <Tittle
                 topTitle={"Car Category"} 
                 boldblackTitle={"Car By Body"} 
                 boldredTitle={"Types"}
             />
-            <div className='grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-12'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mt-12'>
                 <div className='shadow-2xl flex items-center justify-center flex-col rounded-2xl p-4  hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer'>
                     <img src={type1}  className='w-[120px] h-[120px]'/>
                     <h4 className='text-lg font-medium mt-2'>Sedan</h4>

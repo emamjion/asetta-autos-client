@@ -29,11 +29,11 @@ const NewArrivalsCar = ({car}) => {
                 </div>
                 <div className='border my-3'></div>
                 <div className="card-actions justify-between items-center">
-                    <div className='text-[#ef1721] font-bold text-xl flex items-center justify-start'>
+                    <div className='text-[#ef1721] font-bold text-lg md:text-xl flex items-center justify-start'>
                         <span> < FaDollarSign /> </span>
                         {price}
                     </div>
-                    <button className="btn bg-[#ef1721] text-white font-medium hover:bg-[#111] duration-500">Details</button>
+                    <button className="btn btn-sm md:btn-md bg-[#ef1721] text-white font-medium hover:bg-[#111] duration-500">Details</button>
                 </div>
             </div>
         </div>
