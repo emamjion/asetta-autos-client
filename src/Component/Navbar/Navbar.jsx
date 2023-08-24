@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { FaEnvelope, FaPhoneAlt, FaClock, FaArrowRight, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaSearch, FaCartPlus } from "react-icons/fa";
 import logo from '../../assets/images/logo/logo.png';
+import { AuthContex } from '../Providers/Authprovider';
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContex)
+
+    const handleLogOut = () => {
+        logOut()
+            .then()
+    }
+
     return (
         <nav>
             {/* Navbar first part */}
@@ -26,7 +35,14 @@ const Navbar = () => {
                 {/* Login and social media part */}
                 <div className='flex items-center justify-center gap-6'>
                     {/* Login part */}
-                    <Link to='/login' className='flex items-center gap-2 text-lg hover:text-[#ef1721] duration-300'> <span> < FaArrowRight /> </span> Login</Link>
+                    {user ? <>
+                        <Link onClick={handleLogOut} className='flex items-center gap-2 text-lg hover:text-[#ef1721] duration-300'> <span> < FaArrowRight /> </span> Logout</Link>
+                    </> :
+                        <>
+                            <Link to='/login' className='flex items-center gap-2 text-lg hover:text-[#ef1721] duration-300'> <span> < FaArrowRight /> </span> Login</Link>
+                        </>
+
+                    }
                     {/* social icon part */}
                     <div className='flex items-center justify-center gap-4 ml-6'>
                         <p>Follow Us: </p>

@@ -1,14 +1,31 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import './Login.css'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
+import { AuthContex } from '../Providers/Authprovider';
+import Swal from 'sweetalert2';
 
 const Login = () => {
+    const {signin} = useContext(AuthContex)
+    let navigate = useNavigate();
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     const [disable, setDisable] = useState(true);
 
     const handlesubmit = (event) => {
-        event.preventDefault();
+        event.preventDefault()
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password)
+        signin(email, password)
+            .then(res => {
+                const user = res.user;
+                console.log(user)
+                Swal.fire('Your login is succesful')
+                navigate(from, { replace: true });
+            })
     }
 
     const RefCaptcha = useRef(null);

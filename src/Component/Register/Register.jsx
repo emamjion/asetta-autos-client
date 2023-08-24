@@ -1,37 +1,62 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { AuthContex } from '../Providers/Authprovider';
 
 const Register = () => {
+
+    const {createUser} = useContext(AuthContex)
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+      } = useForm()
+
+      const onSubmit = (data) => {
+        console.log(data)
+        createUser(data.email, data.password)
+        .then(result=>{
+            const loggeduser = result.user;
+            console.log(loggeduser)
+        })
+      }
+
     return (
         <div className="hero min-h-screen bg-base-200 background text-white font-bold text-xl">
             <div className="hero-content flex-col ">
                 <div className="card w-full flex-shrink-0 shadow-2xl bg-transparent card-background">
-                    <form className="card-body">
+                    <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <h1 className='text-2xl text-center font-bold text-[#ef1721]'>Register</h1>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" name='name' placeholder="email" className="input input-bordered bg-transparent" />
+                            <input type="text"  {...register("name" ,{ required: true })} name='name' placeholder="Name" className="input input-bordered bg-transparent" />
+                            {errors.name && <span className='text-red-600'>Name field is required</span>}
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="email" className="input input-bordered bg-transparent" />
+                            <input type="email"  {...register("email", { required: true })} name='email' placeholder="email" className="input input-bordered bg-transparent" />
+                            {errors.email && <span className='text-red-600'>email field is required</span>}
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" name='password' placeholder="password" className="input input-bordered bg-transparent" />
+                            <input type="password"  {...register("password", { required: true, minLength: 6,  maxLength: 20 })} name='password' placeholder=" password" className="input input-bordered bg-transparent" />
+                            {errors.password?.type === 'required' && <span className='text-red-600'>Password field is required</span>}
+                            {errors.password?.type === 'minLength' && <span className='text-red-600'>6 caracter is required</span>}
+                            {errors.password?.type === 'maxLength' && <span className='text-red-600'>less than 20 caracter is required</span>}
                         </div>
-                        <div className="form-control">
+                        {/* <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Confirm Password</span>
                             </label>
-                            <input type="password" placeholder="password" className="input input-bordered bg-transparent" />
-                        </div>
+                            <input type="password" placeholder="Cornfirm password" className="input input-bordered bg-transparent" />
+                        </div> */}
                         <div className="form-control mt-6">
                             <input className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]" type="submit" value="Register" />
                         </div>
