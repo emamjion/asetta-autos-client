@@ -9,13 +9,14 @@ import popular9 from '../../assets/images/popular_brands/popular-9.png'
 
 const PopularBrand = () => {
     return (
-        <div className='px-[240px] my-24'>
+        // responsive - mohosin
+        <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
             <Tittle
                 topTitle={"Popular Brands"} 
                 boldblackTitle={"Our Top quality"} 
                 boldredTitle={"Brands"}
             />
-            <div className='grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-12'>
+            <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-12'>
                 <div className='shadow-2xl flex items-center justify-center flex-col rounded-2xl p-4 hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer'>
                     <img src={popular3} className='w-[120px] h-[120px] rounded-xl' />
                     <h4 className='text-lg font-medium mt-4'>Honda</h4>

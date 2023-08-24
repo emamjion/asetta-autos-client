@@ -11,7 +11,8 @@ const LatestNews = () => {
     return (
         <>
             <Tittle topTitle={"Our Blog"} boldblackTitle={"Latest News &"} boldredTitle={"Blog"}></Tittle>
-            <div className='grid md:grid-cols-3 gap-8 mx-[240px] my-12'>
+            {/* responsive - mohosin */}
+            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8  px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
                 <div className="hover:transition-transform transform origin-center hover:scale-105 duration-500 card card-compact text-black w-full font-bold bg-white shadow-xl">
                     <figure className="px-4 pt-5">
                         <img src={img4} alt="Shoes" className="rounded-xl hover:transition-transform transform origin-center hover:scale-105 duration-500" />
@@ -22,7 +23,7 @@ const LatestNews = () => {
                             <p className='flex items-center gap-2 hover:text-[#ef1721] cursor-pointer'><BiSolidCalendar className='text-[#ef1721]'></BiSolidCalendar> January 29, 2023</p>
                         </div>
                         <hr className='my-2' />
-                        <h2 className="card-title text-3xl hover:text-[#ef1721] cursor-pointer">There are many variations of passage available.</h2>
+                        <h2 className="card-title text-xl md:text-3xl hover:text-[#ef1721] cursor-pointer">There are many variations of passage available.</h2>
 
                         <div className="card-actions justify-start">
                             <button className="btn my-2 text-white border-none  bg-[#ef1721] hover:bg-[#111]">Read More <BsArrowRight className='text-white text-xl font-bold'></BsArrowRight></button>
@@ -39,7 +40,7 @@ const LatestNews = () => {
                             <p className='flex items-center gap-2 hover:text-[#ef1721] cursor-pointer'><BiSolidCalendar className='text-[#ef1721]'></BiSolidCalendar> January 29, 2023</p>
                         </div>
                         <hr className='my-2' />
-                        <h2 className="card-title text-3xl hover:text-[#ef1721] cursor-pointer">There are many variations of passage available.</h2>
+                        <h2 className="card-title text-xl md:text-3xl hover:text-[#ef1721] cursor-pointer">There are many variations of passage available.</h2>
 
                         <div className="card-actions justify-start">
                             <button className="btn my-2 text-white border-none  bg-[#ef1721] hover:bg-[#111] ">Read More <BsArrowRight className='text-white text-xl font-bold'></BsArrowRight></button>
@@ -56,7 +57,7 @@ const LatestNews = () => {
                             <p className='flex items-center gap-2 hover:text-[#ef1721] cursor-pointer'><BiSolidCalendar className='text-[#ef1721]'></BiSolidCalendar> January 29, 2023</p>
                         </div>
                         <hr className='my-2' />
-                        <h2 className="card-title text-3xl hover:text-[#ef1721] cursor-pointer">There are many variations of passage available.</h2>
+                        <h2 className="card-title text-xl md:text-3xl hover:text-[#ef1721] cursor-pointer">There are many variations of passage available.</h2>
 
                         <div className="card-actions justify-start">
                             <button className="btn text-white border-none my-2  bg-[#ef1721] hover:bg-[#111]">Read More <BsArrowRight className='text-white text-xl font-bold'></BsArrowRight></button>

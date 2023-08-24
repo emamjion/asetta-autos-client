@@ -18,16 +18,17 @@ const ClientReviews = () => {
     return (
         <>
             <Tittle topTitle={"Testimonials"} boldblackTitle={"What Our Client"} boldredTitle={"Say's"}></Tittle>
-            <div className='mx-[240px] py-20'>
+            {/* responsive - mohosin */}
+            <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
                 <Swiper
-                    slidesPerView={5}
-                    spaceBetween={2}
+                    slidesPerView={2}
+                    spaceBetween={1}
                     centeredSlides={true}
                     pagination={{
                         clickable: true,
                     }}
                     modules={[Pagination]}
-                    className="mySwiper py-10 "
+                    className="mySwiper py-10"
                 >
                     <SwiperSlide>
                         <SwiperCard image={ima1} name={"Herlui Nez"} reviews={"There are many variations of passages are available but the majority have suffered to the alternation to some injection"} rating={'4.5'}></SwiperCard>
