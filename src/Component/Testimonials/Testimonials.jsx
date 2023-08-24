@@ -18,7 +18,7 @@ const Testimonials = () => {
         .then(data => setReviews(data))
     }, [])
     return (
-        // todo - mohosin
+        // responsive - mohosin
         <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-24'>
             <Tittle
                 topTitle={"Testimonials"} 
