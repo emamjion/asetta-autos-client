@@ -5,7 +5,8 @@ import { FaAppStore } from "react-icons/fa";
 
 const MobileApp = () => {
     return (
-        <div className='mx-[240px] bg-white my-24 rounded-2xl flex items-center justify-end px-10'>
+        // todo - mohosin
+        <div className='mx-[240px] hidden bg-white my-24 rounded-2xl flex items-center justify-end px-10'>
             <div className='space-y-4 '>
                 <p className='flex items-center font-bold text-2xl mt-8 text-[#ef1721]'><BsCarFront className='mr-2'></BsCarFront> Get Our App </p>
                 <h1 className='font-bold text-6xl text-[#111]'>Download <span className='text-[#ef1721]'>Our Asetta-auto's</span> <br /> App For Free</h1>

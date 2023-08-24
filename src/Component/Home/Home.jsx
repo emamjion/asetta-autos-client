@@ -17,7 +17,8 @@ const Home = () => {
 			{/* add your component here  */}
 			{/* Banner section */}
 			{/*Sagor Ahmed Make Banner Section */}
-			<Banner></Banner>
+			{/* todo - mohosin */}
+			{/* <Banner></Banner> */}
 
 			{/* About Section */}
 			<AboutUs></AboutUs>

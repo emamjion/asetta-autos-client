@@ -18,7 +18,8 @@ const ClientReviews = () => {
     return (
         <>
             <Tittle topTitle={"Testimonials"} boldblackTitle={"What Our Client"} boldredTitle={"Say's"}></Tittle>
-            <div className='mx-[240px] py-20'>
+            {/* todo - mohosin */}
+            <div className='mx-[240px] py-20 hidden'>
                 <Swiper
                     slidesPerView={5}
                     spaceBetween={2}

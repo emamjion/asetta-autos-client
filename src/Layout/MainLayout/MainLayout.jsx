@@ -9,7 +9,8 @@ const MainLayout = () => {
         <div>
             <Navbar/>
             <Outlet/>
-            <Footer/>
+            {/* todo - mohosin */}
+            {/* <Footer/> */}
         </div>
     );
 };

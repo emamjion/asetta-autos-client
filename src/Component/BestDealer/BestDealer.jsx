@@ -12,7 +12,8 @@ const BestDealer = () => {
     return (
         <>
             <Tittle topTitle={"Car Dealers"} boldblackTitle={"Best Dealers In"} boldredTitle={"Your City"}></Tittle>
-            <div className='mx-[240px] py-20'>
+            {/* todo - mohosin */}
+            <div className='mx-[240px] py-20 hidden'>
                 <div className=' grid md:grid-cols-4 lg:grid-cols-4 sm:grid-cols-1 gap-8 m-8'>
                     {
                         Dealers.map(Dealer => <BestDealerCard key={Dealer._id} Dealer={Dealer}></BestDealerCard>)

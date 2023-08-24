@@ -4,7 +4,8 @@ import chooseImg from '../../assets/images/choose_img/quality-1.png'
 
 const ChooseUs = () => {
     return (
-        <div className='px-[240px] my-24 bg-[#111111] p-16 flex items-center justify-center gap-12'>
+        // todo - mohosin
+        <div className='px-[240px] my-24 hidden bg-[#111111] p-16 flex items-center justify-center gap-12'>
             <div>
                 <div>
                     <div className='text-white flex items-center justify-start'>

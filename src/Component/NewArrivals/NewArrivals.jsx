@@ -11,7 +11,8 @@ const NewArrivals = () => {
         .then(data => setCars(data))
     }, [])
     return (
-        <div className='mx-[240px] my-24'>
+        // todo - mohosin
+        <div className='mx-[240px] my-24 hidden'>
             <Tittle
                 topTitle={"New Arrivals"} 
                 boldblackTitle={"Let's Check Latest"} 

@@ -7,7 +7,8 @@ import {
 } from "react-icons/Ai";
 const AboutUs = () => {
 	return (
-		<div className="w-9/12 m-auto">
+		// todo - mohosin
+		<div className="w-9/12 m-auto hidden">
 			<div className=" bg-base-100 grid gap-10 border p-20 border-red-100 md:grid-cols-2">
 				<div>
 					<div className="w-64 auto p-5 flex bg-black text-white rounded-xl absolute left-40 ">
