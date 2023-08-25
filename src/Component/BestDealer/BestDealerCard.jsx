@@ -10,12 +10,12 @@ const BestDealerCard = ({ Dealer }) => {
                 <img src={img} alt="Shoes" className=" rounded-xl w-full bg-red-50 mx-auto px-5" />
             </figure>
             <div>
-                <p className='bg-[#ef1721] w-2/6  -ml-4 mt-1 px-3 absolute top-0 left-0 text-white rounded-lg py-2 '>Listing {listing}</p>
+                <p className='bg-[#ef1721] -ml-4 mt-1 px-3 absolute top-0 left-0 text-white rounded-lg py-2 text-xs md:text-sm lg:text-lg'>Listing {listing}</p>
             </div>
             <div className="card-body px-auto">
                 <h2 className="card-title">{name}</h2>
-                <p className=' about-us-paragraph'><FaLocationArrow className='text-[#ef1721] w-6 h-6 '></FaLocationArrow>{location}</p>
-                <p className=' about-us-paragraph hover:text-[#ef1721]'><FaPhone className='text-[#ef1721] w-6 h-6 '></FaPhone>{phone}</p>
+                <p className=' about-us-paragraph'><FaLocationArrow className='text-[#ef1721] w-4 h-4  md:w-6  md:h-6 '></FaLocationArrow>{location}</p>
+                <p className=' about-us-paragraph hover:text-[#ef1721]'><FaPhone className='text-[#ef1721] w-4 h-4  md:w-6  md:h-6 '></FaPhone>{phone}</p>
             </div>
         </div>
     );

@@ -2,11 +2,11 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import './Login.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
-import { AuthContex } from '../Providers/Authprovider';
+// import { AuthContex } from '../Providers/Authprovider';
 import Swal from 'sweetalert2';
 
 const Login = () => {
-    const {signin} = useContext(AuthContex)
+    // const {signin} = useContext(AuthContex)
     let navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
