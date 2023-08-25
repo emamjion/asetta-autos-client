@@ -1,8 +1,9 @@
 import React from 'react';
 import { FaPhone, FaLocationArrow } from 'react-icons/fa';
+import img from "../../assets/images/Banner/06.png"
 
 const BestDealerCard = ({ Dealer }) => {
-    const { img, name, location, phone,listing } = Dealer;
+    const { name, location, phone,listing } = Dealer;
     return (
         <div className="card mx-auto font-bold w-full relative bg-white text-black shadow-xl px-1 py-3  hover: duration-500 hover:-translate-y-2 cursor-pointer">
             <figure>
