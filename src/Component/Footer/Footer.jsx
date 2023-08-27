@@ -60,10 +60,18 @@ const Footer = () => {
                         <p>© Copyright {currentyear}  <span className='text-[#111]'> ASETTA AUTO'S </span>  All Rights Reserved. </p>
                     </div>
                     <div className="sociallink">
-                        <FaFacebook className='icons'></FaFacebook>
-                        <FaTwitter className='icons'></FaTwitter>
-                        <FaInstagram className='icons'></FaInstagram>
-                        <FaYoutube className='icons'></FaYoutube>
+                        <a href="https://www.facebook.com">
+                            <FaFacebook className='icons'></FaFacebook>
+                        </a>
+                        <a href="https://www.twitter.com">
+                            <FaTwitter className='icons'></FaTwitter>
+                        </a>
+                        <a href="https://www.instagram.com">
+                            <FaInstagram className='icons'></FaInstagram>
+                        </a>
+                        <a href="https://www.youtube.com">
+                            <FaYoutube className='icons'></FaYoutube>
+                        </a>
                     </div>
                 </div>
             </div>
