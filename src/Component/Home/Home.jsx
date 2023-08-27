@@ -42,7 +42,7 @@ const Home = () => {
 			<Testimonials/>
 
 			{/* Latest News section - Arafat */}
-			{/* <ClientReviews></ClientReviews> */}
+			<ClientReviews></ClientReviews>
 			<LatestNews></LatestNews>
 
 			{/* Mobile App section - Arafat */}

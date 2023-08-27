@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Tittle from '../Shared/Tittle/Tittle';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -9,15 +9,16 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import SwiperCard from '../ReviewsCard/SwiperCard';
 
-import ima1 from "../../assets/images/Banner/02.jpg"
-import ima2 from "../../assets/images/Banner/03.jpg"
-import ima3 from "../../assets/images/Banner/04.jpg"
-import ima4 from "../../assets/images/Banner/05.jpg"
-
 const ClientReviews = () => {
+    const [releaseCar, setReleaseCar] = useState([]);
+    useEffect(() => {
+        fetch('/releaseCar.json')
+        .then(res => res.json())
+        .then(data => setReleaseCar(data))
+    }, [])
     return (
         <>
-            <Tittle topTitle={"Testimonials"} boldblackTitle={"What Our Client"} boldredTitle={"Say's"}></Tittle>
+            <Tittle topTitle={"Car Release"} boldblackTitle={"The latest new car"} boldredTitle={"releases"}></Tittle>
             {/* responsive - mohosin */}
             <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
                 <Swiper
@@ -30,36 +31,13 @@ const ClientReviews = () => {
                     modules={[Pagination]}
                     className="mySwiper py-10"
                 >
-                    <SwiperSlide>
-                        <SwiperCard image={ima1} name={"Herlui Nez"} reviews={"There are many variations of passages are available but the majority have suffered to the alternation to some injection"} rating={'4.5'}></SwiperCard>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <SwiperCard image={ima2} name={"Herlui Nez"} reviews={"There are many variations of passages are available but the majority have suffered to the alternation to some injection"} rating={'4.5'}></SwiperCard>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <SwiperCard image={ima3} name={"Herlui Nez"} reviews={"There are many variations of passages are available but the majority have suffered to the alternation to some injection"} rating={'4.5'}></SwiperCard>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <SwiperCard image={ima4} name={"Herlui Nez"} reviews={"There are many variations of passages are available but the majority have suffered to the alternation to some injection"} rating={'4.5'}></SwiperCard>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <SwiperCard image={ima1} name={"Herlui Nez"} reviews={"There are many variations of passages are available but the majority have suffered to the alternation to some injection"} rating={'4.5'}></SwiperCard>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <SwiperCard image={ima2} name={"Herlui Nez"} reviews={"There are many variations of passages are available but the majority have suffered to the alternation to some injection"} rating={'4.5'}></SwiperCard>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <SwiperCard image={ima3} name={"Herlui Nez"} reviews={"There are many variations of passages are available but the majority have suffered to the alternation to some injection"} rating={'4.5'}></SwiperCard>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <SwiperCard image={ima4} name={"Herlui Nez"} reviews={"There are many variations of passages are available but the majority have suffered to the alternation to some injection"} rating={'4.5'}></SwiperCard>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <SwiperCard image={ima1} name={"Herlui Nez"} reviews={"There are many variations of passages are available but the majority have suffered to the alternation to some injection"} rating={'4.5'}></SwiperCard>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <SwiperCard image={ima2} name={"Herlui Nez"} reviews={"There are many variations of passages are available but the majority have suffered to the alternation to some injection"} rating={'4.5'}></SwiperCard>
-                    </SwiperSlide>
+                    {
+                    releaseCar.map(car => <SwiperSlide
+                        key={car.id}
+                    >
+                        <SwiperCard car={car} ></SwiperCard>
+                    </SwiperSlide>)
+                    }
                     
                 </Swiper>
             </div>
