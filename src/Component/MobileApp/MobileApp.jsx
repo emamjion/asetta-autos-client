@@ -42,7 +42,7 @@ const MobileApp = () => {
             </div>
             <div className="card p-0">
 
-                <figure><img src={img} alt="" className='-mb-36' /></figure>
+                <figure><img src={img} alt="" className='w-full' /></figure>
             </div>
         </div>
     );
