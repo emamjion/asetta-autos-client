@@ -154,21 +154,29 @@ const handleDarkMode =(event)=>{
           {/* social icon part */}
           <div className="flex items-center justify-center gap-4 ml-6">
             <p className="text-sm lg:text-lg">Follow Us: </p>
-            <span className="text-sm lg:text-lg hover:text-[#ef1721] duration-500 cursor-pointer">
-              {" "}
-              <FaFacebookF />{" "}
-            </span>
-            <span className="text-sm lg:text-lg hover:text-[#ef1721] duration-500 cursor-pointer">
-              {" "}
-              <FaTwitter />{" "}
-            </span>
-            <span className="text-sm lg:text-lg hover:text-[#ef1721] duration-500 cursor-pointer">
-              <FaInstagram />
-            </span>
-            <span className="text-sm lg:text-lg hover:text-[#ef1721] duration-500 cursor-pointer">
-              {" "}
-              <FaLinkedinIn />{" "}
-            </span>
+            <a href=" https://www.facebook.com">
+              <span className="text-sm lg:text-lg hover:text-[#ef1721] duration-500 cursor-pointer">
+                {" "}
+                <FaFacebookF />{" "}
+              </span>
+            </a>
+            <a href="https://www.twitter.com">
+              <span className="text-sm lg:text-lg hover:text-[#ef1721] duration-500 cursor-pointer">
+                {" "}
+                <FaTwitter />{" "}
+              </span>
+            </a>
+            <a href="https://www.instagram.com">
+              <span className="text-sm lg:text-lg hover:text-[#ef1721] duration-500 cursor-pointer">
+                <FaInstagram />
+              </span>
+            </a>
+            <a href="https://www.linkedin.com">
+              <span className="text-sm lg:text-lg hover:text-[#ef1721] duration-500 cursor-pointer">
+                {" "}
+                <FaLinkedinIn />{" "}
+              </span>
+            </a>
           </div>
         </div>
       </div>
@@ -195,30 +203,30 @@ const handleDarkMode =(event)=>{
         {show && (
           <div className="bg-slate-300 absolute top-0  right-0 pb-10  lg:hidden left-0 px-4 z-50">
             <div className="  py-2  flex justify-between items-center ">
-            <div>
-              <div className="flex items-center justify-center">
-                <img src={logo} className="w-12 mr-2" />
-                <h2 className="text-lg text-[#111] font-semibold -ml-4">
-                  Asetta Auto&apos;s
-                </h2>
+              <div>
+                <div className="flex items-center justify-center">
+                  <img src={logo} className="w-12 mr-2" />
+                  <h2 className="text-lg text-[#111] font-semibold -ml-4">
+                    Asetta Auto&apos;s
+                  </h2>
+                </div>
+              </div>
+              <div>
+                <span
+                  onClick={() => setShow(false)}
+                  className="text-[#111] text-2xl hover:text-[#ef1721] cursor-pointer duration-500"
+                >
+                  {" "}
+                  <FaWindowClose />{" "}
+                </span>
               </div>
             </div>
-            <div>
-              <span
-                onClick={() => setShow(false)}
-                className="text-[#111] text-2xl hover:text-[#ef1721] cursor-pointer duration-500"
-              >
-                {" "}
-                <FaWindowClose />{" "}
-              </span>
+            <hr className="border-gray-500 w-4/5 mx-auto" />
+            <div className="px-5 z-50">
+              <ul className="space-y-2 mobileList pt-5 w-full">
+                {listItem}
+              </ul>
             </div>
-          </div>
-          <hr className="border-gray-500 w-4/5 mx-auto"/>
-          <div className="px-5 z-50">
-            <ul className="space-y-2 mobileList pt-5 w-full">
-            {listItem}
-            </ul>
-          </div>
           </div>
         )}
       </div>

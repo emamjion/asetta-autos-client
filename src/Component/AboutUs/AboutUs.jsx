@@ -8,7 +8,7 @@ import {
 const AboutUs = () => {
 	return (
 		// responsive - mohosin
-		<div className="md:w-9/12 px-4 m-auto">
+		<div className="md:w-9/12 px-4 m-auto mt-20">
 			<div className=" bg-base-100 grid gap-10 border p-5 md:p-20 border-red-100 md:grid-cols-2">
 				<div>
 					<div className="md:w-64 auto p-5 flex bg-black text-white rounded-xl absolute left-40 ">

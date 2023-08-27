@@ -29,7 +29,6 @@ const Home = () => {
 			<CarCategory/>
 
 			{/* Best Dealer in your city section - Arafat */}
-
 			<BestDealer></BestDealer>
 
 			{/* Why choose us section - Emam */}
@@ -38,11 +37,13 @@ const Home = () => {
 			{/* Popular Brand section - Emam */}
 			<PopularBrand/>
 
-			{/* Testimonials section  */}
+			{/* Testimonials section - Emam */}
 			<Testimonials/>
 
-			{/* Latest News section - Arafat */}
+			{/* Latest News section - Emam */}
 			<ClientReviews></ClientReviews>
+			
+			{/* Latest News section - arafat */}
 			<LatestNews></LatestNews>
 
 			{/* Mobile App section - Arafat */}

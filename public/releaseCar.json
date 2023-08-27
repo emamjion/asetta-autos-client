@@ -1,0 +1,72 @@
+[
+    {
+        "id" : "1",
+        "img" : "https://i.ibb.co/yPHqV9t/car-1.png",
+        "name" : "BMW A5",
+        "description" : "2023 Genesis Electrified A5",
+        "review" : "EV luxury from Mild to Wild"
+    },
+    {
+        "id" : "2",
+        "img" : "https://i.ibb.co/nPDF8Wz/car-2.png",
+        "name" : "Lexus",
+        "description" : "2023 Fuel Effecient m8",
+        "review" : "luxury from Mild to Wild"
+    },
+    {
+        "id" : "3",
+        "img" : "https://i.ibb.co/Lx5nwTf/car-3.png",
+        "name" : "BMW A9",
+        "description" : "2023 Genesis Electrified A5",
+        "review" : "EV luxury from Mild to Wild"
+    },
+    {
+        "id" : "4",
+        "img" : "https://i.ibb.co/B648k4h/car-4.png",
+        "name" : "Honda CR-V",
+        "description" : "2023 Genesis Electrified CR-V",
+        "review" : "EV luxury from Mild to Wild"
+    },
+    {
+        "id" : "5",
+        "img" : "https://i.ibb.co/MZDKqFm/car-5.png",
+        "name" : "Audi A6",
+        "description" : "2023 Genesis Electrified A6",
+        "review" : "EV luxury from Mild to Wild"
+    },
+    {
+        "id" : "6",
+        "img" : "https://i.ibb.co/8Y1tbQf/car-6.png",
+        "name" : "Lamborgini",
+        "description" : "2023 Genesis Electrified",
+        "review" : "EV luxury from Mild to Wild"
+    },
+    {
+        "id" : "7",
+        "img" : "https://i.ibb.co/y4GNbPf/car-7.png",
+        "name" : "Maserati",
+        "description" : "2023 Genesis Electrified sports",
+        "review" : "EV luxury from Mild to Wild"
+    },
+    {
+        "id" : "8",
+        "img" : "https://i.ibb.co/c8zb9pV/car-8.png",
+        "name" : "BMW Q4",
+        "description" : "2023 Genesis Electrified Q4",
+        "review" : "EV luxury from Mild to Wild"
+    },
+    {
+        "id" : "9",
+        "img" : "https://i.ibb.co/3T2tCPV/car-9.png",
+        "name" : "Audi Q9",
+        "description" : "2023 Genesis Electrified Q9",
+        "review" : "EV luxury from Mild to Wild"
+    },
+    {
+        "id" : "6",
+        "img" : "https://i.ibb.co/8Y1tbQf/car-6.png",
+        "name" : "Lamborgini",
+        "description" : "2023 Genesis Electrified",
+        "review" : "EV luxury from Mild to Wild"
+    }
+]
