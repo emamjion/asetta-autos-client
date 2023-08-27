@@ -2,10 +2,10 @@ import { Rating } from '@smastrom/react-rating';
 import React from 'react';
 import '@smastrom/react-rating/style.css'
 import { FaCar, FaDollarSign, FaGasPump } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const NewArrivalsCar = ({car}) => {
-    console.log(car);
-    const {image, price, average_rating, reviews, engine, displacement, model} = car;
+    const {_id , image, price, average_rating, reviews, engine, displacement, model} = car;
     
     return (
         <div className="card card-compact w-full bg-base-100 shadow-xl">
@@ -34,7 +34,9 @@ const NewArrivalsCar = ({car}) => {
                         <span> < FaDollarSign /> </span>
                         {price}
                     </div>
+                    <Link to={`/arrivals-details/${_id}`}>
                     <button className="btn btn-sm md:btn-md bg-[#ef1721] text-white font-medium hover:bg-[#111] duration-500">Details</button>
+                    </Link>
                 </div>
             </div>
         </div>
