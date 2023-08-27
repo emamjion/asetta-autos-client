@@ -11,10 +11,10 @@ import moment from 'moment/moment';
 const Footer = () => {
     const currentyear = moment().format('YYYY');
     return (
-        <footer>
+        <footer className=''>
             <div className="w-full bg-[#111]">
-                <div className="row">
-                    <div className="footer-col quick-section w-2/6">
+                <div className="flex flex-wrap justify-between space-y-10 xl:px-[140px] 2xl:px-[240px] mb-4">
+                    <div className="footer-col quick-section w-1/4 mt-9">
                         <img className='w-40 h-40 -mt-12 ' src={logo} alt="" />
                         <p className='-mt-10 mb-3 text-white'>We are many variations of passages available but the majority have suffered alteration in some form by injected humour words believable. </p>
                         <div className='text-white'>
@@ -23,7 +23,7 @@ const Footer = () => {
                             <p className='py-2 about-us-paragraph'><a href=""><FaMailBulk className='about-us-icons '></FaMailBulk> info@example.com</a></p>
                         </div>
                     </div>
-                    <div className="footer-col quick-section w-1/6">
+                    <div className="footer-col quick-section ">
                         <h1>Quick Links</h1>
                         <ul>
                             <li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow> About Us</a></li>
@@ -34,7 +34,7 @@ const Footer = () => {
                             <li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow>  Our Dealers</a></li>
                         </ul>
                     </div>
-                    <div className="footer-col quick-section w-1/6">
+                    <div className="footer-col quick-section">
                         <h1>Support Center</h1>
                         <ul>
                             <li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow>  FAQ s</a></li>
@@ -45,7 +45,7 @@ const Footer = () => {
                             <li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow>   Sitemap</a></li>
                         </ul>
                     </div>
-                    <div className="footer-col quick-section text-white">
+                    <div className="footer-col quick-section  text-white">
                         <h1>Newsletter</h1>
                         <p>Subscribe Our Newsletter To Get Latest Update And News</p>
                         <form action="" className='mt-7'>
@@ -55,15 +55,23 @@ const Footer = () => {
                     </div>
                 </div>
                 {/* <hr /> */}
-                <div className="footer-bottom bg-[#ef1721]">
+                <div className="footer-bottom  bg-[#ef1721]">
                     <div className="copyright text-white">
                         <p>© Copyright {currentyear}  <span className='text-[#111]'> ASETTA AUTO'S </span>  All Rights Reserved. </p>
                     </div>
                     <div className="sociallink">
-                        <FaFacebook className='icons'></FaFacebook>
-                        <FaTwitter className='icons'></FaTwitter>
-                        <FaInstagram className='icons'></FaInstagram>
-                        <FaYoutube className='icons'></FaYoutube>
+                        <a href="https://www.facebook.com">
+                            <FaFacebook className='icons'></FaFacebook>
+                        </a>
+                        <a href="https://www.twitter.com">
+                            <FaTwitter className='icons'></FaTwitter>
+                        </a>
+                        <a href="https://www.instagram.com">
+                            <FaInstagram className='icons'></FaInstagram>
+                        </a>
+                        <a href="https://www.youtube.com">
+                            <FaYoutube className='icons'></FaYoutube>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -23,7 +23,7 @@
     justify-content: space-between;
     padding: 40px 170px;
     gap: 60px;
-   
+    width: 100%;
 }
 
 .footer-col ul {
@@ -160,6 +160,27 @@
     position: absolute;
     margin-top: -42px;
     margin-left: 184px;
+}
+
+.mobileList li{
+    padding: 6px 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.mobileList li a{
+    color: aliceblue;
+    background-color: rgb(160, 44, 44);
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+    padding: 5px 10px;
+}
+.mobileList li a:hover{
+    color: aliceblue;
+    background-color: rgb(71, 25, 25);
+    text-decoration: underline;
+    
 }
 
 
