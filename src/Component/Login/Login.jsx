@@ -1,17 +1,36 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import './Login.css'
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import React, {  useContext, useRef,  } from 'react';
+import { FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
-// import { AuthContex } from '../Providers/Authprovider';
 import Swal from 'sweetalert2';
-
+import { AuthContex } from '../Providers/Authprovider';
+import app from '../firebase/firebase.config';
+const auth = getAuth(app)
 const Login = () => {
-    // const {signin} = useContext(AuthContex)
+    const {signin} = useContext(AuthContex)
     let navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
+    
 
-    const [disable, setDisable] = useState(true);
+
+    const googleProvider = new GoogleAuthProvider();
+
+    const handleGoogleSignIn =() =>{
+    
+        signInWithPopup(auth, googleProvider)
+        .then(result =>{
+            const user = result.user;
+            console.log(user);
+            Swal.fire('Your login is succesful')
+            navigate(from, { replace: true });
+        })
+    
+        .catch(error =>{
+            console.log('error', error.message);
+        })
+    }
+
 
     const handlesubmit = (event) => {
         event.preventDefault()
@@ -30,23 +49,31 @@ const Login = () => {
 
     const RefCaptcha = useRef(null);
 
-    const handlevalidatecaptcha = () => {
-        const user_captcha_value = RefCaptcha.current.value;
-        if (validateCaptcha(user_captcha_value)) {
-            setDisable(false)
-        }
-        else {
-            setDisable(true)
-        }
-    }
+    // const handlevalidatecaptcha = () => {
+    //     const user_captcha_value = RefCaptcha.current.value;
+    //     if (validateCaptcha(user_captcha_value)) {
+    //         setDisable(false)
+    //     }
+    //     else {
+    //         setDisable(true)
+    //     }
+    // }
 
-    useEffect(() => {
-        loadCaptchaEnginge(6);
-    }, [])
+    // useEffect(() => {
+    //     loadCaptchaEnginge(6);
+    // }, [])
 
 
     return (
-        <div className="hero min-h-screen bg-base-200 background text-white font-bold text-lg">
+       <div className='grid md:grid-cols-2 bg-slate-200'> 
+
+        <div>
+        <div>
+            <img className='w-full p-12 mt-4' src="https://i.ibb.co/jLRxmZV/output-onlinegiftools-1.gif" alt="" /></div>
+        </div>
+
+<div className="bg-slate-200  hero min-h-screen bg-base-200 background text-black font-bold text-lg ">
+           
             <div className="hero-content flex-col ">
                 <div className="card w-full flex-shrink-0 shadow-2xl bg-transparent card-background">
                     <form onSubmit={handlesubmit} className="card-body">
@@ -68,15 +95,24 @@ const Login = () => {
                             </label>
                         </div>
                         <div className="form-control">
-                            <label className="label">
+                            {/* <label className="label">
                                 <LoadCanvasTemplate />
+<<<<<<< HEAD
+                            </label> */}
+                            {/* <input type="text" ref={RefCaptcha} name='captcha' placeholder="type the captcha" className="input input-bordered bg-transparent" />
+                            <button onClick={handlevalidatecaptcha} className="btn btn-outline btn-xs mt-2">validate</button> */}
+=======
                             </label>
                             <input type="text" ref={RefCaptcha} name='captcha' placeholder="type the captcha" className="input input-bordered bg-transparent" />
                             <button onClick={handlevalidatecaptcha} className="btn btn-outline btn-xs mt-2">validated</button>
+>>>>>>> 968b097f784c58e3a3f5a245aee9033ffb758ae6
                         </div>
 
                         <div className="form-control mt-6">
-                            <input disabled={disable} className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]" type="submit" value="Login" />
+                            <input  className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]" type="submit" value="Login" />
+                        </div>
+                        <div className="form-control mt-6">
+                           <button onClick={handleGoogleSignIn}  className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]"><FaGoogle/>Google</button>
                         </div>
                         <div>
                             <p>Don't have an account? <span className=' text-[#ef1721] hover:underline'><Link to='/register'>Register</Link></span></p>
@@ -85,6 +121,8 @@ const Login = () => {
                 </div>
             </div>
         </div>
+
+       </div>
     );
 };
 

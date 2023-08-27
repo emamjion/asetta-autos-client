@@ -2,7 +2,12 @@ import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContex } from '../Providers/Authprovider';
+import { FaGoogle } from 'react-icons/fa';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import app from '../firebase/firebase.config';
+import Swal from 'sweetalert2';
 
+const auth = getAuth(app)
 const Register = () => {
 
     const {createUser} = useContext(AuthContex)
@@ -26,9 +31,38 @@ const Register = () => {
         })
       }
 
+
+      const googleProvider = new GoogleAuthProvider();
+
+      const handleGoogleSignIn =() =>{
+      
+          signInWithPopup(auth, googleProvider)
+          .then(result =>{
+              const user = result.user;
+              console.log(user);
+              Swal.fire('Your login is succesful')
+              navigate(from, { replace: true });
+          })
+      
+          .catch(error =>{
+              console.log('error', error.message);
+          })
+      }
+  
+
+
     return (
-        <div className="hero min-h-screen bg-base-200 background text-white font-bold text-xl">
-            <div className="hero-content flex-col ">
+        <div className='grid md:grid-cols-2 bg-slate-200'>
+          
+        <div>
+        <div className=''>
+                <img className=' w-full' src="https://i.ibb.co/zZJBJGN/output-onlinegiftools.gif" alt="" />
+            </div>
+        </div>
+        <div>
+        <div className="hero min-h-screen  text-black font-bold text-xl ">
+           
+            <div className="hero-content flex-col">
                 <div className="card w-full flex-shrink-0 shadow-2xl bg-transparent card-background">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <h1 className='text-2xl text-center font-bold text-[#ef1721]'>Register</h1>
@@ -64,12 +98,19 @@ const Register = () => {
                         <div className="form-control mt-6">
                             <input className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]" type="submit" value="Register" />
                         </div>
+                        <div className="form-control mt-6">
+                           <button onClick={handleGoogleSignIn}  className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]"><FaGoogle/>Google</button>
+                        </div>
+
+
                         <div>
                             <p>Don't have an account? <span className='text-[#ef1721] hover:underline'><Link to='/login'>Login</Link></span></p>
                         </div>
                     </form>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
     );
 };
