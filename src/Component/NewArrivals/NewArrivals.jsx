@@ -6,7 +6,7 @@ import Tittle from '../Shared/Tittle/Tittle';
 const NewArrivals = () => {
     const [cars, setCars] = useState([]);
     useEffect(() => {
-        fetch('new_arrivals.json')
+        fetch('http://localhost:5000/new-arrivals')
         .then(res => res.json())
         .then(data => setCars(data))
     }, [])
@@ -21,7 +21,7 @@ const NewArrivals = () => {
             <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-12'>
                 {
                     cars.map(car => <NewArrivalsCar
-                        key={car.id}
+                        key={car._id}
                         car={car}
                     />)
                 }
