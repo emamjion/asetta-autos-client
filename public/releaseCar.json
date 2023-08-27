@@ -61,5 +61,12 @@
         "name" : "Audi Q9",
         "description" : "2023 Genesis Electrified Q9",
         "review" : "EV luxury from Mild to Wild"
+    },
+    {
+        "id" : "6",
+        "img" : "https://i.ibb.co/8Y1tbQf/car-6.png",
+        "name" : "Lamborgini",
+        "description" : "2023 Genesis Electrified",
+        "review" : "EV luxury from Mild to Wild"
     }
 ]
