@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import './ContactRoute.css'
-import { FaMailBulk, FaMap, FaPhone } from 'react-icons/fa';
-// import React, { useRef } from "react";
-// import emailjs from '@emailjs/browser';
+import { FaMailBulk, FaMap, FaPhone, FaRegMap, FaWhatsapp } from 'react-icons/fa';
+
+import emailjs from '@emailjs/browser';
 
 
 
@@ -14,7 +14,7 @@ const ContactRoute = () => {
     const sendEmail = (e) => {
       e.preventDefault();
   
-      emailjs.sendForm('service_exr7fdh', 'template_0xbcj6b', form.current, 'JuhWmJlIojuUbaKFI')
+      emailjs.sendForm('service_r20tzfq', 'template_09b8qe4', form.current, 'JuhWmJlIojuUbaKFI')
         .then((result) => {
             console.log(result.text);
             form.current.reset(); // Reset the form fields
@@ -85,19 +85,26 @@ const ContactRoute = () => {
             <input className="btn bg-red-500 border-none text-white p-4 rounded-xl w-32 mx-auto text-center" type="submit" value="Send" />
           </form>
           <div className="flex flex-col gap-7 mt-16">
-            {contact_info.map((contact, i) => (
-              <div
-                key={i}
-                className="flex flex-row text-left gap-4 flex-wrap items-center"
-              >
-                <div className="min-w-[3.5rem] text-3xl min-h-[3.5rem] flex items-center justify-center text-white bg-red-600 rounded-full">
-                <FaMailBulk></FaMailBulk>
+           
+              <div className=" text-left gap-4 flex-wrap items-center text-xl">
+                <div className="min-w-[3.5rem]  min-h-[3.5rem] flex items-center justify-center text-white rounded-full">
+                <FaMailBulk className='w-8 h-12 text-red-500'></FaMailBulk>
+                <p className='mx-6'>atiq@gmail.com</p>
+              
+                </div>
+                <div className="min-w-[3.5rem]  min-h-[3.5rem] flex items-center justify-center text-white rounded-full">
+                <FaWhatsapp className='w-8 h-16 text-red-500 mr-6'></FaWhatsapp>
+                <p >+88 017 924 549 57</p>
+                </div>
+                <div className="min-w-[3.5rem]  min-h-[3.5rem] flex items-center justify-center text-white rounded-full">
+               <FaRegMap className='w-8 h-16 text-red-500 ml-16'></FaRegMap>
+                <p className='mx-6'>Chattogram, Bangladesh</p>
                 </div>
                 <p className="md:text-base text-sm break-words text-white">
-                  {contact.text}
+                 
                 </p>
               </div>
-            ))}
+            
           </div>
         </div>
       </div>

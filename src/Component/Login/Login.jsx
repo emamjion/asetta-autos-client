@@ -1,5 +1,5 @@
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
-import React, { useContext, useRef, } from 'react';
+import React, { useContext, } from 'react';
 import { FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
@@ -47,22 +47,7 @@ const Login = () => {
             })
     }
 
-    // const RefCaptcha = useRef(null);
-
-    // const handlevalidatecaptcha = () => {
-    //     const user_captcha_value = RefCaptcha.current.value;
-    //     if (validateCaptcha(user_captcha_value)) {
-    //         setDisable(false)
-    //     }
-    //     else {
-    //         setDisable(true)
-    //     }
-    // }
-
-    // useEffect(() => {
-    //     loadCaptchaEnginge(6);
-    // }, [])
-
+    
 
     return (
         <div className='grid md:grid-cols-2 bg-slate-200'>
@@ -100,11 +85,9 @@ const Login = () => {
                             </label> */}
                                 {/* <input type="text" ref={RefCaptcha} name='captcha' placeholder="type the captcha" className="input input-bordered bg-transparent" />
                             <button onClick={handlevalidatecaptcha} className="btn btn-outline btn-xs mt-2">validate</button> */}
-<<<<<<< HEAD
                             {/* </label> */}
-                            <input type="text" ref={RefCaptcha} name='captcha' placeholder="type the captcha" className="input input-bordered bg-transparent" />
+                       
                             {/* <button onClick={handlevalidatecaptcha} className="btn btn-outline btn-xs mt-2">validated</button> */}
-=======
                             {/* </label>
                             <input type="text" ref={RefCaptcha} name='captcha' placeholder="type the captcha" className="input input-bordered bg-transparent" />
                             <button onClick={handlevalidatecaptcha} className="btn btn-outline btn-xs mt-2">validated</button> */}
@@ -114,7 +97,6 @@ const Login = () => {
                             {/* <input type="text" ref={RefCaptcha} name='captcha' placeholder="type the captcha" className="input input-bordered bg-transparent" />
                             <button onClick={handlevalidatecaptcha} className="btn btn-outline btn-xs mt-2">validated</button> */}
 
->>>>>>> d933075ad962c8c00902034a125940a5ee90912e
                         </div>
 
                         <div className="form-control mt-6">
