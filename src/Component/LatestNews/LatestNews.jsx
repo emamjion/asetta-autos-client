@@ -13,7 +13,7 @@ const LatestNews = () => {
             <Tittle topTitle={"Our Blog"} boldblackTitle={"Latest News &"} boldredTitle={"Blog"}></Tittle>
             {/* responsive - mohosin */}
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8  px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
-                <div className="hover:transition-transform transform origin-center hover:scale-105 duration-500 card card-compact text-black w-full font-bold bg-white shadow-xl">
+                <div className=" card card-compact text-black w-full font-bold bg-white shadow-xl">
                     <figure className="px-4 pt-5">
                         <img src={img4} alt="Shoes" className="rounded-xl hover:transition-transform transform origin-center hover:scale-105 duration-500" />
                     </figure>
@@ -30,7 +30,7 @@ const LatestNews = () => {
                         </div>
                     </div>
                 </div>
-                <div className="hover:transition-transform transform origin-center hover:scale-105 duration-500 card card-compact text-black w-full font-bold bg-white shadow-xl">
+                <div className=" card card-compact text-black w-full font-bold bg-white shadow-xl">
                     <figure className="px-4 pt-5">
                         <img src={img3} alt="Shoes" className="rounded-xl hover:transition-transform transform origin-center hover:scale-105 duration-500" />
                     </figure>
@@ -47,7 +47,7 @@ const LatestNews = () => {
                         </div>
                     </div>
                 </div>
-                <div className="hover:transition-transform transform origin-center hover:scale-105 duration-500 card card-compact text-black w-full font-bold bg-white shadow-xl">
+                <div className=" card card-compact text-black w-full font-bold bg-white shadow-xl">
                     <figure className="px-4 pt-5">
                         <img src={img2} alt="Shoes" className="rounded-xl hover:transition-transform transform origin-center hover:scale-105 duration-500" />
                     </figure>
