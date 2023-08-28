@@ -7,6 +7,7 @@ import AboutRoute from "../Component/AboutRoute/AboutRoute";
 import ServiceRoute from "../Component/ServiceRoute/ServiceRoute";
 import BlogRoute from "../Component/BlogRoute/BlogRoute";
 import ContactRoute from "../Component/ContactRoute/ContactRoute";
+import CardDetails from "../Component/NewArrivals/CardDetails";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
             {
                 path: 'contact',
                 element: <ContactRoute></ContactRoute>
+            },
+            {
+                path: 'arrivals-details/:id',
+                element: <CardDetails></CardDetails>
             }
             
         ]
