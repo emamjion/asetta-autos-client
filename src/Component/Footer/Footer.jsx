@@ -13,7 +13,7 @@ const Footer = () => {
     return (
         <footer className=''>
             <div className="w-full bg-[#111]">
-                <div className="flex flex-wrap justify-between space-y-10 xl:px-[140px] 2xl:px-[240px] mb-4">
+                <div className="flex flex-wrap justify-between space-y-10 px-4 xl:px-[140px] 2xl:px-[240px] mb-4">
                     <div className="footer-col quick-section w-1/4 mt-9">
                         <img className='w-40 h-40 -mt-12 ' src={logo} alt="" />
                         <p className='-mt-10 mb-3 text-white'>We are many variations of passages available but the majority have suffered alteration in some form by injected humour words believable. </p>

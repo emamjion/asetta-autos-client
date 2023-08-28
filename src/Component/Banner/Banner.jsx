@@ -14,7 +14,7 @@ import img8 from "../../assets/images/Banner/banner-8.png";
 const Banner = () => {
 	return (
 		<Carousel
-			className="py-6  "
+			className=""
 			infiniteLoop={true}
 			autoPlay={true}
 			interval={3000}

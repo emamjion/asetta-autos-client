@@ -7,22 +7,24 @@ import AboutRoute from "../Component/AboutRoute/AboutRoute";
 import ServiceRoute from "../Component/ServiceRoute/ServiceRoute";
 import BlogRoute from "../Component/BlogRoute/BlogRoute";
 import ContactRoute from "../Component/ContactRoute/ContactRoute";
+import CardDetails from "../Component/NewArrivals/CardDetails";
+import MeetOurTeamDetails from "../Component/MeetOurTeam/MeetOurTeamDetails";
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <MainLayout/>,
+        element: <MainLayout />,
         children: [
             {
                 path: '/',
-                element: <Home/>
+                element: <Home />
             },
             {
                 path: 'about',
                 element: <AboutRoute></AboutRoute>
             },
             {
-                path:'services',
+                path: 'services',
                 element: <ServiceRoute></ServiceRoute>
             },
             {
@@ -32,17 +34,26 @@ const router = createBrowserRouter([
             {
                 path: 'contact',
                 element: <ContactRoute></ContactRoute>
+            },
+            {
+                path: 'arrivals-details/:id',
+                element: <CardDetails></CardDetails>
+            },
+            {
+                path: 'ourteam/:id',
+                element: <MeetOurTeamDetails></MeetOurTeamDetails>
+            },
+            {
+                path: 'login',
+                element: <Login></Login>
+            },
+            {
+                path: 'register',
+                element: <Register></Register>
             }
-            
+
         ]
     },
-    {
-        path: 'login',
-        element: <Login></Login>
-    },
-    {
-        path: 'register',
-        element: <Register></Register>
-    }
+
 ])
 export default router;
