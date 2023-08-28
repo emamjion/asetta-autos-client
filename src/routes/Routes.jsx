@@ -9,6 +9,7 @@ import BlogRoute from "../Component/BlogRoute/BlogRoute";
 import ContactRoute from "../Component/ContactRoute/ContactRoute";
 import CardDetails from "../Component/NewArrivals/CardDetails";
 import MeetOurTeamDetails from "../Component/MeetOurTeam/MeetOurTeamDetails";
+import DealerDetails from "../Component/BestDealer/DealerDetails";
 
 const router = createBrowserRouter([
     {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
             {
                 path: 'arrivals-details/:id',
                 element: <CardDetails></CardDetails>
+            },
+            {
+                path: 'dealer-details/:id',
+                element: <DealerDetails></DealerDetails>
             },
             {
                 path: 'ourteam/:id',

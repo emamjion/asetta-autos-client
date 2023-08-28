@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import './ContactRoute.css'
 import { FaMailBulk, FaMap, FaPhone, FaRegMap, FaWhatsapp } from 'react-icons/fa';
 
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 
 
 

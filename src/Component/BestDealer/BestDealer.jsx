@@ -5,7 +5,7 @@ import BestDealerCard from './BestDealerCard';
 const BestDealer = () => {
     const [Dealers, setDealers] = useState([]);
     useEffect(() => {
-        fetch('BestDealer.json')
+        fetch('http://localhost:5000/best-dealers/')
             .then(res => res.json())
             .then(data => setDealers(data))
     }, [])
