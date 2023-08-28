@@ -72,7 +72,7 @@ const Login = () => {
                     <img className='w-full p-12 mt-4' src="https://i.ibb.co/jLRxmZV/output-onlinegiftools-1.gif" alt="" /></div>
             </div>
 
-<div className="bg-slate-200  hero min-h-screen bg-base-200 background text-black font-bold text-lg ">
+<div className="bg-slate-200  hero min-h-screen background text-black font-bold text-lg ">
            
             <div className="hero-content flex-col ">
                 <div className="card w-full flex-shrink-0 shadow-2xl bg-transparent card-background">
@@ -100,6 +100,10 @@ const Login = () => {
                             </label> */}
                                 {/* <input type="text" ref={RefCaptcha} name='captcha' placeholder="type the captcha" className="input input-bordered bg-transparent" />
                             <button onClick={handlevalidatecaptcha} className="btn btn-outline btn-xs mt-2">validate</button> */}
+                            {/* </label>
+                            <input type="text" ref={RefCaptcha} name='captcha' placeholder="type the captcha" className="input input-bordered bg-transparent" />
+                            <button onClick={handlevalidatecaptcha} className="btn btn-outline btn-xs mt-2">validated</button> */}
+                            
 
                             {/* </label> */}
                             {/* <input type="text" ref={RefCaptcha} name='captcha' placeholder="type the captcha" className="input input-bordered bg-transparent" />
@@ -111,7 +115,7 @@ const Login = () => {
                             <input  className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]" type="submit" value="Login" />
                         </div>
                         <div className="form-control mt-6">
-                           <button onClick={handleGoogleSignIn}  className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]"><FaGoogle/>Google</button>
+                            <button onClick={handleGoogleSignIn}  className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]"><FaGoogle/>Google</button>
                         </div>
                         <div>
                             <p>Don't have an account? <span className=' text-[#ef1721] hover:underline'><Link to='/register'>Register</Link></span></p>
