@@ -100,11 +100,11 @@ const Login = () => {
                             </label> */}
                                 {/* <input type="text" ref={RefCaptcha} name='captcha' placeholder="type the captcha" className="input input-bordered bg-transparent" />
                             <button onClick={handlevalidatecaptcha} className="btn btn-outline btn-xs mt-2">validate</button> */}
-=======
-                            </label>
-                            <input type="text" ref={RefCaptcha} name='captcha' placeholder="type the captcha" className="input input-bordered bg-transparent" />
-                            <button onClick={handlevalidatecaptcha} className="btn btn-outline btn-xs mt-2">validated</button>
->>>>>>> 968b097f784c58e3a3f5a245aee9033ffb758ae6
+
+                            {/* </label> */}
+                            {/* <input type="text" ref={RefCaptcha} name='captcha' placeholder="type the captcha" className="input input-bordered bg-transparent" />
+                            <button onClick={handlevalidatecaptcha} className="btn btn-outline btn-xs mt-2">validated</button> */}
+
                         </div>
 
                         <div className="form-control mt-6">
