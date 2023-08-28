@@ -1,14 +1,15 @@
 [
     {
         "id" : "1",
-        "name" : "Toyota Suv",
+        "name" : "Toyota RAV4",
         "image" : "https://i.ibb.co/GtgnJPz/pic-6.png",
         "rating" : "5",
         "reviews" : "58.5",
         "perlitre" : "10.15",
         "model" : "2023",
         "enginetype" : "Hybrid",
-        "price" : "65,350"
+        "price" : "65,350",
+        "description" : "The Toyota RAV4 is one of the most popular compact SUVs globally. It's known for its reliability, spacious interior, and a choice of gas or hybrid powertrains. The RAV4 offers a comfortable ride and is available in various trim levels, including adventure-oriented and sportier versions."
     },
     {
         "id" : "2",
@@ -107,28 +108,50 @@
         "perlitre" : "10.15",
         "model" : "2023",
         "enginetype" : "Electric",
-        "price" : "90,450"
+        "price" : "90,450",
+        "description" : "The Jeep Grand Cherokee is a midsize SUV known for its upscale interior, powerful engine options, and excellent towing capacity. It's available in various trims, including high-performance variants like the Grand Cherokee SRT and Trackhawk.",
+        "color" : "Blue",
+        "seatingCapacity" : "The Toyota Sequoia is a large SUV that typically seats seven or eight passengers, depending on the configuration. It offers a spacious interior with ample room for passengers and cargo.",
+        "engine" : "The Jeep Grand Cherokee is a midsize SUV known for its upscale interior, powerful engine options, and excellent towing capacity. It's available in various trims, including high-performance variants like the Grand Cherokee SRT and Trackhawk.",
+        "interior" : " Inside the Cherokee, you'll find a comfortable and well-appointed cabin. The Cherokee typically offers a user-friendly infotainment system, available leather upholstery, and ample cargo space, making it suitable for both daily commuting and longer trips.",
+        "safetyFeatures" : "Jeep equips the Cherokee with a range of safety features and driver-assistance technologies, including adaptive cruise control, blind-spot monitoring, and more, depending on the trim level and options.",
+        "fuelEfficiency" : "Given its size and V8 engine, the Sequoia's fuel efficiency is typically lower compared to smaller SUVs. However, it may offer a better balance between power and fuel economy compared to some other full-size SUVs."
     },
     {
         "id" : "11",
-        "name" : "Jeep",
+        "name" : "Jeep Cherokee",
         "image" : "https://i.ibb.co/f0Yrzrh/pic-11.png",
         "rating" : "5",
         "reviews" : "58.5",
         "perlitre" : "12.35",
         "model" : "2022",
         "enginetype" : "Non-Hybrid",
-        "price" : "59,950"
+        "price" : "59,950",
+        "description" : "The Jeep Grand Cherokee is a midsize SUV known for its upscale interior, powerful engine options, and excellent towing capacity. It's available in various trims, including high-performance variants like the Grand Cherokee SRT and Trackhawk.",
+        "color" : "Blue",
+        "seatingCapacity" : "The Toyota Sequoia is a large SUV that typically seats seven or eight passengers, depending on the configuration. It offers a spacious interior with ample room for passengers and cargo.",
+        "engine" : "The Jeep Grand Cherokee is a midsize SUV known for its upscale interior, powerful engine options, and excellent towing capacity. It's available in various trims, including high-performance variants like the Grand Cherokee SRT and Trackhawk.",
+        "interior" : " Inside the Cherokee, you'll find a comfortable and well-appointed cabin. The Cherokee typically offers a user-friendly infotainment system, available leather upholstery, and ample cargo space, making it suitable for both daily commuting and longer trips.",
+        "safetyFeatures" : "Jeep equips the Cherokee with a range of safety features and driver-assistance technologies, including adaptive cruise control, blind-spot monitoring, and more, depending on the trim level and options.",
+        "fuelEfficiency" : "Given its size and V8 engine, the Sequoia's fuel efficiency is typically lower compared to smaller SUVs. However, it may offer a better balance between power and fuel economy compared to some other full-size SUVs."
     },
     {
         "id" : "12",
-        "name" : "Toyota",
+        "name" : "Toyota Sequoia",
         "image" : "https://i.ibb.co/z8WxJRy/pic-12.png",
         "rating" : "5",
         "reviews" : "58.5",
         "perlitre" : "9.15",
         "model" : "2022",
         "enginetype" : "Non-Hybrid",
-        "price" : "50,350"
+        "price" : "50,350",
+        "description" : "The Toyota Sequoia is a full-size SUV manufactured by Toyota. As of my last knowledge update in September 2021, the Sequoia was in production, but I do not have information on any updates or changes that may have occurred since then.",
+        "date" : "23-04-2023",
+        "color" : "red",
+        "seatingCapacity" : "The Toyota Sequoia is a large SUV that typically seats seven or eight passengers, depending on the configuration. It offers a spacious interior with ample room for passengers and cargo.",
+        "engine" : "The Sequoia has historically been powered by a V8 engine. The exact engine specifications may vary by model year, but the V8 engine provides ample power for towing and hauling, making it suitable for families with trailers or boats.",
+        "interior" : "Depending on the trim level, the Sequoia offers a range of interior features, including leather upholstery, advanced infotainment systems, premium audio options, and a variety of convenience features.",
+        "safetyFeatures" : "Toyota places a strong emphasis on safety, and the Sequoia typically comes equipped with a suite of advanced safety features, including Toyota Safety Sense-P, which includes adaptive cruise control, lane departure warning, and other driver assistance technologies.",
+        "fuelEfficiency" : "Given its size and V8 engine, the Sequoia's fuel efficiency is typically lower compared to smaller SUVs. However, it may offer a better balance between power and fuel economy compared to some other full-size SUVs."
     }
 ]

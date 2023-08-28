@@ -1,0 +1,182 @@
+[
+    {
+        "make": "Toyota",
+        "model": "Camry",
+        "year": "2023",
+        "color": "Silver",
+        "vin": "1HGCM82633A123456",
+        "engine": {
+            "type": "4-cylinder",
+            "displacement": "2.5L",
+            "horsepower": "203",
+            "description": "Fuel-efficient 2.5-liter 4-cylinder engine with 203 horsepower."
+        },
+        "transmission": "Automatic",
+        "fuel_type": "Gasoline",
+        "mileage": "25000",
+        "features": [
+            {
+                "name": "Air Conditioning",
+                "description": "Dual-zone automatic climate control."
+            },
+            {
+                "name": "Power Windows",
+                "description": "Power windows with one-touch up/down functionality."
+            },
+            {
+                "name": "Bluetooth",
+                "description": "Bluetooth hands-free calling and audio streaming."
+            },
+            {
+                "name": "Backup Camera",
+                "description": "Rearview camera for safer parking and reversing."
+            },
+            {
+                "name": "Leather Seats",
+                "description": "Premium leather-trimmed seats."
+            }
+        ],
+        "price": "25000.00",
+        "owner": {
+            "first_name": "John",
+            "last_name": "Doe",
+            "contact": {
+            "email": "johndoe@email.com",
+            "phone": "+1 (555) 123-4567"
+            }
+        },
+        "reviews": [
+            {
+                "reviewer": "Alice",
+                "rating": "4.5",
+                "comment": "Great car, very comfortable on long drives."
+            },
+            {
+                "reviewer": "Bob",
+                "rating": "5.0",
+                "comment": "Excellent fuel efficiency."
+            }
+        ],
+        "average_rating": "4.75"
+    },
+    {
+        "make": "Ford",
+        "model": "Mustang",
+        "year": "2022",
+        "color": "Red",
+        "vin": "1FA6P8CF2K5100002",
+        "engine": {
+            "type": "V8",
+            "displacement": "5.0L",
+            "horsepower": "450",
+            "description": "Powerful 5.0-liter V8 engine with 450 horsepower."
+        },
+        "transmission": "Manual",
+        "fuel_type": "Premium Unleaded",
+        "mileage": "12000",
+        "features": [
+            {
+                "name": "Air Conditioning",
+                "description": "Climate control."
+            },
+            {
+                "name": "Power Windows",
+                "description": "Power windows."
+            },
+            {
+                "name": "Bluetooth",
+                "description": "Bluetooth connectivity."
+            },
+            {
+            "name": "Backup Camera",
+            "description": "Rearview camera."
+        },
+        {
+            "name": "Leather Seats",
+            "description": "Leather-trimmed seats."
+        }
+        ],
+        "price": "45000.00",
+        "owner": {
+            "first_name": "Alice",
+            "last_name": "Smith",
+            "contact": {
+            "email": "alicesmith@email.com",
+            "phone": "+1 (555) 987-6543"
+        }
+        },
+        "reviews": [
+            {
+                "reviewer": "Charlie",
+                "rating": "5.0",
+                "comment": "Love the Mustang! It's a powerful and fun car to drive."
+            },
+            {
+                "reviewer": "David",
+                "rating": "4.0",
+                "comment": "Great performance, but the fuel economy could be better."
+            }
+        ],
+        "average_rating": "4.5"
+    },
+    {
+        "make": "Honda",
+        "model": "Civic",
+        "year": "2023",
+        "color": "Blue",
+        "vin": "2HGFC2F59LH500003",
+        "engine": {
+            "type": "4-cylinder",
+            "displacement": "1.5L",
+            "horsepower": "174",
+            "description": "Efficient 1.5-liter 4-cylinder engine with 174 horsepower."
+        },
+        "transmission": "CVT",
+        "fuel_type": "Gasoline",
+        "mileage": "15000",
+        "features": [
+            {
+                "name": "Air Conditioning",
+                "description": "Automatic climate control."
+            },
+            {
+                "name": "Power Windows",
+                "description": "Power windows with auto-up/down."
+            },
+            {
+                "name": "Bluetooth",
+                "description": "Hands-free Bluetooth phone and audio."
+        },
+        {
+            "name": "Backup Camera",
+            "description": "Multi-angle rearview camera."
+        },
+        {
+            "name": "Sunroof",
+            "description": "Power moonroof."
+            }
+        ],
+        "price": "22000.00",
+        "owner": {
+            "first_name": "Emily",
+            "last_name": "Johnson",
+            "contact": {
+            "email": "emilyjohnson@email.com",
+            "phone": "+1 (555) 567-8901"
+        }
+        },
+        "reviews": [
+        {
+            "reviewer": "Eva",
+            "rating": "4.0",
+            "comment": "Reliable and economical car."
+        },
+        {
+            "reviewer": "Frank",
+            "rating": "5.0",
+            "comment": "Great value for the price."
+        }
+        ],
+        "average_rating":" 4.5"
+    }
+]
