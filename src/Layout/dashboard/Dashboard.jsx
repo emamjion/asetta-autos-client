@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import {
@@ -15,10 +16,9 @@ import {
   FaWindowClose,
 } from "react-icons/fa";
 import logo from "../../assets/images/logo/logo.png";
-import { AuthContex } from "../Providers/Authprovider";
-
-const Navbar = () => {
-//  dark mode control with local storage --
+import { AuthContex } from "../../Component/Providers/Authprovider";
+const Dashboard = () => {
+    //  dark mode control with local storage --
 const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light');
 useEffect(()=>{
     localStorage.setItem('theme', theme);
@@ -34,59 +34,70 @@ const handleDarkMode =(event)=>{
     }
 };
 
-
-
-
-
-
-
   const { user, logOut } = useContext(AuthContex);
+
+
+  const currentUser = {'name' : 'Md Mohosin', 'role' : 'admin'}
+
 
   const [show, setShow] = useState(false);
 
   const handleLogOut = () => {
     logOut().then();
   };
-
   const listItem = (
     <>
-  
-
+      <li>
+        <NavLink className="hover:text-[#ef1721] duration-500">
+          {currentUser.role} Home
+        </NavLink>
+      </li>
+      {currentUser.role === 'admin' && (
+      <><li>
+      <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-dealers">
+        Add Dealers
+      </NavLink>
+    </li>
+    <li>
+      <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-blogs">
+        Add blog
+      </NavLink>
+    </li></>
+      )}
+      {currentUser.role === 'dealer' && (
+      <><li>
+      <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-cars">
+        Add Cars
+      </NavLink>
+    </li>
+    </>
+      )}
+      {currentUser.role === 'user' && (
+      <>
+      <li>
+      <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/user-cards">
+        My Cards
+      </NavLink>
+    </li>
+      <li>
+      <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-reviews">
+        provide reviews
+      </NavLink>
+    </li>
+    </>
+      )}
       <li>
         <NavLink className="hover:text-[#ef1721] duration-500" to="/">
-          Home
-        </NavLink>
-      </li>
-      <li>
-        <NavLink className="hover:text-[#ef1721] duration-500" to="/about">
-          About
-        </NavLink>
-      </li>
-      <li>
-        <NavLink className="hover:text-[#ef1721] duration-500" to="/services">
-          Services
-        </NavLink>
-      </li>
-      <li>
-        <NavLink className="hover:text-[#ef1721] duration-500" to="/blog">
-          Blog
-        </NavLink>
-      </li>
-      <li>
-        <NavLink className="hover:text-[#ef1721] duration-500" to="/contact">
-          Contact
-        </NavLink>
-      </li>
-      <li>
-        <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard">
-          Dashboard
+          Back home
         </NavLink>
       </li>
     </>
   );
 
-  return (
-    <nav>
+
+    return (
+        <div>
+            <nav>
       {/* Navbar first part */}
       <div className="flex flex-col xl:flex-row gap-2 bg-[#111] text-white items-center justify-center md:justify-between px-4 xl:px-[140px] 2xl:px-[240px] py-4">
         {/* Info part */}
@@ -245,16 +256,16 @@ const handleDarkMode =(event)=>{
         <ul className="flex items-center justify-center  gap-10 text-lg font-medium text-[#111]">
           {listItem}
         </ul>
-        <div className="flex items-center justify-center gap-4 text-lg">
-          <Link to='/dashboard/user-cards'><span className="text-[#111] hover:text-[#ef1721] cursor-pointer duration-500">
+        {/* <div className="flex items-center justify-center gap-4 text-lg">
+          <span className="text-[#111] hover:text-[#ef1721] cursor-pointer duration-500">
             {" "}
             <FaCartPlus />{" "}
-          </span> </Link>
+          </span>
           <span className="text-[#111] hover:text-[#ef1721] cursor-pointer duration-500">
             {" "}
             <FaSearch />{" "}
           </span>
-        </div>
+        </div> */}
         <div className='lg:flex'>
                                 <label className="swap swap-rotate">
 
@@ -268,7 +279,9 @@ const handleDarkMode =(event)=>{
             </div>
       </div>
     </nav>
-  );
+            <Outlet></Outlet>
+        </div>
+    );
 };
 
-export default Navbar;
+export default Dashboard;
