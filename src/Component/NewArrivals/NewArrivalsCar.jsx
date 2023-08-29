@@ -3,6 +3,7 @@ import React from 'react';
 import '@smastrom/react-rating/style.css'
 import { FaCar, FaDollarSign, FaGasPump } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import Button from '../Button/Button';
 
 const NewArrivalsCar = ({car}) => {
     const {_id , image, price, average_rating, reviews, engine, displacement, model} = car;
@@ -35,7 +36,7 @@ const NewArrivalsCar = ({car}) => {
                         {price}
                     </div>
                     <Link to={`/arrivals-details/${_id}`}>
-                    <button className="btn btn-sm md:btn-md bg-[#ef1721] text-white font-medium hover:bg-[#111] duration-500">Details</button>
+                        <Button button={'Details'} />
                     </Link>
                 </div>
             </div>
