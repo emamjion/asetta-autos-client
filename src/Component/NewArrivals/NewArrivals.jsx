@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FaCarSide } from 'react-icons/fa';
 import NewArrivalsCar from './NewArrivalsCar';
 import Tittle from '../Shared/Tittle/Tittle';
+import Button from '../Button/Button';
 
 const NewArrivals = () => {
     const [cars, setCars] = useState([]);
@@ -27,7 +28,7 @@ const NewArrivals = () => {
                 }
             </div>
             <div className='text-center mt-6'>
-                <button className="btn bg-[#ef1721] text-white font-medium hover:bg-[#111] duration-500">Load More</button>
+                <Button button={'Load More'} />
             </div>
         </div>
     );
