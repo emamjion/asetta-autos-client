@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const DashBoardHome = () => {
-    const currentUser = {'name' : 'Md Mohosin', 'role' : 'admin'}
+    const currentUser = {'name' : 'Md Mohosin', 'role' : 'dealer'}
     return (
         <div className=" xl:px-[140px] 2xl:px-[240px] py-10 border">
             <h2 className="uppercase text-center text-xl md:text-4xl font-bold">{currentUser.role} Dashboard</h2>
