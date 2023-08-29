@@ -45,5 +45,3 @@ const NewArrivalsCar = ({car}) => {
 };
 
 export default NewArrivalsCar;
-
-// btn btn-sm md:btn-md bg-[#ef1721] text-white font-medium hover:bg-[#111] duration-500
