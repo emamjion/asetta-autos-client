@@ -37,7 +37,7 @@ const handleDarkMode =(event)=>{
   const { user, logOut } = useContext(AuthContex);
 
 
-  const currentUser = {'name' : 'Md Mohosin', 'role' : 'admin'}
+  const currentUser = {'name' : 'Md Mohosin', 'role' : 'dealer'}
 
 
   const [show, setShow] = useState(false);
