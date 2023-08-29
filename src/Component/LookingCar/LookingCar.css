@@ -1,0 +1,16 @@
+.bg-left-side{
+    background: url('../../assets/images/lookingCar/auto-left.png'), linear-gradient(rgba(239,23,33,94), rgba(239,23,33,94));
+    background-blend-mode: overlay;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.bg-right-side{
+    background: url('../../assets/images/lookingCar/auto-right.png'), linear-gradient(rgba(61, 58, 59, 0.99),rgba(61, 58, 59, 0.99));
+    background-blend-mode: overlay;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}

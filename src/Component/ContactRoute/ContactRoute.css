@@ -16,11 +16,11 @@
         padding: 20px;
       }
       
-      h1 {
+      .heading1 {
         text-align: center;
       }
       
-      p {
+      .paragraph {
         line-height: 1.6;
       }
       
