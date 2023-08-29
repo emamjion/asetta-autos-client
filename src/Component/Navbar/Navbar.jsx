@@ -63,6 +63,11 @@ const handleDarkMode =(event)=>{
         </NavLink>
       </li>
       <li>
+        <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard">
+          Dashboard
+        </NavLink>
+      </li>
+      <li>
         <NavLink className="hover:text-[#ef1721] duration-500" to="/services">
           Services
         </NavLink>
@@ -75,11 +80,6 @@ const handleDarkMode =(event)=>{
       <li>
         <NavLink className="hover:text-[#ef1721] duration-500" to="/contact">
           Contact
-        </NavLink>
-      </li>
-      <li>
-        <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard">
-          Dashboard
         </NavLink>
       </li>
     </>
