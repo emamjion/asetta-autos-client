@@ -18,7 +18,6 @@ import AddBlogs from "../Component/dashboard/addBlogs/AddBlogs";
 import AddCars from "../Component/dashboard/addCars/AddCars";
 import AddReview from "../Component/dashboard/addReview/AddReview";
 import UserCards from "../Component/dashboard/userCards/UserCards";
-import ServiceSectionDetails from "../Component/ServiceSection/ServiceSectionDetails";
 
 const router = createBrowserRouter([
     {
@@ -52,6 +51,10 @@ const router = createBrowserRouter([
             {
                 path: 'dealer-details/:id',
                 element: <DealerDetails></DealerDetails>
+            },
+            {
+                path: 'our-blogs/:id',
+                element: <NewsDetails></NewsDetails>
             },
             {
                 path: 'ourteam/:id',
