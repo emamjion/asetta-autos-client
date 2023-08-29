@@ -18,6 +18,8 @@ import AddBlogs from "../Component/dashboard/addBlogs/AddBlogs";
 import AddCars from "../Component/dashboard/addCars/AddCars";
 import AddReview from "../Component/dashboard/addReview/AddReview";
 import UserCards from "../Component/dashboard/userCards/UserCards";
+import NewsDetails from "../Component/LatestNews/NewsDetails";
+import ServiceSectionDetails from "../Component/ServiceSection/ServiceSectionDetails";
 
 const router = createBrowserRouter([
     {
