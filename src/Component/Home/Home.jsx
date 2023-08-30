@@ -10,6 +10,10 @@ import PopularBrand from "../PopularBrand/PopularBrand";
 import ClientReviews from "../ClientReviews/ClientReviews";
 import MobileApp from "../MobileApp/MobileApp";
 import BestDealer from "../BestDealer/BestDealer";
+import HomeSearch from "../HomeSearch/HomeSearch";
+import OurPartner from "../OurPartner/OurPartner";
+import LookingCar from "../LookingCar/LookingCar";
+import SubmitVehicle from "../SubmitVehicle/SubmitVehicle";
 
 const Home = () => {
 	return (
@@ -19,11 +23,17 @@ const Home = () => {
 			{/*Sagor Ahmed Make Banner Section */}
 			<Banner></Banner>
 
+			{/* Home Search Section - Emam */}
+			<HomeSearch/>
+
 			{/* About Section */}
 			<AboutUs></AboutUs>
 
 			{/* New Arrivals section  - Emam */}
 			<NewArrivals />
+
+			{/* Looking for a car section - Emam */}
+			<LookingCar/>
 
 			{/* Car Body Types - Emam */}
 			<CarCategory/>
@@ -46,8 +56,14 @@ const Home = () => {
 			{/* Latest News section - arafat */}
 			<LatestNews></LatestNews>
 
+			{/* Our partner section - Emam */}
+			<OurPartner/>
+
 			{/* Mobile App section - Arafat */}
 			<MobileApp></MobileApp>
+
+			{/* Submit your vehicle section - Emam */}
+			<SubmitVehicle/>
 		</div>
 	);
 };

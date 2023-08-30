@@ -1,9 +1,10 @@
 [
     {
+        "image" : "https://i.ibb.co/PFP9NZM/toyota-camry.png",
         "make": "Toyota",
         "model": "Camry",
         "year": "2023",
-        "color": "Silver",
+        "color": "White",
         "vin": "1HGCM82633A123456",
         "engine": {
             "type": "4-cylinder",
@@ -60,6 +61,7 @@
         "average_rating": "4.75"
     },
     {
+        "image" : "https://i.ibb.co/ysYG7hW/ford.png",
         "make": "Ford",
         "model": "Mustang",
         "year": "2022",
@@ -120,10 +122,11 @@
         "average_rating": "4.5"
     },
     {
+        "image" : "https://i.ibb.co/Ydv2Wht/honda-civic.png",
         "make": "Honda",
         "model": "Civic",
         "year": "2023",
-        "color": "Blue",
+        "color": "Red",
         "vin": "2HGFC2F59LH500003",
         "engine": {
             "type": "4-cylinder",
@@ -156,7 +159,7 @@
             "description": "Power moonroof."
             }
         ],
-        "price": "22000.00",
+        "price": "33000.00",
         "owner": {
             "first_name": "Emily",
             "last_name": "Johnson",
@@ -173,6 +176,372 @@
         },
         {
             "reviewer": "Frank",
+            "rating": "5.0",
+            "comment": "Great value for the price."
+        }
+        ],
+        "average_rating":" 4.5"
+    },
+    {
+        "image" : "https://i.ibb.co/Tg9X4Yz/toyota-premio.png",
+        "make": "Toyota",
+        "model": "Premio",
+        "year": "2023",
+        "color": "silver",
+        "vin": "2HGFC2F59LH500003",
+        "engine": {
+            "type": "4-cylinder",
+            "displacement": "1.5L",
+            "horsepower": "184",
+            "description": "Efficient 1.5-liter 4-cylinder engine with 174 horsepower."
+        },
+        "transmission": "CVT",
+        "fuel_type": "Gasoline",
+        "mileage": "15000",
+        "features": [
+            {
+                "name": "Air Conditioning",
+                "description": "Automatic climate control."
+            },
+            {
+                "name": "Power Windows",
+                "description": "Power windows with auto-up/down."
+            },
+            {
+                "name": "Bluetooth",
+                "description": "Android Auto, Bluetooth phone and audio."
+        },
+        {
+            "name": "Backup Camera",
+            "description": "Multi-angle rearview camera."
+        },
+        {
+            "name": "No Sunroof",
+            "description": "Power moonroof - No."
+            }
+        ],
+        "price": "57000.00",
+        "owner": {
+            "first_name": "Jovan",
+            "last_name": "Khan",
+            "contact": {
+            "email": "jovankhan@email.com",
+            "phone": "+1 (555) 567-8901"
+        }
+        },
+        "reviews": [
+        {
+            "reviewer": "Eva",
+            "rating": "4.0",
+            "comment": "Reliable and economical car."
+        },
+        {
+            "reviewer": "Anam",
+            "rating": "5.0",
+            "comment": "Great value for the price."
+        }
+        ],
+        "average_rating":" 4.5"
+    },
+    {
+        "image" : "https://i.ibb.co/d7zGYjg/mitsubishi-lancer.png",
+        "make": "Mitsubishi",
+        "model": "Lancer",
+        "year": "2023",
+        "color": "Red",
+        "vin": "2HGFC2F59LH500003",
+        "engine": {
+            "type": "4-cylinder",
+            "displacement": "1.5L",
+            "horsepower": "184",
+            "description": "Efficient 1.5-liter 4-cylinder engine with 174 horsepower."
+        },
+        "transmission": "CVT",
+        "fuel_type": "Gasoline",
+        "mileage": "15000",
+        "features": [
+            {
+                "name": "Air Conditioning",
+                "description": "Automatic climate control."
+            },
+            {
+                "name": "Power Windows",
+                "description": "Power windows with auto-up/down."
+            },
+            {
+                "name": "Bluetooth",
+                "description": "Android Auto, Bluetooth phone and audio."
+        },
+        {
+            "name": "Backup Camera",
+            "description": "Multi-angle rearview camera."
+        },
+        {
+            "name": "Sunroof",
+            "description": "Power moonroof"
+            }
+        ],
+        "price": "37000.00",
+        "owner": {
+            "first_name": "Jovan",
+            "last_name": "Khan",
+            "contact": {
+            "email": "jovankhan@email.com",
+            "phone": "+1 (555) 567-8901"
+        }
+        },
+        "reviews": [
+        {
+            "reviewer": "Eva",
+            "rating": "4.0",
+            "comment": "Reliable and economical car."
+        },
+        {
+            "reviewer": "Anam",
+            "rating": "5.0",
+            "comment": "Great value for the price."
+        }
+        ],
+        "average_rating":" 4.5"
+    },
+    {
+        "image" : "https://i.ibb.co/wWHn6Gq/audi.png",
+        "make": "Audi",
+        "model": "A6",
+        "year": "2023",
+        "color": "Perl",
+        "vin": "2HGFC2F59LH500003",
+        "engine": {
+            "type": "4-cylinder",
+            "displacement": "1.5L",
+            "horsepower": "184",
+            "description": "Efficient 1.5-liter 4-cylinder engine with 174 horsepower."
+        },
+        "transmission": "CVT",
+        "fuel_type": "Gasoline",
+        "mileage": "15000",
+        "features": [
+            {
+                "name": "Air Conditioning",
+                "description": "Automatic climate control."
+            },
+            {
+                "name": "Power Windows",
+                "description": "Power windows with auto-up/down."
+            },
+            {
+                "name": "Bluetooth",
+                "description": "Android Auto, Bluetooth phone and audio."
+        },
+        {
+            "name": "Backup Camera",
+            "description": "Multi-angle rearview camera."
+        },
+        {
+            "name": "No Sunroof",
+            "description": "Power moonroof - No."
+            }
+        ],
+        "price": "46000.00",
+        "owner": {
+            "first_name": "Jovan",
+            "last_name": "Khan",
+            "contact": {
+            "email": "jovankhan@email.com",
+            "phone": "+1 (555) 567-8901"
+        }
+        },
+        "reviews": [
+        {
+            "reviewer": "Eva",
+            "rating": "4.0",
+            "comment": "Reliable and economical car."
+        },
+        {
+            "reviewer": "Anam",
+            "rating": "5.0",
+            "comment": "Great value for the price."
+        }
+        ],
+        "average_rating":" 4.5"
+    },
+    {
+        "image" : "https://i.ibb.co/cYzBXgb/hyundai.png",
+        "make": "Hyundai",
+        "model": "Calligraphy Trim",
+        "year": "2023",
+        "color": "Perl",
+        "vin": "2HGFC2F59LH500003",
+        "engine": {
+            "type": "4-cylinder",
+            "displacement": "1.5L",
+            "horsepower": "184",
+            "description": "Efficient 1.5-liter 4-cylinder engine with 174 horsepower."
+        },
+        "transmission": "CVT",
+        "fuel_type": "Gasoline",
+        "mileage": "15000",
+        "features": [
+            {
+                "name": "Air Conditioning",
+                "description": "Automatic climate control."
+            },
+            {
+                "name": "Power Windows",
+                "description": "Power windows with auto-up/down."
+            },
+            {
+                "name": "Bluetooth",
+                "description": "Android Auto, Bluetooth phone and audio."
+        },
+        {
+            "name": "Backup Camera",
+            "description": "Multi-angle rearview camera."
+        },
+        {
+            "name": "No Sunroof",
+            "description": "Power moonroof - No."
+            }
+        ],
+        "price": "49500.00",
+        "owner": {
+            "first_name": "Jovan",
+            "last_name": "Khan",
+            "contact": {
+            "email": "jovankhan@email.com",
+            "phone": "+1 (555) 567-8901"
+        }
+        },
+        "reviews": [
+        {
+            "reviewer": "Eva",
+            "rating": "4.0",
+            "comment": "Reliable and economical car."
+        },
+        {
+            "reviewer": "Anam",
+            "rating": "5.0",
+            "comment": "Great value for the price."
+        }
+        ],
+        "average_rating":" 4.5"
+    },
+    {
+        "image" : "https://i.ibb.co/6rGW049/honda-accord.png",
+        "make": "Honda",
+        "model": "Accord",
+        "year": "2023",
+        "color": "Red",
+        "vin": "2HGFC2F59LH500003",
+        "engine": {
+            "type": "4-cylinder",
+            "displacement": "1.5L",
+            "horsepower": "184",
+            "description": "Efficient 1.5-liter 4-cylinder engine with 174 horsepower."
+        },
+        "transmission": "CVT",
+        "fuel_type": "Gasoline",
+        "mileage": "15000",
+        "features": [
+            {
+                "name": "Air Conditioning",
+                "description": "Automatic climate control."
+            },
+            {
+                "name": "Power Windows",
+                "description": "Power windows with auto-up/down."
+            },
+            {
+                "name": "Bluetooth",
+                "description": "Android Auto, Bluetooth phone and audio."
+        },
+        {
+            "name": "Backup Camera",
+            "description": "Multi-angle rearview camera."
+        },
+        {
+            "name": "Sunroof",
+            "description": "Power moonroof"
+            }
+        ],
+        "price": "53000.00",
+        "owner": {
+            "first_name": "Jovan",
+            "last_name": "Khan",
+            "contact": {
+            "email": "jovankhan@email.com",
+            "phone": "+1 (555) 567-8901"
+        }
+        },
+        "reviews": [
+        {
+            "reviewer": "Eva",
+            "rating": "4.0",
+            "comment": "Reliable and economical car."
+        },
+        {
+            "reviewer": "Anam",
+            "rating": "5.0",
+            "comment": "Great value for the price."
+        }
+        ],
+        "average_rating":" 4.5"
+    },
+    {
+        "image" : "https://i.ibb.co/wCwG2vL/toyota-land-cruser.png",
+        "make": "Toyota",
+        "model": "Land cruser",
+        "year": "2023",
+        "color": "Wine",
+        "vin": "2HGFC2F59LH500003",
+        "engine": {
+            "type": "4-cylinder",
+            "displacement": "1.5L",
+            "horsepower": "184",
+            "description": "Efficient 1.5-liter 4-cylinder engine with 174 horsepower."
+        },
+        "transmission": "CVT",
+        "fuel_type": "Gasoline",
+        "mileage": "15000",
+        "features": [
+            {
+                "name": "Air Conditioning",
+                "description": "Automatic climate control."
+            },
+            {
+                "name": "Power Windows",
+                "description": "Power windows with auto-up/down."
+            },
+            {
+                "name": "Bluetooth",
+                "description": "Android Auto, Bluetooth phone and audio."
+        },
+        {
+            "name": "Backup Camera",
+            "description": "Multi-angle rearview camera."
+        },
+        {
+            "name": "No Sunroof",
+            "description": "Power moonroof - No."
+            }
+        ],
+        "price": "66000.00",
+        "owner": {
+            "first_name": "Jovan",
+            "last_name": "Khan",
+            "contact": {
+            "email": "jovankhan@email.com",
+            "phone": "+1 (555) 567-8901"
+        }
+        },
+        "reviews": [
+        {
+            "reviewer": "Eva",
+            "rating": "4.0",
+            "comment": "Reliable and economical car."
+        },
+        {
+            "reviewer": "Anam",
             "rating": "5.0",
             "comment": "Great value for the price."
         }

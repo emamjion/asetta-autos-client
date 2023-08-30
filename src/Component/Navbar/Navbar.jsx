@@ -63,6 +63,11 @@ const handleDarkMode =(event)=>{
         </NavLink>
       </li>
       <li>
+        <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard">
+          Dashboard
+        </NavLink>
+      </li>
+      <li>
         <NavLink className="hover:text-[#ef1721] duration-500" to="/services">
           Services
         </NavLink>
@@ -241,10 +246,10 @@ const handleDarkMode =(event)=>{
           {listItem}
         </ul>
         <div className="flex items-center justify-center gap-4 text-lg">
-          <span className="text-[#111] hover:text-[#ef1721] cursor-pointer duration-500">
+          <Link to='/dashboard/user-cards'><span className="text-[#111] hover:text-[#ef1721] cursor-pointer duration-500">
             {" "}
             <FaCartPlus />{" "}
-          </span>
+          </span> </Link>
           <span className="text-[#111] hover:text-[#ef1721] cursor-pointer duration-500">
             {" "}
             <FaSearch />{" "}

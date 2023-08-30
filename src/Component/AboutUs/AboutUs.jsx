@@ -5,6 +5,8 @@ import {
 	AiFillCar,
 	AiFillSetting,
 } from "react-icons/Ai";
+import Button from "../Button/Button";
+// import aboutImg from '../../assets/images/about/about-img.png'
 const AboutUs = () => {
 	return (
 		// responsive - mohosin
@@ -19,6 +21,7 @@ const AboutUs = () => {
 						<h6 className="text-xs md:text-xl w-9/12"> 30 Years Of Quality Service</h6>{" "}
 					</div>
 					<img src="https://i.ibb.co/bgXGT5N/cars.png" alt="" />
+					{/* <img src={aboutImg} /> */}
 				</div>
 				<div>
 					<h4 className="text-red-600 text-lg md:text-2xl font-bold flex">
@@ -60,9 +63,14 @@ const AboutUs = () => {
 							Sed ut perspiciatis unde omnis iste natus sit.
 						</h6>
 					</div>
-					<button className="btn btn-sm md:btn-md mt-5 bg-red-600  flex justify-center items-center  text-white  hover:bg-black">
+					{/* <button className="btn btn-sm md:btn-md mt-5 bg-red-600  flex justify-center items-center  text-white  hover:bg-black">
 						Discover More <AiOutlineArrowRight />{" "}
-					</button>
+					</button> */}
+					<div className="mt-6">
+						<Button 
+							button={'About More'} 
+						/>
+					</div>
 				</div>
 			</div>
 			{/* <div className="hero min-h-screen bg-base-200">
