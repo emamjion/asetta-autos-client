@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContex } from './../../Providers/Authprovider';
+import Swal from "sweetalert2";
 const AddCars = () => {
   const {user} = useContext(AuthContex)
   // console.log(user);
@@ -45,9 +46,40 @@ const AddCars = () => {
           'price' : data.price,
           'dealerEmail' : data.email
         }
-      
 
-      console.log(uploadCars);
+
+        
+        fetch('http://localhost:5000/addACar', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(uploadCars)
+        })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log('Response data:', data);
+            if(data.insertedId){
+              Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Successfully car added!',
+                showConfirmButton: false,
+                timer: 1500
+              })
+            }
+          })
+          .catch(error => {
+            console.error('error', error);
+          });
+        
+
+
     };
     return (
         <div className="px-4 xl:px-[140px] 2xl:px-[240px] py-10 border  shadow-sm drop-shadow-sm">
