@@ -6,7 +6,7 @@ import driverImg from '../../assets/images/about/car-driver.png'
 const CompanyInfo = () => {
     return (
         <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24 py-24'>
-            <div className='grid grid-cols-2 gap-12'>
+            <div className='grid md:grid-cols-2 gap-12'>
                 <div>
                     <div>
                         <h1 className='text-3xl font-semibold'>About our company <span className='text-[#ef1721]'>info.</span></h1>
