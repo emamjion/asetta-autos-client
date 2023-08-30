@@ -37,7 +37,18 @@ const handleDarkMode =(event)=>{
   const { user, logOut } = useContext(AuthContex);
 
 
-  const currentUser = {'name' : 'Md Mohosin', 'role' : 'dealer'}
+  // const currentUser = {'name' : 'Md Mohosin', 'role' : 'dealer'}
+  // const currentUser = { 'name': 'Md Mohosin', 'role': 'admin' }
+  const [users, setUsers] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/users')
+        .then(res => res.json())
+        .then(data => setUsers(data))
+    }, [])
+
+    // find current users
+
+   const currentUser =  users.find(data=>data?.email === user?.email)
 
 
   const [show, setShow] = useState(false);
@@ -49,10 +60,10 @@ const handleDarkMode =(event)=>{
     <>
       <li>
         <NavLink className="hover:text-[#ef1721] duration-500">
-          {currentUser.role} Home
+          {currentUser?.role} Home
         </NavLink>
       </li>
-      {currentUser.role === 'admin' && (
+      {currentUser?.role === 'admin' && (
       <><li>
       <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-dealers">
         Add Dealers
@@ -64,7 +75,7 @@ const handleDarkMode =(event)=>{
       </NavLink>
     </li></>
       )}
-      {currentUser.role === 'dealer' && (
+      {currentUser?.role === 'dealer' && (
       <><li>
       <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-cars">
         Add Cars
@@ -72,7 +83,7 @@ const handleDarkMode =(event)=>{
     </li>
     </>
       )}
-      {currentUser.role === 'user' && (
+      {currentUser?.role === 'user' && (
       <>
       <li>
       <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/user-cards">
