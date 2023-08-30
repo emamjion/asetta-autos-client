@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContex } from '../Providers/Authprovider';
 import app from '../firebase/firebase.config';
+import SocialLogin from '../SocialLogin/SocialLogin';
 const auth = getAuth(app)
 const Login = () => {
     const { signin } = useContext(AuthContex)
@@ -50,14 +51,14 @@ const Login = () => {
     
 
     return (
-        <div className='grid md:grid-cols-2 bg-slate-200'>
+        <div className='grid md:grid-cols-2 items-center bg-slate-200'>
             <div>
                 <div>
                     <img className='w-full p-12 mt-4' src="https://i.ibb.co/jLRxmZV/output-onlinegiftools-1.gif" alt="" />
                 </div>
             </div>
-            <div className="bg-slate-200  hero min-h-screen background text-black font-bold text-lg ">
-                <div className="hero-content flex-col ">
+            <div className="bg-slate-200 hero min-h-screen background text-black font-bold text-lg ">
+                <div className="hero-content flex-col items-center w-[450px]">
                     <div className="card w-full flex-shrink-0 shadow-2xl bg-transparent card-background">
                         <form onSubmit={handlesubmit} className="card-body">
 
@@ -100,13 +101,14 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <input  className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]" type="submit" value="Login" />
                             </div>
-                            <div className="form-control mt-6">
+                            {/* <div className="form-control mt-6">
                                 <button onClick={handleGoogleSignIn}  className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]"><FaGoogle/>Google</button>
-                            </div>
+                            </div> */}
                             <div>
                                 <p>Don't have an account? <span className=' text-[#ef1721] hover:underline'><Link to='/register'>Register</Link></span></p>
                             </div>
                         </form>
+                        
                     </div>
                 </div>
             </div>

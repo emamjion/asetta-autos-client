@@ -25,12 +25,12 @@ const MeetOurTeamDetails = () => {
             <div className="card font-bold w-full lg:card-side bg-base-100 shadow-xl p-10">
                 <figure><img className='' src={photos} alt="Album" /></figure>
                 <div className="card-body w-1/2">
-                    <h2 className="card-title text-2xl">Name: {name}</h2>
-                    <h2 className="card-title text-2xl">Positon: {position}</h2>
+                    <h2 className="card-title text-2xl ms-4">Name: {name}</h2>
+                    <h2 className="card-title text-2xl ms-4">Positon: {position}</h2>
                     <p className='text-xl m-5'><span className='text-2xl'>Professional life :</span> {profession}</p>
                     <p className='text-xl m-5'><span className='text-2xl'>Blog :</span>  {personal_life}</p>
                     <p className='text-xl m-5'><span className='text-2xl'>life :</span> {future_goal}</p>
-                    <div className="card-actions justify-end">
+                    <div className="card-actions justify-end mt-5">
                         <div className="sociallink">
                             <a href="https://www.facebook.com">
                                 <FaFacebook className='icons'></FaFacebook>
