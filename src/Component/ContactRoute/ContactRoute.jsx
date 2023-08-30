@@ -7,6 +7,7 @@ import { FaMailBulk, FaMap, FaPhone, FaRegMap, FaWhatsapp } from 'react-icons/fa
 
 
 
+
 const ContactRoute = () => {
 
     const form = useRef();
@@ -32,6 +33,7 @@ const ContactRoute = () => {
         text: "demo location",
       },
     ];
+  // google map
   
 
 
@@ -70,7 +72,7 @@ const ContactRoute = () => {
             </div>
         </div>
 
-        <section id="contact" className="py-10 px-3  bg-slate-300">
+        <section  id="contact" className="py-10 px-3  bg-slate-300" >
       <div className="text-center mt-8">
         <h3 className="text-5xl font-extrabold">
           Contact <span className="text-red-500">Us</span>
@@ -108,8 +110,23 @@ const ContactRoute = () => {
           </div>
         </div>
       </div>
+
+      <div className=' bg-slate-300'>
+<div className=' rounded my-6 px-4' style={{ width: '100%', height: '400px', overflow: 'hidden'  }}>
+  <iframe
+    title="Google Map"
+    width="100%"
+    height="400"
+  
+    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=chattogram,%20Bangladesh+(Asetta%20Autos)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+  ></iframe>
+</div>
+
+</div>
     </section>
         
+
+
         </div>
     );
 };
