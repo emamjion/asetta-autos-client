@@ -5,33 +5,13 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContex } from '../Providers/Authprovider';
 import app from '../firebase/firebase.config';
-import SocialLogin from '../SocialLogin/SocialLogin';
+import SocialLogin from '../socialLogin/SocialLogin';
 const auth = getAuth(app)
 const Login = () => {
     const { signin } = useContext(AuthContex)
     let navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
-
-
-
-    const googleProvider = new GoogleAuthProvider();
-
-    const handleGoogleSignIn = () => {
-
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
-                Swal.fire('Your login is succesful')
-                navigate(from, { replace: true });
-            })
-
-            .catch(error => {
-                console.log('error', error.message);
-            })
-    }
-
 
     const handlesubmit = (event) => {
         event.preventDefault()
@@ -43,7 +23,7 @@ const Login = () => {
             .then(res => {
                 const user = res.user;
                 console.log(user)
-                Swal.fire('Your login is succesful')
+                // Swal.fire('Your login is succesful')
                 navigate(from, { replace: true });
             })
     }
@@ -57,12 +37,12 @@ const Login = () => {
                     <img className='w-full p-12 mt-4' src="https://i.ibb.co/jLRxmZV/output-onlinegiftools-1.gif" alt="" />
                 </div>
             </div>
-            <div className="bg-slate-200 hero min-h-screen background text-black font-bold text-lg ">
-                <div className="hero-content flex-col items-center w-[450px]">
+            <div className="bg-slate-200  hero min-h-screen background text-black font-bold text-lg ">
+                <div className="hero-content w-full md:w-2/3 flex-col ">
                     <div className="card w-full flex-shrink-0 shadow-2xl bg-transparent card-background">
                         <form onSubmit={handlesubmit} className="card-body">
 
-                                <h1 className='text-2xl text-center font-bold text-[#ef1721]'>Login</h1>
+                                <h1 className='text-3xl md:text-4xl text-center font-bold text-[#ef1721]'>Login</h1>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Email</span>
@@ -101,10 +81,10 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <input  className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]" type="submit" value="Login" />
                             </div>
-                            {/* <div className="form-control mt-6">
-                                <button onClick={handleGoogleSignIn}  className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]"><FaGoogle/>Google</button>
-                            </div> */}
-                            <div>
+                            <div className="form-control mt-6">
+                                <SocialLogin></SocialLogin>
+                            </div>
+                            <div className='text-center text-sm md:text-lg mt-4'>
                                 <p>Don't have an account? <span className=' text-[#ef1721] hover:underline'><Link to='/register'>Register</Link></span></p>
                             </div>
                         </form>

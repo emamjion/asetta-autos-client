@@ -28,6 +28,13 @@ const Authprovider = ({ children }) => {
         })
     }
 
+    //   // update user profile
+    //   const updateUserProfile = (name, photo) => {
+    //     return updateProfile(auth.currentUser, {
+    //         displayName: name, photoURL: photo
+    //     });
+    // }
+
     const signin = (email, password) => {
         setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
@@ -47,7 +54,7 @@ const Authprovider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser)
-            console.log(currentUser)
+            // console.log(currentUser)
             // if (currentUser) {
             //     axios.post('http://localhost:5000/jwt', { email: currentUser.email })
             //         .then(data => {
@@ -73,7 +80,7 @@ const Authprovider = ({ children }) => {
         signin,
         logOut,
         goggleSignIn,
-        updateUserProfile
+        updateUserProfile,
     }
 
 
