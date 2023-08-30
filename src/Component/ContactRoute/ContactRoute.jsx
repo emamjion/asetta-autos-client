@@ -84,7 +84,7 @@ const ContactRoute = () => {
             <input className='p-6 rounded' type="text" name="user_name" placeholder="Your Name" />
             <input className='p-6 rounded' type="Email" name="user_email" placeholder="Your Email Address" />
             <textarea className='p-6' placeholder="Your Message" name="message" rows={10}></textarea>
-            <input className="btn bg-red-500 border-none text-white p-4 rounded-xl w-32 mx-auto text-center" type="submit" value="Send" />
+            <input className="btn bg-red-500 border-none font-bold p-4 rounded-xl w-32 mx-auto text-center" type="submit" value="Send" />
           </form>
           <div className="flex flex-col gap-7 mt-16">
            
