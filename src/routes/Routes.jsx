@@ -20,6 +20,7 @@ import AddReview from "../Component/dashboard/addReview/AddReview";
 import UserCards from "../Component/dashboard/userCards/UserCards";
 import NewsDetails from "../Component/LatestNews/NewsDetails";
 import ServiceSectionDetails from "../Component/ServiceSection/ServiceSectionDetails";
+import AllCar from "../Component/AllCar/AllCar";
 
 const router = createBrowserRouter([
     {
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
             {
                 path: 'register',
                 element: <Register></Register>
+            },
+            {
+                path: 'all-car',
+                element: <AllCar></AllCar>
             }
 
         ]

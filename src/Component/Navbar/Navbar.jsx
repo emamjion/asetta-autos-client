@@ -63,6 +63,11 @@ const handleDarkMode =(event)=>{
         </NavLink>
       </li>
       <li>
+        <NavLink className="hover:text-[#ef1721] duration-500" to="/all-car">
+         All Cars
+        </NavLink>
+      </li>
+      <li>
         <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard">
           Dashboard
         </NavLink>
