@@ -20,7 +20,8 @@ import AddReview from "../Component/dashboard/addReview/AddReview";
 import UserCards from "../Component/dashboard/userCards/UserCards";
 import NewsDetails from "../Component/LatestNews/NewsDetails";
 import ServiceSectionDetails from "../Component/ServiceSection/ServiceSectionDetails";
-import AllCar from "../Component/AllCar/AllCar";
+import DealerRequest from "../Component/dashboard/dealer-request/DealerRequest";
+import DealerRequestDetails from "../Component/dashboard/dealer-request/DealerRequestDetails";
 
 const router = createBrowserRouter([
     {
@@ -109,6 +110,14 @@ const router = createBrowserRouter([
             {
                 path : '/dashboard/user-cards',
                 element : <UserCards></UserCards>
+            },
+            {
+                path : '/dashboard/dealer-request',
+                element : <DealerRequest></DealerRequest>
+            },
+            {
+                path : '/dashboard/dealer-request-details',
+                element : <DealerRequestDetails></DealerRequestDetails>
             },
         ]
     }

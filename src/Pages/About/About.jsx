@@ -8,7 +8,7 @@ import { BiCheckSquare } from "react-icons/bi";
 const About = () => {
     return (
         <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
-            <div className='flex items-center gap-12'>
+            <div className='md:flex items-center gap-12'>
                 <div>
                     <div>
                         <h1 className='text-3xl font-semibold'>WELCOME TO <span className='text-[#ef1721]'>Asetta Auto's</span></h1>
@@ -18,7 +18,7 @@ const About = () => {
                     <p className='mt-8 text-[#666]'>
                         Asetta Auto's is a clean and modern design which is useful for Car Dealer, Auto Dealer, Automotive WordPress website and any other automotive dealership business, who sell, buy or lease vehicles via website. Its stunning beauty, fashionable clean look and proper execution.
                     </p>
-                    <div className='flex items-center gap-20 mt-8'>
+                    <div className='md:flex items-center gap-20 mt-8'>
                         <div>
                             <h4 className='font-semibold mb-4'>Running Costs</h4>
                             <div className="mt-1">
@@ -101,7 +101,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div className='grid grid-cols-2 gap-4'>
+                <div className='grid md:grid-cols-2 gap-4'>
                     <img src={about1} className='rounded-lg shadow-xl' />
                     <img src={about2} className='rounded-lg shadow-xl' />
                     <img src={about3} className='rounded-lg shadow-xl' />
