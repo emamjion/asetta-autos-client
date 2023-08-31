@@ -1,5 +1,4 @@
 import React from 'react';
-import { BiCheckSquare } from 'react-icons/bi';
 import Button from '../../Component/Button/Button';
 import driverImg from '../../assets/images/about/car-driver.png'
 
@@ -21,57 +20,49 @@ const CompanyInfo = () => {
                             <div className="mt-1 grid grid-cols-2 items-center">
                                 <h6 className="flex">
                                             {" "}
-                                            <span className="text-red-600  mt-1 me-3">
-                                                <BiCheckSquare />
+                                            <span className="text-red-600 mt-2 me-3 w-2 h-2 bg-[#ef1721] rounded-full">
                                             </span>{" "}
                                             <span className='text-[#666]'>Expert Drivers</span>
                                 </h6>
                                 <h6 className="flex">
                                             {" "}
-                                            <span className="text-red-600 mt-1 me-3">
-                                                <BiCheckSquare />
+                                            <span className="text-red-600 mt-2 me-3 w-2 h-2 bg-[#ef1721] rounded-full">
                                             </span>{" "}
                                             <span className='text-[#666]'>Qucik response and support</span>
                                 </h6>
                                 <h6 className="flex">
                                             {" "}
-                                            <span className="text-red-600 mt-1 me-3">
-                                                <BiCheckSquare />
+                                            <span className="text-red-600 mt-2 me-3 w-2 h-2 bg-[#ef1721] rounded-full">
                                             </span>{" "}
                                             <span className='text-[#666]'>Online documentation</span>
                                 </h6>
                                 <h6 className="flex">
                                             {" "}
-                                            <span className="text-red-600 mt-1 me-3">
-                                                <BiCheckSquare />
+                                            <span className="text-red-600 mt-2 me-3 w-2 h-2 bg-[#ef1721] rounded-full">
                                             </span>{" "}
                                             <span className='text-[#666]'>Grow your business</span>
                                 </h6>
                                 <h6 className="flex">
                                             {" "}
-                                            <span className="text-red-600 mt-1 me-3">
-                                                <BiCheckSquare />
+                                            <span className="text-red-600 mt-2 me-3 w-2 h-2 bg-[#ef1721] rounded-full">
                                             </span>{" "}
                                             <span className='text-[#666]'>Fast booking confirmation</span>
                                 </h6>
                                 <h6 className="flex">
                                             {" "}
-                                            <span className="text-red-600 mt-1 me-3">
-                                                <BiCheckSquare />
+                                            <span className="text-red-600 mt-2 me-3 w-2 h-2 bg-[#ef1721] rounded-full">
                                             </span>{" "}
                                             <span className='text-[#666]'>Free Registration</span>
                                 </h6>
                                 <h6 className="flex">
                                             {" "}
-                                            <span className="text-red-600 mt-1 me-3">
-                                                <BiCheckSquare />
+                                            <span className="text-red-600 mt-2 me-3 w-2 h-2 bg-[#ef1721] rounded-full">
                                             </span>{" "}
                                             <span className='text-[#666]'>Customer satisfaction</span>
                                 </h6>
                                 <h6 className="flex">
                                             {" "}
-                                            <span className="text-red-600 mt-1 me-3">
-                                                <BiCheckSquare />
+                                            <span className="text-red-600 mt-2 me-3 w-2 h-2 bg-[#ef1721] rounded-full">
                                             </span>{" "}
                                             <span className='text-[#666]'>Low Rent Cost</span>
                                 </h6>
@@ -86,7 +77,7 @@ const CompanyInfo = () => {
                 </div>
                 <div className='relative'>
                     <img src={driverImg} className='rounded-lg shadow-xl' />
-                    <div className='w-48 h-40 flex items-center justify-center flex-col bg-[#ef1721] bg-opacity-60 text-white rounded-lg absolute top-2 left-4'>
+                    <div className='w-48 h-40 flex items-center justify-center flex-col bg-[#ef1721] bg-opacity-60 text-white rounded-lg absolute top-2 left-2'>
                         <span className='text-6xl font-bold tracking-wider'>2998</span>
                         <h5 className='font-medium text-xl mt-2'>Satisfied Customers</h5>
                     </div>
