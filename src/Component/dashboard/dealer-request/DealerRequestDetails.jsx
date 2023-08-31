@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContex } from "../../Providers/Authprovider";
+import Button from './../../Button/Button';
 
 const DealerRequestDetails = () => {
     const {user} = useContext(AuthContex)
@@ -11,6 +12,9 @@ const DealerRequestDetails = () => {
                 <h4 className="text-lg font-semibold">Email : {user?.email}</h4>
                 <h4 className="text-lg font-semibold">Status : <span className="text-red-600">Pending</span></h4>
                 <h4 className="text-lg font-semibold">Address : </h4>
+                <div className="my-4">
+                <Button button={"cancel request"}></Button>
+                </div>
             </div>
         </div>
     );
