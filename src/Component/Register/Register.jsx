@@ -37,6 +37,8 @@ const Register = () => {
                       email: data.email,
                       image : data.photoURL,
                       role: "user",
+                      admin_request : 'no',
+                      dealer_request : 'no'
                     };
                     fetch("http://localhost:5000/users", {
                       method: "POST",

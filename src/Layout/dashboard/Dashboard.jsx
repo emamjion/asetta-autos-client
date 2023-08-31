@@ -95,6 +95,11 @@ const handleDarkMode =(event)=>{
         provide reviews
       </NavLink>
     </li>
+      <li>
+      <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/dealer-request">
+        Dealer Request
+      </NavLink>
+    </li>
     </>
       )}
       <li>
