@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 // import AllCarsData from './AllCarsData';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import AllCarsData from './AllCarsData';
+import Button from '../Button/Button';
 
 const AllCar = () => {
     const [find, setFind] = useState('')
@@ -50,90 +52,32 @@ const AllCar = () => {
  <div>
  <div className="form-control">
   <div className="input-group ">
-   <div className="mx-auto  items-center m-6">
-   <input onChange={e => setFind(e.target.value)} type="text" placeholder="Find Your Car" className="input input-bordered" />
-    <button onClick={handleFind} className=" ml-2 btn btn-active">Search</button>
+    
+   <div className=" items-center m-6 ml-20 p-8">
+   <input onChange={e => setFind(e.target.value)} type="text" placeholder="All Branch" className="input input-bordered mx-2 ml-12 w-36" />
+
+   <input onChange={e => setFind(e.target.value)} type="text" placeholder="All Make" className="input input-bordered mx-2 w-36" />
+
+   <input onChange={e => setFind(e.target.value)} type="text" placeholder="Brand" className="input input-bordered mx-2 w-36" />
+
+   <input onChange={e => setFind(e.target.value)} type="text" placeholder="All registration Date" className="input input-bordered mx-2 w-36" />
+
+    <button onClick={handleFind} className=" ml-2 btn  bg-black hover:bg-red-600 text-white">Search</button>
+    
    </div>
   </div>
 </div>        
 
    </div>
 
-{/* category part */}
-   <div className='w-[80%] mx-auto
-   '>
-   <Tabs className='' defaultIndex={1} onSelect={(index) => handleChange(index)}>
-    <TabList className="flex items-center mx-[20%] my-12 bg-slate-200 p-6" >
-      <Tab className="border btn btn-sm text-red-500 mx-auto">Toyota</Tab>
-      <Tab className="border btn btn-sm text-red-500 mx-auto">Ford</Tab>
-      <Tab className="border btn btn-sm text-red-500 mx-auto">Honda</Tab>
-    </TabList>
-
-    <TabPanel>
-
-<div className='grid gap-6'>
-{
-info.map(info =>
-<div key={info._id}>
-<div className="card card-side bg-base-100 shadow-xl">
-  <figure><img src={info.image} alt="Movie"/></figure>
-  <div className="card-body">
-    <h2 className="card-title">{info.make}</h2>
-    <p>Click the button to watch on Jetflix app.</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Watch</button>
-    </div>
-  </div>
-</div>
-</div> )
-}
-</div>
-
-</TabPanel>
-<TabPanel>
-
-<div className='grid gap-6'>
-{
-info.map(info =>
-<div key={info._id}>
-<div className="card card-side bg-base-100 shadow-xl">
-  <figure><img src={info.image} alt="Movie"/></figure>
-  <div className="card-body">
-    <h2 className="card-title">{info.make}</h2>
-    <p>Click the button to watch on Jetflix app.</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Watch</button>
-    </div>
-  </div>
-</div>
-</div> )
-}
-</div>
-
-</TabPanel>
-<TabPanel>
-
-<div className='grid gap-6 mb-6'>
-{
-info.map(info =>
-<div key={info._id}>
-<div className="card card-side bg-base-100 shadow-xl">
-  <figure><img src={info.image} alt="Movie"/></figure>
-  <div className="card-body">
-    <h2 className="card-title">{info.make}</h2>
-    <p>Click the button to watch on Jetflix app.</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Watch</button>
-    </div>
-  </div>
-</div>
-</div> )
-}
-</div>
-
-</TabPanel>
-  </Tabs>
-   </div>
+   <div className='grid gap-6 mt-12 mx-16 m-8'>
+                {
+                    info.map(info => <AllCarsData
+                        key={info._id}
+                        info={info}
+                    />)
+                }
+            </div>
 
       </div>
     );
