@@ -22,6 +22,7 @@ import NewsDetails from "../Component/LatestNews/NewsDetails";
 import ServiceSectionDetails from "../Component/ServiceSection/ServiceSectionDetails";
 import DealerRequest from "../Component/dashboard/dealer-request/DealerRequest";
 import DealerRequestDetails from "../Component/dashboard/dealer-request/DealerRequestDetails";
+import AllCar from "../Component/AllCar/AllCar";
 
 const router = createBrowserRouter([
     {
