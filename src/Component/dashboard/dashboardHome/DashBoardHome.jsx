@@ -34,7 +34,12 @@ const DashBoardHome = () => {
                 </Link>
                 <Link to="/dashboard/add-reviews">
                   <button className="btn bg-red-600 text-white  hover:bg-black">
-                    Provide Your Reviews
+                    add Reviews
+                  </button>
+                </Link>
+                <Link to="/dashboard/dealer-request">
+                  <button className="btn bg-red-600 text-white  hover:bg-black">
+                    Dealer Request
                   </button>
                 </Link>
               </>

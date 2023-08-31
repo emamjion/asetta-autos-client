@@ -42,7 +42,8 @@ const SocialLogin = () => {
           .then((result) => {
             const loggedUser = result.user;
     
-            const saveUser = {name : loggedUser.displayName, email : loggedUser.email, image : loggedUser.photoURL, role : 'user'}
+            const saveUser = {name : loggedUser.displayName, email : loggedUser.email, image : loggedUser.photoURL, role : 'user', admin_request : 'no',
+            dealer_request : 'no'}
               fetch('http://localhost:5000/users',{
                 method : "POST",
                 headers : {
