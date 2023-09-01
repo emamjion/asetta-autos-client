@@ -31,7 +31,7 @@ const Login = () => {
     
 
     return (
-        <div className='grid md:grid-cols-2 bg-slate-200'>
+        <div className='grid md:grid-cols-2 items-center bg-slate-200'>
             <div>
                 <div>
                     <img className='w-full p-12 mt-4' src="https://i.ibb.co/jLRxmZV/output-onlinegiftools-1.gif" alt="" />
@@ -88,6 +88,7 @@ const Login = () => {
                                 <p>Don't have an account? <span className=' text-[#ef1721] hover:underline'><Link to='/register'>Register</Link></span></p>
                             </div>
                         </form>
+                        
                     </div>
                 </div>
             </div>
