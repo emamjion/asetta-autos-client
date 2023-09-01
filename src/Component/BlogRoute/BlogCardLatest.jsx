@@ -1,19 +1,22 @@
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import Button from '../Button/Button';
 
-const BlogCardLatest = ({ blog }) => {
-    const { image, author, title, _id, content, date } = blog;
-    console.log(blog)
+const BlogCardLatest = ({ blogs }) => {
+    const { image, author, title, _id, content, date, authorImage, blog } = blogs;
+    console.log(blogs)
     return (
-        <div className='w-2/3'>
-            <div className="card w-full md:w-[850px] bg-base-100 shadow-xl mt-8">
-                <figure><img src={image} alt="Shoes" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title text-3xl">{title}</h2>
-                    <p>{content}</p>
-                    <div className="card-actions justify-start">
-                        <button className="btn btn-primary border-none mt-5 bg-[#ef1721] hover:bg-black duration-500 rounded-lg ">Read More <FaArrowRight></FaArrowRight></button>
-                    </div>
+        <div className="card w-full my-10 font-bold h-full lg:card-side bg-base-100 shadow-xl">
+            <figure><img src={image} alt="Album" /></figure>
+            <div className="card-body w-2/3">
+                <h2 className="card-title text-3xl">{title}</h2>
+                <h2 className='text-2xl'>Author:  {author}</h2>
+                <p>{content}</p>
+                <div className="card-actions justify-start">
+                    <Link to={`/our-blogs/${_id}`}>
+                        <Button button={'read more'} />
+                    </Link>
                 </div>
             </div>
         </div>

@@ -24,7 +24,7 @@ const BlogRoute = () => {
                     }
                 </div> */}
                 {
-                    Blogs.map(blog => <BlogCardLatest key={blog._id} blog={blog}></BlogCardLatest>)
+                    Blogs.map(blogs => <BlogCardLatest key={blogs._id} blogs={blogs}></BlogCardLatest>)
                 }
             </div>
         </>

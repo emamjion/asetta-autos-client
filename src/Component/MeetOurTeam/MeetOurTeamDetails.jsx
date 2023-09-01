@@ -30,7 +30,7 @@ const MeetOurTeamDetails = () => {
                     <p className='text-xl m-5'><span className='text-2xl'>Professional life :</span> {profession}</p>
                     <p className='text-xl m-5'><span className='text-2xl'>Blog :</span>  {personal_life}</p>
                     <p className='text-xl m-5'><span className='text-2xl'>life :</span> {future_goal}</p>
-                    <div className="card-actions justify-end mt-5">
+                    <div className="card-actions justify-start mt-5">
                         <div className="sociallink">
                             <a href="https://www.facebook.com">
                                 <FaFacebook className='icons'></FaFacebook>
