@@ -11,7 +11,7 @@ const MeetOurTeamDetails = () => {
     const [teams, setTeams] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/ourteam/${id}`)
+        fetch(`https://asetta-autos-production.up.railway.app/ourteam/${id}`)
             .then(res => res.json())
             .then(data => setTeams(data))
     }, [])

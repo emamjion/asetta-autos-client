@@ -40,7 +40,7 @@ const Register = () => {
                       admin_request : 'no',
                       dealer_request : 'no'
                     };
-                    fetch("http://localhost:5000/users", {
+                    fetch("https://asetta-autos-production.up.railway.app/users", {
                       method: "POST",
                       headers: {
                         "content-type": "application/json",

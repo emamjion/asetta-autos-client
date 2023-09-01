@@ -7,7 +7,7 @@ import Button from '../Button/Button';
 const NewArrivals = () => {
     const [cars, setCars] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/new-arrivals')
+        fetch('https://asetta-autos-production.up.railway.app/new-arrivals')
         .then(res => res.json())
         .then(data => setCars(data))
     }, [])
