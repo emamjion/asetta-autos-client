@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 
 const AddDealers = () => {
     const [users, setUsers] = useState([]);
@@ -6,14 +7,55 @@ const AddDealers = () => {
         fetch('http://localhost:5000/users')
         .then(res => res.json())
         .then(data => setUsers(data))
-    }, [])
+    }, [users])
 
     const dealersPending = users.filter(pending=>pending?.dealer_request === 'pending')
 
 
     const handleConfirm =(id)=>{
         console.log(id);
-    }
+
+        fetch(`http://localhost:5000/makeDealerConfirm/${id}`, {
+            method: 'PATCH',
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          })
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              return response.json();
+            })
+            .then(data => {
+              console.log('Response data:', data);
+              if(data.modifiedCount > 0){
+                // navigate('/dashboard/dealer-request-details')
+                Swal.fire({
+                  position: 'top-end',
+                  icon: 'success',
+                  title: 'Confirm!',
+                  showConfirmButton: false,
+                  timer: 1500
+                })
+              }
+              // if(data.modifiedCount === 0){
+              //   navigate('/dashboard/dealer-request-details')
+              //   Swal.fire({
+              //     position: 'top-end',
+              //     icon: 'info',
+              //     title: 'Already Your Request Added!',
+              //     showConfirmButton: false,
+              //     timer: 1500
+              //   })
+              // }
+              
+            })
+            .catch(error => {
+              console.error('error', error);
+            });
+      };
+
 
     return (
         <div className="px-4 xl:px-[140px] 2xl:px-[240px] py-10 border">
