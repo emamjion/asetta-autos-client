@@ -5,7 +5,7 @@ const DealerDetails = () => {
     const {id}= useParams()
     const [data, setData] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/best-dealers/${id}`)
+        fetch(`https://asetta-autos-production.up.railway.app/best-dealers/${id}`)
             .then(res => res.json())
             .then(data => setData(data))
     }, [])

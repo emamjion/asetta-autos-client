@@ -7,7 +7,7 @@ import NewsCard from './NewsCard';
 const LatestNews = () => {
     const [Blogs, setBlogs] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/our-blogs/')
+        fetch('https://asetta-autos-production.up.railway.app/our-blogs/')
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [])
@@ -18,7 +18,7 @@ const LatestNews = () => {
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-10 '>
                 
                 {
-                    Blogs.slice(0,3).map(blog=><NewsCard key={blog._id} blog={blog}></NewsCard>)
+                    Blogs.slice(0,3).map(blogs=><NewsCard key={blogs._id} blogs={blogs}></NewsCard>)
                 }
             </div>
             <div className='text-center'>

@@ -6,6 +6,7 @@ import { BsFillSendFill } from "react-icons/bs";
 import logo from "/Asseta.png"
 // import logo2 from '../../../src/assets/images/logo/logo.png'
 import moment from 'moment/moment';
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
@@ -29,15 +30,15 @@ const Footer = () => {
                             <li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow> About Us</a></li>
                             <li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow> Update News</a></li>
                             <li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow>  Testimonials</a></li>
-                            <li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow>  Terms Of Service</a></li>
-                            <li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow>  Privacy policy</a></li>
+                            <Link to='/termsofservice'><li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow>  Terms Of Service</a></li></Link>
+                            <Link to='/privacy'> <li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow>  Privacy policy</a></li></Link>
                             <li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow>  Our Dealers</a></li>
                         </ul>
                     </div>
                     <div className="footer-col quick-section">
                         <h1>Support Center</h1>
                         <ul>
-                            <li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow>  FAQ s</a></li>
+                            <Link to='/faq'><li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow>FAQ s</a></li></Link>
                             <li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow>  Affiliates</a></li>
                             <li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow>  Booking Tips</a></li>
                             <li><a href=""><BiSolidRightArrow className='quick-icons'></BiSolidRightArrow>  Sell Vehicles</a></li>

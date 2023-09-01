@@ -23,11 +23,16 @@ import ServiceSectionDetails from "../Component/ServiceSection/ServiceSectionDet
 import DealerRequest from "../Component/dashboard/dealer-request/DealerRequest";
 import DealerRequestDetails from "../Component/dashboard/dealer-request/DealerRequestDetails";
 import AllCar from "../Component/AllCar/AllCar";
+import NotFoundPage from "../Component/NotFoundPage/NotFoundPage";
+import TermsOfService from "../Component/TermsOfService/TermsOfService";
+import PrivacyPolicy from "../Component/PrivacyPolicy/PrivacyPolicy";
+import Faq from "../Component/Faq/Faq";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout />,
+        errorElement: <NotFoundPage></NotFoundPage>,
         children: [
             {
                 path: '/',
@@ -59,7 +64,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'our-blogs/:id',
-                element: <NewsDetails/>
+                element: <NewsDetails />
             },
             {
                 path: 'ourteam/:id',
@@ -68,6 +73,18 @@ const router = createBrowserRouter([
             {
                 path: 'services/:id',
                 element: <ServiceSectionDetails></ServiceSectionDetails>
+            },
+            {
+                path: 'termsofservice',
+                element: <TermsOfService></TermsOfService>
+            },
+            {
+                path: 'privacy',
+                element: <PrivacyPolicy></PrivacyPolicy>
+            },
+            {
+                path: 'faq',
+                element: <Faq></Faq>
             },
             {
                 path: 'login',
@@ -80,6 +97,8 @@ const router = createBrowserRouter([
             {
                 path: 'all-car',
                 element: <AllCar></AllCar>
+                // path: '*',
+                // element: <NotFoundPage></NotFoundPage>
             }
 
         ]
@@ -87,38 +106,38 @@ const router = createBrowserRouter([
     {
         path: 'dashboard',
         element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
-        children : [
+        children: [
             {
-                path : '/dashboard',
-                element : <DashBoardHome></DashBoardHome>
+                path: '/dashboard',
+                element: <DashBoardHome></DashBoardHome>
             },
             {
-                path : '/dashboard/add-dealers',
-                element : <AddDealers></AddDealers>
+                path: '/dashboard/add-dealers',
+                element: <AddDealers></AddDealers>
             },
             {
-                path : '/dashboard/add-blogs',
-                element : <AddBlogs></AddBlogs>
+                path: '/dashboard/add-blogs',
+                element: <AddBlogs></AddBlogs>
             },
             {
-                path : '/dashboard/add-cars',
-                element : <AddCars></AddCars>
+                path: '/dashboard/add-cars',
+                element: <AddCars></AddCars>
             },
             {
-                path : '/dashboard/add-reviews',
-                element : <AddReview></AddReview>
+                path: '/dashboard/add-reviews',
+                element: <AddReview></AddReview>
             },
             {
-                path : '/dashboard/user-cards',
-                element : <UserCards></UserCards>
+                path: '/dashboard/user-cards',
+                element: <UserCards></UserCards>
             },
             {
-                path : '/dashboard/dealer-request',
-                element : <DealerRequest></DealerRequest>
+                path: '/dashboard/dealer-request',
+                element: <DealerRequest></DealerRequest>
             },
             {
-                path : '/dashboard/dealer-request-details',
-                element : <DealerRequestDetails></DealerRequestDetails>
+                path: '/dashboard/dealer-request-details',
+                element: <DealerRequestDetails></DealerRequestDetails>
             },
         ]
     }

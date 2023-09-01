@@ -7,7 +7,7 @@ import MeetOurTeamCard from './MeetOurTeamCard';
 const MeetOurTeam = () => {
     const [members, setMembers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/ourteam')
+        fetch('https://asetta-autos-production.up.railway.app/ourteam')
             .then(res => res.json())
             .then(data => setMembers(data))
     }, [])
