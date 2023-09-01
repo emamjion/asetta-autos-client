@@ -11,10 +11,6 @@ const AllCar = () => {
     
     const [active, setActive] = useState('Toyota');
   
-
-
-    
-
     useEffect(() => {
         fetch(`http://localhost:5000/new-arrivals`)
         .then(res => res.json())
