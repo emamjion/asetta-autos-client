@@ -25,9 +25,50 @@ const Register = () => {
         console.log(data)
         createUser(data.email, data.password)
         .then(result=>{
-            const loggeduser = result.user;
-            console.log(loggeduser)
-            navigate(from, { replace: true });
+            // const loggeduser = result.user;
+            // Swal.fire('User Create succesful')
+            // navigate(from, { replace: true });
+            if (result?.user) {
+                updateUserProfile(data?.name, data?.photoURL)
+                  .then(() => {
+                    const user = {
+                      name: data.name,
+                      email: data.email,
+                      image : data.photoURL,
+                      role: "user",
+                      admin_request : 'no',
+                      dealer_request : 'no'
+                    };
+                    fetch("http://localhost:5000/users", {
+                      method: "POST",
+                      headers: {
+                        "content-type": "application/json",
+                      },
+                      body: JSON.stringify(user),
+                    })
+                      .then((res) => res.json())
+                      .then((data) => {
+                        console.log("user saved", data);
+                        if (data.insertedId) {
+                            Swal.fire({
+                                position: 'top-end',
+                                icon: 'success',
+                                title: 'Successfully Done!',
+                                showConfirmButton: false,
+                                timer: 1500
+                              })
+                          navigate('/')
+                        }
+                      });
+                  })
+                  .catch((err) => {
+                    console.log(err);
+                  });
+              }
+            })
+            .catch((err) => {
+            //   toast.error(err.message);
+            console.log(err);
         })
       }
 

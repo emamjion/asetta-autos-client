@@ -6,6 +6,8 @@ import MeetOurTeam from '../MeetOurTeam/MeetOurTeam';
 import PopularBrand from '../PopularBrand/PopularBrand';
 import About from '../../Pages/About/About';
 import CompanyInfo from '../../Pages/About/CompanyInfo';
+import WhyWeBest from '../../Pages/About/WhyWeBest';
+import AchievementHistory from '../../Pages/About/AchievementHistory';
 
 const AboutRoute = () => {
     return (
@@ -17,6 +19,12 @@ const AboutRoute = () => {
 
             {/* About our company Info section - Emam */}
             <CompanyInfo/>
+
+            {/* Why we are the best section - Emam */}
+            <WhyWeBest/>
+
+            {/* Achievement History */}
+            <AchievementHistory/>
 
             <Testimonials></Testimonials>
             <MeetOurTeam></MeetOurTeam>
