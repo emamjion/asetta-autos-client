@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 const AddDealers = () => {
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://asetta-autos-production.up.railway.app/users')
         .then(res => res.json())
         .then(data => setUsers(data))
     }, [users])
@@ -15,7 +15,7 @@ const AddDealers = () => {
     const handleConfirm =(id)=>{
         console.log(id);
 
-        fetch(`http://localhost:5000/makeDealerConfirm/${id}`, {
+        fetch(`https://asetta-autos-production.up.railway.app/makeDealerConfirm/${id}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json'
