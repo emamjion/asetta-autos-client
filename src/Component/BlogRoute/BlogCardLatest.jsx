@@ -11,8 +11,8 @@ const BlogCardLatest = ({ blogs }) => {
             <figure><img src={image} alt="Album" /></figure>
             <div className="card-body w-2/3">
                 <h2 className="card-title text-3xl">{title}</h2>
-                <h2 className='text-2xl'>Author:  {author}</h2>
-                <p>{content}</p>
+                <h2 className='text-xl'>Author:  {author}</h2>
+                <p className='font-normal'>{content.slice(0,150)}</p>
                 <div className="card-actions justify-start">
                     <Link to={`/our-blogs/${_id}`}>
                         <Button button={'read more'} />

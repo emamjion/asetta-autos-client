@@ -49,7 +49,7 @@ const AddCars = () => {
 
 
         
-        fetch('http://localhost:5000/addACar', {
+        fetch('https://asetta-autos-production.up.railway.app/addACar', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

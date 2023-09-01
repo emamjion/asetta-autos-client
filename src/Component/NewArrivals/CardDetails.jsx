@@ -7,7 +7,7 @@ const CardDetails = () => {
     const [car, setCar] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/new-arrivals/${id}`)
+        fetch(`https://asetta-autos-production.up.railway.app/new-arrivals/${id}`)
         .then(res => res.json())
         .then(data => setCar(data))
     }, [])

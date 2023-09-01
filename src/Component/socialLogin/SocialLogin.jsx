@@ -38,7 +38,7 @@ const SocialLogin = () => {
             <div className="divider"></div>
             <h1 className='text-center'>Continue with other accoutnt</h1>
             <div className="w-full text-center my-8">
-
+               
                 <button onClick={handlegoogleLogin} className="btn btn-square btn-outline">
                     <FaGoogle></FaGoogle>
                 </button>

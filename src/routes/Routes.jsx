@@ -22,6 +22,7 @@ import NewsDetails from "../Component/LatestNews/NewsDetails";
 import ServiceSectionDetails from "../Component/ServiceSection/ServiceSectionDetails";
 import DealerRequest from "../Component/dashboard/dealer-request/DealerRequest";
 import DealerRequestDetails from "../Component/dashboard/dealer-request/DealerRequestDetails";
+import AllCar from "../Component/AllCar/AllCar";
 import NotFoundPage from "../Component/NotFoundPage/NotFoundPage";
 import TermsOfService from "../Component/TermsOfService/TermsOfService";
 import PrivacyPolicy from "../Component/PrivacyPolicy/PrivacyPolicy";
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout />,
+        errorElement: <NotFoundPage></NotFoundPage>,
         children: [
             {
                 path: '/',
@@ -93,8 +95,10 @@ const router = createBrowserRouter([
                 element: <Register></Register>
             },
             {
-                path: '*',
-                element: <NotFoundPage></NotFoundPage>
+                path: 'all-car',
+                element: <AllCar></AllCar>
+                // path: '*',
+                // element: <NotFoundPage></NotFoundPage>
             }
 
         ]

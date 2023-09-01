@@ -9,7 +9,7 @@ import BlogCardLatest from './BlogCardLatest';
 const BlogRoute = () => {
     const [Blogs, setBlogs] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/our-blogs/')
+        fetch('https://asetta-autos-production.up.railway.app/our-blogs/')
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [])

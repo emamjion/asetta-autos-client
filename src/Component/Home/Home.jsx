@@ -24,7 +24,7 @@ const Home = () => {
 			<Banner></Banner>
 
 			{/* Home Search Section - Emam */}
-			<HomeSearch/>
+			{/* <HomeSearch/> */}
 
 			{/* About Section */}
 			<AboutUs></AboutUs>

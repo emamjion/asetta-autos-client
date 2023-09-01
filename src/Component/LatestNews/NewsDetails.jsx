@@ -7,12 +7,12 @@ const NewsDetails = () => {
   const { id } = useParams();
   const [newsDetails, setNewsDetails] = useState([]);
 
-  useEffect(() => {
-    fetch(`http://localhost:5000/our-blogs/${id}`)
-      .then(res => res.json())
-      .then(data => setNewsDetails(data))
-  }, [])
-  console.log(newsDetails)
+    useEffect(() => {
+        fetch(`https://asetta-autos-production.up.railway.app/our-blogs/${id}`)
+        .then(res => res.json())
+        .then(data => setNewsDetails(data))
+    }, [])
+
   const { image, author, title, _id, content, date, authorImage, blog } = newsDetails;
   return (
     <>
