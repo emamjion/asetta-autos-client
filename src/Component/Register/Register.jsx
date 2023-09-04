@@ -6,7 +6,7 @@ import { FaGoogle } from 'react-icons/fa';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../firebase/firebase.config';
 import Swal from 'sweetalert2';
-import SocialLogin from '../socialLogin/SocialLogin';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const auth = getAuth(app)
 const Register = () => {
