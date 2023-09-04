@@ -27,6 +27,7 @@ import NotFoundPage from "../Component/NotFoundPage/NotFoundPage";
 import TermsOfService from "../Component/TermsOfService/TermsOfService";
 import PrivacyPolicy from "../Component/PrivacyPolicy/PrivacyPolicy";
 import Faq from "../Component/Faq/Faq";
+import VrDrives from "../Component/VrDrives/VrDrives";
 
 const router = createBrowserRouter([
     {
@@ -97,8 +98,12 @@ const router = createBrowserRouter([
             {
                 path: 'all-car',
                 element: <AllCar></AllCar>
-                // path: '*',
-                // element: <NotFoundPage></NotFoundPage>
+                
+            },
+            {
+                path: 'vr-drives',
+                element: <VrDrives></VrDrives>
+                
             }
 
         ]
