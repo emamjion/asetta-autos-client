@@ -1,62 +1,91 @@
 import { Rating } from "@smastrom/react-rating";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useState } from "react";
 import { FaAngleRight, FaArrowRight, FaCaretRight, FaMarker, FaSign } from "react-icons/fa";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Button from "../Button/Button";
 import Swal from "sweetalert2";
+import { AuthContex } from "../Providers/Authprovider";
 // import { FaAlignRight} from "react-icons/fa";
 
 
 
 const CardDetails = () => {
+  const {user} = useContext(AuthContex)
+  const {id} = useParams();
+  const [count, setCount] = useState(1);
+  const [car, setCar] = useState([]);
+  const navigate = useNavigate()
+
+  useEffect(() => {
+      fetch(`https://asetta-autos-production.up.railway.app/new-arrivals/${id}`)
+      .then(res => res.json())
+      .then(data => setCar(data))
+  }, [])
+
+
+
   const handleAddToCart = () => {
-    const swalWithBootstrapButtons = Swal.mixin({
-      customClass: {
-        confirmButton: 'btn btn-success',
-        cancelButton: 'btn btn-danger'
-      },
-      buttonsStyling: false
-    })
-    
-    swalWithBootstrapButtons.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+    Swal.fire({
+      title: 'Are you sure! Add to Card!',
+      text: "please confirm!",
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Yes, add it!',
-      cancelButtonText: 'No, cancel!',
-      reverseButtons: true
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, add'
     }).then((result) => {
       if (result.isConfirmed) {
-        swalWithBootstrapButtons.fire(
-          'Added!',
-          'Your Product has been added.',
-          'success'
-        )
-      } else if (
-        /* Read more about handling dismissals below */
-        result.dismiss === Swal.DismissReason.cancel
-      ) {
-        swalWithBootstrapButtons.fire(
-          'Cancelled',
-          'Your imaginary file is safe :)',
-          'error'
-        )
+        car.email = user?.email
+        car.items = count
+        car.carId = car._id
+        delete car._id;
+
+
+
+        fetch('http://localhost:5000/addToCard', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(car)
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log('Response data:', data);
+          if(data.insertedId){
+            navigate('/dashboard/user-cards')
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: 'Successfully added!',
+              showConfirmButton: false,
+              timer: 1500
+            })
+          }
+        })
+        .catch(error => {
+          console.error('error', error);
+        });
       }
     })
+    console.log(car);
   };
 
 
 
-  const [count, setCount] = useState(0);
 
   const handleIncrease = () => {
     setCount(count + 1);
   };
 
   const handleDecrease = () => {
-    if (count > 0) {
+    if (count > 1) {
       setCount(count - 1);
     }
   };
@@ -76,15 +105,9 @@ const CardDetails = () => {
   };
 
 
-    const {id} = useParams();
-    const [car, setCar] = useState([]);
 
-    useEffect(() => {
-        fetch(`https://asetta-autos-production.up.railway.app/new-arrivals/${id}`)
-        .then(res => res.json())
-        .then(data => setCar(data))
-    }, [])
     const {
+      _id,
         make,
         model,
         year,
@@ -101,7 +124,7 @@ const CardDetails = () => {
         average_rating,
         image,
       } = car || null
-      console.log(car);
+      console.log(_id);
     return (
     
       <div className="md:grid grid-cols-2 gap-8 mx-auto p-10 ">
@@ -155,7 +178,6 @@ const CardDetails = () => {
         <button className="bg-slate-200 p-2 rounded text-red-600 btn-sm" onClick={handleIncrease}>+</button>
      <button onClick={handleAddToCart} className="ml-4 w-40">   <Button button={'Add to Cart'} /></button>
       </div>
-
         </div>
       </div>
     
