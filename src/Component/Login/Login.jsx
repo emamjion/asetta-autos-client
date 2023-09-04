@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContex } from '../Providers/Authprovider';
 import app from '../firebase/firebase.config';
-import SocialLogin from '../SocialLogin/SocialLogin';
+import SocialLogin from '../socialLogin/SocialLogin';
 
 const auth = getAuth(app)
 const Login = () => {
