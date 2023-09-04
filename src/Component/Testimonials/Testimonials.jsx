@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Tittle from '../Shared/Tittle/Tittle';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -8,12 +8,13 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 import { Rating } from '@smastrom/react-rating';
 import { FaQuoteRight } from 'react-icons/fa';
 import '@smastrom/react-rating/style.css'
+import { AuthContex } from './../Providers/Authprovider';
 
 
 const Testimonials = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('/testimonials.json')
+        fetch('http://localhost:5000/client-review')
         .then(res => res.json())
         .then(data => setReviews(data))
     }, [])
@@ -36,7 +37,7 @@ const Testimonials = () => {
                 >
                     {
                         reviews.map(review => <SwiperSlide
-                            key={review.id}
+                            key={review._id}
                             className='py-16 mt-6'
                         >
                             <div className='mx-auto p-8 w-9/12 md:w-[600px] shadow-2xl rounded-lg'>
