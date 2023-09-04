@@ -1,34 +1,10 @@
+
 import Button from "../Button/Button";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContex } from "../Providers/Authprovider";
 import Swal from "sweetalert2";
-// const auth = getAuth(app)
 const SocialLogin = () => {
-    // const googleProvider = new GoogleAuthProvider();
-
-    // const handleGoogleSignIn = () => {
-    //     console.log('clidked');
-    //     let navigate = useNavigate();
-    // let location = useLocation();
-    //     let from = location.state?.from?.pathname || "/";
-    //     signInWithPopup(auth, googleProvider)
-    //         .then(result => {
-    //             const user = result.user;
-    //             navigate(from, { replace: true });
-    //             Swal.fire({
-    //                 position: 'top-end',
-    //                 icon: 'success',
-    //                 title: 'Your login is succesful!',
-    //                 showConfirmButton: false,
-    //                 timer: 1500
-    //               })
-    //         })
-
-    //         .catch(error => {
-    //             // console.log('error', error.message);
-    //         })
-    // }
     const navigate = useNavigate()
     const location = useLocation();
     const {goggleSignIn} = useContext(AuthContex)

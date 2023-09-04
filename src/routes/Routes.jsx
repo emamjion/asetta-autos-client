@@ -28,6 +28,7 @@ import TermsOfService from "../Component/TermsOfService/TermsOfService";
 import PrivacyPolicy from "../Component/PrivacyPolicy/PrivacyPolicy";
 import Faq from "../Component/Faq/Faq";
 import VrDrives from "../Component/VrDrives/VrDrives";
+// import VrDrives from "../Component/VrDrives/VrDrives";
 
 const router = createBrowserRouter([
     {

@@ -1,5 +1,5 @@
 import React from 'react';
-import MessengerCustomerChat from 'react-messenger-customer-chat';
+// import MessengerCustomerChat from 'react-messenger-customer-chat';
  
 const VrDrives = () => {
     return (
