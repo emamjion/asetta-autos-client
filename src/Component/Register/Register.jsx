@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContex } from '../Providers/Authprovider';
-import { FaGoogle } from 'react-icons/fa';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../firebase/firebase.config';
 import Swal from 'sweetalert2';
+import SocialLogin from '../socialLogin/SocialLogin';
 
 const auth = getAuth(app)
 const Register = () => {
@@ -102,8 +102,7 @@ const Register = () => {
         </div>
         <div>
         <div className="hero min-h-screen  text-black font-bold text-xl ">
-           
-            <div className="hero-content flex-col">
+            <div className="hero-content w-full  md:w-2/3 flex-col">
                 <div className="card w-full flex-shrink-0 shadow-2xl bg-transparent card-background">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <h1 className='text-2xl text-center font-bold text-[#ef1721]'>Register</h1>
@@ -130,17 +129,11 @@ const Register = () => {
                             {errors.password?.type === 'minLength' && <span className='text-red-600'>6 caracter is required</span>}
                             {errors.password?.type === 'maxLength' && <span className='text-red-600'>less than 20 caracter is required</span>}
                         </div>
-                        {/* <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Confirm Password</span>
-                            </label>
-                            <input type="password" placeholder="Cornfirm password" className="input input-bordered bg-transparent" />
-                        </div> */}
                         <div className="form-control mt-6">
                             <input className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]" type="submit" value="Register" />
                         </div>
                         <div className="form-control mt-6">
-                           <button onClick={handleGoogleSignIn}  className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]"><FaGoogle/>Google</button>
+                           <SocialLogin></SocialLogin>
                         </div>
 
 
