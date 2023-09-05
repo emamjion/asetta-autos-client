@@ -1,0 +1,58 @@
+[
+    {
+        "id" : "1",
+        "image" : "https://i.ibb.co/SB68f5y/stuff-1.png",
+        "name" : "Jonayed Mirza",
+        "position" : "General Manager",
+        "phone" : "802-895-2359",
+        "email" : "jonayed101@yahoo.com"
+    },
+    {
+        "id" : "2",
+        "image" : "https://i.ibb.co/FXCcW9R/stuff-7.png",
+        "name" : "Ekrima Elma",
+        "position" : "Sales Manager",
+        "phone" : "555-111-1245",
+        "email" : "ekrima@gmail.com"
+    },
+    {
+        "id" : "3",
+        "image" : "https://i.ibb.co/Xs64j9B/stuff-6.png",
+        "name" : "Rokibul Alam",
+        "position" : "Public Relation Executive",
+        "phone" : "125-471-0025",
+        "email" : "rokiul.islam@yahoo.com"
+    },
+    {
+        "id" : "4",
+        "image" : "https://i.ibb.co/0t0DTRh/stuff-4.png",
+        "name" : "Jakariya Khan",
+        "position" : "Dealer Manage Executive",
+        "phone" : "451-887-8888",
+        "email" : "jakariyakhan@gmail.com"
+    },
+    {
+        "id" : "5",
+        "image" : "https://i.ibb.co/kQHD7WH/stuff-5.png",
+        "name" : "Pallabi Khan",
+        "position" : "Sales Executive",
+        "phone" : "123-987-2145",
+        "email" : "pallabi222@outlook.com"
+    },
+    {
+        "id" : "6",
+        "image" : "https://i.ibb.co/VJsZBZ2/stuff-2.png",
+        "name" : "Ibrahim Parvez",
+        "position" : "Used Car Manager",
+        "phone" : "711-222-1998",
+        "email" : "ibrahim.parvez@gmail.com"
+    },
+    {
+        "id" : "7",
+        "image" : "https://i.ibb.co/d2qKqfM/stuff-3.png",
+        "name" : "Mariya Eqbal",
+        "position" : "Sales and Leasing Consultant",
+        "phone" : "405-798-2002",
+        "email" : "mariya@yahoo.com"
+    }
+]
