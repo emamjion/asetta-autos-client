@@ -28,6 +28,7 @@ import TermsOfService from "../Component/TermsOfService/TermsOfService";
 import PrivacyPolicy from "../Component/PrivacyPolicy/PrivacyPolicy";
 import Faq from "../Component/Faq/Faq";
 import VrDrives from "../Component/VrDrives/VrDrives";
+import CheckOut from "../Component/checkOut/CheckOut";
 // import VrDrives from "../Component/VrDrives/VrDrives";
 
 const router = createBrowserRouter([
@@ -136,6 +137,10 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/user-cards',
                 element: <UserCards></UserCards>
+            },
+            {
+                path: '/dashboard/checkOut',
+                element: <CheckOut></CheckOut>
             },
             {
                 path: '/dashboard/dealer-request',

@@ -50,9 +50,6 @@ const ShowCardsData = ({card}) => {
 
 
 
-    const handleCheckOut =(id)=>{
-        console.log("checkout", id);
-    }
     return (
         <div className="border p-2 m-4 flex justify-between items-center gap-5">
             <div>
@@ -71,7 +68,7 @@ const ShowCardsData = ({card}) => {
             </div>
             <div>
                 <h4 onClick={()=>handleRemove(_id)} className="border text-center p-1 m-2 hover:text-red-600 cursor-pointer">Remove</h4>
-                <h4 onClick={()=>handleCheckOut(_id)} className="border text-center p-1 m-2 hover:text-green-600 cursor-pointer">checkout</h4>
+                {/* <h4 onClick={()=>handleCheckOut(_id)} className="border text-center p-1 m-2 hover:text-green-600 cursor-pointer">checkout</h4> */}
             </div>
         </div>
     );
