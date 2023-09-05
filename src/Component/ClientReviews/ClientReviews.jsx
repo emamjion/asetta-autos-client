@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import SwiperCard from '../ReviewsCard/SwiperCard';
 
+// TODO: change the component name --> latest car section - Emam
 const ClientReviews = () => {
     const [releaseCar, setReleaseCar] = useState([]);
     useEffect(() => {
