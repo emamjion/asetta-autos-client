@@ -7,7 +7,7 @@ import about4 from '../../assets/images/about/about-4.png'
 
 const AchievementHistory = () => {
     return (
-        <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
+        <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-[240px]'>
             <div className='grid grid-cols-1 md:grid-cols-2 items-center gap-6'>
                 <div>
                     <div className="carousel w-full rounded">

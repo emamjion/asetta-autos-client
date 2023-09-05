@@ -8,6 +8,9 @@ import About from '../../Pages/About/About';
 import CompanyInfo from '../../Pages/About/CompanyInfo';
 import WhyWeBest from '../../Pages/About/WhyWeBest';
 import AchievementHistory from '../../Pages/About/AchievementHistory';
+import ReasonsToBuy from '../../Pages/About/ReasonsToBuy/ReasonsToBuy';
+import OurStuff from '../../Pages/About/OurStuff';
+
 
 const AboutRoute = () => {
     return (
@@ -25,6 +28,12 @@ const AboutRoute = () => {
 
             {/* Achievement History */}
             <AchievementHistory/>
+
+            {/* Reasons to Buy section */}
+            <ReasonsToBuy/>
+
+            {/* Meet Our stuff section */}
+            <OurStuff/>
 
             <Testimonials></Testimonials>
             <MeetOurTeam></MeetOurTeam>
