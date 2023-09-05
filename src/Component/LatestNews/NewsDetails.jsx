@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import RouteBanner from "../Shared/RouteBanner/RouteBanner";
 import { BsFillSendFill } from "react-icons/bs";
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaPhone, FaRegAddressCard, FaMailBulk } from "react-icons/fa";
@@ -10,26 +10,26 @@ import Swal from "sweetalert2";
 const NewsDetails = () => {
   const {user} = useContext(AuthContex)
   const { id } = useParams();
-  const [newsDetails, setNewsDetails] = useState([]);
+  const [commentsLoadData, setCommentsLoadData] = useState([]);
+
+  const newsDetails = useLoaderData();
 
   useEffect(() => {
-    fetch(`https://asetta-autos-production.up.railway.app/our-blogs/${id}`)
+    fetch(`http://localhost:5000/blogComments/${id}`)
       .then(res => res.json())
-      .then(data => setNewsDetails(data))
-  }, [])
+      .then(data => setCommentsLoadData(data))
+  }, [commentsLoadData])
 
   const { image, author, title, _id, content, date, authorImage, blog } = newsDetails;
 
   const currentDate = new Date();
   const formattedDate = currentDate.toLocaleDateString();
-  // console.log(formattedDate);
 
 
   const handleCommentSubmit =(e)=>{
     e.preventDefault()
     const form = e.target
     const comment = form.comment.value
-    // console.log("submit", comment);
     const commentData = {
       'name' : user?.displayName,
       'email' : user?.email,
@@ -161,7 +161,10 @@ const NewsDetails = () => {
             </div>
             <h1 className="mt-10 mb-4 font-bold text-3xl">Comments</h1>
             <hr className="mb-7" />
-            <h1>all comment will here</h1>
+            <div>
+              <h2 className="text-3xl font-semibold">Total Comments : {commentsLoadData?.length}</h2>
+              <p className="text-red-600 my-10 text-center">comment details here</p>
+            </div>
           </div>
         </div>
       </div>
