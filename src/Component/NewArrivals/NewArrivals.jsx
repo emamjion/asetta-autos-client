@@ -9,7 +9,7 @@ const NewArrivals = () => {
     useEffect(() => {
         fetch('https://asetta-autos-production.up.railway.app/new-arrivals')
         .then(res => res.json())
-        .then(data => setCars(data))
+        .then(data => setCars(data.slice(0,8)))
     }, [])
     return (
         // responsive - mohosin

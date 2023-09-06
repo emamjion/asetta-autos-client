@@ -28,6 +28,8 @@ import TermsOfService from "../Component/TermsOfService/TermsOfService";
 import PrivacyPolicy from "../Component/PrivacyPolicy/PrivacyPolicy";
 import Faq from "../Component/Faq/Faq";
 import VrDrives from "../Component/VrDrives/VrDrives";
+import CheckOut from "../Component/checkOut/CheckOut";
+// import VrDrives from "../Component/VrDrives/VrDrives";
 
 const router = createBrowserRouter([
     {
@@ -65,7 +67,9 @@ const router = createBrowserRouter([
             },
             {
                 path: 'our-blogs/:id',
-                element: <NewsDetails />
+                element: <NewsDetails />,
+                // loader : ({ params })=> fetch(`http://localhost:5000/blogComments/${params.id}`)
+                loader : ({ params })=> fetch(`https://asetta-autos-production.up.railway.app/our-blogs/${params.id}`)
             },
             {
                 path: 'ourteam/:id',
@@ -135,6 +139,10 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/user-cards',
                 element: <UserCards></UserCards>
+            },
+            {
+                path: '/dashboard/checkOut',
+                element: <CheckOut></CheckOut>
             },
             {
                 path: '/dashboard/dealer-request',

@@ -14,6 +14,7 @@ import HomeSearch from "../HomeSearch/HomeSearch";
 import OurPartner from "../OurPartner/OurPartner";
 import LookingCar from "../LookingCar/LookingCar";
 import SubmitVehicle from "../SubmitVehicle/SubmitVehicle";
+import SpecialServices from "../SpecialServices/SpecialServices";
 
 const Home = () => {
 	return (
@@ -28,6 +29,9 @@ const Home = () => {
 
 			{/* About Section */}
 			<AboutUs></AboutUs>
+
+			{/* Special Services section */}
+			<SpecialServices/>
 
 			{/* New Arrivals section  - Emam */}
 			<NewArrivals />

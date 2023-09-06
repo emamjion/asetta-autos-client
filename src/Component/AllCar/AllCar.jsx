@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import AllCarsData from './AllCarsData';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
+// import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+// import 'react-tabs/style/react-tabs.css';
 import AllCarsData from './AllCarsData';
 import Button from '../Button/Button';
 

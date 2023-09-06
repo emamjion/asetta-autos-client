@@ -7,3 +7,25 @@
 ul li a.active{
     color: #ef1721;
 }
+
+
+/* service section part 
+.background-custom{
+    position: relative;
+}
+.background-custom::before{
+    content: 'Services';
+    position: absolute;
+    font-size: 160px;
+    font-weight: bold;
+    left: 0;
+    top: -160px;
+    color: #f3f3f3;
+    z-index: -1;
+}
+*/
+
+/*Our services*/
+.custom-hover:hover .hover-icon{
+    color: #fff;
+}
