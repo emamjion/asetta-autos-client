@@ -1,21 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import RouteBanner from "../../Shared/RouteBanner/RouteBanner";
 import { useContext, useEffect, useState } from "react";
 import { AuthContex } from './../../Providers/Authprovider';
 
 const DashBoardHome = () => {
-  const {user} = useContext(AuthContex);
+  const { user } = useContext(AuthContex);
   // const currentUser = { 'name': 'Md Mohosin', 'role': 'admin' }
   const [users, setUsers] = useState([]);
-    useEffect(() => {
-        fetch('https://asetta-autos-production.up.railway.app/users')
-        .then(res => res.json())
-        .then(data => setUsers(data))
-    }, [])
+  useEffect(() => {
+    fetch('https://asetta-autos-production.up.railway.app/users')
+      .then(res => res.json())
+      .then(data => setUsers(data))
+  }, [])
 
-    // find current users
+  // find current users
 
-   const currentUser =  users.find(data=>data?.email === user?.email)
+  const currentUser = users.find(data => data?.email === user?.email)
   //  console.log(currentUser?.role);
 
   return (
@@ -44,6 +44,7 @@ const DashBoardHome = () => {
                 </Link>
               </>
             )}
+            
             {currentUser?.role === "dealer" && (
               <>
                 <Link to="/dashboard/add-cars">
@@ -71,6 +72,8 @@ const DashBoardHome = () => {
           </div>
         </div>
       </div>
+      
+      
     </>
   );
 };

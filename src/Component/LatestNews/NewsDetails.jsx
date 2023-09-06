@@ -2,15 +2,18 @@ import { useContext, useEffect } from "react";
 import { useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import RouteBanner from "../Shared/RouteBanner/RouteBanner";
-import { BsFillSendFill } from "react-icons/bs";
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaPhone, FaRegAddressCard, FaMailBulk } from "react-icons/fa";
+import { BsFillSendFill,BsPerson } from "react-icons/bs";
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaPhone, FaRegAddressCard, FaMailBulk,FaComment,FaShare } from "react-icons/fa";
+import { AiFillLike } from "react-icons/ai";
 import { AuthContex } from './../Providers/Authprovider';
 import Swal from "sweetalert2";
+import Comment from "../Comment/Comment";
 
 const NewsDetails = () => {
-  const {user} = useContext(AuthContex)
+  const { user } = useContext(AuthContex)
   const { id } = useParams();
   const [commentsLoadData, setCommentsLoadData] = useState([]);
+  console.log(commentsLoadData)
 
   const newsDetails = useLoaderData();
 
@@ -26,16 +29,16 @@ const NewsDetails = () => {
   const formattedDate = currentDate.toLocaleDateString();
 
 
-  const handleCommentSubmit =(e)=>{
+  const handleCommentSubmit = (e) => {
     e.preventDefault()
     const form = e.target
     const comment = form.comment.value
     const commentData = {
-      'name' : user?.displayName,
-      'email' : user?.email,
-      'comment' : comment,
-      'date' : formattedDate,
-      'postId' : id
+      'name': user?.displayName,
+      'email': user?.email,
+      'comment': comment,
+      'date': formattedDate,
+      'postId': id,
     }
 
 
@@ -54,7 +57,7 @@ const NewsDetails = () => {
       })
       .then(data => {
         console.log('Response data:', data);
-        if(data.insertedId){
+        if (data.insertedId) {
           Swal.fire({
             position: 'top-end',
             icon: 'success',
@@ -81,11 +84,11 @@ const NewsDetails = () => {
               <img className="w-full h-[800px] rounded-2xl" src={image} alt="" />
               <div className="flex justify-between font-bold">
                 <div className="flex gap-8 mt-7">
-                  <p>{author}</p>
-                  <p>comment</p>
-                  <p>Likes</p>
+                  <p className="flex items-center gap-1"><BsPerson className="text-red-700"></BsPerson>{author}</p>
+                  <p className="flex items-center gap-1"><FaComment className="text-red-700"></FaComment> {commentsLoadData?.length} Comments</p>
+                  <p className="flex items-center gap-1"><AiFillLike className="text-red-700"></AiFillLike>Likes</p>
                 </div>
-                <p className="mt-7">share</p>
+                <p className="mt-7 flex items-center gap-1 me-10"><FaShare className="text-red-700"></FaShare>Share</p>
               </div>
               <h1 className="mt-7 font-bold text-3xl">{title}</h1>
               <p className="mt-7">{content}</p>
@@ -97,7 +100,7 @@ const NewsDetails = () => {
               <hr className="mt-5" />
             </div>
             <div className="flex justify-start mt-7 bg-slate-100 gap-6  p-9 shadow-lg rounded-2xl">
-              <img className="w-[200px] rounded-2xl" src={authorImage} alt="" />
+              <img className="w-[250px] h-[200px] rounded-2xl" src={authorImage} alt="" />
               <div>
                 <h4 className="font-bold">Author</h4>
                 <h1 className="font-bold text-2xl text-red-600 mt-2">{author}</h1>
@@ -159,11 +162,12 @@ const NewsDetails = () => {
               </form>
 
             </div>
-            <h1 className="mt-10 mb-4 font-bold text-3xl">Comments</h1>
+            <h1 className="mt-10 mb-4 font-bold text-3xl">Comments: ({commentsLoadData?.length})</h1>
             <hr className="mb-7" />
             <div>
-              <h2 className="text-3xl font-semibold">Total Comments : {commentsLoadData?.length}</h2>
-              <p className="text-red-600 my-10 text-center">comment details here</p>
+              {
+                commentsLoadData.map(comment=><Comment key={comment._id} comment={comment}></Comment>)
+              }
             </div>
           </div>
         </div>
