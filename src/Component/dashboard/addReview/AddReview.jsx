@@ -18,7 +18,7 @@ const AddReview = () => {
   
       console.log(data);
   
-      fetch('http://localhost:5000/client-review', {
+      fetch('https://asetta-autos-production.up.railway.app/client-review', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

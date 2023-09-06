@@ -48,7 +48,7 @@ const AddDealers = () => {
     const handleReject =(id)=>{
         console.log(id);
 
-        fetch(`http://localhost:5000/dealerReject/${id}`, {
+        fetch(`https://asetta-autos-production.up.railway.app/dealerReject/${id}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json'

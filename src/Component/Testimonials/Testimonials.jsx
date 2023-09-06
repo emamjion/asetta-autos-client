@@ -14,7 +14,7 @@ import { AuthContex } from './../Providers/Authprovider';
 const Testimonials = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/client-review')
+        fetch('https://asetta-autos-production.up.railway.app/client-review')
         .then(res => res.json())
         .then(data => setReviews(data))
     }, [])
