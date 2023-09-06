@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const AddDealers = () => {
@@ -39,17 +40,38 @@ const AddDealers = () => {
                   timer: 1500
                 })
               }
-              // if(data.modifiedCount === 0){
-              //   navigate('/dashboard/dealer-request-details')
-              //   Swal.fire({
-              //     position: 'top-end',
-              //     icon: 'info',
-              //     title: 'Already Your Request Added!',
-              //     showConfirmButton: false,
-              //     timer: 1500
-              //   })
-              // }
-              
+            })
+            .catch(error => {
+              console.error('error', error);
+            });
+      };
+    const handleReject =(id)=>{
+        console.log(id);
+
+        fetch(`http://localhost:5000/dealerReject/${id}`, {
+            method: 'PATCH',
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          })
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              return response.json();
+            })
+            .then(data => {
+              console.log('Response data:', data);
+              if(data.modifiedCount > 0){
+                // navigate('/dashboard/dealer-request-details')
+                Swal.fire({
+                  position: 'top-end',
+                  icon: 'success',
+                  title: 'rejected!',
+                  showConfirmButton: false,
+                  timer: 1500
+                })
+              }
             })
             .catch(error => {
               console.error('error', error);
@@ -78,9 +100,9 @@ const AddDealers = () => {
          { dealersPending.map((pUser, idx)=><tr key={pUser?._id}>
         <th>{idx + 1}</th> 
         <td className="text-xs md:text-lg">{pUser?.email}</td> 
-        <td className="text-xs md:text-lg"><span className="underline cursor-pointer hover:text-blue-700">details</span></td> 
+        <td className="text-xs md:text-lg"><Link to={'/dashboard/userDetails'}><span className="underline cursor-pointer hover:text-blue-700">details</span></Link></td> 
         <td className="text-xs md:text-lg"><span onClick={()=>handleConfirm(pUser?._id)} className="underline cursor-pointer hover:text-green-900">Confirm</span></td> 
-        <td className="text-xs md:text-lg"><span className="underline cursor-pointer hover:text-red-700">Reject</span></td> 
+        <td className="text-xs md:text-lg"><span onClick={()=>handleReject(pUser?._id)}  className="underline cursor-pointer hover:text-red-700">Reject</span></td> 
       </tr>)}
       
     </tbody> 
