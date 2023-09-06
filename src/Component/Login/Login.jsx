@@ -5,7 +5,6 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContex } from '../Providers/Authprovider';
 import app from '../firebase/firebase.config';
-import SocialLogin from '../socialLogin/SocialLogin';
 const auth = getAuth(app)
 const Login = () => {
     const { signin } = useContext(AuthContex)
@@ -82,7 +81,7 @@ const Login = () => {
                                 <input  className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]" type="submit" value="Login" />
                             </div>
                             <div className="form-control mt-6">
-                                <SocialLogin></SocialLogin>
+                           
                             </div>
                             <div className='text-center text-sm md:text-lg mt-4'>
                                 <p>Don't have an account? <span className=' text-[#ef1721] hover:underline'><Link to='/register'>Register</Link></span></p>

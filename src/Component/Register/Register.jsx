@@ -2,11 +2,10 @@ import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContex } from '../Providers/Authprovider';
-import { FaGoogle } from 'react-icons/fa';
+
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../firebase/firebase.config';
 import Swal from 'sweetalert2';
-import SocialLogin from '../socialLogin/SocialLogin';
 
 const auth = getAuth(app)
 const Register = () => {
@@ -140,7 +139,7 @@ const Register = () => {
                             <input className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]" type="submit" value="Register" />
                         </div>
                         <div className="form-control mt-6">
-                           <SocialLogin></SocialLogin>
+                          
                         </div>
 
 
