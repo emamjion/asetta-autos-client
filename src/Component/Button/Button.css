@@ -10,6 +10,7 @@
     overflow: hidden;
     z-index: 1;
     font-weight: 600;
+    border-radius: 6px;
 }
 .button:hover{
     color: #fff;

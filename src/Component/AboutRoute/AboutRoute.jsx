@@ -35,9 +35,9 @@ const AboutRoute = () => {
             {/* Meet Our stuff section */}
             <OurStuff/>
 
-            <Testimonials></Testimonials>
+            {/* <Testimonials></Testimonials> */}
             <MeetOurTeam></MeetOurTeam>
-            <PopularBrand></PopularBrand>
+            {/* <PopularBrand></PopularBrand> */}
         </div>
     );
 };
