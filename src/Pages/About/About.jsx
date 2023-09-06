@@ -7,7 +7,7 @@ import { BiCheckSquare } from "react-icons/bi";
 
 const About = () => {
     return (
-        <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-[240px]'>
+        <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
             <div className='md:flex items-center gap-12'>
                 <div>
                     <div>
