@@ -36,7 +36,7 @@ const AllCar = () => {
 
 
     const handleFind = ()=>{
-        fetch(`http://localhost:5000/findName/${find}`)
+        fetch(`https://asetta-autos-production.up.railway.app/findName/${find}`)
         .then(res => res.json())
         .then (data => setInfo(data))
     

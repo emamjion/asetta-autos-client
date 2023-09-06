@@ -17,7 +17,7 @@ const AddBlogs = () => {
 
     console.log(data);
 
-    fetch('http://localhost:5000/blogPost', {
+    fetch('https://asetta-autos-production.up.railway.app/blogPost', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

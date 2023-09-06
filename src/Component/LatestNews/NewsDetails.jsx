@@ -18,7 +18,7 @@ const NewsDetails = () => {
   const newsDetails = useLoaderData();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/blogComments/${id}`)
+    fetch(`https://asetta-autos-production.up.railway.app/blogComments/${id}`)
       .then(res => res.json())
       .then(data => setCommentsLoadData(data))
   }, [commentsLoadData])
@@ -42,7 +42,7 @@ const NewsDetails = () => {
     }
 
 
-    fetch('http://localhost:5000/blogComments', {
+    fetch('https://asetta-autos-production.up.railway.app/blogComments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

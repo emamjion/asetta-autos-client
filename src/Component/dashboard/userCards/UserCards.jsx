@@ -8,7 +8,7 @@ const UserCards = () => {
     const [cards, setCards] = useState([]);
     
     useEffect(() => {
-        fetch('http://localhost:5000/cards')
+        fetch('https://asetta-autos-production.up.railway.app/cards')
         .then(res => res.json())
         .then(data => setCards(data))
     }, [cards])

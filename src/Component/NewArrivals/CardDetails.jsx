@@ -43,7 +43,7 @@ const CardDetails = () => {
 
 
 
-        fetch('http://localhost:5000/addToCard', {
+        fetch('https://asetta-autos-production.up.railway.app/addToCard', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
