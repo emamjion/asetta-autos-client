@@ -6,6 +6,8 @@ import {
 	AiFillSetting,
 } from "react-icons/Ai";
 import Button from "../Button/Button";
+import Button2 from "../Button/Button2";
+import { Link } from "react-router-dom";
 // import aboutImg from '../../assets/images/about/about-img.png'
 const AboutUs = () => {
 	return (
@@ -26,7 +28,7 @@ const AboutUs = () => {
 				<div>
 					<h4 className="text-red-600 text-lg md:text-2xl font-bold flex">
 						{" "}
-						<span className="mt-1 me-3">
+						<span className="mt-2 me-3">
 							<AiOutlineCar />
 						</span>{" "}
 						About Us
@@ -35,29 +37,29 @@ const AboutUs = () => {
 						World Largest <span className="text-red-600">Car Dealer</span>{" "}
 						Marketplace.
 					</h1>
-					<h6 className="text-sm">
+					<h6 className="text-sm my-3">
 						There are many variations of passages of Lorem Ipsum available, but
 						the majority have suffered alteration in some form, by injected
 						humour.
 					</h6>
-					<div className="mt-1">
+					<div className="mt-2">
 						<h6 className="flex">
 							{" "}
-							<span className="text-red-600  mt-1 me-3">
+							<span className="text-red-600 mt-2 me-3">
 								<AiOutlineCheckCircle />
 							</span>{" "}
 							At vero eos et accusamus et iusto odio.
 						</h6>
 						<h6 className="flex">
 							{" "}
-							<span className="text-red-600 mt-1 me-3">
+							<span className="text-red-600 mt-2 me-3">
 								<AiOutlineCheckCircle />
 							</span>{" "}
 							Established fact that a reader will be distracted.
 						</h6>
 						<h6 className="flex">
 							{" "}
-							<span className="text-red-600 mt-1 me-3">
+							<span className="text-red-600 mt-2 me-3">
 								<AiOutlineCheckCircle />
 							</span>{" "}
 							Sed ut perspiciatis unde omnis iste natus sit.
@@ -67,9 +69,11 @@ const AboutUs = () => {
 						Discover More <AiOutlineArrowRight />{" "}
 					</button> */}
 					<div className="mt-6">
-						<Button 
-							button={'About More'} 
-						/>
+						<Link to='/about'>
+							<Button 
+								button={'About More'} 
+							/>
+						</Link>
 					</div>
 				</div>
 			</div>

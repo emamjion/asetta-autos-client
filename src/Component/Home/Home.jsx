@@ -15,6 +15,7 @@ import OurPartner from "../OurPartner/OurPartner";
 import LookingCar from "../LookingCar/LookingCar";
 import SubmitVehicle from "../SubmitVehicle/SubmitVehicle";
 import SpecialServices from "../SpecialServices/SpecialServices";
+import HomeWhatWeOffer from "../HomeWhatWeOffer/HomeWhatWeOffer";
 
 const Home = () => {
 	return (
@@ -30,14 +31,17 @@ const Home = () => {
 			{/* About Section */}
 			<AboutUs></AboutUs>
 
-			{/* Special Services section */}
-			<SpecialServices/>
+			{/* Home - What we Offer section */}
+			<HomeWhatWeOffer/>
 
 			{/* New Arrivals section  - Emam */}
 			<NewArrivals />
 
 			{/* Looking for a car section - Emam */}
 			<LookingCar/>
+
+			{/* Special Services section */}
+			<SpecialServices/>
 
 			{/* Car Body Types - Emam */}
 			<CarCategory/>
