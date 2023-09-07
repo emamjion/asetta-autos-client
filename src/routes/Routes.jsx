@@ -30,6 +30,7 @@ import Faq from "../Component/Faq/Faq";
 import VrDrives from "../Component/VrDrives/VrDrives";
 import CheckOut from "../Component/checkOut/CheckOut";
 import UserDetails from "../Component/userDetails/UserDetails";
+import KnowMoreRoute from "../Pages/About/KnowMoreRoute/KnowMoreRoute";
 // import VrDrives from "../Component/VrDrives/VrDrives";
 
 const router = createBrowserRouter([
@@ -102,12 +103,14 @@ const router = createBrowserRouter([
             {
                 path: 'all-car',
                 element: <AllCar></AllCar>
-                
             },
             {
                 path: 'vr-drives',
                 element: <VrDrives></VrDrives>
-                
+            },
+            {
+                path: '/know-more',
+                element: <KnowMoreRoute/>
             }
 
         ]

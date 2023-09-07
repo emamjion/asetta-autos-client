@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../../Component/Button/Button';
 import driverImg from '../../assets/images/about/car-driver.png'
+import { Link } from 'react-router-dom';
 
 const CompanyInfo = () => {
     return (
@@ -68,9 +69,11 @@ const CompanyInfo = () => {
                                 </h6>
                             </div>
                             <div className='mt-8'>
-                                <Button 
-                                    button={'Know More'}
-                                />
+                                <Link to='/know-more'>
+                                    <Button 
+                                        button={'Know More'}
+                                    />
+                                </Link>
                             </div>
                         </div>
                     </div>
