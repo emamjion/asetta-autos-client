@@ -16,7 +16,7 @@ const OurServices = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 <div className='border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover'>
                     <div className=''>
-                        <span className='text-6xl text-[#ef1721] hover-icon'>< FaShippingFast /></span>
+                        <span className='text-6xl text-[#ef1721] hover-icon duration-500'>< FaShippingFast /></span>
                     </div>
                     <div>
                         <h2 className='text-2xl font-semibold mb-2'>Super Fast</h2>
@@ -26,7 +26,7 @@ const OurServices = () => {
                     </div>
                 </div>
                 <div className='border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover'>
-                    <span className='text-6xl text-[#ef1721] hover-icon'>< RiOilFill /></span>
+                    <span className='text-6xl text-[#ef1721] hover-icon duration-500'>< RiOilFill /></span>
                     <div>
                         <h2 className='text-2xl font-semibold mb-2'>Oil Change</h2>
                         <p className='tex-[#535353]'>
@@ -35,7 +35,7 @@ const OurServices = () => {
                     </div>
                 </div>
                 <div className='border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover'>
-                    <span className='text-6xl text-[#ef1721] hover-icon'>< TbAirConditioning /></span>
+                    <span className='text-6xl text-[#ef1721] hover-icon duration-500'>< TbAirConditioning /></span>
                     <div>
                         <h2 className='text-2xl font-semibold mb-2'>Air Conditioning</h2>
                         <p className='tex-[#535353]'>
@@ -44,7 +44,7 @@ const OurServices = () => {
                     </div>
                 </div>
                 <div className='border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover'>
-                    <span className='text-6xl'>< FaKey /></span>
+                    <span className='text-6xl text-[#ef1721] hover-icon duration-500'>< FaKey /></span>
                     <div>
                         <h2 className='text-2xl font-semibold mb-2'>Dealership</h2>
                         <p className='tex-[#535353]'>
@@ -53,7 +53,7 @@ const OurServices = () => {
                     </div>
                 </div>
                 <div className='border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover'>
-                    <span className='text-6xl'>< MdCarRepair /></span>
+                    <span className='text-6xl text-[#ef1721] hover-icon duration-500'>< MdCarRepair /></span>
                     <div>
                         <h2 className='text-2xl font-semibold mb-2'>Repairing</h2>
                         <p className='tex-[#535353]'>
@@ -62,7 +62,7 @@ const OurServices = () => {
                     </div>
                 </div>
                 <div className='border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover'>
-                    <span className='text-6xl'>< FaHandshake /></span>
+                    <span className='text-6xl text-[#ef1721] hover-icon duration-500'>< FaHandshake /></span>
                     <div>
                         <h2 className='text-2xl font-semibold mb-2'>Trusted Agents</h2>
                         <p className='tex-[#535353]'>
@@ -71,7 +71,7 @@ const OurServices = () => {
                     </div>
                 </div>
                 <div className='border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover'>
-                    <span className='text-6xl'>< FaLock /></span>
+                    <span className='text-6xl text-[#ef1721] hover-icon duration-500'>< FaLock /></span>
                     <div>
                         <h2 className='text-2xl font-semibold mb-2'>Security</h2>
                         <p className='tex-[#535353]'>
@@ -80,7 +80,7 @@ const OurServices = () => {
                     </div>
                 </div>
                 <div className='border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] hover:text-white duration-500 custom-hover'>
-                    <span className='text-6xl'>< BiSupport /></span>
+                    <span className='text-6xl text-[#ef1721] hover-icon duration-500'>< BiSupport /></span>
                     <div>
                         <h2 className='text-2xl font-semibold mb-2'>Free Support</h2>
                         <p className='tex-[#535353]'>
