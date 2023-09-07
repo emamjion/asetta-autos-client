@@ -41,8 +41,8 @@ const CheckoutForm = () => {
       },[cards , totalPrice])
 
 
-     totalPrice = parseFloat(totalPrice)
-     console.log(totalPrice);
+    //  totalPrice = parseFloat(totalPrice)
+    //  console.log(totalPrice);
 
   const [cardError, setCardError] = useState('');
   const stripe = useStripe();
@@ -104,7 +104,7 @@ const CheckoutForm = () => {
   return (
   <>
   <h1 className="text-4xl font-bold text-center ml-52 "><span className="text-red-600">Payment</span>  With Stripe</h1>
- <div className="grid md:grid-cols-2 mt-8 border p-12 w-full bg-slate-200 ml-36 ">
+ <div className="grid md:grid-cols-2 mt-8 border p-12 w-full bg-[#f7f7f7] ml-36 ">
  <div className="ml-12">
     <img src="https://i.ibb.co/YWgRzvL/electronic-bill-payment-flat-con-removebg-preview.png" alt="" />
   </div>

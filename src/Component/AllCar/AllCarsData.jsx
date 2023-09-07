@@ -27,17 +27,23 @@ const AllCarsData = ({ info }) => {
               {average_rating}
             </div>
             <p className='font-bold text-xl'>Model: {model}</p>
-            <p className='font-bold text-2xl'>{engine.description}</p>
-            <p className='text-red-600 text-2xl font-bold'>${price}</p>
-          </div>
-        </div>
-        
-        {/* Style the button to show/hide */}
-        <div className="card-footer opacity-0 group-hover:opacity-100 absolute left-0 w-full h-full flex items-center justify-center mt-52 transition-opacity duration-2000 ease-in-out opacity-transition">
+            <p className='font-semibold text-xl'>{engine.description}</p>
+
+           
+<div className='flex mt-4'>
+<p className='text-red-600 text-2xl font-bold'>${price}</p>
+<div className="card-footer mx-auto mb-4">
   <Link to={`/arrivals-details/${_id}`}>
     <Button button={'Details'} />
   </Link>
 </div>
+</div>
+
+          </div>
+        </div>
+        
+        {/* Style the button to show/hide */}
+   
 
 
       </div>
