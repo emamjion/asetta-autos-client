@@ -5,9 +5,9 @@ import { BsDot } from 'react-icons/bs';
 const SpecialServices = () => {
     return (
         <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-4 bg-[#f7f7f7] p-16'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-4 bg-[#f7f7f7] p-4 md:p-16'>
                 <div>
-                    <div className='mb-10 text-right flex gap-2 justify-end flex-row-reverse'>
+                    <div className='mb-10 text-justify flex gap-2 justify-end flex-row-reverse'>
                         <span className='text-xl w-4 h-4 border rounded-full flex items-center justify-center text-[#ef1721] border-[#ef1721] mt-2'> < BsDot /> </span>
                         <div>
                             <h1 className='font-semibold text-xl mb-2 hover:text-[#ef1721] duration-500 cursor-pointer'>Experience support team</h1>
@@ -16,7 +16,7 @@ const SpecialServices = () => {
                             </p>
                         </div>
                     </div>
-                    <div className='mb-10 text-right flex gap-2 justify-end flex-row-reverse'>
+                    <div className='mb-10 text-justify flex gap-2 justify-end flex-row-reverse'>
                         <span className='text-xl w-4 h-4 border rounded-full flex items-center justify-center text-[#ef1721] border-[#ef1721] mt-2'> < BsDot /> </span>
                         <div>
                             <h1 className='font-semibold text-xl mb-2 hover:text-[#ef1721] duration-500 cursor-pointer'>Handle emergency situations</h1>
@@ -25,7 +25,7 @@ const SpecialServices = () => {
                             </p>
                         </div>
                     </div>
-                    <div className='mb-10 text-right flex gap-2 justify-end flex-row-reverse'>
+                    <div className='mb-10 text-justify flex gap-2 justify-end flex-row-reverse'>
                         <span className='text-xl w-4 h-4 border rounded-full flex items-center justify-center text-[#ef1721] border-[#ef1721] mt-2'> < BsDot /> </span>
                         <div>
                             <h1 className='font-semibold text-xl mb-2 hover:text-[#ef1721] duration-500 cursor-pointer'>Insurance Included</h1>
@@ -39,7 +39,7 @@ const SpecialServices = () => {
                     <img src={specialService} />
                 </div>
                 <div>
-                    <div className='mb-10 flex gap-2'>
+                    <div className='mb-10 flex gap-2 text-justify'>
                         <span className='text-xl w-4 h-4 border rounded-full flex items-center justify-center text-[#ef1721] border-[#ef1721] mt-2'> < BsDot /> </span>
                         <div>
                             <h1 className='font-semibold text-xl mb-2 hover:text-[#ef1721] duration-500 cursor-pointer'> Hight technology instrument</h1>
@@ -48,7 +48,7 @@ const SpecialServices = () => {
                             </p>
                         </div>
                     </div>
-                    <div className='mb-10 flex gap-2'>
+                    <div className='mb-10 flex gap-2 text-justify'>
                         <span className='text-xl w-4 h-4 border rounded-full flex items-center justify-center text-[#ef1721] border-[#ef1721] mt-2'> < BsDot /> </span>
                         <div>
                             <h1 className='font-semibold text-xl mb-2 hover:text-[#ef1721] duration-500 cursor-pointer'>Access control system</h1>
@@ -57,7 +57,7 @@ const SpecialServices = () => {
                             </p>
                         </div>
                     </div>
-                    <div className='mb-10 flex gap-2'>
+                    <div className='mb-10 flex gap-2 text-justify'>
                         <span className='text-xl w-4 h-4 border rounded-full flex items-center justify-center text-[#ef1721] border-[#ef1721] mt-2'> < BsDot /> </span>
                         <div>
                             <h1 className='font-semibold text-xl mb-2 hover:text-[#ef1721] duration-500 cursor-pointer'>Online 24/7 Available</h1>
