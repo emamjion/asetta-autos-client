@@ -10,15 +10,15 @@ import { FaEnvelope, FaMobile } from 'react-icons/fa';
 const OurStuff = () => {
     const [stuffs, setStuffs] = useState([]);
     useEffect(() => {
-        fetch('/stuff.json')
+        fetch('http://localhost:5000/ourStuf')
         .then(res => res.json())
         .then(data => setStuffs(data))
     }, [])
     
     return (
-        <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24 bg-[#f7f7f7] p-20'>
-            <div className='flex justify-center'>
-                <div className='w-1/3 p-6'>
+        <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24 bg-[#f7f7f7] p-8 md:p-20'>
+            <div className='flex  flex-col md:flex-row  justify-center'>
+                <div className='md:w-1/3 p-6'>
                     <h1 className='font-semibold text-5xl mb-6'>Meet Our Stuff</h1>
                     <hr className='w-28 mt-2 border-[#ef1721] border' />
                     <hr className='w-20 mt-2 border-[#ef1721] border' />
@@ -29,7 +29,7 @@ const OurStuff = () => {
                         We would love to get to know you in turn, so be sure <br /> to come see us in person!
                     </p>
                 </div>
-                <div className='w-2/4'>
+                <div className='md:w-2/4'>
                 <Swiper
                     spaceBetween={30}
                     centeredSlides={true}
@@ -50,7 +50,7 @@ const OurStuff = () => {
                         >
                             <div className='flex items-center flex-col'>
                                 <img src={stuff.image} className='rounded border-8 border-[#fff]' />
-                                <div className='bg-[#fff] w-[50%] -ml-7 h-48 -mt-12 p-6 rounded'>
+                                <div className='bg-[#fff] md:w-[50%] -ml-7 md:h-48 -mt-12 p-6 rounded'>
                                     <h1 className='text-xl font-bold text-[#ef1721]'>{stuff.name}</h1>
                                     <h5 className='mb-4 text-[#827a8e] font-medium'>{stuff.position}</h5>
                                     <div className='flex items-center gap-2 mb-2 font-medium'>
