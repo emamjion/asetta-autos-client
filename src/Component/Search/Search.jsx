@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import Button from '../Button/Button';
 
 const Search = ({ onSearch }) => {
 
@@ -13,7 +14,7 @@ const Search = ({ onSearch }) => {
 
 
     return (
-        <div>
+        <div className='flex'>
             <input
                 type="text"
                 placeholder="Search"
@@ -21,12 +22,13 @@ const Search = ({ onSearch }) => {
                 value={query}
                 onChange={handleInputChange}
             />
-            <button
+            {/* <button
                 id="searchButton"
                 class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-r-md focus:outline-none"
             >
                 Search
-            </button>
+            </button> */}
+            <Button id="searchButton" button={'Search'} />
         </div>
     );
 };

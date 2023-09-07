@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa";
 import logo from "../../assets/images/logo/logo.png";
 import { AuthContex } from "../../Component/Providers/Authprovider";
+import RouteBanner from "../../Component/Shared/RouteBanner/RouteBanner";
 const Dashboard = () => {
   //  dark mode control with local storage --
   const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light');
@@ -56,67 +57,68 @@ const Dashboard = () => {
   const handleLogOut = () => {
     logOut().then();
   };
-  const listItem = (
-    <>
-      <li>
-        <NavLink className="hover:text-[#ef1721] duration-500">
-          {currentUser?.role} Home
-        </NavLink>
-      </li>
-      {currentUser?.role === 'admin' && (
-        <><li>
-          <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-dealers">
-            Add Dealers
-          </NavLink>
-        </li>
-          <li>
-            <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-blogs">
-              Add blog
-            </NavLink>
-          </li></>
-      )}
-      {currentUser?.role === 'dealer' && (
-        <><li>
-          <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-cars">
-            Add Cars
-          </NavLink>
-        </li>
-        </>
-      )}
-      {currentUser?.role === 'user' && (
-        <>
-          <li>
-            <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/user-cards">
-              My Cards
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-reviews">
-              provide reviews
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/dealer-request">
-              Dealer Request
-            </NavLink>
-          </li>
-        </>
-      )}
-      <li>
-        <NavLink className="hover:text-[#ef1721] duration-500" to="/">
-          Back home
-        </NavLink>
-      </li>
-    </>
-  );
+  // const listItem = (
+  //   <>
+  //     <li>
+  //       <NavLink className="hover:text-[#ef1721] duration-500">
+  //         {currentUser?.role} Home
+  //       </NavLink>
+  //     </li>
+  //     {currentUser?.role === 'admin' && (
+  //       <><li>
+  //         <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-dealers">
+  //           Add Dealers
+  //         </NavLink>
+  //       </li>
+  //         <li>
+  //           <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-blogs">
+  //             Add blog
+  //           </NavLink>
+  //         </li></>
+  //     )}
+  //     {currentUser?.role === 'dealer' && (
+  //       <><li>
+  //         <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-cars">
+  //           Add Cars
+  //         </NavLink>
+  //       </li>
+  //       </>
+  //     )}
+  //     {currentUser?.role === 'user' && (
+  //       <>
+  //         <li>
+  //           <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/user-cards">
+  //             My Cards
+  //           </NavLink>
+  //         </li>
+  //         <li>
+  //           <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-reviews">
+  //             provide reviews
+  //           </NavLink>
+  //         </li>
+  //         <li>
+  //           <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/dealer-request">
+  //             Dealer Request
+  //           </NavLink>
+  //         </li>
+  //       </>
+  //     )}
+  //     <li>
+  //       <NavLink className="hover:text-[#ef1721] duration-500" to="/">
+  //         Back home
+  //       </NavLink>
+  //     </li>
+  //   </>
+  // );
 
 
   return (
     <div>
-      <nav>
-        {/* Navbar first part */}
+      <RouteBanner SectionTitle={'DASHBOARD'} smallTitle={'DASHBOAD'}></RouteBanner>
+      {/* <nav>
+        Navbar first part
         <div className="flex flex-col xl:flex-row gap-2 bg-[#111] text-white items-center justify-center md:justify-between px-4 xl:px-[140px] 2xl:px-[240px] py-4">
-          {/* Info part */}
+          Info part
           <div className="hidden lg:flex items-center justify-center gap-6">
             <p className="flex items-center gap-2 text-lg">
               <span className="text-[#ef1721]">
@@ -140,9 +142,9 @@ const Dashboard = () => {
               <span>Sun - Fri(08AM - 10PM)</span>
             </p>
           </div>
-          {/* Login and social media part */}
+          Login and social media part
           <div className="flex items-center justify-center gap-6">
-            {/* Login part */}
+            Login part
 
             {
               user && <label className="avatar tooltip tooltip-bottom tooltip-success" data-tip={user?.displayName}>
@@ -183,7 +185,7 @@ const Dashboard = () => {
                 </Link>
               </>
             )}
-            {/* social icon part */}
+            social icon part
             <div className="flex items-center justify-center gap-4 ml-6">
               <p className="text-sm lg:text-lg">Follow Us: </p>
               <a href=" https://www.facebook.com">
@@ -212,8 +214,8 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        {/* Navbar second part */}
-        {/* todo - mohosin*/}
+        Navbar second part
+        todo - mohosin
         <div className="relative">
           <div className="flex lg:hidden justify-between items-center py-2 bg-slate-200 px-4 xl:px-[140px] 2xl:px-[240px]">
             <div className="flex items-center justify-center">
@@ -272,7 +274,7 @@ const Dashboard = () => {
           <ul className="flex items-center justify-center  gap-10 text-lg font-medium text-[#111]">
             {listItem}
           </ul>
-          {/* <div className="flex items-center justify-center gap-4 text-lg">
+          <div className="flex items-center justify-center gap-4 text-lg">
           <span className="text-[#111] hover:text-[#ef1721] cursor-pointer duration-500">
             {" "}
             <FaCartPlus />{" "}
@@ -281,7 +283,7 @@ const Dashboard = () => {
             {" "}
             <FaSearch />{" "}
           </span>
-        </div> */}
+        </div>
           <div className='lg:flex'>
             <label className="swap swap-rotate">
 
@@ -294,7 +296,7 @@ const Dashboard = () => {
             </label>
           </div>
         </div>
-      </nav>
+      </nav> */}
       <div>
         <div className="drawer lg:drawer-open">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -303,16 +305,23 @@ const Dashboard = () => {
             <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
           </div>
-          <div className="drawer-side">
+          <div className="drawer-side -mt-20">
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-            <ul className="menu p-4 w-80 min-h-full bg-white font-bold text-black">
+            <ul className="menu p-4 w-80  min-h-full bg-slate-200 font-bold text-black">
               {/* Sidebar content here */}
+              <div className="mx-auto">
+                <img src={logo} className="w-40" />
+                <h2 className="text-3xl text-center text-[#111] font-semibold -mt-10">
+                  Asetta Auto&apos;s
+                </h2>
+              </div>
+              <hr className="border border-emerald-600 mt-4" />
               <div className=" mx-auto text-center items-center my-10">
                 <img className="rounded-full mx-auto" src={user.photoURL} alt="" />
                 <h1 className="font-bold text-2xl mt-3">{user.displayName}</h1>
                 <p className="font-bold text-xl mt-1">{user.email}</p>
               </div>
-              <hr className="font-bold my-5" />
+              <hr className="font-bold my-5 " />
               {currentUser?.role === "user" && (
                 <>
                   {/* <li>
@@ -329,7 +338,7 @@ const Dashboard = () => {
                   </li> */}
                   <li>
                     <NavLink className="hover:text-[#ef1721] duration-500 my-2" to="/dashboard/user-cards">
-                    My Cards
+                      My Cards
                     </NavLink>
                   </li>
                   {/* <li>
@@ -411,7 +420,7 @@ const Dashboard = () => {
                   </li> */}
                 </>
               )}
-              <hr className="my-5" />
+              <hr className="my-5 border border-emerald-600" />
               <li className="my-2">
                 <NavLink className="hover:text-[#ef1721] duration-500" to="/">
                   Home
