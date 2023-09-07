@@ -19,16 +19,16 @@ const BlogRoute = () => {
     }, [])
 
     useEffect(() => {
-        
+
         const filtered = Blogs.filter((item) =>
-          item.title.toLowerCase().includes(query.toLowerCase())
+            item.title.toLowerCase().includes(query.toLowerCase())
         );
         setFilteredData(filtered);
-      }, [query, Blogs]);
-    
-      const handleSearch = (searchQuery) => {
+    }, [query, Blogs]);
+
+    const handleSearch = (searchQuery) => {
         setQuery(searchQuery);
-      };
+    };
 
 
     return (
@@ -47,9 +47,11 @@ const BlogRoute = () => {
                         Blogs.map(blog => <NewsCard key={blog._id} blog={blog}></NewsCard>)
                     }
                 </div> */}
-                {
-                    filteredData.map(blogs => <BlogCardLatest key={blogs._id} blogs={blogs}></BlogCardLatest>)
-                }
+                <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-14 mb-10'>
+                    {
+                        filteredData.slice(0,6).map(blogs => <BlogCardLatest key={blogs._id} blogs={blogs}></BlogCardLatest>)
+                    }
+                </div>
             </div>
         </>
     );

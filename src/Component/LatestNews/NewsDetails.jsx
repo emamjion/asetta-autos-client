@@ -92,14 +92,14 @@ const NewsDetails = () => {
               </div>
               <h1 className="mt-7 font-bold text-3xl">{title}</h1>
               <p className="mt-7">{content}</p>
-              <div className="mt-7 border-l-2 border-red-500 p-10 bg-slate-200">
+              <div className="mt-7 border-l-2 border-red-500 p-10 bg-[#f7f7f7]">
                 <i className="mt-7">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution. </i>
                 <h1 className="font-bold mt-4 ">Mark Crawford</h1>
               </div>
               <p className="mt-7">{blog}</p>
               <hr className="mt-5" />
             </div>
-            <div className="flex justify-start mt-7 bg-slate-100 gap-6  p-9 shadow-lg rounded-2xl">
+            <div className="flex justify-start mt-7 bg-[#f7f7f7] gap-6  p-9 shadow-lg rounded-2xl">
               <img className="w-[250px] h-[200px] rounded-2xl" src={authorImage} alt="" />
               <div>
                 <h4 className="font-bold">Author</h4>
@@ -121,7 +121,7 @@ const NewsDetails = () => {
                 </div>
               </div>
             </div>
-            <div className=" bg-slate-300 p-10 rounded-xl mt-10">
+            <div className=" bg-[#f7f7f7] p-10 rounded-xl mt-10">
               <h2 className="text-2xl font-bold mb-4">Leave a Comment</h2>
               <form onSubmit={handleCommentSubmit}>
                 <div className="">
