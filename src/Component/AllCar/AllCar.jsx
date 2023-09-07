@@ -45,28 +45,50 @@ const AllCar = () => {
 
     return (
       <div>
- <div>
- <div className="form-control">
-  <div className="input-group ">
-    
-   <div className=" items-center m-6 ml-20 p-8">
-   <input onChange={e => setFind(e.target.value)} type="text" placeholder="All Branch" className="input input-bordered mx-2 ml-12 w-36" />
+  <div className="flex justify-center items-center mb-6">
+      <div className="form-control">
+        <div className="input-group">
+          <div className="flex items-center space-x-2">
+            <input
+              onChange={(e) => setFind(e.target.value)}
+              type="text"
+              placeholder="All Branch"
+              className="input input-bordered w-36"
+            />
 
-   <input onChange={e => setFind(e.target.value)} type="text" placeholder="All Make" className="input input-bordered mx-2 w-36" />
+            <input
+              onChange={(e) => setFind(e.target.value)}
+              type="text"
+              placeholder="All Make"
+              className="input input-bordered w-36"
+            />
 
-   <input onChange={e => setFind(e.target.value)} type="text" placeholder="Brand" className="input input-bordered mx-2 w-36" />
+            <input
+              onChange={(e) => setFind(e.target.value)}
+              type="text"
+              placeholder="Brand"
+              className="input input-bordered w-36"
+            />
 
-   <input onChange={e => setFind(e.target.value)} type="text" placeholder="All registration Date" className="input input-bordered mx-2 w-36" />
+            <input
+              onChange={(e) => setFind(e.target.value)}
+              type="text"
+              placeholder="All registration Date"
+              className="input input-bordered w-36"
+            />
 
-    <button onClick={handleFind} className=" ml-2 btn  bg-black hover:bg-red-600 text-white">Search</button>
-    
-   </div>
-  </div>
-</div>        
+            <button
+              onClick={handleFind}
+              className="btn bg-black hover:bg-red-600 text-white"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-   </div>
-
-   <div className='grid gap-6 mt-12 mx-16 m-8'>
+   <div className='grid md:grid-cols-3 gap-2'>
                 {
                     info.map(info => <AllCarsData
                         key={info._id}
