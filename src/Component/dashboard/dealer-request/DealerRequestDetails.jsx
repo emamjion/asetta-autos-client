@@ -20,7 +20,7 @@ const DealerRequestDetails = () => {
                 <h4 className="text-lg font-semibold">Status : <span className="text-red-600">Pending</span></h4>
                 <h4 className="text-lg font-semibold">Address : </h4>
                 <div className="my-4">
-                <Button button={"cancel request"}></Button>
+                {/* <Button button={"cancel request"}></Button> */}
                 </div>
             </div>
         </div>

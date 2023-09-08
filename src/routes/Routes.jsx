@@ -149,7 +149,7 @@ const router = createBrowserRouter([
             },
             // {
             //     path: '/dashboard/checkOut',
-            //     element: <CheckOut></CheckOut>
+            //     element: <Checkout></Checkout>
             // },
             {
                 path: '/dashboard/dealer-request',
