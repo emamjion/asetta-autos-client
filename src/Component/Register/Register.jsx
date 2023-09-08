@@ -5,6 +5,7 @@ import { AuthContex } from '../Providers/Authprovider';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../firebase/firebase.config';
 import Swal from 'sweetalert2';
+import GoogleLogin from '../GoogleLogin/GoogleLogin';
 
 const auth = getAuth(app)
 const Register = () => {
@@ -114,15 +115,13 @@ const Register = () => {
                         <div className="form-control mt-6">
                             <input className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]" type="submit" value="Register" />
                         </div>
-                        <div className="form-control mt-6">
-                          
-                        </div>
-
-
-                        <div>
-                            <p>Don't have an account? <span className='text-[#ef1721] hover:underline'><Link to='/login'>Login</Link></span></p>
-                        </div>
                     </form>
+                    <div>
+                    <GoogleLogin></GoogleLogin>
+                    </div>
+                    <div className='text-center text-sm md:text-lg mt-4 pb-8'>
+                            <p>Already have an account! <span className='text-[#ef1721] hover:underline'><Link to='/login'>Login</Link></span></p>
+                        </div>
                 </div>
             </div>
         </div>
