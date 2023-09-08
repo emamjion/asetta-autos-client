@@ -197,9 +197,9 @@ const Dashboard = () => {
                 {currentUser?.role === "user" && (
                   <>
                     <li>
-                      <NavLink className="hover:text-[#ef1721] duration-500 bg-gray-300">
+                      <Link className="hover:text-[#ef1721] duration-500 bg-gray-300">
                         {currentUser?.role} Home
-                      </NavLink>
+                      </Link>
                     </li>
                     <li>
                       <NavLink className="hover:text-[#ef1721] duration-500 my-2" to="/dashboard/user-cards">
@@ -221,9 +221,9 @@ const Dashboard = () => {
                 {currentUser?.role === "dealer" && (
                   <>
                           <li>
-                    <NavLink className="hover:text-[#ef1721] duration-500 bg-gray-300">
+                    <Link className="hover:text-[#ef1721] duration-500 bg-gray-300">
                       {currentUser?.role} Home
-                    </NavLink>
+                    </Link>
                   </li>
                     <li className="my-2">
                       <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-cars">

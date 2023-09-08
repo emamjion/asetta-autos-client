@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 const auth = getAuth(app)
 const Register = () => {
 
-    const {createUser} = useContext(AuthContex)
+    const {createUser, updateUserProfile} = useContext(AuthContex)
     let navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -24,9 +24,6 @@ const Register = () => {
         console.log(data)
         createUser(data.email, data.password)
         .then(result=>{
-            // const loggeduser = result.user;
-            // Swal.fire('User Create succesful')
-            // navigate(from, { replace: true });
             if (result?.user) {
                 updateUserProfile(data?.name, data?.photoURL)
                   .then(() => {
@@ -70,27 +67,6 @@ const Register = () => {
             console.log(err);
         })
       }
-
-
-      const googleProvider = new GoogleAuthProvider();
-
-      const handleGoogleSignIn =() =>{
-      
-          signInWithPopup(auth, googleProvider)
-          .then(result =>{
-              const user = result.user;
-              console.log(user);
-              Swal.fire('Your login is succesful')
-              navigate(from, { replace: true });
-          })
-      
-          .catch(error =>{
-              console.log('error', error.message);
-          })
-      }
-
-
-
     return (
         <div className='grid md:grid-cols-2 bg-slate-200'>
           
@@ -127,6 +103,13 @@ const Register = () => {
                             {errors.password?.type === 'required' && <span className='text-red-600'>Password field is required</span>}
                             {errors.password?.type === 'minLength' && <span className='text-red-600'>6 caracter is required</span>}
                             {errors.password?.type === 'maxLength' && <span className='text-red-600'>less than 20 caracter is required</span>}
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Photo URL</span>
+                            </label>
+                            <input type="url"  {...register("photoURL", { required: true })} name='photoURL' placeholder="photo URL" className="input input-bordered bg-transparent" />
+                            {errors.photoURL && <span className='text-red-600'>photoURL field is required</span>}
                         </div>
                         <div className="form-control mt-6">
                             <input className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]" type="submit" value="Register" />
