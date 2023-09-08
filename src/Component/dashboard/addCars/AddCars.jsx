@@ -82,7 +82,7 @@ const AddCars = () => {
 
     };
     return (
-        <div className="px-4 xl:px-[140px] 2xl:px-[240px] py-10 border  shadow-sm drop-shadow-sm">
+        <div className="px-4  py-10 border  shadow-sm drop-shadow-sm">
             <h2 className="uppercase text-center text-xl md:text-4xl font-bold">Add Your Cars</h2>
             <div className="border p-4 md:p-10 text-gray-800 my-10">
             <form onSubmit={handleSubmit(onSubmit)}>

@@ -8,38 +8,13 @@ const BlogCardLatest = ({ blogs }) => {
     const { image, author, title, _id, content, date, authorImage, blog } = blogs;
     console.log(blogs)
     return (
-        // <div className="card w-full my-10 font-bold h-full lg:card-side bg-base-100 shadow-xl">
-        //     <figure><img src={image} alt="Album" /></figure>
-        //     <div className="card-body w-2/3">
-        //         <h2 className="card-title text-3xl">{title}</h2>
-        //         <h2 className='text-xl'>Author:  {author}</h2>
-        //         <p className='font-normal'>{content.slice(0,150)}</p>
-        //         <div className="card-actions justify-start">
-        //             <Link to={`/our-blogs/${_id}`}>
-        //                 <Button button={'read more'} />
-        //             </Link>
-        //         </div>
-        //     </div>
-        // </div>
-        // <div className='flex items-start m-10 gap-10 rounded-lg px-5 py-5 bg-white shadow-2xl hover:text-[#ef1721] duration-500 hover:-translate-y-2'>
-        //     <div>
-        //         <img className='w-[500px] h-[200px] rounded-lg' src={image} alt="" />
-        //     </div>
-        //     <div>
-        //         <h1 className='text-3xl font-bold mb-5'>{title}</h1>
-        //         <p className='my-5'>{content.slice(0, 350)}...</p>
-        //         <Link to={`/our-blogs/${_id}`}>
-        //             <Button button={'read more'} />
-        //         </Link>
-        //     </div>
-        // </div>
 
         <div className="card w-full h-full bg-base-100 mainbloghover border border-base-300 rounded-sm hover:border hover:border-red-400 duration-500">
             <div className='relative'>
                 <figure className="px-10 pt-10 imagehover">
                     <img src={image} alt="Shoes" className="rounded-xl" />
                 </figure>
-                <div className='bg-[#ef1721] text-white font-bold w-16 h-16 p-3 text-xl flex justify-center text-center rounded-2xl items-center absolute top-1 mt-6 ms-6'>
+                <div className='bg-[#ef1721] text-white font-bold w-24 h-24 text-xl flex justify-center text-center rounded-2xl items-center absolute top-1 mt-12 ms-14'>
                     <p>{date}</p>
                 </div>
             </div>
@@ -47,17 +22,10 @@ const BlogCardLatest = ({ blogs }) => {
                 <p className='uppercase text-xl font-semibold'>by : {author}</p>
                 <h2 className="card-title text-2xl font-bold cursor-pointer hover:text-[#ef1721]">{title}</h2>
                 <p className='text-xl'>{content.slice(0, 150)}...</p>
-                <div className='flex justify-between items-center relative w-full '>
-                    <div className='card-actions justify-start mt-3 hover:text-[#ef1721]'>
-                        <Link to={`/our-blogs/${_id}`}>
-                            <h1 className='text-2xl uppercase font-bold flex items-center gap-1'>Read More <FaArrowRight></FaArrowRight></h1>
-                        </Link>
-                    </div>
-                    <div className='flex gap-3 mt-3 text-3xl cursor-pointer opacity-0 hover:opacity-100 duration-500 bloghover'>
-                        <span className='hover:text-black duration-500'> < FaFacebook /> </span>
-                        <span className='hover:text-black duration-500'> < FaInstagram /> </span>
-                        <span className='hover:text-black duration-500'> < FaLinkedin /> </span>
-                    </div>
+                <div className='card-actions justify-start mt-3 hover:text-[#ef1721]'>
+                    <Link to={`/our-blogs/${_id}`}>
+                        <h1 className='text-2xl uppercase font-bold flex items-center gap-1'>Read More <FaArrowRight></FaArrowRight></h1>
+                    </Link>
                 </div>
             </div>
         </div>

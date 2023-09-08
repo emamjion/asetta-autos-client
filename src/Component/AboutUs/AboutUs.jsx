@@ -1,11 +1,13 @@
-import {
-	AiOutlineCar,
-	AiOutlineCheckCircle,
-	AiOutlineArrowRight,
-	AiFillCar,
-	AiFillSetting,
-} from "react-icons/Ai";
+// import {
+// 	AiOutlineCar,
+// 	AiOutlineCheckCircle,
+// 	AiOutlineArrowRight,
+// 	AiFillCar,
+// 	AiFillSetting,
+// } from "react-icons/Ai";
 import Button from "../Button/Button";
+import Button2 from "../Button/Button2";
+import { Link } from "react-router-dom";
 // import aboutImg from '../../assets/images/about/about-img.png'
 const AboutUs = () => {
 	return (
@@ -16,7 +18,7 @@ const AboutUs = () => {
 					<div className="md:w-64 auto p-5 flex bg-black text-white rounded-xl absolute left-40 ">
 						{" "}
 						<span className="text-red-600 md:text-3xl me-5">
-							<AiFillSetting /> <AiFillCar />
+							{/* <AiFillSetting /> <AiFillCar /> */}
 						</span>{" "}
 						<h6 className="text-xs md:text-xl w-9/12"> 30 Years Of Quality Service</h6>{" "}
 					</div>
@@ -26,40 +28,40 @@ const AboutUs = () => {
 				<div>
 					<h4 className="text-red-600 text-lg md:text-2xl font-bold flex">
 						{" "}
-						<span className="mt-1 me-3">
+						{/* <span className="mt-2 me-3">
 							<AiOutlineCar />
-						</span>{" "}
+						</span>{" "} */}
 						About Us
 					</h4>
 					<h1 className="text-2xl md:text-5xl font-bold mb-4 mt-2">
 						World Largest <span className="text-red-600">Car Dealer</span>{" "}
 						Marketplace.
 					</h1>
-					<h6 className="text-sm">
+					<h6 className="text-sm my-3">
 						There are many variations of passages of Lorem Ipsum available, but
 						the majority have suffered alteration in some form, by injected
 						humour.
 					</h6>
-					<div className="mt-1">
+					<div className="mt-2">
 						<h6 className="flex">
 							{" "}
-							<span className="text-red-600  mt-1 me-3">
+							{/* <span className="text-red-600 mt-2 me-3">
 								<AiOutlineCheckCircle />
-							</span>{" "}
+							</span>{" "} */}
 							At vero eos et accusamus et iusto odio.
 						</h6>
 						<h6 className="flex">
 							{" "}
-							<span className="text-red-600 mt-1 me-3">
+							{/* <span className="text-red-600 mt-2 me-3">
 								<AiOutlineCheckCircle />
-							</span>{" "}
+							</span>{" "} */}
 							Established fact that a reader will be distracted.
 						</h6>
 						<h6 className="flex">
 							{" "}
-							<span className="text-red-600 mt-1 me-3">
+							{/* <span className="text-red-600 mt-2 me-3">
 								<AiOutlineCheckCircle />
-							</span>{" "}
+							</span>{" "} */}
 							Sed ut perspiciatis unde omnis iste natus sit.
 						</h6>
 					</div>
@@ -67,9 +69,11 @@ const AboutUs = () => {
 						Discover More <AiOutlineArrowRight />{" "}
 					</button> */}
 					<div className="mt-6">
-						<Button 
-							button={'About More'} 
-						/>
+						<Link to='/about'>
+							<Button 
+								button={'About More'} 
+							/>
+						</Link>
 					</div>
 				</div>
 			</div>

@@ -50,7 +50,7 @@ const ContactRoute = () => {
             </div>
 
 
-            <div className='bg-slate-200 absolute -mt-12 grid md:grid-cols-3  gap-4 mb-12 mx-12 p-8 font-serif'>
+            <div className='bg-[#f7f7f7] absolute -mt-12 grid md:grid-cols-3  gap-4 mb-12 mx-12 p-8 font-serif'>
 
                 <div>
                    <h1 className='heading1 text-3xl font-bold text-left '>Get in <span className='text-red-500'>Touch</span></h1>
@@ -72,7 +72,7 @@ const ContactRoute = () => {
             </div>
         </div>
 
-        <section  id="contact" className="py-10 px-3  bg-slate-300" >
+        <section  id="contact" className="py-10 px-3  bg-[#f7f7f7]" >
       <div className="text-center mt-8">
         <h3 className="text-5xl font-extrabold">
           Contact <span className="text-red-500">Us</span>
@@ -84,7 +84,7 @@ const ContactRoute = () => {
             <input className='p-6 rounded' type="text" name="user_name" placeholder="Your Name" />
             <input className='p-6 rounded' type="Email" name="user_email" placeholder="Your Email Address" />
             <textarea className='p-6' placeholder="Your Message" name="message" rows={10}></textarea>
-            <input className="btn bg-red-500 border-none font-bold p-4 rounded-xl w-32 mx-auto text-center" type="submit" value="Send" />
+         
             <input className="btn bg-red-500 border-none text-white p-4 w-32 mx-auto text-center hover:text-black duration-700" type="submit" value="Send" />
           </form>
           <div className="flex flex-col gap-7 mt-16">
@@ -112,7 +112,7 @@ const ContactRoute = () => {
         </div>
       </div>
 
-      <div className=' bg-slate-300'>
+      <div className=' bg-[#f7f7f7]'>
 <div className=' rounded my-6 px-4' style={{ width: '100%', height: '400px', overflow: 'hidden'  }}>
   <iframe
     title="Google Map"

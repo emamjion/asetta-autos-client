@@ -4,10 +4,11 @@ import about1 from '../../assets/images/about/about-1.png'
 import about2 from '../../assets/images/about/about-2.png'
 import about3 from '../../assets/images/about/about-3.png'
 import about4 from '../../assets/images/about/about-4.png'
+import { Link } from 'react-router-dom';
 
 const AchievementHistory = () => {
     return (
-        <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-[240px]'>
+        <div className='px-4 xl:px-[140px] 2xl:px-[240px]  my-12 md:my-32'>
             <div className='grid grid-cols-1 md:grid-cols-2 items-center gap-6'>
                 <div>
                     <div className="carousel w-full rounded">
@@ -52,7 +53,9 @@ const AchievementHistory = () => {
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
                     </p>
                     <div className='mt-8'>
-                        <Button button={'Know More'} />
+                        <Link to='/know-more'>
+                            <Button button={'Know More'} />
+                        </Link>
                     </div>
                 </div>
             </div>
