@@ -60,7 +60,7 @@ const DealerRequest = () => {
 
 
     return (
-        <div className="px-4 xl:px-[140px] 2xl:px-[240px] py-10 border">
+        <div className="px-4  py-10 border">
             <h2 className="uppercase text-center text-xl md:text-4xl font-bold ">Dealer Request</h2>
             <p className="text-center my-4 text-red-500 font-semibold">If you want to be a car dealer ! Provide Your details information!</p>
             <h3 className="text-center">Already submit request ~ check it! <Link className="underline text-blue-700 hover:text-blue-500" to='/dashboard/dealer-request-details'>Request Details</Link></h3>

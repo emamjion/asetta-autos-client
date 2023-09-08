@@ -13,14 +13,14 @@ const CheckoutForm = () => {
   const [clientSecret, setClientSecret] = useState('price')
   
   useEffect(() => {
-      fetch('http://localhost:5000/create-payment-intent')
+      fetch('https://asetta-autos-production.up.railway.app/create-payment-intent')
       .then(res => res.json())
       .then(data => setClientSecret(data))
   }, [])
 
 
   useEffect(() => {
-      fetch('http://localhost:5000/cards')
+      fetch('https://asetta-autos-production.up.railway.app/cards')
       .then(res => res.json())
       .then(data => setCards(data))
   }, [cards])

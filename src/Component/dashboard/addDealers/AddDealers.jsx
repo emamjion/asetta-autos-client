@@ -80,7 +80,7 @@ const AddDealers = () => {
 
 
     return (
-        <div className="px-4 xl:px-[140px] 2xl:px-[240px] py-10 border">
+        <div className="px-4 xl:px-[40px] py-10 border">
             <h2 className="uppercase text-center text-xl md:text-4xl font-bold">Add New Dealers</h2>
             <div className="mt-8">
                 <h3 className="text-xl font-semibold">Total : {dealersPending?.length}</h3>
