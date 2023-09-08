@@ -86,6 +86,7 @@ const NewsDetails = () => {
                 <div className="flex gap-8 mt-7">
                   <p className="flex items-center gap-1"><BsPerson className="text-red-700"></BsPerson>{author}</p>
                   <p className="flex items-center gap-1"><FaComment className="text-red-700"></FaComment> {commentsLoadData?.length} Comments</p>
+                  {/* TODO: icon lekha text er jaigai react icon bosbe */}
                   <p className="flex items-center gap-1">icon - Likes</p>
                 </div>
                 <p className="mt-7 flex items-center gap-1 me-10"><FaShare className="text-red-700"></FaShare>Share</p>
