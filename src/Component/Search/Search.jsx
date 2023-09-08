@@ -18,7 +18,7 @@ const Search = ({ onSearch }) => {
             <input
                 type="text"
                 placeholder="Search"
-                class="px-4 py-2 rounded-l-md focus:outline-none focus:ring focus:border-blue-500 w-96 sm:w-96 md:w-96 border border-red-400"
+                class="px-4 py-2 rounded-l-md focus:outline-none focus:ring focus:border-blue-500 w-96 sm:w-96 md:w-96 border border-black"
                 value={query}
                 onChange={handleInputChange}
             />
@@ -28,7 +28,7 @@ const Search = ({ onSearch }) => {
             >
                 Search
             </button> */}
-            <Button id="searchButton" button={'Search'} />
+            <Button id="searchButton" className='border-black' button={'Search'} />
         </div>
     );
 };

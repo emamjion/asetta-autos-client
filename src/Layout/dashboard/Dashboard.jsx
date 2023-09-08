@@ -309,13 +309,13 @@ const Dashboard = () => {
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
             <ul className="menu p-4 w-80  min-h-full bg-slate-200 font-bold text-black">
               {/* Sidebar content here */}
-              <div className="mx-auto">
+              {/* <div className="mx-auto">
                 <img src={logo} className="w-40" />
                 <h2 className="text-3xl text-center text-[#111] font-semibold -mt-10">
                   Asetta Auto&apos;s
                 </h2>
               </div>
-              <hr className="border border-emerald-600 mt-4" />
+              <hr className="border border-emerald-600 mt-4" /> */}
               <div className=" mx-auto text-center items-center my-10">
                 <img className="rounded-full mx-auto" src={user.photoURL} alt="" />
                 <h1 className="font-bold text-2xl mt-3">{user.displayName}</h1>

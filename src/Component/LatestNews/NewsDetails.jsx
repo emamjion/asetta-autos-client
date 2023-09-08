@@ -99,7 +99,7 @@ const NewsDetails = () => {
               <p className="mt-7">{blog}</p>
               <hr className="mt-5" />
             </div>
-            <div className="flex justify-start mt-7 bg-[#f7f7f7] gap-6  p-9 shadow-lg rounded-2xl">
+            <div className="flex justify-start mt-7 bg-[#fff] gap-6  p-9 shadow-md rounded-lg border">
               <img className="w-[250px] h-[200px] rounded-2xl" src={authorImage} alt="" />
               <div>
                 <h4 className="font-bold">Author</h4>

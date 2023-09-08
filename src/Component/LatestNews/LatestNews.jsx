@@ -15,7 +15,7 @@ const LatestNews = () => {
         <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
             <Tittle topTitle={"Our Blog"} boldblackTitle={"Latest News &"} boldredTitle={"Blog"}></Tittle>
             {/* responsive - mohosin */}
-            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-10 '>
+            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 my-20'>
                 
                 {
                     Blogs.slice(0,3).map(blogs=><NewsCard key={blogs._id} blogs={blogs}></NewsCard>)
