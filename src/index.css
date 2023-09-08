@@ -29,3 +29,32 @@ ul li a.active{
 .custom-hover:hover .hover-icon{
     color: #fff;
 }
+
+/* for blog hover */
+
+.mainbloghover{
+    transition: all 0.5s;
+}
+
+.bloghover{
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.5s;
+}
+
+.mainbloghover:hover{
+    background-color: rgb(238, 231, 231);
+}
+
+.mainbloghover:hover .bloghover{
+    opacity: 1;
+    color: #ef1721;
+}
+
+.mainbloghover:hover .imagehover{
+    transform: scale(1.1);
+    /* transition: transform 0.3s ease; */
+    transition: all 1s;
+    animation-duration: 0.5s;
+}
+
