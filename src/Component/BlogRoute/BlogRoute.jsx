@@ -36,7 +36,7 @@ const BlogRoute = () => {
             <RouteBanner SectionTitle={'Our Blogs'} smallTitle={'Our Blogs'}></RouteBanner>
             <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
                 <Tittle topTitle={"Our Blog"} boldblackTitle={"Latest News &"} boldredTitle={"Blog"}></Tittle>
-                <div class="flex items-center space-x-2 justify-center text-xl my-10">
+                <div class="flex flex-wrap items-center space-x-2 justify-center text-xl my-10">
                     <Search onSearch={handleSearch}></Search>
                 </div>
 
