@@ -48,33 +48,33 @@ const AllCar = () => {
   <div className="flex justify-center items-center mb-6">
       <div className="form-control">
         <div className="input-group">
-          <div className="flex items-center space-x-2">
+          <div className="flex flex-wrap items-center justify-center space-x-2 ">
             <input
               onChange={(e) => setFind(e.target.value)}
               type="text"
               placeholder="All Branch"
-              className="input input-bordered w-36"
+              className="input input-bordered w-full mb-2 md:mb-0 md:w-36"
             />
 
             <input
               onChange={(e) => setFind(e.target.value)}
               type="text"
               placeholder="All Make"
-              className="input input-bordered w-36"
+              className="input input-bordered w-full mb-2 md:mb-0 md:w-36"
             />
 
             <input
               onChange={(e) => setFind(e.target.value)}
               type="text"
               placeholder="Brand"
-              className="input input-bordered w-36"
+              className="input input-bordered w-full mb-2 md:mb-0 md:w-36"
             />
 
             <input
               onChange={(e) => setFind(e.target.value)}
               type="text"
               placeholder="All registration Date"
-              className="input input-bordered w-36"
+              className="input input-bordered w-full mb-2 md:mb-0 md:w-36"
             />
 
             <button

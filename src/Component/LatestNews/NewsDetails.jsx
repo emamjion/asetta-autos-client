@@ -81,7 +81,7 @@ const NewsDetails = () => {
         <div className="">
           <div>
             <div className=" p-5 text-black">
-              <img className="w-full h-[800px] rounded-2xl" src={image} alt="" />
+              <img className="w-full md:h-[800px] rounded-2xl" src={image} alt="" />
               <div className="flex justify-between font-bold">
                 <div className="flex gap-8 mt-7">
                   <p className="flex items-center gap-1"><BsPerson className="text-red-700"></BsPerson>{author}</p>
@@ -91,12 +91,12 @@ const NewsDetails = () => {
                 <p className="mt-7 flex items-center gap-1 me-10"><FaShare className="text-red-700"></FaShare>Share</p>
               </div>
               <h1 className="mt-7 font-bold text-3xl">{title}</h1>
-              <p className="mt-7">{content}</p>
+              <p className="mt-7 text-justify">{content}</p>
               <div className="mt-7 border-l-2 border-red-500 p-10 bg-[#f7f7f7]">
                 <i className="mt-7">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution. </i>
                 <h1 className="font-bold mt-4 ">Mark Crawford</h1>
               </div>
-              <p className="mt-7">{blog}</p>
+              <p className="mt-7 text-justify">{blog}</p>
               <hr className="mt-5" />
             </div>
             <div className="flex justify-start mt-7 bg-[#f7f7f7] gap-6  p-9 shadow-lg rounded-2xl">

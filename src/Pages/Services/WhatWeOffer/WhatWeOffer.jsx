@@ -16,12 +16,12 @@ const WhatWeOffer = () => {
                 <hr className='w-28  border-[#ef1721] border' />
                 <hr className='w-24 mt-1 mb-5 border-[#ef1721] border' />
             </div>
-            <div className='flex items-center gap-4 mt-6'>
+            <div className='md:flex items-center gap-4 mt-6 space-y-5 md:space-y-0'>
                 {
                     offers.map(offer => <div
                         key={offer.id}
                     >
-                        <div className='border shadow-sm h-96 relative'>
+                        <div className='border shadow-sm h-full pb-2 md:h-96 relative'>
                             <img src={offer.image} />
                             <div className='p-4 relative'>
                                 <h1 className='text-xl font-semibold mb-3'>{offer.serviceName}</h1>

@@ -47,7 +47,7 @@ const BlogRoute = () => {
                         Blogs.map(blog => <NewsCard key={blog._id} blog={blog}></NewsCard>)
                     }
                 </div> */}
-                <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-14 mb-10'>
+                <div className='grid sm:grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-14 mb-10'>
                     {
                         filteredData.slice(0,6).map(blogs => <BlogCardLatest key={blogs._id} blogs={blogs}></BlogCardLatest>)
                     }
