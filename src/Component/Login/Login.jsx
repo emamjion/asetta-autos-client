@@ -8,6 +8,7 @@ import app from '../firebase/firebase.config';
 import { toast } from 'react-toastify';
 import { useState } from 'react';
 import Button from './../Button/Button';
+import GoogleLogin from '../GoogleLogin/GoogleLogin';
 const auth = getAuth(app)
 const Login = () => {
     const { signin, resetPassword } = useContext(AuthContex)
@@ -92,14 +93,14 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <input  className="btn btn-primary border-none text-white bg-[#ef1721] hover:bg-[#181818]" type="submit" value="Login" />
                             </div>
-                            <div className="form-control mt-6">
-                           
+                            
+                        </form>
+                        <div>
+                                <GoogleLogin></GoogleLogin>
                             </div>
-                            <div className='text-center text-sm md:text-lg mt-4'>
+                        <div className='text-center text-sm md:text-lg mt-4 pb-8'>
                                 <p>Don't have an account? <span className=' text-[#ef1721] hover:underline'><Link to='/register'>Register</Link></span></p>
                             </div>
-                        </form>
-                        
                     </div>
                 </div>
             </div>
