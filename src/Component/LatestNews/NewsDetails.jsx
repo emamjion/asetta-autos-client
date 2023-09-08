@@ -4,7 +4,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import RouteBanner from "../Shared/RouteBanner/RouteBanner";
 import { BsFillSendFill,BsPerson } from "react-icons/bs";
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaPhone, FaRegAddressCard, FaMailBulk,FaComment,FaShare } from "react-icons/fa";
-import { AiFillLike } from "react-icons/ai";
+// import { AiFillLike } from "react-icons/ai";
 import { AuthContex } from './../Providers/Authprovider';
 import Swal from "sweetalert2";
 import Comment from "../Comment/Comment";
@@ -86,7 +86,7 @@ const NewsDetails = () => {
                 <div className="flex gap-8 mt-7">
                   <p className="flex items-center gap-1"><BsPerson className="text-red-700"></BsPerson>{author}</p>
                   <p className="flex items-center gap-1"><FaComment className="text-red-700"></FaComment> {commentsLoadData?.length} Comments</p>
-                  <p className="flex items-center gap-1"><AiFillLike className="text-red-700"></AiFillLike>Likes</p>
+                  <p className="flex items-center gap-1">icon - Likes</p>
                 </div>
                 <p className="mt-7 flex items-center gap-1 me-10"><FaShare className="text-red-700"></FaShare>Share</p>
               </div>
