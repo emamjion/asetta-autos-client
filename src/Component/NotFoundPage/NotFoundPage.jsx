@@ -2,7 +2,7 @@ import React from 'react';
 import RouteBanner from '../Shared/RouteBanner/RouteBanner';
 import image from '../../assets/images/Banner/404.png';
 import Button from '../Button/Button';
-import { AiFillHome } from 'react-icons/Ai';
+// import { AiFillHome } from 'react-icons/Ai';
 import { Link } from 'react-router-dom';
 
 const NotFoundPage = () => {
@@ -16,7 +16,7 @@ const NotFoundPage = () => {
                     <p className='mt-5'>The page you looking for not found may be it not exist or removed.</p>
                 </div>
                 <Link to='/'><button className="btn mx-auto py-4 btn-sm md:btn-md mt-5 bg-red-600  flex justify-center items-center  text-white  hover:bg-black">
-                    Go Back Home  <AiFillHome />{" "}
+                    Go Back Home  icon{" "}
                 </button></Link>
             </div>
         </>
