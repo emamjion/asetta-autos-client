@@ -10,7 +10,7 @@ import { FaEnvelope, FaMobile } from 'react-icons/fa';
 const OurStuff = () => {
     const [stuffs, setStuffs] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/ourStuf')
+        fetch('https://asetta-autos-production.up.railway.app/ourStuf')
         .then(res => res.json())
         .then(data => setStuffs(data))
     }, [])

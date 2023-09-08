@@ -30,7 +30,7 @@ const UserCards = () => {
 
 
     return (
-        <div className="px-4 xl:px-[140px] 2xl:px-[240px] py-10 border">
+        <div className="px-4 py-10 border">
         <h2 className="uppercase text-center text-xl md:text-4xl font-bold">My Cards</h2>
         <div className="border my-5 p-2 md:p-20">
             <div className="flex justify-between items-center">

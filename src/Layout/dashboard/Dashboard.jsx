@@ -38,8 +38,6 @@ const Dashboard = () => {
   const { user, logOut } = useContext(AuthContex);
 
 
-  // const currentUser = {'name' : 'Md Mohosin', 'role' : 'dealer'}
-  // const currentUser = { 'name': 'Md Mohosin', 'role': 'admin' }
   const [users, setUsers] = useState([]);
   useEffect(() => {
     fetch('https://asetta-autos-production.up.railway.app/users')
@@ -55,60 +53,6 @@ const Dashboard = () => {
   const handleLogOut = () => {
     logOut().then();
   };
-  const listItem = (
-    <>
-      <li>
-        <NavLink className="hover:text-[#ef1721] duration-500">
-          {currentUser?.role} Home
-        </NavLink>
-      </li>
-      {currentUser?.role === 'admin' && (
-        <><li>
-          <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-dealers">
-            Add Dealers
-          </NavLink>
-        </li>
-          <li>
-            <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-blogs">
-              Add blog
-            </NavLink>
-          </li></>
-      )}
-      {currentUser?.role === 'dealer' && (
-        <><li>
-          <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-cars">
-            Add Cars
-          </NavLink>
-        </li>
-        </>
-      )}
-      {currentUser?.role === 'user' && (
-        <>
-          <li>
-            <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/user-cards">
-              My Cards
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-reviews">
-              provide reviews
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/dealer-request">
-              Dealer Request
-            </NavLink>
-          </li>
-        </>
-      )}
-      <li>
-        <NavLink className="hover:text-[#ef1721] duration-500" to="/">
-          Back home
-        </NavLink>
-      </li>
-    </>
-  );
-
 
   return (
     <div>
@@ -229,8 +173,6 @@ const Dashboard = () => {
               
             </div>
           </div>
-          {/* <RouteBanner SectionTitle={'DASHBOARD'} smallTitle={'DASHBOAD'}></RouteBanner> */}
-         
             <div className="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox"  className="drawer-toggle" />
             <div className="drawer-content my-10 mx-4">
@@ -254,42 +196,21 @@ const Dashboard = () => {
                 <hr className="font-bold my-5 " />
                 {currentUser?.role === "user" && (
                   <>
-                    {/* <li>
-                      <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard">
-                        Dashboard
+                    <li>
+                      <NavLink className="hover:text-[#ef1721] duration-500 bg-gray-300">
+                        {currentUser?.role} Home
                       </NavLink>
-                    </li> */}
-                    {/* <li>
-                      <Link to="/dashboard/user-cards">
-                        <button className="btn bg-red-600 text-white  hover:bg-black">
-                          My Cards
-                        </button>
-                      </Link>
-                    </li> */}
+                    </li>
                     <li>
                       <NavLink className="hover:text-[#ef1721] duration-500 my-2" to="/dashboard/user-cards">
                         My Cards
                       </NavLink>
                     </li>
-                    {/* <li>
-                      <Link to="/dashboard/add-reviews">
-                        <button className="btn bg-red-600 text-white  hover:bg-black">
-                          add Reviews
-                        </button>
-                      </Link>
-                    </li> */}
                     <li>
                       <NavLink className="hover:text-[#ef1721] duration-500 my-2" to="/dashboard/add-reviews">
                         add Reviews
                       </NavLink>
                     </li>
-                    {/* <li>
-                      <Link to="/dashboard/dealer-request">
-                        <button className="btn bg-red-600 text-white  hover:bg-black">
-                          Dealer Request
-                        </button>
-                      </Link>
-                    </li> */}
                     <li>
                       <NavLink className="hover:text-[#ef1721] duration-500 my-2" to="/dashboard/dealer-request">
                         Dealer Request
@@ -299,17 +220,11 @@ const Dashboard = () => {
                 )}
                 {currentUser?.role === "dealer" && (
                   <>
-                    {/* <li>
-                      <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard">
-                        Dashboard
-                      </NavLink>
-                    </li> */}
-                    {/* <Link className="text-bold hover:text-red-700 " to="/dashboard/add-cars">
-                      Add Your Cars
-                    </Link> */}
-                    {/* <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-cars">
-                      Add Cars
-                    </NavLink> */}
+                          <li>
+                    <NavLink className="hover:text-[#ef1721] duration-500 bg-gray-300">
+                      {currentUser?.role} Home
+                    </NavLink>
+                  </li>
                     <li className="my-2">
                       <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-cars">
                         Add Your Cars
@@ -319,18 +234,11 @@ const Dashboard = () => {
                 )}
                 {currentUser?.role === "admin" && (
                   <>
-                    {/* <li>
-                      <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard">
-                        Dashboard
-                      </NavLink>
-                    </li> */}
-                    {/* <li>
-                      <Link to="/dashboard/add-dealers">
-                        <button className="btn bg-red-600 text-white  hover:bg-black">
-                          Add a new Dealers
-                        </button>
-                      </Link>
-                    </li> */}
+                    <li>
+                   <Link className="hover:text-[#ef1721] duration-500 bg-gray-300">
+                     {currentUser?.role} Home
+                   </Link>
+                 </li>
                     <li>
                       <NavLink className="hover:text-[#ef1721] duration-500 my-2" to="/dashboard/add-dealers">
                         Add a new Dealers
@@ -341,13 +249,6 @@ const Dashboard = () => {
                         Add Your Blogs
                       </NavLink>
                     </li>
-                    {/* <li>
-                      <Link to="/dashboard/add-blogs">
-                        <button className="btn bg-red-600 text-white  hover:bg-black">
-                          Add Your Blogs
-                        </button>
-                      </Link>
-                    </li> */}
                   </>
                 )}
                 <hr className="my-5 border border-emerald-600" />
