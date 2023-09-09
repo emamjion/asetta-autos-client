@@ -64,7 +64,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink className="hover:text-[#ef1721] duration-500" to="/all-car">
-         All Cars
+          All Cars
         </NavLink>
       </li>
       <li>

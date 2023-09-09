@@ -86,6 +86,7 @@ const NewsDetails = () => {
                 <div className="flex gap-8 mt-7">
                   <p className="flex items-center gap-1"><BsPerson className="text-red-700"></BsPerson>{author}</p>
                   <p className="flex items-center gap-1"><FaComment className="text-red-700"></FaComment> {commentsLoadData?.length} Comments</p>
+                  {/* TODO: icon lekha text er jaigai react icon bosbe */}
                   <p className="flex items-center gap-1">icon - Likes</p>
                 </div>
                 <p className="mt-7 flex items-center gap-1 me-10"><FaShare className="text-red-700"></FaShare>Share</p>
@@ -99,7 +100,7 @@ const NewsDetails = () => {
               <p className="mt-7 text-justify">{blog}</p>
               <hr className="mt-5" />
             </div>
-            <div className="flex justify-start mt-7 bg-[#f7f7f7] gap-6  p-9 shadow-lg rounded-2xl">
+            <div className="flex justify-start mt-7 bg-[#fff] gap-6  p-9 shadow-md rounded-lg border">
               <img className="w-[250px] h-[200px] rounded-2xl" src={authorImage} alt="" />
               <div>
                 <h4 className="font-bold">Author</h4>

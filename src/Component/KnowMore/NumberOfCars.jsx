@@ -7,6 +7,7 @@ const NumberOfCars = () => {
         <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
             <div className='flex items-center justify-between gap-10'>
                 <div className='flex justify-center gap-4'>
+                    {/* TODO: comments kore rakha icon er jaigai react icon bosbe  - avoid ai icons*/}
                     {/* <span className='text-3xl w-16 h-16 bg-[#ef1721] flex items-center justify-center rounded-lg text-white'> < AiFillCar /> </span> */}
                     <div>
                         <span className='text-2xl font-bold'>711</span>

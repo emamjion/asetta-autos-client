@@ -28,7 +28,7 @@ const Search = ({ onSearch }) => {
             >
                 Search
             </button> */}
-            <Button id="searchButton" button={'Search'} />
+            <Button id="searchButton" className='border-black' button={'Search'} />
         </div>
     );
 };

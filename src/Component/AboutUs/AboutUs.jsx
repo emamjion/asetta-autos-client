@@ -6,9 +6,9 @@
 // 	AiFillSetting,
 // } from "react-icons/Ai";
 import Button from "../Button/Button";
-import Button2 from "../Button/Button2";
 import { Link } from "react-router-dom";
 // import aboutImg from '../../assets/images/about/about-img.png'
+// TODO: comment kore rakha icon gulo te react icon bosbe - avoid ai icons
 const AboutUs = () => {
 	return (
 		// responsive - mohosin
