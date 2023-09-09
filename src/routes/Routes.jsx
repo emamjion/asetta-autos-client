@@ -69,8 +69,8 @@ const router = createBrowserRouter([
             },
             {
                 path: 'our-blogs/:id',
-                element: <NewsDetails />,
-                loader : ({ params })=> fetch(`https://asetta-autos-production.up.railway.app/our-blogs/${params.id}`)
+                element: <PrivateRoute><NewsDetails /></PrivateRoute>,
+                // loader : ({ params })=> fetch(`https://asetta-autos-production.up.railway.app/our-blogs/${params.id}`)
             },
             {
                 path: 'ourteam/:id',
@@ -149,7 +149,7 @@ const router = createBrowserRouter([
             },
             // {
             //     path: '/dashboard/checkOut',
-            //     element: <CheckOut></CheckOut>
+            //     element: <Checkout></Checkout>
             // },
             {
                 path: '/dashboard/dealer-request',

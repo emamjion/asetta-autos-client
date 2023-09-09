@@ -6,7 +6,7 @@ import Button from '../Button/Button';
 
 const BlogCardLatest = ({ blogs }) => {
     const { image, author, title, _id, content, date, authorImage, blog } = blogs;
-    console.log(blogs)
+    // console.log(blogs)
     return (
 
         <div className="card w-full h-full bg-base-100 mainbloghover border border-base-300 rounded-sm hover:border hover:border-red-400 duration-500">

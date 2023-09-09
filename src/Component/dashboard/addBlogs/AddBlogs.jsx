@@ -15,6 +15,19 @@ const AddBlogs = () => {
     data.author = user?.displayName;
     data.authorImage = user?.photoURL;
 
+    // const love = [
+    //   {email : data?.email},
+    //   {postLove : 0},
+    // ]
+    const love = {
+      'email' : [user?.email],
+      'postLove' : 0,
+    }
+
+    data.postLove = love;
+    
+    
+
     console.log(data);
 
     fetch('https://asetta-autos-production.up.railway.app/blogPost', {
