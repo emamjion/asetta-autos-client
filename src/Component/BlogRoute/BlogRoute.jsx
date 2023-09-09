@@ -36,7 +36,7 @@ const BlogRoute = () => {
             <RouteBanner SectionTitle={'Our Blogs'} smallTitle={'Our Blogs'}></RouteBanner>
             <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
                 <Tittle topTitle={"Our Blog"} boldblackTitle={"Latest News &"} boldredTitle={"Blog"}></Tittle>
-                <div class="flex flex-wrap items-center space-x-2 justify-center text-xl my-10">
+                <div className="flex flex-wrap items-center space-x-2 justify-center text-xl my-10">
                     <Search onSearch={handleSearch}></Search>
                 </div>
 
@@ -49,7 +49,7 @@ const BlogRoute = () => {
                 </div> */}
                 <div className='grid sm:grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-14 mb-10'>
                     {
-                        filteredData.slice(0,6).map(blogs => <BlogCardLatest key={blogs._id} blogs={blogs}></BlogCardLatest>)
+                        filteredData.map(blogs => <BlogCardLatest key={blogs._id} blogs={blogs}></BlogCardLatest>)
                     }
                 </div>
             </div>

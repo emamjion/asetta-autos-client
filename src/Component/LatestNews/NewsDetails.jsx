@@ -8,14 +8,34 @@ import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaPhone, FaRegAddressCar
 import { AuthContex } from './../Providers/Authprovider';
 import Swal from "sweetalert2";
 import Comment from "../Comment/Comment";
+import { FaBeer } from 'react-icons/fa';
 
 const NewsDetails = () => {
   const { user } = useContext(AuthContex)
   const { id } = useParams();
   const [commentsLoadData, setCommentsLoadData] = useState([]);
-  console.log(commentsLoadData)
+  const [newsDetails, setNewsDetails] = useState([]);
+  // console.log(commentsLoadData)
 
-  const newsDetails = useLoaderData();
+  // const newsDetails = useLoaderData();
+  // console.log(newsDetails);
+
+  const { image, author, title, _id, content, date, authorImage, blog } = newsDetails;
+ 
+  // const likePerson = postLove?.email.find(LP=>LP === user?.email)
+
+  
+
+  // console.log(likePerson);
+
+
+  useEffect(() => {
+    fetch(`https://asetta-autos-production.up.railway.app/our-blogs/${id}`)
+      .then(res => res.json())
+      .then(data => setNewsDetails(data))
+  }, [newsDetails])
+
+
 
   useEffect(() => {
     fetch(`https://asetta-autos-production.up.railway.app/blogComments/${id}`)
@@ -23,7 +43,6 @@ const NewsDetails = () => {
       .then(data => setCommentsLoadData(data))
   }, [commentsLoadData])
 
-  const { image, author, title, _id, content, date, authorImage, blog } = newsDetails;
 
   const currentDate = new Date();
   const formattedDate = currentDate.toLocaleDateString();
@@ -36,10 +55,13 @@ const NewsDetails = () => {
     const commentData = {
       'name': user?.displayName,
       'email': user?.email,
+      'photoURL': user?.photoURL,
       'comment': comment,
       'date': formattedDate,
       'postId': id,
     }
+
+    form.comment.value= ''
 
 
     fetch('https://asetta-autos-production.up.railway.app/blogComments', {
@@ -73,6 +95,41 @@ const NewsDetails = () => {
 
   }
 
+  // const handleLike =(id)=>{
+  //   console.log("like", id);
+
+
+  //   const likeEmail = {email : user?.email}
+
+  //   console.log(likeEmail);
+
+  //   fetch(`http://localhost:5000/blogLike/${id}`, {
+  //           method: 'PATCH',
+  //           headers: {
+  //             'Content-Type': 'application/json'
+  //           },
+  //           body: JSON.stringify(likeEmail)
+  //         })
+  //           .then(response => {
+  //             if (!response.ok) {
+  //               throw new Error('Network response was not ok');
+  //             }
+  //             return response.json();
+  //           })
+  //           .then(data => {
+  //             console.log('Response data:', data);
+  //             if(data.modifiedCount > 0){
+  //               // navigate('/dashboard/dealer-request-details')
+                
+  //             }
+  //           })
+  //           .catch(error => {
+  //             console.error('error', error);
+  //           });
+
+
+  // }
+
 
   return (
     <>
@@ -81,18 +138,20 @@ const NewsDetails = () => {
         <div className="">
           <div>
             <div className=" p-5 text-black">
-              <img className="w-full md:h-[800px] rounded-2xl" src={image} alt="" />
+              <img className="w-full md:h-[800px] rounded-2xl" src={image} alt="" />  
+              <h1 className="mt-7 font-bold text-3xl">{title}</h1>
+              <p className="mt-7 text-justify">{content}</p>
+
               <div className="flex justify-between font-bold">
                 <div className="flex gap-8 mt-7">
-                  <p className="flex items-center gap-1"><BsPerson className="text-red-700"></BsPerson>{author}</p>
+                {/* <p className="flex items-center hover:text-red-500 cursor-pointer gap-1"><button disabled={likePerson}><img className="w-6 hover:text-red-500" onClick={()=>handleLike(_id)} src="https://cdn-icons-png.flaticon.com/256/1077/1077035.png" alt="" /></button> </p> <span>{ postLove?.postLove} - Loves</span> */}
                   <p className="flex items-center gap-1"><FaComment className="text-red-700"></FaComment> {commentsLoadData?.length} Comments</p>
-                  {/* TODO: icon lekha text er jaigai react icon bosbe */}
-                  <p className="flex items-center gap-1">icon - Likes</p>
                 </div>
                 <p className="mt-7 flex items-center gap-1 me-10"><FaShare className="text-red-700"></FaShare>Share</p>
               </div>
-              <h1 className="mt-7 font-bold text-3xl">{title}</h1>
-              <p className="mt-7 text-justify">{content}</p>
+
+              <hr className="mt-5" />
+
               <div className="mt-7 border-l-2 border-red-500 p-10 bg-[#f7f7f7]">
                 <i className="mt-7">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution. </i>
                 <h1 className="font-bold mt-4 ">Mark Crawford</h1>
@@ -153,12 +212,13 @@ const NewsDetails = () => {
                   <textarea
                     id="comment"
                     name="comment"
+                    required
                     className="w-full border border-gray-500 rounded-2xl py-2 px-3 h-40 focus:outline-none focus:border-blue-500"
                     placeholder="Your Comment"
                   ></textarea>
                 </div>
                 <div className="mt-4">
-                  <button type='submit' className="subscribe-button mt-10 bg-[#ef1721] hover:bg-black text-white duration-500 rounded-lg ">Post Comment<BsFillSendFill className='ml-2'></BsFillSendFill></button>
+                  <button type='submit' className="subscribe-button mt-10 hover:border border-red-600 bg-[#ef1721] hover:bg-black text-white duration-300 rounded-lg ">Post Comment<BsFillSendFill className='ml-2'></BsFillSendFill></button>
                 </div>
               </form>
 

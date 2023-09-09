@@ -18,13 +18,13 @@ const Search = ({ onSearch }) => {
             <input
                 type="text"
                 placeholder="Search"
-                class=" py-2 px-4 rounded-l-md focus:outline-none focus:ring focus:border-blue-500 w-full  mb-2 md:mb-0 md:w-96 sm:w-96   border border-red-400"
+                className=" py-2 px-4 rounded-l-md focus:outline-none focus:ring focus:border-blue-500 w-full  mb-2 md:mb-0 md:w-96 sm:w-96   border border-red-400"
                 value={query}
                 onChange={handleInputChange}
             />
             {/* <button
                 id="searchButton"
-                class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-r-md focus:outline-none"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-r-md focus:outline-none"
             >
                 Search
             </button> */}
