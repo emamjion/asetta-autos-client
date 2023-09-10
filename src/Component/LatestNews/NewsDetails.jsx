@@ -11,7 +11,7 @@ import Comment from "../Comment/Comment";
 import { FaBeer } from 'react-icons/fa';
 
 const NewsDetails = () => {
-  const { user } = useContext(AuthContex)
+  const { user,theme } = useContext(AuthContex)
   const { id } = useParams();
   const [commentsLoadData, setCommentsLoadData] = useState([]);
   const [newsDetails, setNewsDetails] = useState([]);
@@ -139,15 +139,15 @@ const NewsDetails = () => {
           <div>
             <div className=" p-5 text-black">
               <img className="w-full md:h-[800px] rounded-2xl" src={image} alt="" />  
-              <h1 className="mt-7 font-bold text-3xl">{title}</h1>
-              <p className="mt-7 text-justify">{content}</p>
+              <h1 className={`mt-7 font-bold text-3xl white ${theme}`}>{title}</h1>
+              <p className={`mt-7 text-justify white ${theme}`}>{content}</p>
 
               <div className="flex justify-between font-bold">
                 <div className="flex gap-8 mt-7">
                 {/* <p className="flex items-center hover:text-red-500 cursor-pointer gap-1"><button disabled={likePerson}><img className="w-6 hover:text-red-500" onClick={()=>handleLike(_id)} src="https://cdn-icons-png.flaticon.com/256/1077/1077035.png" alt="" /></button> </p> <span>{ postLove?.postLove} - Loves</span> */}
-                  <p className="flex items-center gap-1"><FaComment className="text-red-700"></FaComment> {commentsLoadData?.length} Comments</p>
+                  <p className={`flex items-center gap-1 white ${theme}`}><FaComment className="text-red-700"></FaComment> {commentsLoadData?.length} Comments</p>
                 </div>
-                <p className="mt-7 flex items-center gap-1 me-10"><FaShare className="text-red-700"></FaShare>Share</p>
+                <p className={`mt-7 flex items-center gap-1 me-10 white ${theme}`}><FaShare className="text-red-700"></FaShare>Share</p>
               </div>
 
               <hr className="mt-5" />
@@ -164,7 +164,7 @@ const NewsDetails = () => {
               <div>
                 <h4 className="font-bold">Author</h4>
                 <h1 className="font-bold text-2xl text-red-600 mt-2">{author}</h1>
-                <p className="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam libero expedita hic praesentium esse quae dolor dicta, quas quidem tempora, at, quos similique? Beatae voluptatem iste maxime vero iusto minima temporibus atque quaerat error corporis.</p>
+                <p className={`mt-3 text ${theme}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam libero expedita hic praesentium esse quae dolor dicta, quas quidem tempora, at, quos similique? Beatae voluptatem iste maxime vero iusto minima temporibus atque quaerat error corporis.</p>
                 <div className="sociallink mt-3">
                   <a href="https://www.facebook.com">
                     <FaFacebook className='icons'></FaFacebook>

@@ -12,6 +12,7 @@ import { AuthContex } from './../Providers/Authprovider';
 
 
 const Testimonials = () => {
+    const { theme } = useContext(AuthContex);
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
         fetch('https://asetta-autos-production.up.railway.app/client-review')
@@ -40,7 +41,7 @@ const Testimonials = () => {
                             key={review._id}
                             className='py-16 mt-6'
                         >
-                            <div className='mx-auto p-8 w-9/12 md:w-[600px] shadow-2xl rounded-lg'>
+                            <div className={`mx-auto  bg ${theme} p-8 w-9/12 md:w-[600px] shadow-2xl rounded-lg`}>
                                 <img src={review.image} className='rounded-full w-16 md:w-[100px] md:h-[100px] border-4 border-[#ef1721] md:mb-2 mx-auto absolute top-10 md:top-1' />
                                 <div className='flex items-start justify-start gap-4 my-4 w-[400px]'>
                                     <div>

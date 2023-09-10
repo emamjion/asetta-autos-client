@@ -4,14 +4,17 @@ import '@smastrom/react-rating/style.css'
 import { FaCar, FaDollarSign, FaGasPump } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
+import { useContext } from 'react';
+import { AuthContex } from '../Providers/Authprovider';
 
 const NewArrivalsCar = ({car}) => {
+    const { theme } = useContext(AuthContex);
     const {_id , image, price, average_rating, reviews, engine, displacement, model} = car;
     
     return (
-        <div className="card card-compact w-full bg-base-100 shadow-xl">
+        <div className={`card card-compact bg ${theme} w-full shadow-xl `}>
             <figure><img src={image} className='hover:scale-110 duration-500' /></figure>
-            <div className="card-body">
+            <div className={`card-body mode text-black`}>
                 <h2 className="card-title">{model}</h2>
                 <div className='flex items-center justify-start gap-6'>
                     <div className='flex items-center justify-start gap-2'>

@@ -35,9 +35,27 @@ const Authprovider = ({ children }) => {
     }
 
 
+    // for dark mode and light mode
+    const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light');
+    useEffect(() => {
+        localStorage.setItem('theme', theme);
+        const localTheme = localStorage.getItem('theme');
+        document.querySelector('html').setAttribute("data-theme", localTheme)
+    }, [theme]);
+
+    const handleDarkMode = (event) => {
+        if (event.target.checked) {
+            setTheme('dark')
+        }
+        else {
+            setTheme('light')
+        }
+    };
+
+
     // reset password
 
-    const resetPassword = email =>{
+    const resetPassword = email => {
         return sendPasswordResetEmail(auth, email)
     }
 
@@ -81,7 +99,9 @@ const Authprovider = ({ children }) => {
         logOut,
         goggleSignIn,
         updateUserProfile,
-        resetPassword
+        resetPassword,
+        theme,
+        handleDarkMode
     }
 
 

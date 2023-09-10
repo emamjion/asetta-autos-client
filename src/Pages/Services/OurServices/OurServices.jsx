@@ -4,17 +4,20 @@ import { RiOilFill } from "react-icons/ri";
 import { TbAirConditioning } from "react-icons/tb";
 import { MdCarRepair } from "react-icons/md";
 import { BiSupport } from "react-icons/bi";
+import { useContext } from 'react';
+import { AuthContex } from '../../../Component/Providers/Authprovider';
 
 const OurServices = () => {
+    const { theme } = useContext(AuthContex)
     return (
-        <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
+        <div className={`px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24 text ${theme}`}>
             <div className='text-center'>
-                <h1 className='text-3xl font-semibold mb-5'>Our Services</h1>
+                <h1 className={`text-3xl font-semibold mb-5 mode ${theme}`}>Our Services</h1>
                 <hr className='w-28  border-[#ef1721] border mx-auto' />
                 <hr className='w-24 mt-1 mb-5 border-[#ef1721] border mx-auto' />
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-                <div className='border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover'>
+                <div className={`border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover bg ${theme}`}>
                     <div className=''>
                         <span className='text-6xl text-[#ef1721] hover-icon duration-500'>< FaShippingFast /></span>
                     </div>
@@ -25,7 +28,7 @@ const OurServices = () => {
                         </p>
                     </div>
                 </div>
-                <div className='border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover'>
+                <div className={`border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover bg ${theme}`}>
                     <span className='text-6xl text-[#ef1721] hover-icon duration-500'>< RiOilFill /></span>
                     <div>
                         <h2 className='text-2xl font-semibold mb-2'>Oil Change</h2>
@@ -34,7 +37,7 @@ const OurServices = () => {
                         </p>
                     </div>
                 </div>
-                <div className='border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover'>
+                <div className={`border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover bg ${theme}`}>
                     <span className='text-6xl text-[#ef1721] hover-icon duration-500'>< TbAirConditioning /></span>
                     <div>
                         <h2 className='text-2xl font-semibold mb-2'>Air Conditioning</h2>
@@ -43,7 +46,7 @@ const OurServices = () => {
                         </p>
                     </div>
                 </div>
-                <div className='border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover'>
+                <div className={`border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover bg ${theme}`}>
                     <span className='text-6xl text-[#ef1721] hover-icon duration-500'>< FaKey /></span>
                     <div>
                         <h2 className='text-2xl font-semibold mb-2'>Dealership</h2>
@@ -52,7 +55,7 @@ const OurServices = () => {
                         </p>
                     </div>
                 </div>
-                <div className='border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover'>
+                <div className={`border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover bg ${theme}`}>
                     <span className='text-6xl text-[#ef1721] hover-icon duration-500'>< MdCarRepair /></span>
                     <div>
                         <h2 className='text-2xl font-semibold mb-2'>Repairing</h2>
@@ -61,7 +64,7 @@ const OurServices = () => {
                         </p>
                     </div>
                 </div>
-                <div className='border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover'>
+                <div className={`border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover bg ${theme}`}>
                     <span className='text-6xl text-[#ef1721] hover-icon duration-500'>< FaHandshake /></span>
                     <div>
                         <h2 className='text-2xl font-semibold mb-2'>Trusted Agents</h2>
@@ -70,8 +73,8 @@ const OurServices = () => {
                         </p>
                     </div>
                 </div>
-                <div className='border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover'>
-                    <span className='text-6xl text-[#ef1721] hover-icon duration-500'>< FaLock /></span>
+                <div className={`border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover bg ${theme}`}>
+                    <span className='text-6xl text-[#ef1721] hover-icon duration-500 '>< FaLock /></span>
                     <div>
                         <h2 className='text-2xl font-semibold mb-2'>Security</h2>
                         <p className='tex-[#535353]'>
@@ -79,7 +82,7 @@ const OurServices = () => {
                         </p>
                     </div>
                 </div>
-                <div className='border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] hover:text-white duration-500 custom-hover'>
+                <div className={`border p-8 flex gap-4 shadow-md rounded hover:bg-[#ef1721] duration-500 hover:text-white custom-hover bg ${theme}`}>
                     <span className='text-6xl text-[#ef1721] hover-icon duration-500'>< BiSupport /></span>
                     <div>
                         <h2 className='text-2xl font-semibold mb-2'>Free Support</h2>

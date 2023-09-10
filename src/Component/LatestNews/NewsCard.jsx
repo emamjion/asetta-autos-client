@@ -3,7 +3,10 @@ import { BiSolidCalendar } from "react-icons/bi";
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 import { FaArrowRight, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { useContext } from 'react';
+import { AuthContex } from '../Providers/Authprovider';
 const NewsCard = ({ blogs }) => {
+    const { theme } = useContext(AuthContex);
     const { image, author, title, _id, content, date, authorImage, blog } = blogs;
     return (
         // <div className=" card card-compact text-black w-full font-bold bg-white shadow-xl">
@@ -25,7 +28,7 @@ const NewsCard = ({ blogs }) => {
         //         </div>
         //     </div>
         // </div>
-        <div className="card w-full h-full bg-base-100 mainbloghover border border-base-300 rounded-sm hover:border hover:border-red-400 duration-500">
+        <div className={`card w-full h-full bg-base-100 mainbloghover border border-base-300 bg ${theme} text ${theme} rounded-sm hover:border hover:border-red-400 duration-500`}>
             <div className='relative'>
                 <figure className="px-10 pt-10 imagehover">
                     <img src={image} alt="Shoes" className="rounded-xl" />
