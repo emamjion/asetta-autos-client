@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
+import { AuthContex } from '../../../Component/Providers/Authprovider';
 
 
 const WhatWeOffer = () => {
+    const { theme } = useContext(AuthContex);
     const [offers, setOffers] = useState([]);
     useEffect(() => {
         fetch('/WhatWeOffer.json')
@@ -12,7 +14,7 @@ const WhatWeOffer = () => {
     return (
         <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
             <div className='flex items-center flex-col'>
-                <h1 className='text-3xl font-semibold mb-5'>What We Offer</h1>
+                <h1 className={`text-3xl font-semibold mb-5 mode ${theme}`}>What We Offer</h1>
                 <hr className='w-28  border-[#ef1721] border' />
                 <hr className='w-24 mt-1 mb-5 border-[#ef1721] border' />
             </div>
@@ -21,11 +23,11 @@ const WhatWeOffer = () => {
                     offers.map(offer => <div
                         key={offer.id}
                     >
-                        <div className='border shadow-sm h-full pb-2 md:h-96 relative'>
+                        <div className={`border shadow-sm bg ${theme} text ${theme} h-full pb-2 md:h-96 relative`}>
                             <img src={offer.image} />
                             <div className='p-4 relative'>
                                 <h1 className='text-xl font-semibold mb-3'>{offer.serviceName}</h1>
-                                <p className='text-[#535353] mb-6'>
+                                <p className={`text-[#535353] mb-6 text ${theme}`}>
                                     {offer.mainDesc}
                                 </p>
                                 {/* TODO: change the arrow position - button ti bottom 0 te hobe.  */}

@@ -4,7 +4,7 @@
 
 
 
-ul li a.active{
+ul li a.active {
     color: #ef1721;
 }
 
@@ -26,35 +26,59 @@ ul li a.active{
 */
 
 /*Our services*/
-.custom-hover:hover .hover-icon{
+.custom-hover:hover .hover-icon {
     color: #fff;
 }
 
 /* for blog hover */
 
-.mainbloghover{
+.mainbloghover {
     transition: all 0.5s;
 }
 
-.bloghover{
+.bloghover {
     opacity: 0;
     z-index: 1;
     transition: opacity 0.5s;
 }
 
-.mainbloghover:hover{
+.mainbloghover:hover {
     background-color: rgb(238, 231, 231);
 }
 
-.mainbloghover:hover .bloghover{
+.mainbloghover:hover .bloghover {
     opacity: 1;
     color: #ef1721;
 }
 
-.mainbloghover:hover .imagehover{
+.mainbloghover:hover .imagehover {
     transform: scale(1.1);
     /* transition: transform 0.3s ease; */
     transition: all 1s;
     animation-duration: 0.5s;
+}
+
+
+
+/* for dark and light mode design */
+
+.mode.light {
+    color: #111;
+}
+
+.mode.dark {
+    color: #ffffff;
+}
+
+.bg.dark {
+    background-color: white;
+}
+
+.text.dark{
+    color: black;
+}
+
+.white.dark{
+    color: white;
 }
 

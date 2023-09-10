@@ -5,8 +5,11 @@ import about2 from '../../assets/images/about/about-2.png'
 import about3 from '../../assets/images/about/about-3.png'
 import about4 from '../../assets/images/about/about-4.png'
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContex } from '../../Component/Providers/Authprovider';
 
 const AchievementHistory = () => {
+    const { theme } = useContext(AuthContex)
     return (
         <div className='px-4 xl:px-[140px] 2xl:px-[240px]  my-12 md:my-32'>
             <div className='grid grid-cols-1 md:grid-cols-2 items-center gap-6'>
@@ -42,8 +45,8 @@ const AchievementHistory = () => {
                     </div>
                 </div>
                 </div>
-                <div>
-                    <div className=''>
+                <div className={`mode ${theme}`}>
+                    <div>
                         <span className='text-[#ef1721] text-xl font-medium'>HISTORY</span>
                         <h1 className='font-semibold text-3xl my-2'>Our Previous Achievement History</h1>
                         <hr className='w-16 border-2 border-[#ef1721]'/>
