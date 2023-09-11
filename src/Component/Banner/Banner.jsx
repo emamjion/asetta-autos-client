@@ -13,9 +13,13 @@ import img8 from "../../assets/images/Banner/banner-8.png";
 import Button from "../Button/Button";
 import Button2 from "../Button/Button2";
 import { Link } from "react-router-dom";
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 const Banner = () => {
 	return (
+		
+		<>
+
 		<Carousel
 			className=""
 			infiniteLoop={true}
@@ -174,7 +178,17 @@ const Banner = () => {
 					</div>
 				</div>
 			</div>
+	
 		</Carousel>
+
+		
+		<MessengerCustomerChat
+    pageId="<132262526628559>"
+    appId="<681735823877168>"
+    // htmlRef="<REF_STRING>"
+  />,
+		
+		</>
 	);
 };
 
