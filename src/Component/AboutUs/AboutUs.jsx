@@ -5,15 +5,18 @@
 // 	AiFillCar,
 // 	AiFillSetting,
 // } from "react-icons/Ai";
+import { useContext } from "react";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
+import { AuthContex } from "../Providers/Authprovider";
 // import aboutImg from '../../assets/images/about/about-img.png'
 // TODO: comment kore rakha icon gulo te react icon bosbe - avoid ai icons
 const AboutUs = () => {
+	const { theme } = useContext(AuthContex);
 	return (
 		// responsive - mohosin
 		<div className="md:w-9/12 px-4 m-auto mt-20">
-			<div className=" bg-base-100 grid gap-10 border p-5 md:p-20 border-red-100 md:grid-cols-2">
+			<div className={`bg-base-100 grid gap-10 border p-5 md:p-20 border-red-100 md:grid-cols-2 mode ${theme}`}>
 				<div>
 					<div className="md:w-64 auto p-5 flex bg-black text-white rounded-xl absolute left-40 ">
 						{" "}
