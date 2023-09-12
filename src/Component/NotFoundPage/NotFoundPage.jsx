@@ -2,8 +2,8 @@ import React from 'react';
 import RouteBanner from '../Shared/RouteBanner/RouteBanner';
 import image from '../../assets/images/Banner/404.png';
 import Button from '../Button/Button';
-// import { AiFillHome } from 'react-icons/Ai';
 import { Link } from 'react-router-dom';
+import { FaHome } from 'react-icons/fa';
 
 const NotFoundPage = () => {
     return (
@@ -15,9 +15,8 @@ const NotFoundPage = () => {
                     <h1 className='text-4xl mt-10 text-black font-bold'>Opos... Page Not Found!</h1>
                     <p className='mt-5'>The page you looking for not found may be it not exist or removed.</p>
                 </div>
-                {/* TODO: icon lekha text er jaigai react icon bosbe */}
                 <Link to='/'><button className="btn mx-auto py-4 btn-sm md:btn-md mt-5 bg-red-600  flex justify-center items-center  text-white  hover:bg-black">
-                    Go Back Home  icon{" "}
+                    Go Back Home <span className='text-xl'> < FaHome /></span>{" "}
                 </button></Link>
             </div>
         </>
