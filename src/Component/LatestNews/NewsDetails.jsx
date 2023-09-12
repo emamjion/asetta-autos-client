@@ -109,7 +109,7 @@ const NewsDetails = () => {
     const findEmail = loveEmails.find(em => em===user?.email)
     const likeEmail = {email : user?.email}
     if(!findEmail){
-      setLike(true)
+      // setLike(true)
       fetch(`http://localhost:5000/blogLike/${id}`, {
             method: 'PATCH',
             headers: {
@@ -138,7 +138,36 @@ const NewsDetails = () => {
 
 
   const handleDisLike =(id)=>{
-    console.log("clicked", id);
+    const findEmail = loveEmails.find(em => em===user?.email)
+    const likeEmail = {email : user?.email}
+    if(findEmail){
+      console.log("ase kam hobi");
+      // setLike(true)
+      fetch(`http://localhost:5000/blogDisLike/${id}`, {
+            method: 'PATCH',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(likeEmail)
+          })
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              return response.json();
+            })
+            .then(data => {
+              if(data.modifiedCount > 0){
+                console.log('Response data:', data);
+                toast("Remove Love!")
+                
+              }
+            })
+            .catch(error => {
+              console.error('error', error);
+            });
+    }
+
   }
 
 
@@ -156,9 +185,9 @@ const NewsDetails = () => {
               <div className="flex justify-between font-bold">
                 <div className="flex gap-8 mt-7">
                 <p className="flex items-center hover:text-red-500 cursor-pointer gap-1">
-                  {like ? <img className="w-6 hover:text-red-500" onClick={()=>handleDisLike(_id)} src="https://secure.webtoolhub.com/static/resources/icons/set105/d35fa703.png" alt="" />  : <img className="w-6 hover:text-red-500" onClick={()=>handleLike(_id)} src="https://cdn-icons-png.flaticon.com/256/1077/1077035.png" alt="" /> }
+                  {like ? <img className="w-7 hover:text-red-500" onClick={()=>handleDisLike(_id)} src="https://secure.webtoolhub.com/static/resources/icons/set105/d35fa703.png" alt="" />  : <img className="w-7 hover:text-red-500" onClick={()=>handleLike(_id)} src="https://cdn-icons-png.flaticon.com/256/1077/1077035.png" alt="" /> }
                   </p> <span>{loveEmails?.length} - Loves</span>
-                  <p className={`flex items-center gap-1 white ${theme}`}><FaComment className="text-red-700"></FaComment> {commentsLoadData?.length} Comments</p>
+                  <a href="#comments"><p className={`flex items-center gap-1 white ${theme}`}><FaComment className="text-red-700"></FaComment> {commentsLoadData?.length} Comments</p></a>
                 </div>
                 <p className={`mt-7 flex items-center gap-1 me-10 white ${theme}`}><FaShare className="text-red-700"></FaShare>Share</p>
               </div>
@@ -172,12 +201,12 @@ const NewsDetails = () => {
               <p className="mt-7 text-justify">{blog}</p>
               <hr className="mt-5" />
             </div>
-            <div className="flex justify-start mt-7 bg-[#fff] gap-6  p-9 shadow-md rounded-lg border">
-              <img className="w-[250px] h-[200px] rounded-2xl" src={authorImage} alt="" />
+            <div className="md:flex justify-start mt-7 bg-[#fff] gap-6  p-9 shadow-md rounded-lg border">
+              <img className="w-[100px]  md:w-[250px] md:h-[200px] rounded-2xl" src={authorImage} alt="" />
               <div>
                 <h4 className="font-bold">Author</h4>
                 <h1 className="font-bold text-2xl text-red-600 mt-2">{author}</h1>
-                <p className={`mt-3 text ${theme}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam libero expedita hic praesentium esse quae dolor dicta, quas quidem tempora, at, quos similique? Beatae voluptatem iste maxime vero iusto minima temporibus atque quaerat error corporis.</p>
+                <p className={`my-5 text ${theme}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam libero expedita hic praesentium esse quae dolor dicta, quas quidem tempora, at, quos similique? Beatae voluptatem iste maxime vero iusto minima temporibus atque quaerat error corporis.</p>
                 <div className="sociallink mt-3">
                   <a href="https://www.facebook.com">
                     <FaFacebook className='icons'></FaFacebook>
@@ -194,7 +223,7 @@ const NewsDetails = () => {
                 </div>
               </div>
             </div>
-            <div className=" bg-[#f7f7f7] p-10 rounded-xl mt-10">
+            <div className=" bg-[#f7f7f7] p-10 rounded-xl mt-10" id="comments">
               <h2 className="text-2xl font-bold mb-4">Leave a Comment</h2>
               <form onSubmit={handleCommentSubmit}>
                 <div className="">
