@@ -88,7 +88,7 @@ const AllCar = () => {
       </div>
     </div>
 
-   <div className='grid md:grid-cols-3 gap-2'>
+   <div className='grid md:grid-cols-3'>
                 {
                     info.map(info => <AllCarsData
                         key={info._id}

@@ -17,7 +17,7 @@ const AllCarsData = ({ info }) => {
   <img src={image} alt="Shoes" className='transform hover:scale-105 transition-transform duration-200' />
 </figure>
 
-          <div className="card-body h-[235px]">
+          <div className="card-body h-[240px]">
             <div className='flex items-center justify-start gap-2'>
               <Rating
                 style={{ maxWidth: 100 }}
@@ -26,13 +26,14 @@ const AllCarsData = ({ info }) => {
               />
               {average_rating}
             </div>
+            <p className='font-bold text-xl'>Brand: {make}</p>
             <p className='font-bold text-xl'>Model: {model}</p>
             <p className='font-semibold text-xl'>{engine.description}</p>
 
            
 <div className='flex mt-4'>
 <p className='text-red-600 text-2xl font-bold'>${price}</p>
-<div className="card-footer mx-auto mb-4">
+<div className="card-footer mx-auto">
   <Link to={`/arrivals-details/${_id}`}>
     <Button button={'Details'} />
   </Link>

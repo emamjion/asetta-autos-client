@@ -31,6 +31,7 @@ import VrDrives from "../Component/VrDrives/VrDrives";
 // import CheckOut from "../Component/checkOut/CheckOut";
 import UserDetails from "../Component/userDetails/UserDetails";
 import KnowMoreRoute from "../Pages/About/KnowMoreRoute/KnowMoreRoute";
+import Checkout from "../Component/checkOut/CheckOut";
 // import VrDrives from "../Component/VrDrives/VrDrives";
 
 const router = createBrowserRouter([
@@ -147,10 +148,10 @@ const router = createBrowserRouter([
                 path: '/dashboard/user-cards',
                 element: <UserCards></UserCards>
             },
-            // {
-            //     path: '/dashboard/checkOut',
-            //     element: <Checkout></Checkout>
-            // },
+            {
+                path: '/dashboard/checkOut',
+                element: <Checkout></Checkout>
+            },
             {
                 path: '/dashboard/dealer-request',
                 element: <DealerRequest></DealerRequest>

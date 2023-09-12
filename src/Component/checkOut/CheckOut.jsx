@@ -2,47 +2,49 @@ import React, { useContext, useEffect, useState } from "react";
 import { Elements, CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import { AuthContex } from "../Providers/Authprovider";
+import axios from "axios";
+
+
 
 // Initialize Stripe with your public key
 const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_PK);
 
 
 const CheckoutForm = () => {
-  const {user} = useContext(AuthContex)
+  
+  const { user } = useContext(AuthContex); 
   const [cards, setCards] = useState([]);
-  const [clientSecret, setClientSecret] = useState('price')
-  
-  useEffect(() => {
-      fetch('https://asetta-autos-production.up.railway.app/create-payment-intent')
-      .then(res => res.json())
-      .then(data => setClientSecret(data))
-  }, [])
-
-
-  useEffect(() => {
-      fetch('https://asetta-autos-production.up.railway.app/cards')
-      .then(res => res.json())
-      .then(data => setCards(data))
-  }, [cards])
-
-  
-
-  const myCards = cards.filter(card=>card?.email === user?.email)
-  // console.log(myCards);
-
-
+  const [clientSecret, setClientSecret] = useState(''); 
   let [totalPrice, setTotalPrice] = useState(0);
 
-  useEffect(()=>{
-      const total = myCards.reduce((accumulator, product) => {
-          return accumulator + (parseFloat(product?.price)* parseFloat(product?.items));
-        }, 0);
-        setTotalPrice(total);
-      },[cards , totalPrice])
 
 
-    //  totalPrice = parseFloat(totalPrice)
-    //  console.log(totalPrice);
+useEffect(() =>{
+  axios.post('/create-payment-intent', {totalPrice})
+  .then(res =>{
+    console.log(res.data.clientSecret);
+    setClientSecret(res.data.clientSecret)
+  })
+
+}, [totalPrice])
+
+
+
+  useEffect(() => {
+    fetch('https://asetta-autos-production.up.railway.app/cards')
+      .then(res => res.json())
+      .then(data => setCards(data))
+  }, []); // Removed 'cards' from the dependency array
+
+  const myCards = cards.filter(card => card?.email === user?.email);
+
+
+  useEffect(() => {
+    const total = myCards.reduce((accumulator, product) => {
+      return accumulator + (parseFloat(product?.price) * parseFloat(product?.items));
+    }, 0);
+    setTotalPrice(total);
+  }, [cards]); 
 
   const [cardError, setCardError] = useState('');
   const stripe = useStripe();
@@ -53,31 +55,27 @@ const CheckoutForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-
     if (!stripe || !elements) {
       return;
     }
 
     const card = elements.getElement(CardElement);
     if (card === null) {
-        return
+      return;
     }
 
     const { error } = await stripe.createPaymentMethod({
-        type: 'card',
-        card
-    })
-
+      type: 'card',
+      card
+    });
 
     if (error) {
-      console.log('error', error)
+      console.log('error', error);
       setCardError(error.message);
-  }
-  else {
+    } else {
       setCardError('');
       // console.log('payment method', paymentMethod)
-  }
-   
+    }
 
     // Disable the submit button during processing
     setProcessing(true);
@@ -99,48 +97,66 @@ const CheckoutForm = () => {
 
     // Re-enable the submit button
     setProcessing(false);
+
+const {paymentIntent, error:confirmError} = await stripe.confirmCardPayment(
+  clientSecret,
+  {
+    payment_method:{
+      card: card,
+      billing_details:{
+        email: user?.email || 'Unknown',
+        name: user?.displayName || 'anonymous'
+      }
+    }
+  }
+);
+
+if(confirmError){
+  console.log(confirmError);
+}
+console.log(paymentIntent);
   };
 
   return (
-  <>
-  <h1 className="text-4xl font-bold text-center ml-52 "><span className="text-red-600">Payment</span>  With Stripe</h1>
- <div className="grid md:grid-cols-2 mt-8 border p-12 w-full bg-[#f7f7f7] ml-36 ">
- <div className="ml-12">
-    <img src="https://i.ibb.co/YWgRzvL/electronic-bill-payment-flat-con-removebg-preview.png" alt="" />
-  </div>
-    <div className="mt-28 ">
-    <form className="mx-auto p-4" onSubmit={handleSubmit}>
-      <CardElement
-        options={{
-          style: {
-            base: {
-              fontSize: '16px',
-              color: '#aab7c4',
-              '::placeholder': {
-                color: 'black',
-              },
-            },
-            invalid: {
+    <>
+      <h1 className="text-4xl font-bold text-center  "><span className="text-red-600">Payment</span>  With Stripe</h1>
+      <div className="grid md:grid-cols-2 mt-8 border p-12  bg-[#f7f7f7] ">
+     
+
+<div className="mx-auto">
+  <form className="" onSubmit={handleSubmit}>
+    <CardElement
+      options={{
+        style: {
+          base: {
+            fontSize: '16px',
+            color: '#aab7c4',
+            '::placeholder': {
               color: 'black',
             },
           },
-        }}
-      />
-      <button className="btn btn-outline w-24 mt-12 ml-32" type="submit" disabled={!stripe || processing}>
-        {processing ? "Processing..." : "Pay"}
-      </button>
-    </form>
-    {cardError && <p className="text-red-600 ml-8 font-bold">{cardError}</p>}
+          invalid: {
+            color: 'black',
+          },
+        },
+      }}
+    />
+    <button className="btn btn-outline w-24 mt-12 ml-32" type="submit" disabled={!stripe || processing}>
+      {processing ? "Processing..." : "Pay"}
+    </button>
+  </form>
+  {cardError && <p className="text-red-600 ml-8 font-bold">{cardError}</p>}
+</div>
 
-    </div>
- </div>
-  </>
+
+      </div>
+    </>
   );
 };
 
 const Checkout = () => {
   return (
-    <div className="w-2/3 m-8">
+    <div className="">
       <Elements stripe={stripePromise}>
         <CheckoutForm />
       </Elements>
