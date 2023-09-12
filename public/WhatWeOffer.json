@@ -1,6 +1,6 @@
 [
     {
-        "id" : "1",
+       
         "image" : "https://i.ibb.co/wgdMhXx/offer-1.jpg",
         "serviceName" : "Test Drive Any Car",
         "mainDesc" : "We can help you make your car look as good as possible before anyone comes to see it",
@@ -9,7 +9,7 @@
         "subDesc3" : "For example, during the auto repair for sale, we achieve great results by polishing the car, headlight renovation and interior cleaning and repair. Our service does not have any rivals. Simply, we can return your car to its perfect appearance. Your investment will be symbolic in comparison with what pre-sell preparation will earn. The new owner will be glad to buy such a beautiful car. This is the procedure of car repair for sale."
     },
     {
-        "id" : "2",
+        
         "image" : "https://i.ibb.co/y6Q102T/offer-3.jpg",
         "serviceName" : "Financing",
         "mainDesc" : "We welcome you to stop by and take a look at the pristine inventory we offer. We assure you that you will be amazed",
@@ -18,7 +18,7 @@
         "subDesc3" : "For example, during the auto repair for sale, we achieve great results by polishing the car, headlight renovation and interior cleaning and repair. Our service does not have any rivals. Simply, we can return your car to its perfect appearance. Your investment will be symbolic in comparison with what pre-sell preparation will earn. The new owner will be glad to buy such a beautiful car. This is the procedure of car repair for sale."
     },
     {
-        "id" : "3",
+        
         "image" : "https://i.ibb.co/mJP6Cts/offer-2.jpg",
         "serviceName" : "Trade-In Service",
         "mainDesc" : "Allows you to purchase a new car at an attractive price, while saving you all the trouble of handling your old car",
@@ -27,7 +27,7 @@
         "subDesc3" : "For example, during the auto repair for sale, we achieve great results by polishing the car, headlight renovation and interior cleaning and repair. Our service does not have any rivals. Simply, we can return your car to its perfect appearance. Your investment will be symbolic in comparison with what pre-sell preparation will earn. The new owner will be glad to buy such a beautiful car. This is the procedure of car repair for sale."
     },
     {
-        "id" : "4",
+        
         "image" : "https://i.ibb.co/myQsPZn/offer-4.jpg",
         "serviceName" : "Pre-Sale Preparetion",
         "mainDesc" : "We welcome you to stop by and take a look at the pristine inventory we offer",

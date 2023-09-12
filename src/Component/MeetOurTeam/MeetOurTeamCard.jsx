@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { useContext } from 'react';
+import { AuthContex } from '../Providers/Authprovider';
 
 // TODO: card hover korle overlay hobe. card er upor overlay add korte hobe.
 const MeetOurTeamCard = ({ member }) => {
+    const { theme } = useContext(AuthContex);
     const { _id,name, position, photos, profession, personal_life, future_goal } = member;
     return (
         <Link to={`/ourteam/${_id}`}>
@@ -16,9 +19,9 @@ const MeetOurTeamCard = ({ member }) => {
                         <span className='hover:text-[#ef1721] duration-500'> < FaLinkedin /> </span>
                     </div>
                 </div>
-                <div className='text-center mt-5'>
+                <div className={`text-center mt-5 text ${theme} `}>
                     <h1 className='text-xl font-medium'>{name}</h1>
-                    <p className='mt-1 text-[#535353]'>{position}</p>
+                    <p className={`mt-1 text-[#535353] text ${theme}`}>{position}</p>
                 </div>
             </div>
         </Link>
