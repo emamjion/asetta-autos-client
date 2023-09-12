@@ -170,6 +170,35 @@ const NewsDetails = () => {
 
   }
 
+  const handleSharePost =(id)=>{
+    const currentURL = location.href;
+            Swal.fire({
+              title: 'Are you sure want to copy URL',
+              text: currentURL,
+              icon: 'warning',
+              showCancelButton: true,
+              confirmButtonColor: '#3085d6',
+              cancelButtonColor: '#d33',
+              confirmButtonText: 'Copy URL'
+            }).then((result) => {
+              if (result.isConfirmed) {
+
+            const textArea = document.createElement("textarea");
+            textArea.value = currentURL;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+
+
+                Swal.fire(
+                  'Copied!',
+                  'share URL with your friend!'
+                )
+              }
+            })
+  }
+
 
   return (
     <>
@@ -184,12 +213,12 @@ const NewsDetails = () => {
 
               <div className="flex justify-between font-bold">
                 <div className="flex gap-8 mt-7">
-                <p className="flex items-center hover:text-red-500 cursor-pointer gap-1">
+                <p className={`flex items-center hover:text-red-500 cursor-pointer gap-1 ${theme}`}>
                   {like ? <img className="w-7 hover:text-red-500" onClick={()=>handleDisLike(_id)} src="https://secure.webtoolhub.com/static/resources/icons/set105/d35fa703.png" alt="" />  : <img className="w-7 hover:text-red-500" onClick={()=>handleLike(_id)} src="https://cdn-icons-png.flaticon.com/256/1077/1077035.png" alt="" /> }
                   </p> <span>{loveEmails?.length} - Loves</span>
                   <a href="#comments"><p className={`flex items-center gap-1 white ${theme}`}><FaComment className="text-red-700"></FaComment> {commentsLoadData?.length} Comments</p></a>
                 </div>
-                <p className={`mt-7 flex items-center gap-1 me-10 white ${theme}`}><FaShare className="text-red-700"></FaShare>Share</p>
+                <p onClick={()=>handleSharePost(_id)} className={`mt-7 flex items-center gap-1 me-10 white cursor-pointer ${theme}`}><FaShare className="text-red-700"></FaShare>Share</p>
               </div>
 
               <hr className="mt-5" />

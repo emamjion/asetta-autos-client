@@ -5,7 +5,7 @@ import { FaClock } from "react-icons/fa";
 
 const Comment = ({ comment }) => {
     const { user } = useContext(AuthContex)
-    console.log(comment)
+    // console.log(comment)
 
 
 
