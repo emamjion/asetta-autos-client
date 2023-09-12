@@ -22,6 +22,15 @@ const Navbar = () => {
   const { user, logOut,handleDarkMode,theme } = useContext(AuthContex);
 
   const [show, setShow] = useState(false);
+  const [cards, setCards] = useState([]);
+    
+  useEffect(() => {
+      fetch('https://asetta-autos-production.up.railway.app/cards')
+      .then(res => res.json())
+      .then(data => setCards(data))
+  }, [cards])
+
+  const myCards = cards.filter(card=>card?.email === user?.email)
 
   const handleLogOut = () => {
     logOut().then();
@@ -229,14 +238,17 @@ const Navbar = () => {
         <ul className="flex items-center justify-center  gap-10 text-lg font-medium ">
           {listItem}
         </ul>
-        <div className="flex items-center justify-center gap-4 text-lg">
+        <div className="flex items-center justify-center gap-8 text-lg">
           <Link to='/dashboard/user-cards'><span className=" hover:text-[#ef1721] cursor-pointer duration-500">
             {" "}
-            <FaCartPlus />{" "}
+            <div className="indicator">
+            <span className="indicator-item badge badge-secondary">{myCards?.length}</span> 
+            <FaCartPlus className="text-3xl"/>
+          </div>
           </span> </Link>
           <span className=" hover:text-[#ef1721] cursor-pointer duration-500">
             {" "}
-            <FaSearch />{" "}
+            <FaSearch  className="text-3xl"/>{" "}
           </span>
         </div>
         <div className='lg:flex'>
