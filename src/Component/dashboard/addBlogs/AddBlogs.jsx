@@ -19,12 +19,14 @@ const AddBlogs = () => {
     //   {email : data?.email},
     //   {postLove : 0},
     // ]
-    const love = {
-      'email' : [user?.email],
-      'postLove' : 0,
-    }
+    // const love = {
+    //   'email' : [],
+    //   'love' : 0,
+    // }
 
-    data.postLove = love;
+    // data.postLove = love;
+
+    data.loveEmails = []
     
     
 
