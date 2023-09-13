@@ -196,6 +196,15 @@ const Banner = () => {
 					</div>
 				</div>
 
+		
+<div className="text-red-600">
+			<MessengerCustomerChat
+    pageId="132262526628559"
+    appId="681735823877168"
+    // htmlRef="<REF_STRING>"
+  />,
+</div>
+		
 			</Carousel>
 
 
