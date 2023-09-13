@@ -32,6 +32,7 @@ import VrDrives from "../Component/VrDrives/VrDrives";
 import UserDetails from "../Component/userDetails/UserDetails";
 import KnowMoreRoute from "../Pages/About/KnowMoreRoute/KnowMoreRoute";
 import WhatWeOfferDetails from "../Pages/Services/WhatWeOffer/WhatWeOfferDetails";
+import DiscoverMoreRoute from "../Component/DiscoverMoreRoute/DiscoverMoreRoute";
 // import VrDrives from "../Component/VrDrives/VrDrives";
 
 const router = createBrowserRouter([
@@ -116,6 +117,10 @@ const router = createBrowserRouter([
             {
                 path: '/know-more',
                 element: <KnowMoreRoute/>
+            },
+            {
+                path: '/discover-more',
+                element: <DiscoverMoreRoute/>
             }
 
         ]
