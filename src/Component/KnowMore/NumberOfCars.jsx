@@ -1,7 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
-// import { AiFillCar } from "react-icons/ai";
-import { FaAward, FaHandshake, FaUserTie } from 'react-icons/fa';
+import { FaAward, FaCarAlt, FaHandshake, FaUserTie } from 'react-icons/fa';
 import { AuthContex } from '../Providers/Authprovider';
 
 const NumberOfCars = () => {
@@ -10,8 +9,7 @@ const NumberOfCars = () => {
         <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
             <div className={`flex items-center justify-between gap-10 mode ${theme}`}>
                 <div className='flex justify-center gap-4'>
-                    {/* TODO: comments kore rakha icon er jaigai react icon bosbe  - avoid ai icons*/}
-                    {/* <span className='text-3xl w-16 h-16 bg-[#ef1721] flex items-center justify-center rounded-lg text-white'> < AiFillCar /> </span> */}
+                    <span className='text-3xl w-16 h-16 bg-[#ef1721] flex items-center justify-center rounded-lg text-white'> < FaCarAlt /> </span>
                     <div>
                         <span className='text-2xl font-bold'>711</span>
                         <h2 className={`text-[#757575] mt-1 mode ${theme}`}>Number of Cars</h2>

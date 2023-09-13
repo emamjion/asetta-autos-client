@@ -14,7 +14,7 @@ const HomeWhatWeOffer = () => {
                 <h1 className='font-bold text-2xl mt-2'>WHAT WE OFFERS</h1>
             </div>
             <div className='md:flex items-center justify-center gap-5 mt-8'>
-                <div className={`w-full bg ${theme}`}>
+                <div className={`w-full bg ${theme} p-5 rounded-md  shadow-md`}>
                     <img src={weoffer1} className='rounded w-full' />
                     <div className='mt-5'>
                         <h5 className='text-[#757575] text-xs mb-1'>WE OFFER</h5>
@@ -25,7 +25,7 @@ const HomeWhatWeOffer = () => {
                         </p>
                     </div>
                 </div>
-                <div className={`w-full bg ${theme}`}>
+                <div className={`w-full bg ${theme} p-5 rounded-md  shadow-md`}>
                     <img src={weoffer2} className='rounded w-full' />
                     <div className='mt-5'>
                         <h5 className='text-[#757575] text-xs mb-1'>WE ARE THE</h5>
@@ -36,7 +36,7 @@ const HomeWhatWeOffer = () => {
                         </p>
                     </div>
                 </div>
-                <div className={`w-full bg ${theme}`}>
+                <div className={`w-full bg ${theme} p-5 rounded-md shadow-md`}>
                     <img src={weoffer3} className='rounded w-full' />
                     <div className='mt-5'>
                         <h5 className='text-[#757575] text-xs mb-1'>OUR CUSTOMERS GET</h5>

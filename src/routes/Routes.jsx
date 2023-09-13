@@ -32,6 +32,8 @@ import VrDrives from "../Component/VrDrives/VrDrives";
 import UserDetails from "../Component/userDetails/UserDetails";
 import KnowMoreRoute from "../Pages/About/KnowMoreRoute/KnowMoreRoute";
 import Checkout from "../Component/checkOut/CheckOut";
+import WhatWeOfferDetails from "../Pages/Services/WhatWeOffer/WhatWeOfferDetails";
+import UserAddCars from "../Component/SubmitVehicle/UserAddCars";
 // import VrDrives from "../Component/VrDrives/VrDrives";
 
 const router = createBrowserRouter([
@@ -78,6 +80,10 @@ const router = createBrowserRouter([
                 element: <MeetOurTeamDetails></MeetOurTeamDetails>
             },
             {
+                path: 'WhatWeOffer/:id',
+                element: <WhatWeOfferDetails></WhatWeOfferDetails>
+            },
+            {
                 path: 'services/:id',
                 element: <ServiceSectionDetails></ServiceSectionDetails>
             },
@@ -112,6 +118,10 @@ const router = createBrowserRouter([
             {
                 path: '/know-more',
                 element: <KnowMoreRoute/>
+            },
+            {
+                path: '/approved-car',
+                element: <UserAddCars></UserAddCars>
             }
 
         ]

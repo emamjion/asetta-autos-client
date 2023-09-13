@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 // import 'react-tabs/style/react-tabs.css';
 import AllCarsData from './AllCarsData';
 import Button from '../Button/Button';
+import { NavLink } from 'react-router-dom';
 
 const AllCar = () => {
     const [find, setFind] = useState('')
@@ -88,6 +89,18 @@ const AllCar = () => {
       </div>
     </div>
 
+<div className='flex btn py-2 text-white text-xl btn-outline border-none w-[40%] mx-auto bg-black'>
+
+        <NavLink className="hover:text-[#ef1721] duration-500 p-2" to="/all-car">
+         Brand New Cars
+        </NavLink>
+      
+
+        <NavLink className="hover:text-[#ef1721] duration-500 p-2" to="/approved-car">
+         Used Cars
+        </NavLink>
+      
+</div>
    <div className='grid md:grid-cols-3'>
                 {
                     info.map(info => <AllCarsData
