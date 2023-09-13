@@ -96,7 +96,7 @@ const AllCar = () => {
       </div>
 
       <div className='flex items-start justify-center gap-10 mt-10'>
-        <div className='bg-red-500 px-10 py-10 sticky top-0'>
+        <div className='bg-gray-100 border shadow-lg px-10 py-10 sticky top-0'>
           <div className="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content my-10 mx-4">
@@ -108,109 +108,109 @@ const AllCar = () => {
 
                 <form className='sticky top-0' onSubmit={handleSubmit(onSubmit)}>
                   <div className='flex flex-col gap-1 mt-8'>
-                    <label className='text-white text-xl font-bold'>Car Name</label>
+                    <label className='text-black text-lg font-bold'>Car Name</label>
                     <Controller
                       name="carName"
                       control={control}
                       defaultValue=""
                       rules={{ required: 'This field is required' }}
-                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-2xl' type="text" placeholder='Car Name' {...field} />}
+                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="text" placeholder='Car Name' {...field} />}
                     />
                     {/* <span>{errors.carName && errors.carName.message}</span> */}
                   </div>
 
                   <div className='flex flex-col gap-1 mt-8'>
-                    <label className='text-white text-xl font-bold'>Car Model</label>
+                    <label className='text-black text-lg font-bold'>Car Model</label>
                     <Controller
                       name="carModel"
                       control={control}
                       defaultValue=""
                       rules={{ required: 'This field is required' }}
-                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-2xl' type="text" placeholder='Car Model' {...field} />}
+                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="text" placeholder='Car Model' {...field} />}
                     />
                     {/* <span>{errors.carModel && errors.carModel.message}</span> */}
                   </div>
 
                   <div className='flex flex-col gap-1 mt-8'>
-                    <label className='text-white text-xl font-bold'>Year</label>
+                    <label className='text-black text-lg font-bold'>Year</label>
                     <Controller
                       name="year"
                       control={control}
                       defaultValue=""
                       rules={{ required: 'This field is required' }}
-                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-2xl' type="number" placeholder='Year' {...field} />}
+                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="number" placeholder='Year' {...field} />}
                     />
                     {/* <span>{errors.year && errors.year.message}</span> */}
                   </div>
 
                   <div className='flex flex-col gap-1 mt-8' >
-                    <label className='text-white text-xl font-bold'>Body Style</label>
+                    <label className='text-black text-lg font-bold'>Body Style</label>
                     <Controller
                       name="bodyStyle"
                       control={control}
                       defaultValue=""
                       rules={{ required: 'This field is required' }}
-                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-2xl' type="text" placeholder='Body Style' {...field} />}
+                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="text" placeholder='Body Style' {...field} />}
                     />
                     {/* <span>{errors.bodyStyle && errors.bodyStyle.message}</span> */}
                   </div>
 
                   <div className='flex flex-col gap-1 mt-8'>
-                    <label className='text-white text-xl font-bold'>Condition</label>
+                    <label className='text-black text-lg font-bold'>Condition</label>
                     <Controller
                       name="condition"
                       control={control}
                       defaultValue=""
                       rules={{ required: 'This field is required' }}
-                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-2xl' type="text" placeholder='Condition' {...field} />}
+                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="text" placeholder='Condition' {...field} />}
                     />
                     {/* <span>{errors.condition && errors.condition.message}</span> */}
                   </div>
 
                   <div className='flex flex-col gap-1 mt-8'>
-                    <label className='text-white text-xl font-bold'>Mileage</label>
+                    <label className='text-black text-lg font-bold'>Mileage</label>
                     <Controller
                       name="mileage"
                       control={control}
                       defaultValue=""
                       rules={{ required: 'This field is required' }}
-                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-2xl' type="number" placeholder='Mileage' {...field} />}
+                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="number" placeholder='Mileage' {...field} />}
                     />
                     {/* <span>{errors.mileage && errors.mileage.message}</span> */}
                   </div>
 
                   <div className='flex flex-col gap-1 mt-8'>
-                    <label className='text-white text-xl font-bold'>Transmission</label>
+                    <label className='text-black text-lg font-bold'>Transmission</label>
                     <Controller
                       name="transmission"
                       control={control}
                       defaultValue=""
                       rules={{ required: 'This field is required' }}
-                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-2xl' type="text" placeholder='Transmission' {...field} />}
+                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="text" placeholder='Transmission' {...field} />}
                     />
                     {/* <span>{errors.transmission && errors.transmission.message}</span> */}
                   </div>
 
                   <div className='flex flex-col gap-1 mt-8'>
-                    <label className='text-white text-xl font-bold'>Engine</label>
+                    <label className='text-black text-lg font-bold'>Engine</label>
                     <Controller
                       name="engine"
                       control={control}
                       defaultValue=""
                       rules={{ required: 'This field is required' }}
-                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-2xl' type="text" placeholder='Engine' {...field} />}
+                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="text" placeholder='Engine' {...field} />}
                     />
                     {/* <span>{errors.engine && errors.engine.message}</span> */}
                   </div>
 
                   <div className='flex flex-col gap-1 mt-8'>
-                    <label className='text-white text-xl font-bold'>Exterior Color</label>
+                    <label className='text-black text-lg font-bold'>Exterior Color</label>
                     <Controller
                       name="exteriorColor"
                       control={control}
                       defaultValue=""
                       rules={{ required: 'This field is required' }}
-                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-2xl' type="text" placeholder='Exterior Color' {...field} />}
+                      render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="text" placeholder='Exterior Color' {...field} />}
                     />
                     {/* <span>{errors.exteriorColor && errors.exteriorColor.message}</span> */}
                   </div>
