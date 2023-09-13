@@ -34,6 +34,7 @@ import KnowMoreRoute from "../Pages/About/KnowMoreRoute/KnowMoreRoute";
 import Checkout from "../Component/checkOut/CheckOut";
 import WhatWeOfferDetails from "../Pages/Services/WhatWeOffer/WhatWeOfferDetails";
 import UserAddCars from "../Component/SubmitVehicle/UserAddCars";
+import DiscoverMoreRoute from "../Component/DiscoverMoreRoute/DiscoverMoreRoute";
 // import VrDrives from "../Component/VrDrives/VrDrives";
 
 const router = createBrowserRouter([
@@ -122,6 +123,11 @@ const router = createBrowserRouter([
             {
                 path: '/approved-car',
                 element: <UserAddCars></UserAddCars>
+            
+            },
+            {
+                path: '/discover-more',
+                element: <DiscoverMoreRoute/>
             }
 
         ]
