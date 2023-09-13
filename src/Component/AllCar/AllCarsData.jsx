@@ -2,11 +2,9 @@ import React from 'react';
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
 import { Rating } from '@smastrom/react-rating';
-import { AiOutlineEnvironment } from "react-icons/ai";
 import { PiEngineFill } from "react-icons/pi";
 import { BsFillFuelPumpFill } from "react-icons/bs";
-import { AiFillCar } from "react-icons/ai";
-import { FaRoad, FaShareAlt } from "react-icons/fa";
+import { FaCar, FaMapMarkerAlt, FaRoad, FaShareAlt } from "react-icons/fa";
 
 const AllCarsData = ({ info }) => {
   const { _id, image, price, mileage, average_rating, reviews, engine, displacement, model, make, fuel_type, color } = info;
@@ -102,12 +100,12 @@ const AllCarsData = ({ info }) => {
               <p className='bg-red-600 text-white text-xl  py-5 rounded-lg px-4 text-center'>${price}</p>
             </div>
           </div>
-          <p className='text-2xl flex items-center'><AiOutlineEnvironment className='me-2'></AiOutlineEnvironment> Miami Street, Hawthorn Victoria, Úc </p>
+          <p className='text-2xl flex items-center'><FaMapMarkerAlt className='me-2'></FaMapMarkerAlt> Miami Street, Hawthorn Victoria, Úc </p>
           <div className='flex items-center gap-36 my-5'>
             <p className='text-xl flex items-center flex-col justify-center gap-3'><span className='flex items-center'><FaRoad className='me-2'></FaRoad>MILEAGE</span><span className='ms-8'>{mileage}</span></p>
             <p className='text-xl flex items-center flex-col justify-center gap-3'><span className='flex items-center'><BsFillFuelPumpFill className='me-2'></BsFillFuelPumpFill>FUEL TYPE</span><span className='ms-8'>{fuel_type}</span></p>
             <p className='text-xl flex items-center flex-col justify-center gap-3'><span className='flex items-center'><PiEngineFill className='me-2'></PiEngineFill>ENGINE</span><span className='ms-8'>{engine.type}</span></p>
-            <p className='text-xl flex items-center flex-col justify-center gap-3'><span className='flex items-center'><AiFillCar className='me-2'></AiFillCar>COLOR</span><span className='ms-8'>{color}</span></p>
+            <p className='text-xl flex items-center flex-col justify-center gap-3'><span className='flex items-center'><FaCar className='me-2'></FaCar>COLOR</span><span className='ms-8'>{color}</span></p>
           </div>
           <div className='flex items-center gap-2 my-5'>
             <Rating
