@@ -2,6 +2,11 @@ import React from 'react';
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
 import { Rating } from '@smastrom/react-rating';
+import { AiOutlineEnvironment } from "react-icons/ai";
+import { PiEngineFill } from "react-icons/pi";
+import { BsFillFuelPumpFill } from "react-icons/bs";
+import { AiFillCar } from "react-icons/ai";
+import { FaRoad, FaShareAlt } from "react-icons/fa";
 
 const AllCarsData = ({ info }) => {
   const { _id, image, price, mileage, average_rating, reviews, engine, displacement, model, make, fuel_type, color } = info;
@@ -49,31 +54,83 @@ const AllCarsData = ({ info }) => {
 
     //   </div>
     // </div>
-    <div className='flex justify-center items-center gap-10 my-8 px-5 py-10 shadow-lg'>
+    // <div className='flex justify-center w-full items-center gap-16 my-8 px-5 py-10 shadow-lg'>
+    //   <div className=''>
+    //     <img className='' src={image} alt="" />
+    //   </div>
+    //   <div className='w-2/3 font-bold'>
+    //     <div className='flex justify-between items-center'>
+    //       <p className='font-bold text-4xl mt-2'>Model: {model}</p>
+    //       <p className='bg-red-600 text-white text-xl py-5 rounded-lg px-8'>${price}</p>
+    //     </div>
+    //     <p className='text-2xl flex items-center'><AiOutlineEnvironment className='me-2'></AiOutlineEnvironment> Miami Street, Hawthorn Victoria, Úc </p>
+    //     <div className='flex items-center gap-32 my-8'>
+    //       <p className='text-2xl flex items-center flex-col justify-center gap-3'><span className='flex items-center'><FaRoad className='me-2'></FaRoad>MILEAGE</span><span className='ms-8'>{mileage}</span></p>
+    //       <p className='text-2xl flex items-center flex-col justify-center gap-3'><span className='flex items-center'><BsFillFuelPumpFill className='me-2'></BsFillFuelPumpFill>FUEL TYPE</span><span className='ms-8'>{fuel_type}</span></p>
+    //       <p className='text-2xl flex items-center flex-col justify-center gap-3'><span className='flex items-center'><PiEngineFill className='me-2'></PiEngineFill>ENGINE</span><span className='ms-8'>{engine.type}</span></p>
+    //       <p className='text-2xl flex items-center flex-col justify-center gap-3'><span className='flex items-center'><AiFillCar className='me-2'></AiFillCar>COLOR</span><span className='ms-8'>{color}</span></p>
+    //     </div>
+    //     <div className='flex items-center gap-2 my-5'>
+    //       <Rating
+    //         style={{ maxWidth: 100 }}
+    //         value={average_rating}
+    //         readOnly
+    //       />
+    //       <p className='mt-2'>{average_rating}</p>
+    //     </div>
+    //     <div className='flex justify-between items-center'>
+    //       <div className='flex justify-start items-center gap-14 mt-8'>
+    //         <Button button={"Vehicle Details"}></Button>
+    //         <Button button={"Contact Dealer"}></Button>
+    //         <Button button={"Test Drive"}></Button>
+    //       </div>
+    //       <div>
+    //         <p><FaShareAlt className='text-4xl'></FaShareAlt></p>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
+    <div className="card lg:card-side bg-base-100 shadow-lg gap-16 my-8 h-[450px]">
       <div className=''>
-        <img src={image} alt="" />
+        <figure><img className='' src={image} alt="" /></figure>
       </div>
-      <div className='w-2/3 font-bold'>
-        <p className='font-bold text-4xl my-5'>Model: {model}</p>
-        <p className='text-2xl my-3'>Miami Street, Hawthorn Victoria, Úc </p>
-        <div className='flex items-center gap-32 my-5'>
-          <p className='text-2xl'>MILEAGE <br />{mileage}</p>
-          <p className='text-2xl'>FUEL TYPE <br />{fuel_type}</p>
-          <p className='text-2xl'>ENGINE <br />{engine.type}</p>
-          <p className='text-2xl'>COLOR <br />{color}</p>
-        </div>
-        <div className='flex items-center justify-start gap-2 my-5'>
-          <Rating
-            style={{ maxWidth: 100 }}
-            value={average_rating}
-            readOnly
-          />
-          {average_rating}
-        </div>
-        <div className='flex justify-start items-center gap-14 my-5'>
-          <Button button={"Vehicle Details"}></Button>
-          <Button button={"Contact Dealer"}></Button>
-          <Button button={"Test Drive"}></Button>
+      <div className="card-body">
+        <div className='w-2/3 font-bold'>
+          <div className='flex justify-between items-center'>
+            <p className='font-bold text-4xl mt-2'>Model: {model}</p>
+            <div className='card-actions justify-end -me-96 pe-20'>
+              <p className='bg-red-600 text-white text-xl  py-5 rounded-lg px-4 text-center'>${price}</p>
+            </div>
+          </div>
+          <p className='text-2xl flex items-center'><AiOutlineEnvironment className='me-2'></AiOutlineEnvironment> Miami Street, Hawthorn Victoria, Úc </p>
+          <div className='flex items-center gap-36 my-5'>
+            <p className='text-xl flex items-center flex-col justify-center gap-3'><span className='flex items-center'><FaRoad className='me-2'></FaRoad>MILEAGE</span><span className='ms-8'>{mileage}</span></p>
+            <p className='text-xl flex items-center flex-col justify-center gap-3'><span className='flex items-center'><BsFillFuelPumpFill className='me-2'></BsFillFuelPumpFill>FUEL TYPE</span><span className='ms-8'>{fuel_type}</span></p>
+            <p className='text-xl flex items-center flex-col justify-center gap-3'><span className='flex items-center'><PiEngineFill className='me-2'></PiEngineFill>ENGINE</span><span className='ms-8'>{engine.type}</span></p>
+            <p className='text-xl flex items-center flex-col justify-center gap-3'><span className='flex items-center'><AiFillCar className='me-2'></AiFillCar>COLOR</span><span className='ms-8'>{color}</span></p>
+          </div>
+          <div className='flex items-center gap-2 my-5'>
+            <Rating
+              style={{ maxWidth: 100 }}
+              value={average_rating}
+              readOnly
+            />
+            <p className='mt-2'>{average_rating}</p>
+          </div>
+          <div className='flex justify-between items-center'>
+            <div className='flex justify-start items-center gap-14 mt-8'>
+              <Link to={`/arrivals-details/${_id}`}>
+                <Button button={"Vehicle Details"}></Button>
+              </Link>
+              <Button button={"Contact Dealer"}></Button>
+              <Button button={"Test Drive"}></Button>
+            </div>
+            <div>
+            </div>
+            <div className='card-actions justify-end -me-96 pe-20'>
+              <p><FaShareAlt className='text-4xl'></FaShareAlt></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
