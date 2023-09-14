@@ -96,25 +96,26 @@ const AllCar = () => {
         </div>
       </div>
 
-<div className='flex btn py-2 text-white text-xl btn-outline border-none w-[40%] mx-auto bg-black'>
+      <div className='flex btn py-2 text-white text-xl btn-outline border-none w-[40%] mx-auto bg-black'>
 
         <NavLink className="hover:text-[#ef1721] duration-500 p-2" to="/all-car">
-         Brand New Cars
+          Brand New Cars
         </NavLink>
-      
+
 
         <NavLink className="hover:text-[#ef1721] duration-500 p-2" to="/approved-car">
-         Used Cars
+          Used Cars
         </NavLink>
-      
-</div>
-   <div className='grid md:grid-cols-3'>
-                {
-                    info.map(info => <AllCarsData
-                        key={info._id}
-                        info={info}
-                    />)
-                }
+
+      </div>
+      {/* <div className='grid md:grid-cols-3'>
+        {
+          info.map(info => <AllCarsData
+            key={info._id}
+            info={info}
+          />)
+        }
+      </div> */}
       <div className='flex items-start justify-center gap-10 mt-10'>
         <div className='bg-red-500 px-10 py-10 sticky top-0'>
           <div className="drawer lg:drawer-open">
@@ -252,8 +253,6 @@ const AllCar = () => {
           }
         </div>
       </div>
-
-    </div>
     </div>
   );
 };
