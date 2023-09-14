@@ -27,11 +27,11 @@ const CarCategory = () => {
                 boldredTitle={"Types"}
             />
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mt-12'>
-                <div className={`shadow-2xl flex items-center justify-center flex-col rounded-2xl p-4 bg ${theme} text ${theme} hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer`}>
+                <div className={`shadow-md border flex items-center justify-center flex-col rounded-2xl p-4 bg ${theme} text ${theme} hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer`}>
                     <img src={type1}  className='w-[120px] h-[120px]'/>
                     <h4 className='text-lg font-medium mt-2'>Sedan</h4>
                 </div>
-                <div className={`shadow-2xl flex items-center justify-center flex-col rounded-2xl p-4 bg ${theme} text ${theme} hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer`}>
+                <div className={`shadow-md border flex items-center justify-center flex-col rounded-2xl p-4 bg ${theme} text ${theme} hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer`}>
                     <img src={type2}  className='w-[120px] h-[120px]'/>
                     <h4 className='text-lg font-medium mt-2'>Compact</h4>
                 </div>
