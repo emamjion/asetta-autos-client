@@ -1,8 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContex } from '../Providers/Authprovider';
+import { useParams } from 'react-router-dom';
 
 const CheckOut = () => {
 
+  const {id} = useParams()
+  console.log(id);
   const {user} = useContext(AuthContex)
   const [cards, setCards] = useState([]);
   
@@ -14,25 +17,18 @@ const CheckOut = () => {
 
   
 
-  const myCards = cards.filter(card=>card?.email === user?.email)
-  // console.log(myCards);
+  const myCard = cards.find(card=>card?._id === id)
 
+  console.log(myCard);
 
-  const [totalPrice, setTotalPrice] = useState(0);
-
-  useEffect(()=>{
-      const total = myCards.reduce((accumulator, product) => {
-          return accumulator + (parseFloat(product?.price)* parseFloat(product?.items));
-        }, 0);
-        setTotalPrice(total);
-      },[cards , totalPrice])
-
+  const subTotal = myCard?.price * myCard?.items
+  
 
 
   return (
     <div>
 <div>
-<h1>{totalPrice}</h1>
+<h1>{subTotal}</h1>
 <h1>{cards._id}</h1>
 
 <h1 className='btn btn-accent'>Pay</h1>
