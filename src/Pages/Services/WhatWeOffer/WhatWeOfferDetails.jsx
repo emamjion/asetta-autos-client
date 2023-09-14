@@ -11,7 +11,6 @@ const WhatWeOfferDetails = () => {
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
-  
     const {image,serviceName,mainDesc,subDesc1,subDesc2,subDesc3} =data
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl">
@@ -22,7 +21,7 @@ const WhatWeOfferDetails = () => {
                 <p>{subDesc1}</p>
                 <p>{subDesc2}</p>
                 <p>{subDesc3}</p>
-                <div className="card-actions justify-end">
+                <div className="card-actions justify-center">
                     <button className="btn btn-primary">Listen</button>
                 </div>
             </div>
