@@ -8,11 +8,10 @@ const UserAddCars = () => {
     const [info, setInfo] = useState([])
   
     useEffect(() =>{
-        fetch(`http://localhost:5000/myInfo/${user?.email}`)
+        fetch(`http://localhost:5000/myInfo`)
         .then(res => res.json())
         .then(data => setInfo(data))
-     }, [])
-    console.log(info);
+    }, [])
 
     return (
 
