@@ -8,7 +8,7 @@ const UserAddCars = () => {
     const [info, setInfo] = useState([])
   
     useEffect(() =>{
-        fetch(`http://localhost:5000/myInfo`)
+        fetch(`https://asetta-autos-production.up.railway.app/myInfo`)
         .then(res => res.json())
         .then(data => setInfo(data))
     }, [])
