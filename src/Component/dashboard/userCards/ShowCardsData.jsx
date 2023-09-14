@@ -8,9 +8,6 @@ const ShowCardsData = ({card}) => {
 
     const handleRemove =(id)=>{
         console.log("remove", id);
-
-
-
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -39,7 +36,7 @@ const ShowCardsData = ({card}) => {
             Swal.fire({
                 position: 'top-end',
                 icon: 'success',
-                title: 'Successfully added!',
+                title: 'Successfully removed!',
                 showConfirmButton: false,
                 timer: 1500
               })
