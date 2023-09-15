@@ -5,7 +5,7 @@ import BestDealerCard from './BestDealerCard';
 const OurDealer = () => {
     const [dealers, setDealers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/best-dealers')
+        fetch('https://asetta-autos-production.up.railway.app/best-dealers')
         .then(res => res.json())
         .then(data => setDealers(data))
     }, [])
