@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Tittle from '../Shared/Tittle/Tittle';
 import BestDealerCard from './BestDealerCard';
+import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 const BestDealer = () => {
     const [Dealers, setDealers] = useState([]);
@@ -14,10 +16,15 @@ const BestDealer = () => {
             <Tittle topTitle={"Car Dealers"} boldblackTitle={"Best Dealers In"} boldredTitle={"Your City"}></Tittle>
             {/* responsive - mohosin */}
             <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
-                <div className=' grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 m-8'>
+                <div className=' grid sm:grid-cols-2 md:grid-cols-3 gap-6'>
                     {
-                        Dealers.map(Dealer => <BestDealerCard key={Dealer._id} Dealer={Dealer}></BestDealerCard>)
+                        Dealers.slice(0,3).map(Dealer => <BestDealerCard key={Dealer._id} Dealer={Dealer}></BestDealerCard>)
                     }
+                </div>
+                <div className='mt-6 text-center'>
+                    <Link>
+                        <Button button={'Show All Dealers'} />
+                    </Link>
                 </div>
             </div>
         </>

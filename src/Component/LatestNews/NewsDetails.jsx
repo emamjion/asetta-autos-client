@@ -110,7 +110,7 @@ const NewsDetails = () => {
     const likeEmail = {email : user?.email}
     if(!findEmail){
       // setLike(true)
-      fetch(`http://localhost:5000/blogLike/${id}`, {
+      fetch(`https://asetta-autos-production.up.railway.app/blogLike/${id}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json'
@@ -143,7 +143,7 @@ const NewsDetails = () => {
     if(findEmail){
       console.log("ase kam hobi");
       // setLike(true)
-      fetch(`http://localhost:5000/blogDisLike/${id}`, {
+      fetch(`https://asetta-autos-production.up.railway.app/blogDisLike/${id}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json'

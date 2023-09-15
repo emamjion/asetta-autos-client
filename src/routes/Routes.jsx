@@ -165,7 +165,7 @@ const router = createBrowserRouter([
                 element: <UserCards></UserCards>
             },
             {
-                path: '/dashboard/checkOut',
+                path: '/dashboard/checkOut/:id',
                 element: <Checkout></Checkout>
             },
             {

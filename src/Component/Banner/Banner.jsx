@@ -10,7 +10,6 @@ import img5 from "../../assets/images/Banner/banner-5.png";
 import img6 from "../../assets/images/Banner/banner-6.png";
 import img7 from "../../assets/images/Banner/banner-7.png";
 import img8 from "../../assets/images/Banner/banner-8.png";
-import Button from "../Button/Button";
 import Button2 from "../Button/Button2";
 import { Link } from "react-router-dom";
 import MessengerCustomerChat from "react-messenger-customer-chat";
@@ -158,7 +157,7 @@ const Banner = () => {
 					<div className="absolute flex justify-center w-full items-center h-full left-0 top-0 bg-gradient-to-r from-[#181818] to-[rgba(21,21,21,0.3)]">
 						<div className="space-y-2 md:space-y-6 w-3/4 md:pl-[120px]">
 							<h4 className="text-white font-semibold tracking-widest text-2xl">Welcome to Asetta Auto's</h4>
-							<hr className='w-1/3 border-2 border-[#ef1721] mx-auto' />
+							{/* <hr className='w-1/3 border-2 border-[#ef1721] mx-auto' /> */}
 							<h1 className="text-white text-4xl md:text-7xl font-bold">Best Way To Find Your <span className="text-[#ef1721]">Dream</span> Car</h1>
 							<p className="text-white">
 								There are many variations of passages of Lorem Ipsum available, but the majority <br /> have suffered alteration in some form, by injected humour.
@@ -195,17 +194,8 @@ const Banner = () => {
 						</div>
 					</div>
 				</div>
-
 		
-<div className="text-red-600">
-			<MessengerCustomerChat
-    pageId="132262526628559"
-    appId="681735823877168"
-    // htmlRef="<REF_STRING>"
-  />,
-</div>
-		
-			</Carousel>
+	</Carousel>
 
 
 			<MessengerCustomerChat

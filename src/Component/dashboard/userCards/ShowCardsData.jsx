@@ -1,4 +1,5 @@
 import { handler } from "daisyui";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ShowCardsData = ({card}) => {
@@ -8,9 +9,6 @@ const ShowCardsData = ({card}) => {
 
     const handleRemove =(id)=>{
         console.log("remove", id);
-
-
-
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -39,7 +37,7 @@ const ShowCardsData = ({card}) => {
             Swal.fire({
                 position: 'top-end',
                 icon: 'success',
-                title: 'Successfully added!',
+                title: 'Successfully removed!',
                 showConfirmButton: false,
                 timer: 1500
               })
@@ -68,7 +66,8 @@ const ShowCardsData = ({card}) => {
             </div>
             <div>
                 <h4 onClick={()=>handleRemove(_id)} className="border text-center p-1 m-2 hover:text-red-600 cursor-pointer">Remove</h4>
-                {/* <h4 onClick={()=>handleCheckOut(_id)} className="border text-center p-1 m-2 hover:text-green-600 cursor-pointer">checkout</h4> */}
+                <Link to={`/dashboard/checkOut/${_id}`}><h4 className="border text-center p-1 m-2 hover:text-green-600 cursor-pointer">checkout</h4></Link>
+                
             </div>
         </div>
     );
