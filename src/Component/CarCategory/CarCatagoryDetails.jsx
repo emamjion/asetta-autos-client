@@ -7,7 +7,7 @@ const CarCatagoryDetails = () => {
     const { id } = useParams()
     const [data, setData] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/carbodyType/${id}`)
+        fetch(`https://asetta-autos-production.up.railway.app/carbodyType/${id}`)
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
