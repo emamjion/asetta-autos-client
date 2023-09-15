@@ -2,8 +2,16 @@ import React from 'react';
 import img from "../../assets/images/Banner/01.png";
 import { BsCarFront, BsGooglePlay } from "react-icons/bs";
 import { FaAppStore } from "react-icons/fa";
+import Swal from 'sweetalert2';
 
 const MobileApp = () => {
+    const handleAppButton = () => {
+        Swal.fire('Our Mobile App is Working');
+    }
+    const handleAppButton2 = () => {
+        Swal.fire('Our Mobile App is Working');
+    }
+    
     return (
         // responsive - mohosin
         <div className='px-4 xl:px-[140px] 2xl:px-[240px] bg-white my-24 rounded-2xl flex flex-col-reverse md:flex-row items-center justify-end'>
@@ -13,7 +21,7 @@ const MobileApp = () => {
                 <p className='text-slate-800 font-semibold'>There are many variations of passages available but the majority have <br /> suffered in some form going to use a passage by injected humour. </p>
                 <div className='flex items-center space-x-3 '>
                     <div className='mb-8'>
-                        <button className='bg-[#ef1721] font-bold text-white px-6 py-3 rounded-2xl hover:bg-[#111] duration-500'>
+                        <button onClick={handleAppButton} className='bg-[#ef1721] font-bold text-white px-6 py-3 rounded-2xl hover:bg-[#111] duration-500'>
                             <div className='flex items-center gap-2'>
                                 <div>
                                     <BsGooglePlay className='md:w-10 md:h-10'></BsGooglePlay>
@@ -26,7 +34,7 @@ const MobileApp = () => {
                         </button>
                     </div>
                     <div className='mb-8'>
-                        <button className='bg-[#111] font-bold text-white px-6 py-3 rounded-2xl hover:bg-[#ef1721] duration-500'>
+                        <button onClick={handleAppButton2} className='bg-[#111] font-bold text-white px-6 py-3 rounded-2xl hover:bg-[#ef1721] duration-500'>
                             <div className='flex items-center gap-2'>
                                 <div>
                                     <FaAppStore className='md:w-10 md:h-10'></FaAppStore>

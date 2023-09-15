@@ -37,6 +37,7 @@ import UserAddCars from "../Component/SubmitVehicle/UserAddCars";
 import DiscoverMoreRoute from "../Component/DiscoverMoreRoute/DiscoverMoreRoute";
 import PaymentSuccess from "../Component/checkOut/Payment/PaymentSuccess";
 import CarCatagoryDetails from "../Component/CarCategory/CarCatagoryDetails";
+import OurDealer from "../Component/BestDealer/OurDealer";
 // import VrDrives from "../Component/VrDrives/VrDrives";
 
 const router = createBrowserRouter([
@@ -134,6 +135,10 @@ const router = createBrowserRouter([
             {
                 path: '/discover-more',
                 element: <DiscoverMoreRoute/>
+            },
+            {
+                path: '/our-dealer',
+                element: <OurDealer/>
             },
             {
                 path: 'payment/success/:tranId',
