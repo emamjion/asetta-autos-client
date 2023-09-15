@@ -1,0 +1,18 @@
+/* Gradient background */
+.ssl {
+    background: linear-gradient(to bottom, #90b0bf39, #77aab5a8);
+    /* height: 100vh; */
+    /* margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+  
+  /* Additional styling for your form and content */
+  .text-center {
+    /* text-align: center;
+    color: #fff; */
+  }
+  
+  /* Add any other CSS styles you need for your form and content here */
+  

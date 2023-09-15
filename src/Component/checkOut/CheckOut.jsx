@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { AuthContex } from '../Providers/Authprovider'; // Make sure to correct the import if needed
 import { useParams } from 'react-router-dom';
+import './Checkout.css'; 
 
 const CheckOut = () => {
   const formRef = useRef(null);
@@ -46,7 +47,7 @@ const CheckOut = () => {
       orderId: id, // Set the orderId using the id from useParams
     };
 
-    fetch('https://asetta-autos-production.up.railway.app/getmoney', {
+    fetch('http://localhost:5000/getmoney', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -63,9 +64,10 @@ const CheckOut = () => {
   };
 
   return (
-    <div>
-      <div>
-        <h1>{subTotal}</h1>
+    <div className='ssl p-14  h-full'>
+      <div className='text-center'>
+        <p className='text-3xl mb-2 font-semibold'>Payment With <span className='text-blue-600'>SSLCommerz</span></p>
+        <h1 className='text-red-500 text-xl font-semibold'>Subtotal: ${subTotal}</h1>
         <h1>{cards._id}</h1>
       </div>
 
