@@ -15,11 +15,11 @@ const OurPartner = () => {
             <p className='text-center mt-6'>
                 We&apos;d like to share with you their top quality products and services that you will enjoy.
             </p>
-            <div className='mt-4 flex flex-wrap items-center justify-center gap-3'>
-                <img src={partner1} className='' />
-                <img src={partner2} />
-                <img src={partner3} />
-                <img src={partner4} />
+            <div className='mt-4 md:flex items-center justify-center'>
+                <img src={partner1} className='w-full h-full' />
+                <img src={partner2} className='w-full h-full'/>
+                <img src={partner3} className='w-full h-full'/>
+                <img src={partner4} className='w-full h-full'/>
             </div>
         </div>
     );

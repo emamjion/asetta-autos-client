@@ -17,7 +17,7 @@ const BlogCardLatest = ({ blogs }) => {
                 <figure className="px-10 pt-10 imagehover">
                     <img src={image} alt="Shoes" className="rounded-xl" />
                 </figure>
-                <div className='bg-[#ef1721] text-white font-bold w-16 h-16 p-3 text-xl flex justify-center text-center rounded-2xl items-center absolute top-1 mt-6 ms-6'>
+                <div className='bg-[#ef1721] text-white font-bold  p-3 text-xl flex justify-center text-center rounded-2xl items-center absolute top-1 mt-6 ms-6'>
                     <p>{date}</p>
                 </div>
             </div>
