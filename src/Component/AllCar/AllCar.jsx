@@ -96,36 +96,36 @@ const AllCar = () => {
         </div>
       </div>
 
-<div className='flex btn py-2 text-white text-xl btn-outline border-none w-[40%] mx-auto bg-black'>
+      <div className='flex btn py-2 text-white text-xl btn-outline border-none w-[40%] mx-auto bg-black'>
 
         <NavLink className="hover:text-[#ef1721] duration-500 p-2" to="/all-car">
           Brand New Cars
         </NavLink>
-      
+
 
         <NavLink className="hover:text-[#ef1721] duration-500 p-2" to="/approved-car">
           Used Cars
         </NavLink>
-      
-</div>
-    <div className=''>
-                {/* {
+
+      </div>
+      <div className=''>
+        {/* {
                     info.map(info => <AllCarsData
                         key={info._id}
                         info={info}
                     />)
                 } */}
-      <div className='flex items-start justify-center gap-10 mt-10'>
-        <div className='bg-gray-100 border shadow-lg px-10 py-10'>
+      </div>
+      <div className='flex items-start justify-center gap-20 mt-10'>
+        <div className='bg-gray-100 border shadow-lg px-10 py-10 sticky top-0'>
           <div className="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content my-10 mx-4">
-
+            <div className="drawer-content flex flex-col items-center justify-center">
+              <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
             </div>
-            <div className="drawer-side ">
+            <div className="drawer-side">
               <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-              <ul className="menu w-12/12 min-h-full  font-bold text-black">
-
+              <ul className="menu p-4 w-full min-h-full bg-base-200 text-base-content">
                 <form className='sticky top-0' onSubmit={handleSubmit(onSubmit)}>
                   <div className='flex flex-col gap-1 mt-8'>
                     <label className='text-black text-lg font-bold'>Car Name</label>
@@ -136,7 +136,7 @@ const AllCar = () => {
                       rules={{ required: 'This field is required' }}
                       render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="text" placeholder='Car Name' {...field} />}
                     />
-                    
+
                   </div>
 
                   <div className='flex flex-col gap-1 mt-8'>
@@ -148,7 +148,7 @@ const AllCar = () => {
                       rules={{ required: 'This field is required' }}
                       render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="text" placeholder='Car Model' {...field} />}
                     />
-                    
+
                   </div>
 
                   <div className='flex flex-col gap-1 mt-8'>
@@ -160,7 +160,7 @@ const AllCar = () => {
                       rules={{ required: 'This field is required' }}
                       render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="number" placeholder='Year' {...field} />}
                     />
-                    
+
                   </div>
 
                   <div className='flex flex-col gap-1 mt-8' >
@@ -172,7 +172,7 @@ const AllCar = () => {
                       rules={{ required: 'This field is required' }}
                       render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="text" placeholder='Body Style' {...field} />}
                     />
-                    
+
                   </div>
 
                   <div className='flex flex-col gap-1 mt-8'>
@@ -184,7 +184,7 @@ const AllCar = () => {
                       rules={{ required: 'This field is required' }}
                       render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="text" placeholder='Condition' {...field} />}
                     />
-                    
+
                   </div>
 
                   <div className='flex flex-col gap-1 mt-8'>
@@ -196,7 +196,7 @@ const AllCar = () => {
                       rules={{ required: 'This field is required' }}
                       render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="number" placeholder='Mileage' {...field} />}
                     />
-                    
+
                   </div>
 
                   <div className='flex flex-col gap-1 mt-8'>
@@ -208,7 +208,7 @@ const AllCar = () => {
                       rules={{ required: 'This field is required' }}
                       render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="text" placeholder='Transmission' {...field} />}
                     />
-                    
+
                   </div>
 
                   <div className='flex flex-col gap-1 mt-8'>
@@ -220,7 +220,7 @@ const AllCar = () => {
                       rules={{ required: 'This field is required' }}
                       render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="text" placeholder='Engine' {...field} />}
                     />
-                    
+
                   </div>
 
                   <div className='flex flex-col gap-1 mt-8'>
@@ -232,7 +232,7 @@ const AllCar = () => {
                       rules={{ required: 'This field is required' }}
                       render={({ field }) => <input className='w-80 h-14 pl-4 rounded-md text-md' type="text" placeholder='Exterior Color' {...field} />}
                     />
-                    
+
                   </div>
 
                   <button className='text-2xl w-full mt-10 bg-black px-10 py-5 text-white' type="submit">SEARCH</button>
@@ -252,8 +252,6 @@ const AllCar = () => {
           }
         </div>
       </div>
-
-    </div>
     </div>
   );
 };
