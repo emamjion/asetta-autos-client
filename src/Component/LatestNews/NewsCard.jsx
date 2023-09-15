@@ -9,31 +9,12 @@ const NewsCard = ({ blogs }) => {
     const { theme } = useContext(AuthContex);
     const { image, author, title, _id, content, date, authorImage, blog } = blogs;
     return (
-        // <div className=" card card-compact text-black w-full font-bold bg-white shadow-xl">
-        //     <figure className="px-4 pt-5">
-        //         <img src={blogs?.image} alt="Shoes" className="rounded-xl hover:transition-transform transform origin-center hover:scale-105 duration-500" />
-        //     </figure>
-        //     <div className="card-body">
-        //         <div className='flex mt-2 text-[16px] justify-around'>
-        //             <p className=' flex items-center gap-2 hover:text-[#ef1721] cursor-pointer'> <BsPersonCircle className='text-[#ef1721]'></BsPersonCircle>{blogs?.author}</p>
-        //             <p className='flex items-center gap-2 hover:text-[#ef1721] cursor-pointer'><BiSolidCalendar className='text-[#ef1721]'></BiSolidCalendar> {blogs?.date}</p>
-        //         </div>
-        //         <hr className='my-2' />
-        //         <h2 className="card-title text-xl md:text-3xl hover:text-[#ef1721] cursor-pointer">{blogs?.title}</h2>
-
-        //         <div className="card-actions justify-start">
-        //             <Link to={`/our-blogs/${blogs?._id}`}>
-        //                 <Button button={'read more'} />
-        //             </Link>
-        //         </div>
-        //     </div>
-        // </div>
         <div className={`card w-full h-full bg-base-100 mainbloghover border border-base-300 bg ${theme} text ${theme} rounded-sm hover:border hover:border-red-400 duration-500`}>
             <div className='relative'>
                 <figure className="px-10 pt-10 imagehover">
                     <img src={image} alt="Shoes" className="rounded-xl" />
                 </figure>
-                <div className='bg-[#ef1721] text-white font-bold w-16 h-16 p-3 text-xl flex justify-center text-center rounded-2xl items-center absolute top-1 mt-6 ms-6'>
+                <div className='bg-[#ef1721] text-white font-bold  p-3 text-sm flex justify-center text-center rounded-2xl items-center absolute top-1 mt-6 ms-6'>
                     <p>{date}</p>
                 </div>
             </div>
