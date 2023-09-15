@@ -14,12 +14,12 @@ const DealerDetails = () => {
     }, [])
     return (
         <div className="min-h-screen px-4 xl:px-[140px] 2xl:px-[240px] py-24">
-          <div className="flex justify-between gap-6">
-            <div className="flex gap-6 w-[75%]">
+          <div className="md:flex justify-between gap-6">
+            <div className="md:flex gap-6 md:w-[75%]">
               <img
                 src={data?.image}
                       alt={data?.dealerName}
-                      className="bg-white border shadow-md rounded-lg p-3"
+                      className="bg-white border shadow-md rounded-lg p-3 w-full"
               />
               <div className="mt-6">
                 <h1 className="text-2xl font-semibold">{data.dealerName}</h1>
@@ -32,7 +32,7 @@ const DealerDetails = () => {
                 </div>
               </div> 
             </div>
-            <div className="w-[25%]">
+            <div className="md:w-[25%] mt-5 md:mt-0">
               <div className="bg-[#f7f7f7] px-8 py-4 rounded">
                 <div className="flex items-center gap-1">
                       <span> < FaGlobe /> </span>
@@ -56,14 +56,14 @@ const DealerDetails = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-between gap-6">
-            <div className="mt-12 w-[75%]">
+          <div className="md:flex justify-between gap-6">
+            <div className="mt-12 md:w-[75%]">
                   <h1 className="bg-[#f7f7f7] p-4 text-2xl font-medium">About {data.dealerName}</h1>
-                  <p className="mt-2">
+                  <p className="mt-2 text-xs md:text-sm">
                     {data?.description}
                   </p>
                   <div>
-                    <div className=' rounded my-6 px-4' style={{ width: '100%', height: '400px', overflow: 'hidden' }}>
+                    <div className=' rounded my-6' style={{ width: '100%', height: '400px', overflow: 'hidden' }}>
                       <iframe
                       title="Google Map"
                       width="100%"
@@ -74,7 +74,7 @@ const DealerDetails = () => {
                     </div>
                   </div>
             </div>
-            <div className="mt-12 w-[25%] border px-6 py-4 rounded h-96">
+            <div className="mt-12 md:w-[25%] border px-6 py-4 rounded h-96">
               <div className="flex gap-2 items-center"> <span className="text-xl text-[#ef1721]"> < FaEnvelope /> </span><span className="text-lg font-semibold">Message to Dealer</span></div>
               <form className="mt-4">
                 <div className="">
@@ -111,10 +111,10 @@ const DealerDetails = () => {
             </div>
           </div>
           {/* Car listing by Dealer */}
-          <div>Car listing by Dealer</div>
+          {/* <div>Car listing by Dealer</div> */}
 
           {/* Leave a comment */}
-          <div>Leave a comment</div>
+          {/* <div>Leave a comment</div> */}
         </div>
     );
 };
