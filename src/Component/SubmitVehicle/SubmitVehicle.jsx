@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
-// import Button from '../Button/Button';
 import { useContext } from 'react';
 import { AuthContex } from '../Providers/Authprovider';
+import Swal from 'sweetalert2';
+import Button from '../Button/Button';
 
 const SubmitVehicle = () => {
     const { user } = useContext(AuthContex);
@@ -38,7 +39,6 @@ const SubmitVehicle = () => {
             userEmail: user.email
 
         }
-        console.log(adding);
         
 fetch('https://asetta-autos-production.up.railway.app/add-car-user',{
     method: 'POST',
@@ -50,7 +50,7 @@ fetch('https://asetta-autos-production.up.railway.app/add-car-user',{
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                Swal.fire('Your Vehicle Submitted');
                 formRef.current.reset();
             })
     }
@@ -61,15 +61,13 @@ fetch('https://asetta-autos-production.up.railway.app/add-car-user',{
             <p className='my-6'>
                 If you&apos;re wondering how to go about selling your car, we&apos;re here to help you find the ideal way to maximise <br /> the return for your current vehicle.
             </p>
-            {/* <Button button={'submit your vehicle now'} /> */}
             <div>
 
                 {/* Open the modal using document.getElementById('ID').showModal() method */}
-                <button className="btn bg-red-600 text-white" onClick={() => document.getElementById('my_modal_5').showModal()}>submit your vehicle now</button>
+                <button className="button" onClick={() => document.getElementById('my_modal_5').showModal()}>submit your vehicle now</button>
 
-
-                <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
-                    <div className="modal-box">
+                <dialog id="my_modal_5" className="modal">
+                    <div className="modal-box w-11/12 max-w-5xl">
 
 
                         <h1 className='text-center text-3xl font-bold'> <span className='text-red-600'>Submit your </span>Vehicle here</h1>
@@ -149,14 +147,21 @@ fetch('https://asetta-autos-production.up.railway.app/add-car-user',{
 
                             <div className="form-control mt-6 w-2/3 mx-auto">
 
-                                <input type="submit" value="Submit" className="btn  w-60 mx-auto bg-red-600 text-white" />
+                                {/* <input type="submit" value="Submit" className="btn  w-60 mx-auto bg-red-600 text-white" /> */}
+                                <Button
+                                    type="submit" 
+                                    button={'Submit'}
+                                />
                             </div>
                         </form>
 
                         <div className="modal-action">
                             <form method="dialog">
                                 {/* if there is a button in form, it will close the modal */}
-                                <button className="btn text-white bg-red-600">X</button>
+                                {/* <button className="btn text-white bg-red-600">X</button> */}
+                                <Button
+                                    button={'x'}
+                                />
                             </form>
                         </div>
                     </div>

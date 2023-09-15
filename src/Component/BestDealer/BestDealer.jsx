@@ -22,7 +22,7 @@ const BestDealer = () => {
                     }
                 </div>
                 <div className='mt-6 text-center'>
-                    <Link>
+                    <Link to='/our-dealer'>
                         <Button button={'Show All Dealers'} />
                     </Link>
                 </div>
