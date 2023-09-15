@@ -36,6 +36,7 @@ import WhatWeOfferDetails from "../Pages/Services/WhatWeOffer/WhatWeOfferDetails
 import UserAddCars from "../Component/SubmitVehicle/UserAddCars";
 import DiscoverMoreRoute from "../Component/DiscoverMoreRoute/DiscoverMoreRoute";
 import PaymentSuccess from "../Component/checkOut/Payment/PaymentSuccess";
+import CarCatagoryDetails from "../Component/CarCategory/CarCatagoryDetails";
 // import VrDrives from "../Component/VrDrives/VrDrives";
 
 const router = createBrowserRouter([
@@ -84,6 +85,10 @@ const router = createBrowserRouter([
             {
                 path: 'WhatWeOffer/:id',
                 element: <WhatWeOfferDetails></WhatWeOfferDetails>
+            },
+            {
+                path: 'carbodyType/:id',
+                element: <CarCatagoryDetails></CarCatagoryDetails>
             },
             {
                 path: 'services/:id',
