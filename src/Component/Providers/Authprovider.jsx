@@ -2,6 +2,7 @@
 import { createContext, useEffect, useState } from "react";
 import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import app from "../firebase/firebase.config";
+import axios from "axios";
 
 
 
@@ -72,17 +73,6 @@ const Authprovider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser)
-            // console.log(currentUser)
-            // if (currentUser) {
-            //     axios.post('https://asetta-autos-production.up.railway.app/jwt', { email: currentUser.email })
-            //         .then(data => {
-            //             console.log(data.data.token)
-            //             localStorage.setItem('access-token', data.data.token)
-            //         })
-            // }
-            // else {
-            //     localStorage.removeItem('access-token')
-            // }
             setLoading(false)
         });
         return () => {
