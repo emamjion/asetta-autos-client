@@ -12,14 +12,11 @@ const CarCatagoryDetails = () => {
             .then(data => setData(data))
     }, [])
     return (
-        <div className="card lg:card-side bg-base-100 shadow-xl">
-            <figure><img src={data.img4} alt="Album" /></figure>
+        <div className="card lg:card-side bg-base-100 shadow-xl px-4 xl:px-[140px] 2xl:px-[240px] my-10">
+            <img className='w-full hover:scale-110 duration-500' src={data.img4} alt="Album" />
             <div className="card-body">
-                <h2 className="card-title">{data.name}</h2>
-                <p>{data.description}</p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Listen</button>
-                </div>
+                <h2 className="card-title text-3xl md:text-5xl uppercase mb-3">{data.name}</h2>
+                <p className='text-sm tracking-wider text-justify'>{data.description}</p>
             </div>
         </div>
     );
