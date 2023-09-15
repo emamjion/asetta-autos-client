@@ -17,8 +17,11 @@ const Comment = ({ comment }) => {
             <div className='w-11/12'>
                 <h1 className='font-bold text-sm md:text-xl'>{comment?.name}</h1>
                 <p className='text-red-600 font-bold mt-3 flex items-center gap-1'><FaClock></FaClock>{comment.date}</p>
-                <p className='mt-3 text-justify'>{comment?.comment}</p>
-                <hr className='my-2 border border-gray-500'/>
+                <p className='mt-3 text-justify text-sm lg:text-lg'>{comment?.comment}</p>
+                <hr  className='my-1' />
+                <div>
+                    <p className='font-bold cursor-pointer inline-block text-sm lg:text-lg text-gray-700'>01  <span className='text-gray-500 ms-1'>like</span></p>
+                </div>
             </div>
         </div>
     );
