@@ -1,10 +1,11 @@
 
-import React from 'react';
+import React, { useRef } from 'react';
 import { BsFillFuelPumpFill } from 'react-icons/bs';
 import { FaCar, FaMapMarkerAlt, FaRoad } from 'react-icons/fa';
 import { PiEngineFill } from 'react-icons/pi';
 
 const ContactWithDealer = ({info}) => {
+    const formRef = useRef(null);
 
     const { _id, image, price, mileage, average_rating, reviews, engine, displacement, model, make, fuel_type, color } = info;
 
@@ -29,6 +30,7 @@ const ContactWithDealer = ({info}) => {
             model:{model}
         }
         console.log(personinfo);
+        formRef.current.reset();
 
         // fetch('http://localhost:5000/add-car-user', {
         //     method: 'POST',
@@ -63,7 +65,7 @@ const ContactWithDealer = ({info}) => {
                     </div>
                 </div>
             </div>
-            <form onSubmit={handleBookContact}>
+            <form onSubmit={handleBookContact} ref={formRef}>
                 <h1 className='text-xl font-bold mt-10'>PERSONAL INFORMATION</h1>
                 <div className="grid grid-cols-1 gap-6  mx-auto mt-4">
                     <div className="form-control">

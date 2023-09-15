@@ -1,10 +1,98 @@
 [
     {
-        "_id": "1",
-        "name": "Jennifer Smith",
-        "description": "sedan",
+        "name": "sedan",
+        "description": "Sedans are a classic and widely recognized car body style. They are characterized by their four-door configuration, offering easy access to both the front and rear passenger areas. Sedans are known for their versatility and come in various sizes to cater to different needs.Compact sedans like the Honda Civic are popular choices for urban dwellers due to their maneuverability and fuel efficiency. Mid-size sedans such as the Toyota Camry strike a balance between interior space and fuel economy, making them ideal for families. Full-size luxury sedans like the Mercedes-Benz S-Class provide top-tier comfort and advanced technology.Sedans typically feature a separate trunk compartment for luggage, ensuring ample cargo space while maintaining a sleek and formal appearance. Many sedans offer a smooth and comfortable ride, making them suitable for long-distance travel.",
         "img1":"https://i.ibb.co/x5mMKdb/type-1.png", 
-        "img2":"https://i.ibb.co/x5mMKdb/type-1.png", 
-        "img3":"https://i.ibb.co/x5mMKdb/type-1.png" 
+        "img2":"https://i.ibb.co/27158W1/saden1.png", 
+        "img3":"https://i.ibb.co/3c42yFx/saden3.png",
+        "img4":"https://i.ibb.co/x5mMKdb/type-1.png"  
+    },
+    {
+        "name": "compact",
+        "description": "Hatchbacks are known for their practicality and efficient use of space. What sets them apart is the rear door that opens upward, providing easy access to the cargo area. This design feature makes hatchbacks incredibly versatile.Compact hatchbacks like the Volkswagen Golf are perfect for city driving, offering a nimble and efficient option for daily commutes. Larger hatchbacks like the Subaru Outback provide more cargo space and flexibility for outdoor enthusiasts and families.Hatchbacks often feature fold-down rear seats, allowing you to expand the cargo area as needed. This flexibility makes them a great choice for carrying groceries, sports equipment, or larger items when the rear seats are folded down.",
+        "img1":"https://i.ibb.co/L9Ct8wW/compact1.png", 
+        "img2":"https://i.ibb.co/4VMX6Pb/compact2.png", 
+        "img3":"https://i.ibb.co/jLtW3K5/compact3.png" ,
+        "img4":"https://i.ibb.co/rMqMCJc/type-2.png" 
+    },
+    {
+        "name": "convertible",
+        "description": "Convertibles, also known as cabriolets, are designed for open-air driving enjoyment. What sets them apart is their retractable roof, which can be lowered to allow passengers to experience the wind in their hair and the sun on their skin.Convertibles come in various sizes and styles. Compact convertibles like the Fiat 500C are great for city driving and can be an affordable way to enjoy open-air motoring. Luxury convertibles like the Mercedes-Benz E-Class Cabriolet offer high-end features and a premium driving experience.The retractable roof mechanisms vary, with some convertibles featuring soft tops that fold down behind the rear seats, while others have hardtops that provide better insulation and security when raised. Convertibles are often associated with leisurely drives along scenic routes and coastal highways, providing a sense of freedom and connection to the environment.",
+        "img1":"https://i.ibb.co/Vw3ygN8/convertible1.png", 
+        "img2":"https://i.ibb.co/4J2YxhK/convertible2.png", 
+        "img3":"https://i.ibb.co/5XZWpVY/convertible3.png", 
+        "img4":"https://i.ibb.co/FY4ynbb/type-3.png" 
+    },
+    {
+        "name": "suv",
+        "description": "SUVs are a diverse category of vehicles known for their versatility and ruggedness. They are designed to handle a wide range of activities, from family transportation to off-road adventures. SUVs often feature higher ground clearance, which improves their ability to navigate challenging terrain.Compact SUVs like the Honda CR-V offer excellent fuel efficiency and are well-suited for urban environments. Mid-size SUVs like the Toyota Highlander provide ample space for both passengers and cargo, making them ideal for family road trips. Full-size SUVs such as the Chevrolet Suburban offer generous interior space, making them a favorite for large families and those who need to tow trailers or boats.Many SUVs are available with optional four-wheel drive systems, enhancing their off-road capabilities. This feature is especially appealing to outdoor enthusiasts who enjoy exploring rugged trails and remote destinations.",
+        "img1":"https://i.ibb.co/XFPCwT3/SUV1.png", 
+        "img2":"https://i.ibb.co/B2kdTnC/SUV2.png", 
+        "img3":"https://i.ibb.co/LS7g9xs/SUV3.png", 
+        "img4":"https://i.ibb.co/8snH7TB/type-4.png" 
+    },
+    {
+        "name": "crossover",
+        "description": "Crossovers are a popular hybrid between traditional SUVs and sedans. They typically feature unibody construction, similar to sedans, which results in a smoother ride and improved fuel efficiency. However, crossovers offer more interior space and a higher driving position similar to SUVs. Compact crossovers like the Nissan Rogue are excellent choices for urban commuters who want a comfortable and spacious vehicle with a car-like driving experience. Mid-size crossovers like the Ford Edge provide roomy interiors for families while maintaining good fuel economy. Some luxury crossovers like the BMW X5 offer premium features and a luxurious driving experience.Crossovers are prized for their versatility and adaptability. They often come with available all-wheel drive options, making them suitable for a variety of weather conditions. This combination of features has contributed to their popularity in recent years.",
+        "img1":"https://i.ibb.co/LtHGcBk/Crossover1.png", 
+        "img2":"https://i.ibb.co/Dfq0my8/Crossover2.png", 
+        "img3":"https://i.ibb.co/QnVK5H2/Crossover3.png", 
+        "img4":"https://i.ibb.co/jvpPWQM/type-5.png"
+    },
+    {
+        "name": "wagon",
+        "description": "Wagons are a practical car body style known for their extended rooflines and integrated cargo areas. They offer more cargo space compared to sedans and often provide a versatile solution for those who need to transport larger items.Compact wagons like the Subaru Impreza offer the efficiency and maneuverability of a smaller car while providing extra cargo capacity. Mid-size wagons like the Volvo V60 are popular choices for families, offering a balance between interior space and a car-like driving experience. Wagons often have a rear hatch or tailgate that opens to reveal a spacious cargo area. Some models feature rear seats that can be folded flat to expand the cargo space even further, making them excellent choices for those who frequently need to transport sports equipment, luggage, or other bulky items.",
+        "img1":"https://i.ibb.co/FDGGr1P/Wagon1.png", 
+        "img2":"https://i.ibb.co/cgTd5jv/Wagon2.png", 
+        "img3":"https://i.ibb.co/jTSb8rf/Wagon3.png", 
+        "img4":"https://i.ibb.co/9bjwzqt/type-6.png" 
+    },
+    {
+        "name": "sports",
+        "description": "Sports cars are a thrilling and dynamic category of automobiles, designed to deliver exceptional performance, agile handling, and an exhilarating driving experience. These cars prioritize speed, precision, and style, making them the embodiment of automotive enthusiasm.One of the defining characteristics of a sports car is its high-performance engine. These engines are often finely tuned to produce substantial horsepower and torque, resulting in rapid acceleration and impressive top speeds. Sports cars are built with the objective of providing drivers with the sensation of power at their fingertips.When it comes to handling, sports cars excel. They feature specialized suspension systems, low centers of gravity, and precise steering to provide sharp and responsive control. This allows drivers to navigate corners with remarkable agility, making every twist and turn an exhilarating experience. Rear-wheel drive is a common configuration for sports cars, as it enhances the car's balance and driving dynamics.",
+        "img1":"https://i.ibb.co/BVkWw1Q/Sports1.png", 
+        "img2":"https://i.ibb.co/zm3SDbK/Sports2.png", 
+        "img3":"https://i.ibb.co/jWk6M49/Sports3.png", 
+        "img4":"https://i.ibb.co/bRhH2DJ/type-7.png" 
+    },
+    {
+        "name": "pickup",
+        "description": "Pickup trucks are renowned for their versatility and capability. They are characterized by an open cargo bed at the rear, which can be configured for various purposes, such as carrying cargo, towing trailers, or accommodating specialized equipment.Compact pickup trucks like the Toyota Tacoma are well-suited for individuals who need a versatile vehicle for both work and play. Full-size pickup trucks like the Ford F-150 are popular choices for contractors, ranchers, and outdoor enthusiasts due to their towing and payload capabilities.Pickup trucks often come with a choice of cab styles, including regular cab, extended cab, and crew cab, allowing buyers to select the seating configuration that best suits their needs. Many modern pickup trucks offer advanced technology features and luxurious interiors, blurring the line between work and leisure vehicles.",
+        "img1":"https://i.ibb.co/5sW0VsS/Pickup1.png", 
+        "img2":"https://i.ibb.co/bX6bC4V/Pickup2.png", 
+        "img3":"https://i.ibb.co/2jstnTt/Pickup3.png", 
+        "img4":"https://i.ibb.co/GtJJM8s/type-8.png" 
+    },
+    {
+        "name": "Family MPV",
+        "description": "Family MPVs, or Multi-Purpose Vehicles, are highly sought-after for their spacious and adaptable interiors, making them a popular choice for families and those with varying transportation needs. These vehicles prioritize passenger comfort, practicality, and safety in a family-friendly package.One of the defining features of family MPVs is their spacious interior. Typically designed with three rows of seating, they can comfortably accommodate seven to eight passengers. This generous seating capacity is ideal for larger families or when transporting groups of people. Additionally, the rear seats are often designed to be easily folded down or removed, allowing families to configure the interior to suit their specific requirements, whether it's for extra cargo space or additional seating.Comfort and convenience are paramount in family MPVs. They boast comfortable seating arrangements, ample legroom, and often come equipped with climate control systems to cater to different passenger preferences. To keep everyone entertained during journeys, many models incorporate advanced infotainment systems, entertainment options, and connectivity features.",
+        "img1":"https://i.ibb.co/RpNG6gr/Family-MPV1.png", 
+        "img2":"https://i.ibb.co/t3yY2M9/Family-MPV2.png", 
+        "img3":"https://i.ibb.co/NYdbyF0/Family-MPV3.png",
+        "img4":"https://i.ibb.co/RpNG6gr/Family-MPV1.png"
+    },
+    {
+        "name": "coupe",
+        "description": "Coupes are a sporty and stylish car body style characterized by their two-door configuration and often low-slung rooflines. They are designed for drivers who prioritize performance and aesthetics.Sports coupes like the Ford Mustang and Chevrolet Camaro are known for their powerful engines, sharp handling, and aggressive styling. They are favored by enthusiasts who appreciate the thrill of high-speed driving and sharp cornering.Coupe designs vary widely, ranging from compact two-seaters like the Mazda MX-5 Miata to larger models with rear seats like the BMW 4 Series. While coupes often sacrifice rear-seat space for their sleek profiles, they offer an engaging driving experience that many find irresistible.",
+        "img1":"https://i.ibb.co/k69MWWN/Coupe1.png", 
+        "img2":"https://i.ibb.co/vvrg0Sy/Coupe2.png", 
+        "img3":"https://i.ibb.co/MDtmVzs/Coupe3.png", 
+        "img4":"https://i.ibb.co/mFDG5y8/type-10.png" 
+    },
+    {
+        "name": "Electric",
+        "description": "Electric cars, often referred to as EVs (Electric Vehicles), represent a significant advancement in the automotive industry, offering an environmentally friendly and technologically innovative alternative to traditional internal combustion engine (ICE) vehicles. These vehicles are powered by electric motors and rely on rechargeable batteries, which store and provide energy for propulsion. Electric cars have gained widespread attention due to their potential to reduce greenhouse gas emissions, lower operating costs, and transform the way we think about transportation.One of the key features of electric cars is their propulsion system, which consists of one or more electric motors powered by high-capacity batteries. These batteries store electricity, typically in the form of lithium-ion cells, which is then converted into motion by the electric motor. Unlike ICE vehicles, electric cars produce zero tailpipe emissions, making them an eco-friendly choice for environmentally conscious consumers.Charging infrastructure plays a vital role in the adoption of electric cars. Owners can charge their vehicles using various methods, including home charging stations, public charging networks, and fast-charging stations.",
+        "img1":"https://i.ibb.co/MnhwbKD/Electric1.png", 
+        "img2":"https://i.ibb.co/R09LxSR/Electric2.png", 
+        "img3":"https://i.ibb.co/HPx3VFM/Electric3.png", 
+        "img4":"https://i.ibb.co/VCS4Wj8/type-11.png" 
+    },
+    {
+        "name": "Luxury",
+        "description": "Luxury family MPVs represent the pinnacle of comfort, convenience, and sophistication in the realm of family transportation. These vehicles seamlessly blend the practicality of traditional MPVs with opulent features and high-end materials to create a truly exceptional driving experience for discerning families.In terms of design, luxury family MPVs exude elegance. Their exterior aesthetics showcase sleek lines, premium finishes, and meticulous attention to detail. These vehicles are often adorned with upscale features, such as polished chrome accents and a selection of exclusive paint finishes, ensuring they make a striking statement on the road.Step inside, and you'll find interiors that redefine luxury. Sumptuous materials, such as supple leather upholstery and rich wood or metal trim, adorn the cabin. Seating is designed for maximum comfort and often includes features like heating, ventilation, and power adjustments. Every element, from the premium carpeting to the meticulously crafted dashboard, exudes quality and sophistication.",
+        "img1":"https://i.ibb.co/4FLKXdc/Luxury1.png", 
+        "img2":"https://i.ibb.co/CmVdSRV/Luxury2.png", 
+        "img3":"https://i.ibb.co/dP75JxD/Luxury3.png", 
+        "img4":"https://i.ibb.co/5RdrrJc/type-12.png" 
     }
 ]
