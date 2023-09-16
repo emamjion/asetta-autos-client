@@ -7,6 +7,7 @@ import { GiSteeringWheel } from "react-icons/gi";
 import { IoIosColorPalette } from "react-icons/io";
 import { BsFuelPump } from "react-icons/bs";
 import Button from "../Button/Button";
+import RouteBanner from "../Shared/RouteBanner/RouteBanner";
 
 const DealerDetails = () => {
     const {id}= useParams();
@@ -24,8 +25,14 @@ const DealerDetails = () => {
       .then(data => setCarPics(data.slice(0,6)))
     }, [])
     return (
-        <div className="min-h-screen px-4 xl:px-[140px] 2xl:px-[240px] py-24">
-          <div className="md:flex justify-between gap-6">
+        <>
+          <RouteBanner
+            SectionTitle={dealers.dealerName}
+            smallTitle={'Dealer Details'}
+          />
+          <div className="min-h-screen px-4 xl:px-[140px] 2xl:px-[240px]">
+          
+          <div className="md:flex justify-between gap-6 my-24">
             <div className="md:flex gap-6 md:w-[75%]">
               <img
                 src={dealers?.image}
@@ -169,7 +176,7 @@ const DealerDetails = () => {
           </div>
 
           {/* Leave a comment */}
-          <div>
+          <div className="mb-12">
             <h1 className="mt-16 mb-3 font-medium text-xl">Leave a Comment</h1>
             <form>
               <div>
@@ -201,7 +208,8 @@ const DealerDetails = () => {
               </div>
             </form>
           </div>
-        </div>
+          </div>
+        </>
     );
 };
 
