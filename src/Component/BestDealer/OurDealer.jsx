@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import BestDealer from './BestDealer';
 import BestDealerCard from './BestDealerCard';
 import { FaStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const OurDealer = () => {
     const [dealers, setDealers] = useState([]);
@@ -20,22 +21,9 @@ const OurDealer = () => {
                 A dealer is a person or entity that engages in buying and selling goods  or assets for profit. <br /> Dealers can be found in various industries  and contexts, and their <br /> specific roles and responsibilities can vary widely.
                 </p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12'>
                 {
-                    dealers.map(dealer => <div className="card w-full bg-base-100 border shadow-xl">
-                    <figure><img src={dealer.image} /></figure>
-                    <div className="card-body">
-                        <h2 className="card-title">
-                            {dealer.dealerName}
-                            <div className="badge bg-[#ef1721] text-white p-3">{dealer.specialty}</div>
-                        </h2>
-                        <p className='my-2'>{dealer.description}</p>
-                        <div className="card-actions justify-end">
-                            <div className="badge badge-outline"><span className='mr-1 text-[#ef1721]'>< FaStar /></span>{dealer.rating}</div> 
-                            {/* <div className="badge badge-outline">Products</div> */}
-                        </div>
-                    </div>
-                </div>)
+                        dealers.map(dealer => <BestDealerCard key={dealer._id} Dealer={dealer} />)
                 }
             </div>
 
@@ -44,3 +32,4 @@ const OurDealer = () => {
 };
 
 export default OurDealer;
+
