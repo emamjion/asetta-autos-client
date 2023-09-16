@@ -4,6 +4,8 @@ import { FaMailBulk, FaMap, FaPhone, FaRegMap, FaWhatsapp } from 'react-icons/fa
 import RouteBanner from '../Shared/RouteBanner/RouteBanner';
 import { AuthContex } from '../Providers/Authprovider';
 import { useContext } from 'react';
+import Button from '../Button/Button';
+import Button2 from '../Button/Button2';
 
 // import emailjs from '@emailjs/browser';
 
@@ -88,8 +90,10 @@ const ContactRoute = () => {
               <input className='p-6 rounded' type="text" name="user_name" placeholder="Your Name" />
               <input className='p-6 rounded' type="Email" name="user_email" placeholder="Your Email Address" />
               <textarea className='p-6' placeholder="Your Message" name="message" rows={10}></textarea>
-
-              <input className="btn bg-red-500 border-none text-white p-4 w-32 mx-auto text-center hover:text-black duration-700" type="submit" value="Send" />
+              <Button2
+                button2={'Send'}
+                type="submit"
+              />
             </form>
             <div className="flex flex-col gap-7 mt-16">
 
