@@ -13,7 +13,6 @@ const DealerDetails = () => {
     const {id}= useParams();
     const [dealers, setDealers] = useState([]);
     const [carPics, setCarPics] = useState([]);
-    console.log(dealers);
     useEffect(() => {
         fetch(`http://localhost:5000/best-dealers/${id}`)
             .then(res => res.json())

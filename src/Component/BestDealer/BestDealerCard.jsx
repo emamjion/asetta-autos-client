@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 const BestDealerCard = ({ Dealer }) => {
     const {_id, dealerName, image, location,rating, phone,listing, specialty } = Dealer;
-    console.log(Dealer);
     return (
         <Link to={`/dealer-details/${_id}`}>
             
