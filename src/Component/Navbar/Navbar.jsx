@@ -28,7 +28,7 @@ const Navbar = () => {
       fetch('https://asetta-autos-production.up.railway.app/cards')
       .then(res => res.json())
       .then(data => setCards(data))
-  }, [cards])
+  }, [])
 
   const myCards = cards.filter(card=>card?.email === user?.email)
 
@@ -242,7 +242,7 @@ const Navbar = () => {
           <Link to='/dashboard/user-cards'><span className=" hover:text-[#ef1721] cursor-pointer duration-500">
             {" "}
             <div className="indicator">
-            <span className="indicator-item badge badge-secondary">{myCards?.length}</span> 
+            {user && <span className="indicator-item badge badge-secondary">{myCards?.length}</span> }
             <FaCartPlus className="text-3xl"/>
           </div>
           </span> </Link>
