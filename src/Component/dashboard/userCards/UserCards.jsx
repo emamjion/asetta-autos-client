@@ -20,8 +20,6 @@ const UserCards = () => {
         .then(data => setCards(data))
     }, [cards])
 
-    
-
     // const myCards = cards.filter(card=>card?.email === user?.email)
     // console.log(myCards);
 
