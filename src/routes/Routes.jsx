@@ -68,7 +68,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'arrivals-details/:id',
-                element: <CardDetails></CardDetails>
+                element: <PrivateRoute><CardDetails></CardDetails></PrivateRoute>
             },
             {
                 path: 'dealer-details/:id',
@@ -150,6 +150,7 @@ const router = createBrowserRouter([
     {
         path: 'dashboard',
         element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        errorElement : <NotFoundPage></NotFoundPage>,
         children: [
             {
                 path: '/dashboard',
