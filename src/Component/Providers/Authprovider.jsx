@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import app from "../firebase/firebase.config";
 import axios from "axios";
-import jwt_decode from 'jwt-decode';
+// import jwt_decode from 'jwt-decode';
 
 
 
