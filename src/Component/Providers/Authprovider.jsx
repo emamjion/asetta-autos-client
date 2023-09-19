@@ -79,9 +79,10 @@ const Authprovider = ({ children }) => {
                  .then(data=>{
                      localStorage.setItem('car-access-token', data.data.token)
                  })
-            }else{
-                localStorage.removeItem('car-access-token')
             }
+            
+            localStorage.removeItem('car-access-token')
+            
             setLoading(false)
         });
         return () => {
