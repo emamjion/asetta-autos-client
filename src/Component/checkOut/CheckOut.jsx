@@ -88,8 +88,8 @@ const CheckOut = () => {
 <div className='flex justify-between mb-8'>  <h1 className='t mb-2 font-semibold'>Subtotal:  </h1> <h1> ${subTotal}</h1>
 </div>
     
-          <hr />
-          <div className='flex justify-between'>  <h1 className='text-xl mb-2 font-semibold'>Total:   </h1> <h1>${subTotal}</h1>
+          <hr/>
+          <div className='flex justify-between mt-2'>  <h1 className='text-xl mb-2 font-semibold'>Total:   </h1> <h1>${subTotal}</h1>
 </div>
           <h1>{cards._id}</h1>
           <div className='text-center'>
@@ -137,7 +137,7 @@ const CheckOut = () => {
        
           </div>
         <div className='flex justify-between mt-8'>
-        <button className="button  mx-auto" onClick={handlePreviousStep}>Pre</button>
+        <button className="button  mx-auto" onClick={handlePreviousStep}> Pre </button>
             <div className=" button   mx-auto">
             <input type="submit" value="Pay"  />
             </div>
