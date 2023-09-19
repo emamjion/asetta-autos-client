@@ -47,7 +47,7 @@ const CheckOut = () => {
       orderId: id, // Set the orderId using the id from useParams
     };
 
-    fetch('https://asetta-autos-production.up.railway.app/getmoney', {
+    fetch('http://localhost:5000/getmoney', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -57,7 +57,7 @@ const CheckOut = () => {
       .then((res) => res.json())
       .then((data) => {
         window.location.replace(data.url)
-        console.log(data);
+        console.log(data.url);
         formRef.current.reset();
         setOrderId(data.orderId); // Store the orderId in state
       });
