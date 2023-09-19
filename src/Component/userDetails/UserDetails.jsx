@@ -2,15 +2,11 @@ import { useContext } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { AuthContex } from "../Providers/Authprovider";
+import useAllUser from "../../hooks/useAllUser";
 
 const UserDetails = () => {
-    const [users, setUsers] = useState([]);
     const {user} = useContext(AuthContex)
-    useEffect(() => {
-        fetch('https://asetta-autos-production.up.railway.app/users')
-        .then(res => res.json())
-        .then(data => setUsers(data))
-    }, [])
+    const [users] = useAllUser()
 
     const currentUser = users.find(fUser=>fUser?.email === user?.email)
     console.log(currentUser);

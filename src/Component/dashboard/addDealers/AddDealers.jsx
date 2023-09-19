@@ -1,14 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAllUser from './../../../hooks/useAllUser';
 
 const AddDealers = () => {
-    const [users, setUsers] = useState([]);
-    useEffect(() => {
-        fetch('https://asetta-autos-production.up.railway.app/users')
-        .then(res => res.json())
-        .then(data => setUsers(data))
-    }, [users])
+    const [users] = useAllUser()
 
     const dealersPending = users.filter(pending=>pending?.dealer_request === 'pending')
 
