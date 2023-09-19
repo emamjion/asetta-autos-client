@@ -1,11 +1,14 @@
 import { handler } from "daisyui";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import useCards from "../../../hooks/useCards";
 
 const ShowCardsData = ({card}) => {
     const {_id , image, make, model, price, color, items, category} = card || null
 
     let subTotal = price * items
+
+    const [, refetch] = useCards()
 
     const handleRemove =(id)=>{
         console.log("remove", id);
@@ -30,17 +33,20 @@ const ShowCardsData = ({card}) => {
             })
             .then(data => {
               console.log('Response data:', data);
+              if(data.deletedCount > 0){
+                refetch()
+                Swal.fire({
+                  position: 'top-end',
+                  icon: 'success',
+                  title: 'Successfully removed!',
+                  showConfirmButton: false,
+                  timer: 1500
+                })
+              }
             })
             .catch(error => {
               console.error('error', error);
             });
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Successfully removed!',
-                showConfirmButton: false,
-                timer: 1500
-              })
             }
           })
           }

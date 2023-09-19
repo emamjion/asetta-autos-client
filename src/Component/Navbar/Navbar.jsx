@@ -24,7 +24,8 @@ const Navbar = () => {
 
   const [show, setShow] = useState(false);
 
-  const [cards] = useCards()
+
+    // const [cards] = useCards()
 
 
   const handleLogOut = () => {
@@ -237,7 +238,7 @@ const Navbar = () => {
           <Link to='/dashboard/user-cards'><span className=" hover:text-[#ef1721] cursor-pointer duration-500">
             {" "}
             <div className="indicator">
-            {user && <span className="indicator-item badge badge-secondary">{cards?.length}</span> }
+            {/* {user && <span className="indicator-item badge badge-secondary">{cards?.length || 0}</span> } */}
             <FaCartPlus className="text-3xl"/>
           </div>
           </span> </Link>

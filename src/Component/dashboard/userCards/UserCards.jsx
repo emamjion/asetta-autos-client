@@ -7,7 +7,7 @@ import useCards from "../../../hooks/useCards";
 const UserCards = () => {
     const {user} = useContext(AuthContex)
 
-    const [cards] = useCards()
+    const [cards, refetch] = useCards()
 
     const [totalPrice, setTotalPrice] = useState(0);
 
@@ -16,7 +16,7 @@ const UserCards = () => {
             return accumulator + (parseFloat(product?.price)* parseFloat(product?.items));
           }, 0);
           setTotalPrice(total);
-        },[cards , totalPrice])
+        },[cards])
 
 
     return (
