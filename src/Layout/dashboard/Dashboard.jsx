@@ -25,6 +25,7 @@ import RouteBanner from "../../Component/Shared/RouteBanner/RouteBanner";
 import { FaCartShopping } from "react-icons/fa6";
 import { MdReviews } from "react-icons/md";
 import { BiSolidUserPlus } from "react-icons/bi";
+import useAllUser from "../../hooks/useAllUser";
 const Dashboard = () => {
   //  dark mode control with local storage --
   const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light');
@@ -45,12 +46,7 @@ const Dashboard = () => {
   const { user, logOut } = useContext(AuthContex);
 
 
-  const [users, setUsers] = useState([]);
-  useEffect(() => {
-    fetch('https://asetta-autos-production.up.railway.app/users')
-      .then(res => res.json())
-      .then(data => setUsers(data))
-  }, [])
+  const [users] = useAllUser()
 
   // find current users
 

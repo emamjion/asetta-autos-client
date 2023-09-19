@@ -1,16 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContex } from "../../Providers/Authprovider";
 import Button from './../../Button/Button';
+import useAllUser from "../../../hooks/useAllUser";
 
 const DealerRequestDetails = () => {
     const {user} = useContext(AuthContex)
-    const [users, setUsers] = useState([]);
-    useEffect(() => {
-        fetch('https://asetta-autos-production.up.railway.app/users')
-        .then(res => res.json())
-        .then(data => setUsers(data))
-    }, [])
-    console.log(users);
+    const [users] = useAllUser()
     return (
         <div>
             <h2 className="uppercase text-center text-xl md:text-4xl font-bold ">Dealer Request Details</h2>
