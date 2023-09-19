@@ -71,7 +71,7 @@ const Home = () => {
 			<MobileApp></MobileApp>
 
 			{/* Submit your vehicle section - Emam */}
-			<SubmitVehicle/>
+			{/* <SubmitVehicle/> */}
 		</div>
 	);
 };

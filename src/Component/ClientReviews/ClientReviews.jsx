@@ -30,7 +30,7 @@ const ClientReviews = () => {
                         clickable: true,
                     }}
                     modules={[Pagination]}
-                    className="mySwiper py-10"
+                    className="mySwiper"
                 >
                     {
                     releaseCar.map(car => <SwiperSlide
