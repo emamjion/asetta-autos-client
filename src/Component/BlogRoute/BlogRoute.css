@@ -1,0 +1,13 @@
+/* Center pagination horizontally */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px; /* Add margin as needed */
+  }
+  
+  .pagination-buttons {
+    display: flex;
+    align-items: center;
+  }
+  

@@ -7,22 +7,22 @@ const UserCards = () => {
     const {user} = useContext(AuthContex)
     const [cards, setCards] = useState([]);
     
+    const token = localStorage.getItem('car-access-token')
+
     useEffect(() => {
-        fetch('https://asetta-autos-production.up.railway.app/cards')
+        fetch(`http://localhost:5000/cards`)
         .then(res => res.json())
         .then(data => setCards(data))
     }, [cards])
 
-    
-
     const myCards = cards.filter(card=>card?.email === user?.email)
-    // console.log(myCards);
+    console.log(myCards);
 
 
     const [totalPrice, setTotalPrice] = useState(0);
 
     useEffect(()=>{
-        const total = myCards.reduce((accumulator, product) => {
+        const total = cards.reduce((accumulator, product) => {
             return accumulator + (parseFloat(product?.price)* parseFloat(product?.items));
           }, 0);
           setTotalPrice(total);

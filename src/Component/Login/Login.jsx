@@ -50,8 +50,6 @@ const Login = () => {
           )
     }
 
-    
-
     return (
         <div className='grid md:grid-cols-2 items-center bg-slate-200 relative'>
             <div>

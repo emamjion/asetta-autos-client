@@ -2,16 +2,12 @@ import { Link, Outlet } from "react-router-dom";
 import RouteBanner from "../../Shared/RouteBanner/RouteBanner";
 import { useContext, useEffect, useState } from "react";
 import { AuthContex } from './../../Providers/Authprovider';
+import useAllUser from "../../../hooks/useAllUser";
 
 const DashBoardHome = () => {
   const { user } = useContext(AuthContex);
   // const currentUser = { 'name': 'Md Mohosin', 'role': 'admin' }
-  const [users, setUsers] = useState([]);
-  useEffect(() => {
-    fetch('https://asetta-autos-production.up.railway.app/users')
-      .then(res => res.json())
-      .then(data => setUsers(data))
-  }, [])
+  const [users] = useAllUser()
 
   // find current users
 
