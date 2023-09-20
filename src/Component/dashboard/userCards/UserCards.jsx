@@ -2,27 +2,12 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContex } from "../../Providers/Authprovider";
 import ShowCardsData from "./ShowCardsData";
 import { Link } from "react-router-dom";
+import useCards from "../../../hooks/useCards";
 
 const UserCards = () => {
     const {user} = useContext(AuthContex)
-    const [cards, setCards] = useState([]);
-    
-    const token = localStorage.getItem('car-access-token')
 
-    useEffect(() => {
-        fetch(`http://localhost:5000/cards/${user?.email}`,{  
-            method : 'GET',
-            headers: {
-              'Authorization': `Bearer ${token}`
-            }
-        })
-        .then(res => res.json())
-        .then(data => setCards(data))
-    }, [cards])
-
-    // const myCards = cards.filter(card=>card?.email === user?.email)
-    // console.log(myCards);
-
+    const [cards, refetch] = useCards()
 
     const [totalPrice, setTotalPrice] = useState(0);
 
@@ -31,7 +16,7 @@ const UserCards = () => {
             return accumulator + (parseFloat(product?.price)* parseFloat(product?.items));
           }, 0);
           setTotalPrice(total);
-        },[cards , totalPrice])
+        },[cards])
 
 
     return (

@@ -20,28 +20,28 @@ const PopularBrand = () => {
                 boldredTitle={"Brands"}
             />
             <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-12'>
-                <div className={`shadow-2xl flex items-center justify-center flex-col rounded-2xl p-4 bg ${theme} text ${theme} hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer`}>
-                    <img src={popular3} className='w-[120px] h-[120px] rounded-xl' />
+                <div className={`shadow-md border flex items-center justify-center flex-col p-4 bg ${theme} text ${theme} hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer`}>
+                    <img src={popular3} className='rounded-md' />
                     <h4 className='text-lg font-medium mt-4'>Honda</h4>
                 </div>
-                <div className={`shadow-2xl flex items-center justify-center flex-col rounded-2xl p-4 bg ${theme} text ${theme} hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer`}>
-                    <img src={popular5} className='w-[120px] h-[120px] rounded-xl' />
+                <div className={`shadow-md border flex items-center justify-center flex-col p-4 bg ${theme} text ${theme} hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer`}>
+                    <img src={popular5} className='rounded-md' />
                     <h4 className='text-lg font-medium mt-4'>Toyota</h4>
                 </div>
-                <div className={`shadow-2xl flex items-center justify-center flex-col rounded-2xl p-4 bg ${theme} text ${theme} hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer`}>
-                    <img src={popular6} className='w-[120px] h-[120px] rounded-xl' />
+                <div className={`shadow-md border flex items-center justify-center flex-col p-4 bg ${theme} text ${theme} hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer`}>
+                    <img src={popular6} className='rounded-md' />
                     <h4 className='text-lg font-medium mt-4'>Audi</h4>
                 </div>
-                <div className={`shadow-2xl flex items-center justify-center flex-col rounded-2xl p-4 bg ${theme} text ${theme} hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer`}>
-                    <img src={popular7} className='w-[120px] h-[120px] rounded-xl' />
+                <div className={`shadow-md border flex items-center justify-center flex-col p-4 bg ${theme} text ${theme} hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer`}>
+                    <img src={popular7} className=' rounded-md' />
                     <h4 className='text-lg font-medium mt-4'>BMW</h4>
                 </div>
-                <div className={`shadow-2xl flex items-center justify-center flex-col rounded-2xl p-4 bg ${theme} text ${theme} hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer`}>
-                    <img src={popular8} className='w-[120px] h-[120px] rounded-xl' />
+                <div className={`shadow-md border flex items-center justify-center flex-col  p-4 bg ${theme} text ${theme} hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer`}>
+                    <img src={popular8} className='rounded-md' />
                     <h4 className='text-lg font-medium mt-4'>Ferrari</h4>
                 </div>
-                <div className={`shadow-2xl flex items-center justify-center flex-col rounded-2xl p-4 bg ${theme} text ${theme} hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer`}>
-                    <img src={popular9} className='w-[120px] h-[120px] rounded-xl' />
+                <div className={`shadow-md border flex items-center justify-center flex-col p-4 bg ${theme} text ${theme} hover:text-[#ef1721] duration-500 hover:-translate-y-2 cursor-pointer`}>
+                    <img src={popular9} className=' rounded-md' />
                     <h4 className='text-lg font-medium mt-2'>Mercedes Benz</h4>
                 </div>
             </div>

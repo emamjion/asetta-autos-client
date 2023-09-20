@@ -1,64 +1,8 @@
-import { Outlet } from "react-router-dom";
-import React, { useContext, useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import {
-  FaEnvelope,
-  FaPhoneAlt,
-  FaClock,
-  FaArrowRight,
-  FaFacebookF,
-  FaBars,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-  FaSearch,
-  FaCartPlus,
-  FaWindowClose,
-  FaHome,
-  FaCarAlt,
-  FaPager,
-  FaUserPlus,
-} from "react-icons/fa";
-import logo from "../../assets/images/logo/logo.png";
-import { AuthContex } from "../../Component/Providers/Authprovider";
-import RouteBanner from "../../Component/Shared/RouteBanner/RouteBanner";
-import { FaCartShopping } from "react-icons/fa6";
-import { MdReviews } from "react-icons/md";
-import { BiSolidUserPlus } from "react-icons/bi";
-import useAllUser from "../../hooks/useAllUser";
+import React from 'react';
+
 const Dashboard = () => {
-  //  dark mode control with local storage --
-  const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light');
-  useEffect(() => {
-    localStorage.setItem('theme', theme);
-    const localTheme = localStorage.getItem('theme');
-    document.querySelector('html').setAttribute("data-theme", localTheme)
-  }, [theme]);
-  const handleDarkMode = (event) => {
-    if (event.target.checked) {
-      setTheme('dark')
-    }
-    else {
-      setTheme('light')
-    }
-  };
-
-  const { user, logOut } = useContext(AuthContex);
-
-
-  const [users] = useAllUser()
-
-  // find current users
-
-  const currentUser = users.find(data => data?.email === user?.email)
-
-
-  const handleLogOut = () => {
-    logOut().then();
-  };
-
-  return (
-    <div>
+    return (
+        <div>
       <nav>
         <div className="flex flex-wrap flex-col xl:flex-row gap-2 bg-[#111] text-white items-center justify-center md:justify-between px-4 xl:px-[140px] 2xl:px-[240px] py-4">
           <div className="hidden lg:flex items-center justify-center gap-6">
@@ -155,7 +99,7 @@ const Dashboard = () => {
         </div>
         {/* todo - mohosin */}
         <div className="relative">
-          <div className="flex lg:hidden justify-between items-center py-2 bg-[#2c3e50] px-4 xl:px-[140px] 2xl:px-[240px]">
+          <div className="flex lg:hidden justify-between items-center py-2 bg-slate-200 px-4 xl:px-[140px] 2xl:px-[240px]">
             <div className="flex items-center justify-center">
               <img src={logo} className="w-12 mr-2" />
               <h2 className="text-lg text-[#111] font-semibold -ml-4">
@@ -181,50 +125,51 @@ const Dashboard = () => {
             <div className="drawer-content my-10 mx-4">
               <Outlet></Outlet>
             </div>
-            <div className="drawer-side">
+            <div className="drawer-side ">
               <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-              <ul className="menu px-20 w-12/12 xl:px-[100px] min-h-full bg-[#f7f7f7] border-r shadow-md font-bold text-[#181818]">
+              {/* <ul className="menu px-20 w-12/12 xl:px-[100px]   min-h-full bg-slate-200 font-bold text-black">
                 <div className="mx-auto">
                   <img src={logo} className="w-40" />
-                  <h2 className="text-3xl text-center text-[#181818] font-semibold -mt-10 mb-12">
+                  <h2 className="text-3xl text-center text-[#111] font-semibold -mt-10">
                     Asetta Auto&apos;s
                   </h2>
                 </div>
-                
+                <hr className="border border-emerald-600 mt-4" />
+                <hr className="font-bold my-5 " />
                 {currentUser?.role === "user" && (
                   <>
                     <li>
-                      <Link className="hover:text-[#ef1721] duration-500">
-                        <span> < FaHome /> </span> Home <span className="border border-[#181818] w-14 text-center p-1 rounded">{currentUser?.role}</span>
+                      <Link className="hover:text-[#ef1721] duration-500 bg-gray-300">
+                        {currentUser?.role} Home
                       </Link>
                     </li>
                     <li>
                       <NavLink className="hover:text-[#ef1721] duration-500 my-2" to="/dashboard/user-cards">
-                        <span> < FaCartShopping /> </span> My Cart
+                        My Cards
                       </NavLink>
                     </li>
                     <li>
                       <NavLink className="hover:text-[#ef1721] duration-500 my-2" to="/dashboard/add-reviews">
-                        <span> < MdReviews /> </span>Add Reviews
+                        add Reviews
                       </NavLink>
                     </li>
                     <li>
                       <NavLink className="hover:text-[#ef1721] duration-500 my-2" to="/dashboard/dealer-request">
-                        <span> < BiSolidUserPlus /> </span>Dealer Request
+                        Dealer Request
                       </NavLink>
                     </li>
                   </>
                 )}
                 {currentUser?.role === "dealer" && (
                   <>
-                    <li>
-                    <Link className="hover:text-[#ef1721] duration-500">
-                    <span> < FaHome /> </span> Home <span className="border border-[#181818] w-14 text-center p-1 rounded">{currentUser?.role}</span>
+                          <li>
+                    <Link className="hover:text-[#ef1721] duration-500 bg-gray-300">
+                      {currentUser?.role} Home
                     </Link>
                   </li>
                     <li className="my-2">
                       <NavLink className="hover:text-[#ef1721] duration-500" to="/dashboard/add-cars">
-                        <span> < FaCarAlt /> </span>Add Your Cars
+                        Add Your Cars
                       </NavLink>
                     </li>
                   </>
@@ -232,23 +177,23 @@ const Dashboard = () => {
                 {currentUser?.role === "admin" && (
                   <>
                     <li>
-                    <Link className="hover:text-[#ef1721] duration-500">
-                    <span> < FaHome /> </span> Home <span className="border border-[#181818] w-14 text-center p-1 rounded">{currentUser?.role}</span>
-                    </Link>
-                </li>
+                   <Link className="hover:text-[#ef1721] duration-500 bg-gray-300">
+                     {currentUser?.role} Home
+                   </Link>
+                 </li>
                     <li>
                       <NavLink className="hover:text-[#ef1721] duration-500 my-2" to="/dashboard/add-dealers">
-                        <span> < FaUserPlus /> </span>Add a new Dealers
+                        Add a new Dealers
                       </NavLink>
                     </li>
                     <li>
                       <NavLink className="hover:text-[#ef1721] duration-500 my-2" to="/dashboard/add-blogs">
-                        <span> < FaPager /> </span>Add Your Blogs
+                        Add Your Blogs
                       </NavLink>
                     </li>
                   </>
                 )}
-                <hr className="my-5 border" />
+                <hr className="my-5 border border-emerald-600" />
                 <li className="my-2">
                   <NavLink className="hover:text-[#ef1721] duration-500" to="/">
                     Home
@@ -279,7 +224,7 @@ const Dashboard = () => {
                     Contact
                   </NavLink>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
@@ -288,7 +233,7 @@ const Dashboard = () => {
         
       </div>
     </div>
-  );
+    );
 };
 
 export default Dashboard;
