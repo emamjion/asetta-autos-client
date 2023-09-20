@@ -4,22 +4,26 @@ import Tittle from '../Shared/Tittle/Tittle';
 import BlogCardLatest from './BlogCardLatest';
 import Search from '../Search/Search';
 import './BlogRoute.css'
+import { useGetblogsQuery } from '../Redux/feature/api/baseapi';
+
+
 
 const BlogRoute = () => {
-  const [blogs, setBlogs] = useState([]);
+  // const [blogs, setBlogs] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [query, setQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4; // Number of blogs to display per page
+  const {data: blogs, isLoading} = useGetblogsQuery();
+ 
+  // useEffect(() => {
+  //   fetch('https://asetta-autos-production.up.railway.app/our-blogs/')
+  //     .then((res) => res.json())
+  //     .then((data) => setBlogs(data));
+  // }, []);
 
   useEffect(() => {
-    fetch('https://asetta-autos-production.up.railway.app/our-blogs/')
-      .then((res) => res.json())
-      .then((data) => setBlogs(data));
-  }, []);
-
-  useEffect(() => {
-    const filtered = blogs.filter((item) =>
+    const filtered = blogs?.filter((item) =>
       item.title.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredData(filtered);
@@ -35,9 +39,9 @@ const BlogRoute = () => {
   const endIndex = startIndex + itemsPerPage;
 
   // Slice the filtered data to display only the items for the current page.
-  const blogsToDisplay = filteredData.slice(startIndex, endIndex);
+  const blogsToDisplay = filteredData?.slice(startIndex, endIndex);
 
-  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+  const totalPages = Math.ceil(filteredData?.length / itemsPerPage);
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
@@ -53,7 +57,7 @@ const BlogRoute = () => {
         </div>
 
         <div className='grid sm:grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-14 mb-10'>
-          {blogsToDisplay.map((blog) => (
+          {blogsToDisplay?.map((blog) => (
             <BlogCardLatest key={blog._id} blogs={blog} pageNumber={currentPage}></BlogCardLatest>
           ))}
         </div>

@@ -19,7 +19,7 @@ const MeetOurTeamCard = ({ member }) => {
                         <span className='hover:text-[#ef1721] duration-500'> < FaLinkedin /> </span>
                     </div>
                 </div>
-                <div className={`text-center mt-5 text ${theme} `}>
+                <div className={`text-center mt-5 text ${theme}`}>
                     <h1 className='text-xl font-medium'>{name}</h1>
                     <p className={`mt-1 text-[#535353] text ${theme}`}>{position}</p>
                 </div>

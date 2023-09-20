@@ -103,3 +103,8 @@ ul li a.active {
     border: #ef1721;
 }
 
+.app[data-theme="dark"] {
+    background-color: black;
+    color: white;
+  }
+
