@@ -2,22 +2,25 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import { AuthContex } from '../Providers/Authprovider'; // Make sure to correct the import if needed
 import { useParams } from 'react-router-dom';
 import './Checkout.css';
+import useCards from '../../hooks/useCards';
 
 const CheckOut = () => {
   const formRef = useRef(null);
   const { id } = useParams();
   const { user } = useContext(AuthContex); // Make sure to correct the import if needed
 
-  const [cards, setCards] = useState([]);
+  // const [cards, setCards] = useState([]);
   const [subTotal, setSubTotal] = useState(0); // State variable to store the subTotal
   const [orderId, setOrderId] = useState(null); // State variable to store the order ID
   const [currentStep, setCurrentStep] = useState(1); // State variable to manage the current step
 
-  useEffect(() => {
-    fetch('https://asetta-autos-production.up.railway.app/cards')
-      .then((res) => res.json())
-      .then((data) => setCards(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch('https://asetta-autos-production.up.railway.app/cards')
+  //     .then((res) => res.json())
+  //     .then((data) => setCards(data));
+  // }, []);
+
+  const [cards] = useCards();
 
   useEffect(() => {
     const myCard = cards.find((card) => card?._id === id);
