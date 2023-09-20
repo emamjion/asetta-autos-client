@@ -38,6 +38,7 @@ import DiscoverMoreRoute from "../Component/DiscoverMoreRoute/DiscoverMoreRoute"
 import PaymentSuccess from "../Component/checkOut/Payment/PaymentSuccess";
 import CarCatagoryDetails from "../Component/CarCategory/CarCatagoryDetails";
 import OurDealer from "../Component/BestDealer/OurDealer";
+import DashboardLayout from "../Layout/dashboard/DashboardLayout";
 // import VrDrives from "../Component/VrDrives/VrDrives";
 
 const router = createBrowserRouter([
@@ -144,12 +145,12 @@ const router = createBrowserRouter([
                 path: 'payment/success/:tranId',
                 element: <PaymentSuccess></PaymentSuccess>
             }
-          
         ]
     },
     {
         path: 'dashboard',
-        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        // element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        element: <DashboardLayout/>,
         errorElement : <NotFoundPage></NotFoundPage>,
         children: [
             {
