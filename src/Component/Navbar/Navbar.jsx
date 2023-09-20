@@ -30,7 +30,7 @@ const Navbar = () => {
       .then(data => setCards(data))
   }, [])
 
-  const myCards = cards.filter(card=>card?.email === user?.email)
+  const myCards = cards?.filter(card=>card?.email === user?.email)
 
   const handleLogOut = () => {
     logOut().then();

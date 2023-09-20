@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import NewArrivals from "../NewArrivals/NewArrivals";
 import Banner from "../Banner/Banner";
 import AboutUs from "../AboutUs/AboutUs";
@@ -16,10 +16,12 @@ import LookingCar from "../LookingCar/LookingCar";
 import SubmitVehicle from "../SubmitVehicle/SubmitVehicle";
 import SpecialServices from "../SpecialServices/SpecialServices";
 import HomeWhatWeOffer from "../HomeWhatWeOffer/HomeWhatWeOffer";
+import { AuthContex } from "../Providers/Authprovider";
 
 const Home = () => {
+	const { theme } = useContext(AuthContex);
 	return (
-		<div>
+		<div className={`app ${theme}`}>
 			{/* add your component here  */}
 			{/* Banner section */}
 			{/*Sagor Ahmed Make Banner Section */}
