@@ -52,7 +52,7 @@ const CheckOut = () => {
       orderId: id, // Set the orderId using the id from useParams
     };
 
-    fetch('http://localhost:5000/getmoney', {
+    fetch('https://asetta-autos-production.up.railway.app/getmoney', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
