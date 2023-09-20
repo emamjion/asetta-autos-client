@@ -4,7 +4,7 @@ const useAllUser = () => {
 
     const [users, setUsers] = useState([]);
     useEffect(() => {
-      fetch('https://asetta-autos-production.up.railway.app/users')
+      fetch('http://localhost:5000/users')
         .then(res => res.json())
         .then(data => setUsers(data))
     }, [])

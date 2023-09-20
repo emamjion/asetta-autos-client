@@ -8,7 +8,7 @@ const useAxiosSecure = () => {
     const axiosSecure = axios.create({
       baseURL: 'http://localhost:5000',
     });
-  
+
     useEffect(() => {
       axiosSecure.interceptors.request.use((config) => {
         const token = localStorage.getItem('car-access-token');
@@ -17,7 +17,7 @@ const useAxiosSecure = () => {
         }
         return config;
       });
-  
+
       axiosSecure.interceptors.response.use(
         (response) => response,
         async (error) => {
@@ -29,7 +29,7 @@ const useAxiosSecure = () => {
         }
       );
     }, [logOut, navigate, axiosSecure]);
-  
+
     return [axiosSecure];
 };
 
