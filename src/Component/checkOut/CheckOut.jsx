@@ -62,7 +62,7 @@ const CheckOut = () => {
       .then((res) => res.json())
       .then((data) => {
         window.location.replace(data.url)
-        console.log(data);
+        console.log(data.url);
         formRef.current.reset();
         setOrderId(data.orderId); 
       });

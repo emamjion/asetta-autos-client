@@ -74,11 +74,13 @@ const Authprovider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser)
+
             if(currentUser){
                  axios.post('https://asetta-autos-production.up.railway.app/jwt', {email : currentUser.email})
                  .then(data=>{
                      localStorage.setItem('car-access-token', data.data.token)
                  })
+
             }
             
             localStorage.removeItem('car-access-token')
