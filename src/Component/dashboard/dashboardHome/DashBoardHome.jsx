@@ -19,7 +19,7 @@ const DashBoardHome = () => {
       <div className=" px-4  py-10 border">
         <RouteBanner SectionTitle={`${currentUser?.role} DASHBOARD`} smallTitle={`${currentUser?.role} DASHBOARD`}></RouteBanner>
         <div className="my-10">
-          <div className="text-center space-x-5">
+          {/* <div className="text-center space-x-5">
             {currentUser?.role === "user" && (
               <>
                 <Link to="/dashboard/user-cards">
@@ -64,7 +64,7 @@ const DashBoardHome = () => {
               </>
             )}
 
-          </div>
+          </div> */}
         </div>
       </div>
       
