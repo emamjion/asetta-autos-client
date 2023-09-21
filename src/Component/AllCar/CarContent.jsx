@@ -2,14 +2,19 @@ import React from 'react';
 import { BiDownArrow } from 'react-icons/bi';
 import { BsDot } from 'react-icons/bs';
 import { PiHeart } from 'react-icons/pi';
+import { Link } from 'react-router-dom';
+import Button from '../Button/Button';
+import ContactWithDealer from '../ContactWithDealer/ContactWithDealer';
+import TestDriveBook from '../TestDriveBook/TestDriveBook';
+import { FaShareAlt } from 'react-icons/fa';
 
 const CarContent = ({cars}) => { 
     return (
         <div>
             {
-                cars.slice(0,2).map(car => <div>
+                cars.map(car => <div className='mb-8 border-b pb-10'>
                     <div
-                    key={car._id}
+                    key={car?._id}
                     className='grid md:grid-cols-2 gap-4 p-4'
                 >
                     <div>
@@ -43,17 +48,31 @@ const CarContent = ({cars}) => {
                                 <span>< BiDownArrow /></span>
                                 <h1 className='text-sm font-medium'>SPECIFICATIONS</h1>
                             </div>
-                            <ul className='mt-2'>
-                                <li className='text-sm my-1 text-[#757575] flex items-center gap-1'><span className='text-[#ef1721] text-2xl'> < BsDot /> </span> Engine DOHC 24-valve V-6</li>
-                                <li className='text-sm my-1 text-[#757575] flex items-center gap-1'><span className='text-[#ef1721] text-2xl'> < BsDot /> </span> Audio Controls on Steering Wheel</li>
-                                <li className='text-sm my-1 text-[#757575] flex items-center gap-1'><span className='text-[#ef1721] text-2xl'> < BsDot /> </span> Power Windows</li>
-                                <li className='text-sm my-1 text-[#757575] flex items-center gap-1'><span className='text-[#ef1721] text-2xl'> < BsDot /> </span> Daytime Running Lights</li>
-                                <li className='text-sm my-1 text-[#757575] flex items-center gap-1'><span className='text-[#ef1721] text-2xl'> < BsDot /> </span> Cruise Control, ABS</li>
+                            
+                            <ul>
+                            {
+                                car?.features?.map((f, idx)=>{
+                                   return <li key={idx} className='text-sm my-1 text-[#757575] flex items-center gap-1'><span className='text-[#ef1721] text-2xl'> < BsDot /> </span>{f.description}</li>
+                                })
+                            }
                             </ul>
                         </div>
                     </div>
                 </div>
-                <hr className='w-11/12 mx-auto my-3 border'/>
+                <div className='flex justify-between items-center px-5'>
+          <div className='flex justify-center items-center gap-4  '>
+            <Link to={`/arrivals-details/${car?._id}`}>
+              <Button button={"Vehicle Details"}></Button>
+            </Link>
+            <button className="button" onClick={() => document.getElementById(`my_modal_2/${car?._id}`).showModal()}>Contact Dealer</button>
+            <ContactWithDealer car={car}></ContactWithDealer>
+          <button className="button" onClick={() => document.getElementById(`my_modal_1/${car?._id}`).showModal()}>Test Drive</button>
+            <TestDriveBook car={car}></TestDriveBook>
+          </div>
+          <div>
+            <p><FaShareAlt className='text-4xl'></FaShareAlt></p>
+          </div>
+        </div>
                 </div>)
             }
         </div>

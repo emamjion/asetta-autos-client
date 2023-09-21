@@ -4,10 +4,10 @@ import { BsFillFuelPumpFill } from 'react-icons/bs';
 import { FaCar, FaMapMarkerAlt, FaRoad } from 'react-icons/fa';
 import { PiEngineFill } from 'react-icons/pi';
 
-const ContactWithDealer = ({info}) => {
+const ContactWithDealer = ({car}) => {
     const formRef = useRef(null);
 
-    const { _id, image, price, mileage, average_rating, reviews, engine, displacement, model, make, fuel_type, color } = info;
+    const { _id, image, price, mileage, average_rating, reviews, engine, displacement, model, make, fuel_type, color } = car;
 
 
     const handleBookContact = event => {
