@@ -21,7 +21,7 @@ const AllCarRoute = () => {
             <div className='h-screen w-[25%]'>
                 <CarLeftSidebar cars={cars} setCars={setCars} />
             </div>
-            <div className='border h-screen w-[50%]'>
+            <div className='h-screen w-[50%]'>
                 <CarContent cars={cars} setCars={setCars} />
             </div>
             <div className='border h-screen w-[25%]'>
