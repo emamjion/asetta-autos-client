@@ -22,13 +22,13 @@ const AllCarRoute = () => {
 
     return (
         <div className={`flex items-center gap-2 my-12 px-4 xl:px-[140px] 2xl:px-[240px] mode ${theme} my-14 md:my-24`}>
-           <div className='border h-screen w-[25%]'>
-                <CarLeftSidebar></CarLeftSidebar>
-           </div>
-            <div className='border h-screen w-[50%]'>
+            <div className='h-screen w-[20%]'>
+                <CarLeftSidebar cars={cars} setCars={setCars} />
+            </div>
+            <div className='h-screen w-[60%]'>
                 <CarContent cars={cars} setCars={setCars} />
             </div>
-            <div className='border h-screen w-[25%]'>
+            <div className='h-screen w-[20%]'>
                 <CarRightSidebar cars={cars} setCars={setCars} />
             </div>
         </div>
