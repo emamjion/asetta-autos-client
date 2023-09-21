@@ -14,8 +14,8 @@ const BlogRoute = () => {
   const [query, setQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4; // Number of blogs to display per page
-  const {data: blogs, isLoading} = useGetblogsQuery();
- 
+  const { data: blogs, isLoading } = useGetblogsQuery();
+
   // useEffect(() => {
   //   fetch('https://asetta-autos-production.up.railway.app/our-blogs/')
   //     .then((res) => res.json())
@@ -64,34 +64,33 @@ const BlogRoute = () => {
 
         {/* Pagination controls */}
         <div className="pagination-container">
-    <button
-      className='button'
-      onClick={() => handlePageChange(currentPage - 1)}
-      disabled={currentPage === 1}
-    >
-      Previous
-    </button>
-    <div className="pagination-buttons">
-      {Array.from({ length: totalPages }).map((_, index) => (
-        <button
-          key={index}
-          onClick={() => handlePageChange(index + 1)}
-          className={`pagination-button ml-4 button ${
-            currentPage === index + 1 ? 'active' : ''
-          }`}
-        >
-          {index + 1}
-        </button>
-      ))}
-    </div>
-    <button
-      className='button ml-4'
-      onClick={() => handlePageChange(currentPage + 1)}
-      disabled={currentPage === totalPages}
-    >
-      Next
-    </button>
-  </div>
+          <button
+            className='button'
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+          >
+            Previous
+          </button>
+          <div className="pagination-buttons">
+            {Array.from({ length: totalPages }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handlePageChange(index + 1)}
+                className={`pagination-button ml-4 button ${currentPage === index + 1 ? 'active' : ''
+                  }`}
+              >
+                {index + 1}
+              </button>
+            ))}
+          </div>
+          <button
+            className='button ml-4'
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+          >
+            Next
+          </button>
+        </div>
 
 
 
