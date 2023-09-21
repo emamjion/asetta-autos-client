@@ -11,10 +11,10 @@ const [rangeValue, setRangeValue] = useState(2500);
     };
     
     return (
-        <div>
-            <div className='flex items-center gap-x-2 justify-center bg-[#181818] text-white p-4 text-lg'>
+        <div className='shadow-xl p-3 rounded'>
+            <div className='flex items-center gap-x-2 justify-center bg-[#181818] text-white p-4 text-lg rounded'>
                 <span>< FaCarSide /></span>
-                <h1>Search Your Favourite Car</h1>
+                <h1>Filter Options</h1>
             </div>
             <div className='space-y-6 px-4'>
                 <div className='mt-4' defaultValue={'Car Condition'}>
