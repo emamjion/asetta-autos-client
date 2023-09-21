@@ -19,7 +19,7 @@ const CarContent = ({cars}) => {
                         <div className='flex items-center justify-between mb-4'>
                             <h1 className='font-medium text-xl'>{car.make} {car.model}</h1>
                             <div className='flex items-center'>
-                                <span className=''>< PiHeart /></span>
+                                <span className='text-2xl cursor-pointer'>< PiHeart /></span>
                                 <button className='mx-3 bg-[#ef1721] p-1 text-white rounded font-semibold'>$ <span>{car.price}</span></button>
                             </div>
                         </div>
