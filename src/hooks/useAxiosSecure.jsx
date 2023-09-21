@@ -6,7 +6,7 @@ const useAxiosSecure = () => {
     const { logOut } = useContext(AuthContex)
     const navigate = useNavigate(); 
     const axiosSecure = axios.create({
-      baseURL: 'http://localhost:5000',
+      baseURL: 'https://asetta-autos-production.up.railway.app',
     });
 
     useEffect(() => {

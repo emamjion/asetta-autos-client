@@ -14,12 +14,12 @@ const DealerDetails = () => {
     const [dealers, setDealers] = useState([]);
     const [carPics, setCarPics] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/best-dealers/${id}`)
+        fetch(`https://asetta-autos-production.up.railway.app/best-dealers/${id}`)
             .then(res => res.json())
             .then(data => setDealers(data))
     }, []);
     useEffect(() => {
-      fetch('http://localhost:5000/new-arrivals')
+      fetch('https://asetta-autos-production.up.railway.app/new-arrivals')
       .then(res => res.json())
       .then(data => setCarPics(data.slice(0,6)))
     }, [])
