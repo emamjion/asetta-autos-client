@@ -13,14 +13,14 @@ const CarLeftSidebar = () => {
 
 
     return (
-        <div>
-            <div className='flex items-center gap-x-2 justify-center bg-[#181818] text-white p-4 text-lg'>
+        <div className='shadow-xl p-3 rounded'>
+            <div className='flex items-center gap-x-2 justify-center bg-[#181818] text-white p-4 text-lg rounded'>
                 <span>< FaCarSide /></span>
-                <h1>Search Your Favourite Car</h1>
+                <h1>Filter Options</h1>
             </div>
             <form className='space-y-6 px-4'>
                 <div className='mt-4' defaultValue={'Car Condition'}>
-                    <select className="select-bordered border p-3 px-2 w-full rounded-md cursor-text border-[#535353]">
+                    <select className="select-bordered border p-2 px-2 w-full rounded-md cursor-text border-[#535353]">
                         <option className=''>Car Condition</option>
                         <option>Used Car</option>
                         <option>Brand New Car</option>
@@ -28,7 +28,7 @@ const CarLeftSidebar = () => {
                     </select>
                 </div>
                 <div className='' defaultValue={'Year'}>
-                    <select className="border p-3 select-bordered w-full rounded-md cursor-text border-[#535353]">
+                    <select className="border p-2 select-bordered w-full rounded-md cursor-text border-[#535353]">
                         <option className=''>Year</option>
                         <option>2023</option>
                         <option>2022</option>
@@ -36,26 +36,26 @@ const CarLeftSidebar = () => {
                     </select>
                 </div>
                 <div className=''>
-                    <input type="text" placeholder='Brands' className='border border-[#535353] w-full rounded-md p-3' />
+                    <input type="text" placeholder='Brands' className='border border-[#535353] w-full rounded-md p-1' />
                 </div>
                 <div className=''>
-                    <input type="text" placeholder='Model' className='border border-[#535353] p-3 w-full rounded-md' />
+                    <input type="text" placeholder='Model' className='border border-[#535353] p-1 w-full rounded-md' />
                 </div>
                 <div className=''>
-                    <input type="text" placeholder='Body Type' className='border border-[#535353] p-3 w-full rounded-md' />
+                    <input type="text" placeholder='Body Type' className='border border-[#535353] p-1 w-full rounded-md' />
                 </div>
+                {/* <div className=''>
+                    <input type="text" placeholder='Max Mileage' className='border border-[#535353] p-1 w-full rounded-md' />
+                </div> */}
+                {/* <div className=''>
+                    <input type="text" placeholder='Transmission' className='border border-[#535353] p-1 w-full rounded-md' />
+                </div> */}
                 <div className=''>
-                    <input type="text" placeholder='Max Mileage' className='border border-[#535353] p-3 w-full rounded-md' />
+                    <input type="text" placeholder='Ext Color' className='border border-[#535353] p-1 w-full rounded-md' />
                 </div>
-                <div className=''>
-                    <input type="text" placeholder='Transmission' className='border border-[#535353] p-3 w-full rounded-md' />
-                </div>
-                <div className=''>
-                    <input type="text" placeholder='Ext Color' className='border border-[#535353] p-3 w-full rounded-md' />
-                </div>
-                <div className='mt-1'>
-                    <input type="text" placeholder='Int Color' className='border border-[#535353] p-3 w-full rounded-md' />
-                </div>
+                {/* <div className='mt-1'>
+                    <input type="text" placeholder='Int Color' className='border border-[#535353] p-1 w-full rounded-md' />
+                </div> */}
                 <div className='mt-1'>
                     <h1 className='text-lg font-medium mb-1'>Price</h1>
                     <div>
