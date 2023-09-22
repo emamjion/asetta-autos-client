@@ -21,12 +21,12 @@ const AllCarRoute = () => {
             <div className='h-screen w-[20%] sticky  left-0 top-0'>
                 <CarLeftSidebar cars={cars} setCars={setCars} />
             </div>
-            <div className='w-[60%] mx-auto'>
+            <div className='w-[80%] mx-auto'>
                 <CarContent cars={cars} setCars={setCars} />
             </div>
-            <div className='h-screen w-[20%] sticky  right-0 top-0'>
+            {/* <div className='h-screen w-[20%] sticky  right-0 top-0'>
                 <CarRightSidebar cars={cars} setCars={setCars} />
-            </div>
+            </div> */}
         </div>
     );
 };
