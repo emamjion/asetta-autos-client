@@ -7,6 +7,7 @@ import { PiEngineFill } from 'react-icons/pi';
 
 const TestDriveBook = ({ car }) => {
     const formRef = useRef(null);
+    console.log(formRef)
     const { _id, image, price, mileage, average_rating, reviews, engine, displacement, model, make, fuel_type, color } = car;
 
 

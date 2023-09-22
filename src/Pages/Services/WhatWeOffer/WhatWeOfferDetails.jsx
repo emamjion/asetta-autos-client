@@ -1,20 +1,37 @@
 import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
 import { FaMapMarkerAlt, FaMobile } from 'react-icons/fa';
 import { MdWatchLater } from 'react-icons/md';
 import { NavLink, useParams } from 'react-router-dom';
 import Button2 from '../../../Component/Button/Button2';
+import Swal from 'sweetalert2';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { useRef } from 'react';
+
 
 const WhatWeOfferDetails = () => {
     const { id } = useParams()
     const [data, setData] = useState([]);
+    const formRef = useRef(null);
     useEffect(() => {
         fetch(`https://asetta-autos-production.up.railway.app/WhatWeOffer/${id}`)
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
     const {image,serviceName,mainDesc,subDesc1,subDesc2,subDesc3} =data
+
+    const handleEmailsubmit =() =>{
+        event.preventDefault()
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const text = form.text.value;
+        console.log(name,email,text)
+        Swal.fire('Your question is send succesfuly')
+        // formRef.current.reset();
+        formRef.textContent=''
+    }
+
     return (
         <div className='px-4 xl:px-[140px] 2xl:px-[240px] my-14 md:my-24'>
             <div className='flex w-full gap-6'>
@@ -60,7 +77,7 @@ const WhatWeOfferDetails = () => {
                     <div className='mt-14'>
                         <h1 className='bg-[#ef1721] text-white p-4 text-center font-semibold text-2xl'>Book A Test Drive</h1>
                         <h4 className='mt-12 font-medium text-xl'>Ask Question</h4>
-                        <form className="mt-6">
+                        <form onSubmit={handleEmailsubmit} className="mt-6">
                             <div className="">
                                 <input 
                                     type="text" 
@@ -73,7 +90,7 @@ const WhatWeOfferDetails = () => {
                                 <input 
                                     type="email" 
                                     placeholder="Email*" 
-                                    name="name" 
+                                    name="email" 
                                     className="w-full h-12 px-3 rounded bg-[#f7f7f7] py-4"  
                                 />
                             </div>
@@ -81,6 +98,7 @@ const WhatWeOfferDetails = () => {
                                 <textarea 
                                     cols='20' 
                                     rows='5' 
+                                    name='text'
                                     className="w-full h-28 px-3 rounded bg-[#f7f7f7] py-4 resize-none"
                                     placeholder="Question"
                                 ></textarea>
