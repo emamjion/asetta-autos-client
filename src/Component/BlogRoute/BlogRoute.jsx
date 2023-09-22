@@ -15,6 +15,7 @@ const BlogRoute = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4; // Number of blogs to display per page
   const { data: blogs, isLoading } = useGetblogsQuery();
+  console.log(blogs)
 
   // useEffect(() => {
   //   fetch('https://asetta-autos-production.up.railway.app/our-blogs/')
