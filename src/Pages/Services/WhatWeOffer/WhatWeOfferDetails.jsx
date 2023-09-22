@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaMapMarkerAlt, FaMobile } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaMobile, FaPray } from 'react-icons/fa';
 import { MdWatchLater } from 'react-icons/md';
 import { NavLink, useParams } from 'react-router-dom';
 import Button2 from '../../../Component/Button/Button2';
@@ -12,7 +12,7 @@ import { useRef } from 'react';
 const WhatWeOfferDetails = () => {
     const { id } = useParams()
     const [data, setData] = useState([]);
-    const formRef = useRef(null);
+    const formRef = useRef();
     useEffect(() => {
         fetch(`https://asetta-autos-production.up.railway.app/WhatWeOffer/${id}`)
             .then(res => res.json())
@@ -28,7 +28,7 @@ const WhatWeOfferDetails = () => {
         const text = form.text.value;
         console.log(name,email,text)
         Swal.fire('Your question is send succesfuly')
-       form.reset();
+        form.reset();
     }
 
     return (

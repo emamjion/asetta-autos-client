@@ -2,11 +2,11 @@ import React, { useContext, useEffect } from 'react';
 import leaftArrow from '../../assets/images/logo/left-arrow-icon.png'
 import logo from '../../assets/images/logo/logo.png'
 import { useState } from 'react';
-import { MdLogout, MdOutlineDashboard, MdOutlineReviews, MdPayment, MdShoppingCart } from 'react-icons/md';
+import { MdHome, MdLogout, MdOutlineDashboard, MdOutlineReviews, MdPayment, MdShoppingCart } from 'react-icons/md';
 import { PiUsersThreeLight } from 'react-icons/pi';
-import { RiPagesLine, RiSettings4Line } from 'react-icons/ri';
-import { TbFileAnalytics } from 'react-icons/tb';
-import { FaUserTie } from 'react-icons/fa';
+import { RiContactsBookLine, RiPagesLine, RiServiceLine, RiSettings4Line } from 'react-icons/ri';
+import { TbFileAnalytics, TbListDetails } from 'react-icons/tb';
+import { FaCarAlt, FaPager, FaUserTie } from 'react-icons/fa';
 import { Link, Outlet } from 'react-router-dom';
 import { AuthContex } from '../../Component/Providers/Authprovider';
 import useAllUser from '../../hooks/useAllUser';
@@ -19,16 +19,30 @@ const DashboardLayout = () => {
         {title : 'Manage Users', link: '/users', icon: PiUsersThreeLight, gap: true},
         {title : 'Add Blogs', link: '/dashboard/add-blogs', icon: RiPagesLine},
         {title : 'Add New Dealers', link: '/dashboard/add-dealers', icon: FaUserTie},
-        {title : 'Analytics', link: '/analytics', icon: TbFileAnalytics, gap: true},
-        {title : 'Setting', link: 'dashboard', icon: RiSettings4Line}
+        {title : 'Analytics', link: '/analytics', icon: TbFileAnalytics},
+        {title : 'Setting', link: 'dashboard', icon: RiSettings4Line},
+        
+        {title : 'Home', link: '/', icon: MdHome, gap: true},
+        {title : 'About', link: '/about', icon: TbListDetails},
+        {title : 'Cars', link: '/all-car', icon: FaCarAlt},
+        {title : 'Service', link: '/services', icon: RiServiceLine},
+        {title : 'Blog', link: '/blog', icon: FaPager},
+        {title : 'Contact', link: '/contact', icon: RiContactsBookLine},
     ]
     const dealerMenus = [
         {title : 'Dashboard', link: '/dashboard', icon: MdOutlineDashboard},
         {title : 'Add Cars', link: '/dashboard/add-cars', icon: PiUsersThreeLight, gap: true},
         {title : 'Add Blogs', link: '/add-blogs', icon: RiPagesLine},
         {title : 'Dealers', link: '/dealers', icon: FaUserTie},
-        {title : 'Analytics', link: '/analytics', icon: TbFileAnalytics, gap: true},
-        {title : 'Setting', link: 'dashboard', icon: RiSettings4Line}
+        {title : 'Analytics', link: '/analytics', icon: TbFileAnalytics},
+        {title : 'Setting', link: 'dashboard', icon: RiSettings4Line},
+        
+        {title : 'Home', link: '/', icon: MdHome, gap: true},
+        {title : 'About', link: '/about', icon: TbListDetails},
+        {title : 'Cars', link: '/all-car', icon: FaCarAlt},
+        {title : 'Service', link: '/services', icon: RiServiceLine},
+        {title : 'Blog', link: '/blog', icon: FaPager},
+        {title : 'Contact', link: '/contact', icon: RiContactsBookLine},
     ]
     const userMenus = [
         {title : 'Dashboard', link: '/dashboard', icon: MdOutlineDashboard},
@@ -36,8 +50,15 @@ const DashboardLayout = () => {
         {title : 'Payment History', link: '/users', icon: MdPayment},
         {title : 'Add Reviews', link: '/dashboard/add-reviews', icon: MdOutlineReviews},
         {title : 'Dealer Request', link: '/dashboard/dealer-request', icon: CiSquareQuestion},
-        {title : 'Analytics', link: '/analytics', icon: TbFileAnalytics, gap: true},
-        {title : 'Setting', link: 'dashboard', icon: RiSettings4Line}
+        {title : 'Analytics', link: '/analytics', icon: TbFileAnalytics},
+        {title : 'Setting', link: 'dashboard', icon: RiSettings4Line},
+
+        {title : 'Home', link: '/', icon: MdHome, gap: true},
+        {title : 'About', link: '/about', icon: TbListDetails},
+        {title : 'Cars', link: '/all-car', icon: FaCarAlt},
+        {title : 'Service', link: '/services', icon: RiServiceLine},
+        {title : 'Blog', link: '/blog', icon: FaPager},
+        {title : 'Contact', link: '/contact', icon: RiContactsBookLine},
     ]
 
 
