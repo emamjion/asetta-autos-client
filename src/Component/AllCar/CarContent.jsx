@@ -11,8 +11,6 @@ import { FaShareAlt } from 'react-icons/fa';
 const CarContent = ({cars}) => { 
     const [hOpen, setHopen] = useState(true);
     const [sOpen, setSopen] = useState(true);
-
-    
     return (
         <div>
             {
