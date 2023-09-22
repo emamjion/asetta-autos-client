@@ -3,19 +3,14 @@ import NewArrivalsCar from './NewArrivalsCar';
 import Tittle from '../Shared/Tittle/Tittle';
 import '../Button/Button'
 
-
-
 const NewArrivals = () => {
     const [cars, setCars] = useState([]);
     const [visibleCars, setVisibleCars] = useState(8);
     const [showAll, setShowAll] = useState(false);
 
-
-
     const toggleShowAll = () => {
         setShowAll(!showAll);
     };
-
 
     useEffect(() => {
         fetch('https://asetta-autos-production.up.railway.app/new-arrivals')

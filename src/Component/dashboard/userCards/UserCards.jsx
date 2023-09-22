@@ -7,7 +7,8 @@ import useCards from "../../../hooks/useCards";
 const UserCards = () => {
     const {user} = useContext(AuthContex)
 
-    const [cards, refetch] = useCards()
+    const [cards, refetch,isLoading ] = useCards()
+
 
     const [totalPrice, setTotalPrice] = useState(0);
 
