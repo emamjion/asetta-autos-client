@@ -8,9 +8,12 @@ import 'swiper/css/pagination';
 
 import { Pagination } from 'swiper/modules';
 import SwiperCard from '../ReviewsCard/SwiperCard';
+import { useContext } from 'react';
+import { AuthContex } from '../Providers/Authprovider';
 
 // TODO: change the component name --> latest car section - Emam
 const ClientReviews = () => {
+    
     const [releaseCar, setReleaseCar] = useState([]);
     useEffect(() => {
         fetch('/releaseCar.json')

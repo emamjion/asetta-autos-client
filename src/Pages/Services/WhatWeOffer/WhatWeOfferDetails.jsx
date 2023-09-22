@@ -20,7 +20,7 @@ const WhatWeOfferDetails = () => {
     }, [])
     const {image,serviceName,mainDesc,subDesc1,subDesc2,subDesc3} =data
 
-    const handleEmailsubmit =() =>{
+    const handleEmailsubmit =(event) =>{
         event.preventDefault()
         const form = event.target;
         const name = form.name.value;
@@ -28,8 +28,7 @@ const WhatWeOfferDetails = () => {
         const text = form.text.value;
         console.log(name,email,text)
         Swal.fire('Your question is send succesfuly')
-        // formRef.current.reset();
-        formRef.textContent=''
+       form.reset();
     }
 
     return (
