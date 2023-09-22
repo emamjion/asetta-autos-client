@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { BiFilterAlt } from 'react-icons/bi';
 import { FaCarSide } from 'react-icons/fa';
 
 const CarLeftSidebar = () => {
-const [rangeValue, setRangeValue] = useState(2500);
-
-    // Function to handle changes in the range input
+    const [rangeValue, setRangeValue] = useState(2500);
+    
     const handleRangeChange = (event) => {
         setRangeValue(Number(event.target.value));
     };
-    
+
+
+
     return (
         <div className='shadow-xl p-3 rounded'>
             <div className='flex items-center gap-x-2 justify-center bg-[#181818] text-white p-4 text-lg rounded'>
                 <span>< FaCarSide /></span>
                 <h1>Filter Options</h1>
             </div>
-            <div className='space-y-6 px-4'>
+            <form className='space-y-6 px-4'>
                 <div className='mt-4' defaultValue={'Car Condition'}>
                     <select className="select-bordered border p-2 px-2 w-full rounded-md cursor-text border-[#535353]">
                         <option className=''>Car Condition</option>
@@ -74,9 +76,9 @@ const [rangeValue, setRangeValue] = useState(2500);
                         <div className='flex items-center justify-center mt-1 gap-3'>
                             <button className='bg-[#f7f7f7] flex-1 p-3'>1000</button>
                             <button className='bg-[#f7f7f7] flex-1 p-3'>{rangeValue}</button>
-                        </div>        
+                        </div>
                         <div className='flex items-center flex-col mt-4 gap-3'>
-                            <button className='button w-full'>Reset Filters</button>
+                            <button  className='button w-full'>Reset Filters</button>
                             <button className='button2 w-full flex items-center justify-center gap-1'>
                                 <span className=''>< BiFilterAlt /></span>
                                 <span>Filter</span>
@@ -84,7 +86,7 @@ const [rangeValue, setRangeValue] = useState(2500);
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     );
 };
