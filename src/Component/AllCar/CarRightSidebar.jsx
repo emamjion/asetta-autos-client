@@ -15,7 +15,7 @@ const CarRightSidebar = ({cars}) => {
                     <span className='w-8 h-8 bg-[#cd486b] cursor-pointer text-white flex items-center justify-center rounded-md'>< FaInstagram /></span>
                 </div>
             </div>
-            {/* Finance Calculator */}
+            Finance Calculator 
             <hr className='border-b my-3' />
             <div className='my-8'>
                 <div className='flex items-center gap-x-2 justify-center bg-[#181818] text-white p-4 text-lg rounded'>
