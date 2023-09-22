@@ -6,7 +6,7 @@ import useAxiosSecure from './useAxiosSecure';
 const useCards =()=>{
     const {user} = useContext(AuthContex)
     const [axiosSecure]  = useAxiosSecure()
-    const { refetch, data : cards = []} = useQuery({
+    const { refetch, data : cards = [], isLoading} = useQuery({
         queryKey: ['cards', user?.email],
         queryFn: async () => {
                 const res = await axiosSecure(`/cards?email=${user?.email}`)
@@ -21,7 +21,7 @@ const useCards =()=>{
         //     return res.json()
         //   },
       })
-      return [cards, refetch]
+      return [cards, refetch, isLoading]
 }
 
 export default useCards

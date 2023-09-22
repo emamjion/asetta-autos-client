@@ -20,7 +20,8 @@ const CheckOut = () => {
   //     .then((data) => setCards(data));
   // }, []);
 
-  const [cards] = useCards();
+  const [cards, ,  isLoading] = useCards();
+
 
   useEffect(() => {
     const myCard = cards.find((card) => card?._id === id);

@@ -8,7 +8,7 @@ const ShowCardsData = ({card}) => {
 
     let subTotal = price * items
 
-    const [, refetch] = useCards()
+    const [, refetch, isLoading] = useCards()
 
     const handleRemove =(id)=>{
         console.log("remove", id);
@@ -55,7 +55,7 @@ const ShowCardsData = ({card}) => {
 
 
     return (
-        <div className="border p-2 m-4 flex justify-between items-center gap-5">
+        <div className="border p-2 m-4 text-sm flex justify-between items-center gap-5">
             <div>
                 <img className="w-40" src={image} alt="" />
             </div>
