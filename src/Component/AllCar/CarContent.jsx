@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BiDownArrow } from 'react-icons/bi';
 import { BsDot } from 'react-icons/bs';
 import { PiHeart } from 'react-icons/pi';
@@ -9,6 +9,10 @@ import TestDriveBook from '../TestDriveBook/TestDriveBook';
 import { FaShareAlt } from 'react-icons/fa';
 
 const CarContent = ({cars}) => { 
+    const [hOpen, setHopen] = useState(true);
+    const [sOpen, setSopen] = useState(true);
+
+    
     return (
         <div>
             {
@@ -32,27 +36,29 @@ const CarContent = ({cars}) => {
                             {car?.engine?.description}
                         </p>
                         <div className='mt-6'>
-                            <div className='flex items-center gap-1'>
-                                <span>< BiDownArrow /></span>
+                            <div className={` flex items-center gap-1 cursor-pointer text-[#ef1721]`} onClick={() => setHopen(!hOpen)}>
+                                <span className={`${!hOpen && 'rotate-[180deg] duration-700'} duration-700`}>< BiDownArrow /></span>
                                 <h1 className='text-sm font-medium'>HIGHLIGHTS</h1>
                             </div>
-                            <div className='flex items-center gap-1 mt-2'>
-                                <div className='border p-2 rounded text-[#757575]'>{car?.mileage}</div>
-                                <div className='border p-2 rounded text-[#757575]'>Model: {car?.year}</div>
-                                <div className='border p-2 rounded text-[#757575]'>{car?.engine?.horsepower} hp</div>
-                                <div className='border p-2 rounded text-[#757575]'>{car?.transmission}</div>
+                            <div className={` ${hOpen ? 'duration-700 opacity-100' : ' opacity-0 duration-300 h-0'}`}>
+                                <div className='flex items-center gap-1'>
+                                    <div className='border p-2 rounded text-[#757575]'>{car?.mileage}</div>
+                                    <div className='border p-2 rounded text-[#757575]'>Model: {car?.year}</div>
+                                    <div className='border p-2 rounded text-[#757575]'>{car?.engine?.horsepower} hp</div>
+                                    <div className='border p-2 rounded text-[#757575]'>{car?.transmission}</div>
+                                </div>
                             </div>
                         </div>
-                        <div className='mt-6'>
-                            <div className='flex items-center gap-1'>
-                                <span>< BiDownArrow /></span>
+                        <div className='mt-3'>
+                            <div className='flex items-center gap-1 cursor-pointer text-[#ef1721]' onClick={() => setSopen(!sOpen)}>
+                                <span className={`${!sOpen && 'rotate-[180deg] duration-700'} duration-700`}>< BiDownArrow /></span>
                                 <h1 className='text-sm font-medium'>SPECIFICATIONS</h1>
                             </div>
                             
-                            <ul>
+                            <ul className={` ${sOpen ? 'duration-700 opacity-100' : ' opacity-0 duration-300 h-0'}`}>
                             {
                                 car?.features?.map((f, idx)=>{
-                                   return <li key={idx} className='text-sm my-1 text-[#757575] flex items-center gap-1'><span className='text-[#ef1721] text-2xl'> < BsDot /> </span>{f.description}</li>
+                                    return <li key={idx} className='text-sm my-1 text-[#757575] flex items-center gap-1'><span className='text-[#ef1721] text-2xl'> < BsDot /> </span><span>{f.description}</span></li>
                                 })
                             }
                             </ul>
