@@ -16,7 +16,7 @@ const SocialLogin = () => {
             const loggedUser = result.user;
 
             const saveUser = {name : loggedUser.displayName, email : loggedUser.email, image : loggedUser.photoURL, role : 'user'}
-              fetch('https://asetta-autos-production.up.railway.app/users',{
+              fetch('https://asetta-autos-server-gules.vercel.app/users',{
                 method : "POST",
                 headers : {
                   'content-type' : 'application/json'

@@ -14,7 +14,7 @@ const WhatWeOfferDetails = () => {
     const [data, setData] = useState([]);
     const formRef = useRef();
     useEffect(() => {
-        fetch(`https://asetta-autos-production.up.railway.app/WhatWeOffer/${id}`)
+        fetch(`https://asetta-autos-server-gules.vercel.app/WhatWeOffer/${id}`)
             .then(res => res.json())
             .then(data => setData(data))
     }, [])

@@ -16,7 +16,7 @@ const DealerRequest = () => {
         console.log(data);
 
 
-        fetch('https://asetta-autos-production.up.railway.app/makeDealer', {
+        fetch('https://asetta-autos-server-gules.vercel.app/makeDealer', {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json'

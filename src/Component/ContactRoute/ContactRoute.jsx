@@ -6,6 +6,7 @@ import { AuthContex } from '../Providers/Authprovider';
 import { useContext } from 'react';
 import Button from '../Button/Button';
 import Button2 from '../Button/Button2';
+// import PieChartWithCustomizedLabel from './PieChartWithCustomizedLabel';
 
 // import emailjs from '@emailjs/browser';
 
@@ -55,6 +56,9 @@ const ContactRoute = () => {
                 <p className='paragraph w-96 text-left mx-12 mt-8' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus excepturi minus exercitationem eos sed modi dolorum cumque sunt facere reprehenderit?</p>
             </div> */}
 
+{/* todo */}
+{/* <PieChartWithCustomizedLabel /> */}
+{/* kdkl */}
 
         <div className={`bg-[#f7f7f7] absolute -mt-12 grid md:grid-cols-3  gap-4 mb-12 mx-12 p-8 font-serif text ${theme}`}>
 

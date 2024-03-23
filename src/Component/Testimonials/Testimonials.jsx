@@ -15,7 +15,7 @@ const Testimonials = () => {
     const { theme } = useContext(AuthContex);
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('https://asetta-autos-production.up.railway.app/client-review')
+        fetch('https://asetta-autos-server-gules.vercel.app/client-review')
         .then(res => res.json())
         .then(data => setReviews(data))
     }, [])

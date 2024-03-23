@@ -13,7 +13,7 @@ const NewArrivals = () => {
     };
 
     useEffect(() => {
-        fetch('https://asetta-autos-production.up.railway.app/new-arrivals')
+        fetch('https://asetta-autos-server-gules.vercel.app/new-arrivals')
             .then(res => res.json())
             .then(data => setCars(data));
     }, []);

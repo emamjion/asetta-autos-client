@@ -18,7 +18,7 @@ const AddReview = () => {
   
       console.log(data);
   
-      fetch('https://asetta-autos-production.up.railway.app/client-review', {
+      fetch('https://asetta-autos-server-gules.vercel.app/client-review', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

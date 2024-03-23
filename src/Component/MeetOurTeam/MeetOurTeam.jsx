@@ -10,7 +10,7 @@ const MeetOurTeam = () => {
     const {data: members, isLoading} = useGetourteamQuery();
     console.log(members)
     // useEffect(() => {
-    //     fetch('https://asetta-autos-production.up.railway.app/ourteam')
+    //     fetch('https://asetta-autos-server-gules.vercel.app/ourteam')
     //         .then(res => res.json())
     //         .then(data => setMembers(data))
     // }, [])

@@ -14,7 +14,7 @@ const useCards =()=>{
                  return res.data
           },
         // queryFn: async () => {
-        //     const res = await fetch(`https://asetta-autos-production.up.railway.app/cards?email=${user?.email}`)
+        //     const res = await fetch(`https://asetta-autos-server-gules.vercel.app/cards?email=${user?.email}`)
         //     if (!res.ok) {
         //       throw new Error('Network response was not ok')
         //     }

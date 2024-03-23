@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const OurDealer = () => {
     const [dealers, setDealers] = useState([]);
     useEffect(() => {
-        fetch('https://asetta-autos-production.up.railway.app/best-dealers')
+        fetch('https://asetta-autos-server-gules.vercel.app/best-dealers')
         .then(res => res.json())
         .then(data => setDealers(data))
     }, [])

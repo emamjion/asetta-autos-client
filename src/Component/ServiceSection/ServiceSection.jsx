@@ -5,7 +5,7 @@ import ServiceSectionCard from './ServiceSectionCard';
 const ServiceSection = () => {
     const [services , setServices] = useState([]);
     useEffect(()=>{
-        fetch('https://asetta-autos-production.up.railway.app/services')
+        fetch('https://asetta-autos-server-gules.vercel.app/services')
         .then(res=>res.json())
         .then(data=>setServices(data))
     },[])

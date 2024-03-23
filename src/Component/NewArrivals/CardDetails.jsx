@@ -18,7 +18,7 @@ const CardDetails = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-      fetch(`https://asetta-autos-production.up.railway.app/new-arrivals/${id}`)
+      fetch(`https://asetta-autos-server-gules.vercel.app/new-arrivals/${id}`)
       .then(res => res.json())
       .then(data => setCar(data))
   }, [])
@@ -43,7 +43,7 @@ const CardDetails = () => {
 
 
 
-        fetch('https://asetta-autos-production.up.railway.app/addToCard', {
+        fetch('https://asetta-autos-server-gules.vercel.app/addToCard', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -21,7 +21,7 @@ const CarCategory = () => {
     const { theme } = useContext(AuthContex);
     const [catagory, setCatagory]=useState([]);
     useEffect(()=>{
-        fetch("https://asetta-autos-production.up.railway.app/carbodyType")
+        fetch("https://asetta-autos-server-gules.vercel.app/carbodyType")
         .then(res=>res.json())
         .then(data=>setCatagory(data))
     },[])

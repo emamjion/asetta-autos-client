@@ -16,11 +16,11 @@ const DashboardLayout = () => {
     const [open, setOpen] = useState(true);
     const adminMenus = [
         {title : 'Dashboard', link: '/dashboard', icon: MdOutlineDashboard},
-        {title : 'Manage Users', link: '/users', icon: PiUsersThreeLight, gap: true},
+        // {title : 'Manage Users', link: '/users', icon: PiUsersThreeLight, gap: true},
         {title : 'Add Blogs', link: '/dashboard/add-blogs', icon: RiPagesLine},
         {title : 'Add New Dealers', link: '/dashboard/add-dealers', icon: FaUserTie},
-        {title : 'Analytics', link: '/analytics', icon: TbFileAnalytics},
-        {title : 'Setting', link: 'dashboard', icon: RiSettings4Line},
+        // {title : 'Analytics', link: '/analytics', icon: TbFileAnalytics},
+        // {title : 'Setting', link: 'dashboard', icon: RiSettings4Line},
         
         {title : 'Home', link: '/', icon: MdHome, gap: true},
         {title : 'About', link: '/about', icon: TbListDetails},
@@ -33,9 +33,9 @@ const DashboardLayout = () => {
         {title : 'Dashboard', link: '/dashboard', icon: MdOutlineDashboard},
         {title : 'Add Cars', link: '/dashboard/add-cars', icon: PiUsersThreeLight, gap: true},
         {title : 'Add Blogs', link: '/add-blogs', icon: RiPagesLine},
-        {title : 'Dealers', link: '/dealers', icon: FaUserTie},
-        {title : 'Analytics', link: '/analytics', icon: TbFileAnalytics},
-        {title : 'Setting', link: 'dashboard', icon: RiSettings4Line},
+        // {title : 'Dealers', link: '/dealers', icon: FaUserTie},
+        // {title : 'Analytics', link: '/analytics', icon: TbFileAnalytics},
+        // {title : 'Setting', link: 'dashboard', icon: RiSettings4Line},
         
         {title : 'Home', link: '/', icon: MdHome, gap: true},
         {title : 'About', link: '/about', icon: TbListDetails},
@@ -47,11 +47,11 @@ const DashboardLayout = () => {
     const userMenus = [
         {title : 'Dashboard', link: '/dashboard', icon: MdOutlineDashboard},
         {title : 'My Carts', link: '/dashboard/user-cards', icon: MdShoppingCart},
-        {title : 'Payment History', link: '/users', icon: MdPayment},
+        // {title : 'Payment History', link: '/users', icon: MdPayment},
         {title : 'Add Reviews', link: '/dashboard/add-reviews', icon: MdOutlineReviews},
         {title : 'Dealer Request', link: '/dashboard/dealer-request', icon: CiSquareQuestion},
-        {title : 'Analytics', link: '/analytics', icon: TbFileAnalytics},
-        {title : 'Setting', link: 'dashboard', icon: RiSettings4Line},
+        // {title : 'Analytics', link: '/analytics', icon: TbFileAnalytics},
+        // {title : 'Setting', link: 'dashboard', icon: RiSettings4Line},
 
         {title : 'Home', link: '/', icon: MdHome, gap: true},
         {title : 'About', link: '/about', icon: TbListDetails},

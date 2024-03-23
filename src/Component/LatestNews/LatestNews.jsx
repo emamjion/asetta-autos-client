@@ -7,7 +7,7 @@ import NewsCard from './NewsCard';
 const LatestNews = () => {
     const [Blogs, setBlogs] = useState([]);
     useEffect(() => {
-        fetch('https://asetta-autos-production.up.railway.app/our-blogs/')
+        fetch('https://asetta-autos-server-gules.vercel.app/our-blogs/')
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [])

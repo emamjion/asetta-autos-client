@@ -8,7 +8,7 @@ const WhatWeOffer = () => {
     const { theme } = useContext(AuthContex);
     const [offers, setOffers] = useState([]);
     useEffect(() => {
-        fetch('https://asetta-autos-production.up.railway.app/WhatWeOffer')
+        fetch('https://asetta-autos-server-gules.vercel.app/WhatWeOffer')
             .then(res => res.json())
             .then(data => setOffers(data))
     }, [])

@@ -27,7 +27,7 @@ const NewsDetails = () => {
 
 
   useEffect(() => {
-    fetch(`https://asetta-autos-production.up.railway.app/our-blogs/${id}`)
+    fetch(`https://asetta-autos-server-gules.vercel.app/our-blogs/${id}`)
       .then(res => res.json())
       .then(data => setNewsDetails(data))
   }, [newsDetails])
@@ -35,7 +35,7 @@ const NewsDetails = () => {
 
 
   useEffect(() => {
-    fetch(`https://asetta-autos-production.up.railway.app/blogComments/${id}`)
+    fetch(`https://asetta-autos-server-gules.vercel.app/blogComments/${id}`)
       .then(res => res.json())
       .then(data => setCommentsLoadData(data))
   }, [commentsLoadData])
@@ -61,7 +61,7 @@ const NewsDetails = () => {
     form.comment.value= ''
 
 
-    fetch('https://asetta-autos-production.up.railway.app/blogComments', {
+    fetch('https://asetta-autos-server-gules.vercel.app/blogComments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -110,7 +110,7 @@ const NewsDetails = () => {
     const likeEmail = {email : user?.email}
     if(!findEmail){
       // setLike(true)
-      fetch(`https://asetta-autos-production.up.railway.app/blogLike/${id}`, {
+      fetch(`https://asetta-autos-server-gules.vercel.app/blogLike/${id}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json'
@@ -143,7 +143,7 @@ const NewsDetails = () => {
     if(findEmail){
       console.log("ase kam hobi");
       // setLike(true)
-      fetch(`https://asetta-autos-production.up.railway.app/blogDisLike/${id}`, {
+      fetch(`https://asetta-autos-server-gules.vercel.app/blogDisLike/${id}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json'

@@ -13,7 +13,7 @@
 //   const [orderId, setOrderId] = useState(null); // State variable to store the order ID
 
 //   useEffect(() => {
-//     fetch('https://asetta-autos-production.up.railway.app/cards')
+//     fetch('https://asetta-autos-server-gules.vercel.app/cards')
 //       .then((res) => res.json())
 //       .then((data) => setCards(data));
 //   }, []);
@@ -47,7 +47,7 @@
 //       orderId: id, // Set the orderId using the id from useParams
 //     };
 
-//     fetch('https://asetta-autos-production.up.railway.app/getmoney', {
+//     fetch('https://asetta-autos-server-gules.vercel.app/getmoney', {
 //       method: 'POST',
 //       headers: {
 //         'content-type': 'application/json',

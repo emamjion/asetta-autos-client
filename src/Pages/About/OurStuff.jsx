@@ -13,7 +13,7 @@ const OurStuff = () => {
     const [stuffs, setStuffs] = useState([]);
     const { theme } = useContext(AuthContex);
     useEffect(() => {
-        fetch('https://asetta-autos-production.up.railway.app/ourStuf')
+        fetch('https://asetta-autos-server-gules.vercel.app/ourStuf')
             .then(res => res.json())
             .then(data => setStuffs(data))
     }, [])

@@ -22,7 +22,7 @@ const ShowCardsData = ({card}) => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://asetta-autos-production.up.railway.app/deleteCard/${_id}`, {
+                fetch(`https://asetta-autos-server-gules.vercel.app/deleteCard/${_id}`, {
             method: 'DELETE',
           })
             .then(response => {

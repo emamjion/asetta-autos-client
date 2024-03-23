@@ -37,7 +37,7 @@ const LookingCar = () => {
 
         }
         
-        fetch('https://asetta-autos-production.up.railway.app/add-car-user',{
+        fetch('https://asetta-autos-server-gules.vercel.app/add-car-user',{
             method: 'POST',
             headers: {
             'content-type': 'application/json'
