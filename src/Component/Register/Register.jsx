@@ -36,7 +36,7 @@ const Register = () => {
                       admin_request : 'no',
                       dealer_request : 'no'
                     };
-                    fetch("https://asetta-autos-production.up.railway.app/users", {
+                    fetch("https://asetta-autos-server-gules.vercel.app/users", {
                       method: "POST",
                       headers: {
                         "content-type": "application/json",

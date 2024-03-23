@@ -12,7 +12,7 @@ const AddDealers = () => {
     const handleConfirm =(id)=>{
         console.log(id);
 
-        fetch(`https://asetta-autos-production.up.railway.app/makeDealerConfirm/${id}`, {
+        fetch(`https://asetta-autos-server-gules.vercel.app/makeDealerConfirm/${id}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ const AddDealers = () => {
     const handleReject =(id)=>{
         console.log(id);
 
-        fetch(`https://asetta-autos-production.up.railway.app/dealerReject/${id}`, {
+        fetch(`https://asetta-autos-server-gules.vercel.app/dealerReject/${id}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json'

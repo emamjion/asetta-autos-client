@@ -49,7 +49,7 @@ const AddCars = () => {
 
 
         
-        fetch('https://asetta-autos-production.up.railway.app/addACar', {
+        fetch('https://asetta-autos-server-gules.vercel.app/addACar', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

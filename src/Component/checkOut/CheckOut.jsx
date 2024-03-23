@@ -15,7 +15,7 @@ const CheckOut = () => {
   const [currentStep, setCurrentStep] = useState(1); // State variable to manage the current step
 
   // useEffect(() => {
-  //   fetch('https://asetta-autos-production.up.railway.app/cards')
+  //   fetch('https://asetta-autos-server-gules.vercel.app/cards')
   //     .then((res) => res.json())
   //     .then((data) => setCards(data));
   // }, []);
@@ -56,7 +56,7 @@ const CheckOut = () => {
       orderId: id, // Set the orderId using the id from useParams
     };
 
-    fetch('https://asetta-autos-production.up.railway.app/getmoney', {
+    fetch('https://asetta-autos-server-gules.vercel.app/getmoney', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

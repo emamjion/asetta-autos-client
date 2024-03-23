@@ -79,7 +79,7 @@ const router = createBrowserRouter([
             {
                 path: 'our-blogs/:id',
                 element: <PrivateRoute><NewsDetails /></PrivateRoute>,
-                // loader : ({ params })=> fetch(`https://asetta-autos-production.up.railway.app/our-blogs/${params.id}`)
+                // loader : ({ params })=> fetch(`https://asetta-autos-server-gules.vercel.app/our-blogs/${params.id}`)
             },
             {
                 path: 'ourteam/:id',

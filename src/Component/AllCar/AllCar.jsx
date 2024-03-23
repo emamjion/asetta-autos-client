@@ -14,7 +14,8 @@ const AllCar = () => {
   const [active, setActive] = useState('Toyota');
 
   useEffect(() => {
-    fetch(`https://asetta-autos-production.up.railway.app/new-arrivals`)
+    // fetch(`https://asetta-autos-server-gules.vercel.app/new-arrivals`)
+    fetch(`https://asetta-autos-server-gules.vercel.app/new-arrivals`)
       .then(res => res.json())
       .then(data => setInfo(data))
   }, [active])
@@ -44,7 +45,7 @@ const AllCar = () => {
 
 
   const handleFind = () => {
-    fetch(`https://asetta-autos-production.up.railway.app/findName/${find}`)
+    fetch(`https://asetta-autos-server-gules.vercel.app/findName/${find}`)
       .then(res => res.json())
       .then(data => setInfo(data))
 

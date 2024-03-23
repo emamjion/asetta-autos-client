@@ -15,12 +15,12 @@ const DealerDetails = () => {
   const [dealers, setDealers] = useState([]);
   const [carPics, setCarPics] = useState([]);
   useEffect(() => {
-    fetch(`https://asetta-autos-production.up.railway.app/best-dealers/${id}`)
+    fetch(`https://asetta-autos-server-gules.vercel.app/best-dealers/${id}`)
       .then(res => res.json())
       .then(data => setDealers(data))
   }, []);
   useEffect(() => {
-    fetch('https://asetta-autos-production.up.railway.app/new-arrivals')
+    fetch('https://asetta-autos-server-gules.vercel.app/new-arrivals')
       .then(res => res.json())
       .then(data => setCarPics(data.slice(0, 6)))
   }, [])

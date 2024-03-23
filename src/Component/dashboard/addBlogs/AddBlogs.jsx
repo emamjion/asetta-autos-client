@@ -32,7 +32,7 @@ const AddBlogs = () => {
 
     console.log(data);
 
-    fetch('https://asetta-autos-production.up.railway.app/blogPost', {
+    fetch('https://asetta-autos-server-gules.vercel.app/blogPost', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

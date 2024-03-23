@@ -10,7 +10,7 @@ const ServiceSectionDetails = () => {
     const [service, setService] = useState([]);
 
     useEffect(() => {
-        fetch(`https://asetta-autos-production.up.railway.app/services/${id}`)
+        fetch(`https://asetta-autos-server-gules.vercel.app/services/${id}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [])

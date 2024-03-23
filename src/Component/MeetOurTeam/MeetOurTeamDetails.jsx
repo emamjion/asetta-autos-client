@@ -12,7 +12,7 @@ const MeetOurTeamDetails = () => {
     const [teams, setTeams] = useState([]);
 
     useEffect(() => {
-        fetch(`https://asetta-autos-production.up.railway.app/ourteam/${id}`)
+        fetch(`https://asetta-autos-server-gules.vercel.app/ourteam/${id}`)
             .then(res => res.json())
             .then(data => setTeams(data))
     }, [])
