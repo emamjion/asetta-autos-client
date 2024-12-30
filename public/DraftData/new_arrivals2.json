@@ -16,6 +16,7 @@
         "fuel_type": "Gasoline",
         "mileage": "25000",
         "features": [
+            
             {
                 "name": "Air Conditioning",
                 "description": "Dual-zone automatic climate control."
