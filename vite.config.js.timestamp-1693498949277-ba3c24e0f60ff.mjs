@@ -4,6 +4,7 @@ import react from "file:///C:/projects/asetta-autos-client/node_modules/@vitejs/
 var vite_config_default = defineConfig({
   plugins: [react()]
 });
+
 export {
   vite_config_default as default
 };
